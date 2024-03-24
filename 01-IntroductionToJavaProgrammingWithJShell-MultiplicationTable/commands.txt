@@ -162,3 +162,39 @@ void clear() { System.out.print("\033[H\033[2J ");}
 clear()
 long l = 6_000_000_000l;
 clear()
+short numberOfGoals;
+numberOfGoals++
+numberOfGoals
+numberOfGoals++
+numberOfGoals
+long populationOfTheWorld;
+double average;
+char ch = 'A';
+ch = 'B'
+char grade = 'C';
+grade = 'A'
+grade
+clear()
+boolean isEven;
+isEven = true
+boolean isPrime;
+boolean isItRainingToday;
+boolean areYouEnjoyingTheCourse;
+areYouEnjoyingTheCourse = true
+System.out.printf("%d * %d = %d", 5, i, 5*i);
+clear()
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+clear()
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+i = 7
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+i = 10
+i < 5
+i > 5
+i <= 5
+i <= 10
+i >= 10
+System.out.println("i is less than 5");
+i
+clear()
