@@ -98,3 +98,67 @@ System.out.print("\033[H\033[2J ");
 int noOfGoals;
 int NoOfGoals;
 int score;
+System.out.print("\033[H\033[2J ");
+System.out.print("\033[H\033[2J ");
+short s;
+float f = 4.0f;
+float f2 = 4.5f;
+double dbl = 4.5;
+System.out.print("\033[H\033[2J ");
+i = j
+i
+j
+i = j
+i = j * 2
+i = i * 2
+i = i + i
+i = i - i
+i = i + 1
+i = i + 1
+i = i + 1
+i = i + 1
+i = i + 1
+i = i + 1
+i = i - 1
+i = i - 1
+i = i - 1
+i = i - 1
+i = i - 1
+i++
+i
+i++
+i
+i--
+i
+i--
+i
+System.out.print("\033[H\033[2J ");
+number = number + 1
+number++
+number
+number++
+number
+number--
+number
+++number
+number
+System.out.print("\033[H\033[2J ");
+number++
+++number
+number
+--number
+number--
+number
+System.out.print("\033[H\033[2J ");
+i = i + 2
+i += 2
+i -= 1
+i *= 5
+i
+i /= 4
+i %= 2
+void clear() { System.out.print("\033[H\033[2J ");}
+;
+clear()
+long l = 6_000_000_000l;
+clear()
