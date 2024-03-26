@@ -321,3 +321,80 @@ Let's do a quick review
 Exercise
 - Adding three numbers 5 + 6 + 7 = 18
 
+
+## Variables
+
+Our end objective is to print the complete 5 tables. We need to execute 10 statements to get this done right now.
+
+System.out.printf("%d * %d = %d", 5 , 1 , 5 * 1 ).println();
+...
+System.out.printf("%d * %d = %d", 5 , 6 , 5 * 6 ).println();
+...
+...
+System.out.printf("%d * %d = %d", 5 , 7 , 5 * 7 ).println();
+
+How do we make this even simpler. Think what is changing between each of these statements.
+
+Each time I want to print a new table value, I have to change the constants/literals being passed.
+
+Can we avoid it? 
+
+Welcome variables!
+
+5, 6, 7 are constants (literals). Their values will not change. 
+
+Variables are those thing whose values can change during the execution of a program!
+
+Variables have a name, type and value.
+
+Name gives us a way to refer to the variable.
+
+Java is a Strongly Typed Language. That means, you need to tell Java what kind of values you want to store in the variable.
+
+There are two types of literals we looked at until now
+- Strings - "Welcome to Programming"
+- Numbers - Specifically integers - 5 , 6, 7
+
+Before creating a variable, I need to tell Java what kind of values a variable will store. For now, lets now create a number variable.
+
+int i = 0;
+
+Declaration is give a variable a name and type.
+
+Think about this 
+- name of variable is i
+- type of variable is int. int stands for integer. integer can hold a wide range of numbers.
+- the initial value of i is 0
+
+> In the background a memory location is allocated to the variable. Value 0 is stored in the memory location.
+
+i = 6; //This is called assignment. 
+
+We are changing the value in the memory location to 6. The way we look at assignment should be different from the way we look at is equal to in mathemetics. We will discuss this in depth later. For now, the value on the right hand side gets copied to the variable on the left hand side.
+
+System.out.printf("%d * %d = %d", 5 , 6 , 5 * 6 ).println();
+
+Let's use i in the above printf.
+
+jshell> System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+5 * 6 = 30
+
+jshell> i = 7
+i ==> 7
+
+jshell> System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+5 * 7 = 35
+
+Isn't this fun! We have made the same line of code do different things based on the value of the variable. The value of a variable can change from time to time and the statement prints the multiple of 5 based on the value of the variable.
+
+Puzzles
+- Try using variables without declaring them
+  - j = 2;
+- Try using undeclared variables in expressions
+- Try using un initialized variables in expressions
+- Try assigning a character value to an integer variable
+
+Exercises
+- Create three variables a,b,c and create a statement for printing sum of three variables
+- Think - How can you print the 5 table from 1 to 10 right now?
+
