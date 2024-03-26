@@ -116,3 +116,103 @@ jshell> printLearningExperience
 |    symbol:   variable printLearningExperience
 |  printLearningExperience
 |  ^---------------------^
+
+
+jshell> printLearningExperience()
+I've created my first variable
+I've created my first method
+I've created my first loop
+I'm excited to learn Java
+
+jshell> void 2things() {
+   ...> }
+|  Error:
+|  illegal start of expression
+|  void 2things() {
+|  ^--^
+|  Error:
+|  ';' expected
+|  void 2things() {
+|      ^
+|  Error:
+|  ';' expected
+|  void 2things() {
+|                ^
+|  Error:
+|  cannot find symbol
+|    symbol:   method things()
+|  void 2things() {
+|        ^----^
+
+jshell> void void(){
+   ...> }
+|  Error:
+|  illegal start of expression
+|  void void(){
+|  ^--^
+|  Error:
+|  ';' expected
+|  void void(){
+|      ^
+|  Error:
+|  illegal start of expression
+|  void void(){
+|       ^--^
+|  Error:
+|  ';' expected
+|  void void(){
+|           ^
+
+jshell> void for(){
+|  Error:
+|  illegal start of expression
+|  void for(){
+|  ^--^
+|  Error:
+|  ';' expected
+|  void for(){
+|      ^
+|  Error:
+|  illegal start of expression
+|  void for(){
+|           ^
+|  Error:
+|  reached end of file while parsing
+|  void for(){
+|             ^
+|  Error:
+|  missing return statement
+|  void for(){
+|  ^---------^
+
+jshell> void if(){
+|  Error:
+|  illegal start of expression
+|  void if(){
+|  ^--^
+|  Error:
+|  ';' expected
+|  void if(){
+|      ^
+|  Error:
+|  illegal start of expression
+|  void if(){
+|          ^
+|  Error:
+|  reached end of file while parsing
+|  void if(){
+|            ^
+|  Error:
+|  missing return statement
+|  void if(){
+|  ^--------^
+
+jshell> void NameOfMethod(){
+   ...> }
+|  created method NameOfMethod()
+
+jshell> void nameOfMethod(){
+   ...> }
+|  created method nameOfMethod()
+
+jshell> clear()
