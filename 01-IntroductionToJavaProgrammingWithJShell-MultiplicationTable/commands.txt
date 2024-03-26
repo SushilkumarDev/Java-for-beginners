@@ -246,3 +246,90 @@ number = 9
 if (number % 2 == 0)
 System.out.println("number is even");
 clear()
+i > 5
+i = 5
+i == 5
+i == 6
+if(i==5)
+System.out.println("i is odd");
+if(i==5)
+System.out.println("i is odd");
+ System.out.println("i is prime");
+i == 6
+i = 6
+if(i==5)
+System.out.println("i is odd");
+ System.out.println("i is prime");
+if(i==5) {
+System.out.println("i is odd");
+System.out.println("i is prime");
+}
+if(i==5) {
+System.out.println("i is prime");
+}
+clear()
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+clear()
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+i = i + 1
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+i = i + 1
+System.out.printf("%d * %d = %d", 5, i, 5*i).println()
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", 5, i, 5*i).println();
+}
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", 6, i, 6*i).println();
+}
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", 7, i, 7*i).println();
+}
+int table = 7;
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+table = 8
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+table = 8
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+table = 9
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+for(i =1; i<=10; i++) {
+   System.out.printf("%d", i).println();
+}
+clear()
+for(i=10; i<=1  ;i--) {
+   System.out.printf("%d", i).println();
+}
+for(i=10; i>=1  ;i--) {
+   System.out.printf("%d", i).println();
+}
+for(i=10; i>=1  ;i = i - 2) {
+   System.out.printf("%d", i).println();
+}
+for(i=9; i>=1  ;i = i - 2) {
+   System.out.printf("%d", i).println();
+}
+for(i =1; i<=10; i++) {
+   System.out.printf("%d", i * i).println();
+}
+for(i =2; i<=10; i = i + 2) {
+   System.out.printf("%d", i * i).println();
+}
+for(i =2; i<=20; i = i + 2) {
+   System.out.printf("%d", i * i).println();
+}
+for(i =1; i<=10; i++) {
+   System.out.printf("%d", (2 * i) * (2 * i) ).println();
+}
+for(i =1; i<=20; i = i + 2) {
+   System.out.printf("%d", i * i).println();
+}
+clear()
+clear()
