@@ -198,3 +198,51 @@ i >= 10
 System.out.println("i is less than 5");
 i
 clear()
+if (i<5)
+   System.out.println("i is less than 5");
+i
+i = 4
+if (i<5)
+   System.out.println("i is less than 5");
+int number1 = 5;
+int number2 = 7;
+if (number2>number1)
+System.out.println("number2 is greater than number1");
+number2 = 3
+if (number2>number1)
+System.out.println("number2 is greater than number1");
+clear()
+int a = 1;
+int b = 2;
+int c = 3;
+int d = 1;
+if(a+b > c +d)
+System.out.println("a+b is greater than c+d");
+a = 6
+if(a+b > c +d)
+System.out.println("a+b is greater than c+d");
+if ( a + b > c + d )
+    System.out.println("a+b is greater than c+d");
+int angle1 = 20;
+int angle2 = 60;
+int angle3 = 50;
+if(angle1 + angle2 + angle3 == 180)
+    System.out.println("Valid Triangle");
+angle3 += 50
+angle3
+angle1
+angle2
+if(angle1 + angle2 + angle3 == 180)
+    System.out.println("Valid Triangle");
+int number = 10;
+number % 2
+9 % 2
+8 % 2
+if (number % 2 == 0)
+System.out.println("number is even");
+if (number % 2 == 0)
+System.out.println("number is even");
+number = 9
+if (number % 2 == 0)
+System.out.println("number is even");
+clear()
