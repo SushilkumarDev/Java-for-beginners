@@ -333,3 +333,25 @@ for(i =1; i<=20; i = i + 2) {
 }
 clear()
 clear()
+int i = 1;
+for ( ;i<=10 ;i++ );
+i
+for (i=1 ;i<=10 ;i++ );
+int j;
+for (i=1, j=2 ;i<=10 ;i++, j++ );
+i
+j
+for (i=1, j=2 ;i<=10 ;i++, j--);
+i
+j
+for(;;);
+for(int i=1; i<=10; i++) {
+System.out.println("No 1");
+System.out.println("No 2");
+}
+for(int i=1; i<=10; i++) {
+System.out.println("No 1");
+System.out.println("No 2");
+}
+   System.out.println("i is less than 5");
+System.out.print("\033[H\033[2J ");
