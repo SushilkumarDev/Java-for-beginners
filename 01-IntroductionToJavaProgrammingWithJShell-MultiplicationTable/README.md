@@ -489,3 +489,197 @@ int test1, test2; //multiple variables of same type allowed but not considered b
 Exercise
 - Think of a few more valid identifier names and declare variables with those names
 - Try to think of variable names not matching the rules and see what happens!
+
+
+## Basic If Condition
+
+- int team1Goals = 5;
+- int team2Goals = 7;
+
+Let's try and write a few conditions.
+
+jshell> team1Goals > team2Goals
+$47 ==> false
+
+jshell> team1Goals < team2Goals
+$48 ==> true
+
+Let's try to conditionally execute statements.
+
+jshell> if(true)
+   ...>  System.out.println("Test");
+Test
+
+jshell> if(false)
+   ...>  System.out.println("Test");
+
+Syntax
+if(condition)
+	statement;
+
+Let's now try to print 
+
+jshell> if(team1Goals > team2Goals) 
+   ...> System.out.println("Team 1 wins");
+
+jshell> if(team2Goals > team1Goals) 
+   ...> System.out.println("Team 2 wins");
+Team 2 wins
+
+Let's now to print which number is greater
+
+jshell> int number1 = 6;
+number1 ==> 6
+
+jshell> int number2 = 7;
+number2 ==> 7
+
+jshell> if(number1 > number2)
+   ...>   System.out.println("Number1 is greater than number2");
+
+jshell> if(number1 >= number2)
+   ...>   System.out.println("Number1 is greater than number2");
+
+jshell> if(number2 > number1)
+   ...>   System.out.println("Number2 is greater than number1");
+Number2 is greater than number1
+
+jshell> if(number2 >= number1)
+   ...>   System.out.println("Number2 is greater than number1");
+Number2 is greater than number1
+
+Now change the values of number1 and number2 and execute the same statements.
+
+Exercise
+- [ ] Have four variables a,b,c,d and create an if statement to print if a + b is greater than c + d.
+- [ ] Have three angles of a triangle stored in three variables angle1, angle2, angle3. Create an if statement to state if the three angles can form a triangle. Hint : angle1 + angle2 + angle3 = 180
+- [ ] Have a variable called number. Create an if statement to find if it is even number. Hint : % operator.
+
+We will return with a number of other variations of if - if else and logical operators later in the course.
+
+## For Loop - Printing 5 Table from 1 to 10
+
+This is not a lot of fun
+
+int i = 0;
+
+i = 1;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = 2;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = 3;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = 4;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+Can we do better?
+
+int i = 0;
+i = i + 1;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = i + 1;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = i + 1;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+i = i + 1;
+System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+This is cool! Isn't it? We have got the same statements executing multiple times and we get desired result.
+
+How do we execute same statement again and again and again?
+
+What we want to be able to say is 
+
+for the value of i from 1 to 10
+	execute the statement - System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+How do we do that? How do we repeat the same statement again and again 10 times? How do i use different values of i?
+
+That's where loops come in
+
+Syntax of a for loop is 
+
+for(initialization;condition;update)
+	statement;
+
+Logic
+- initialization - the initial value. We want to start from i = 1;
+- update - we want to increment the value of i by 1 each time
+- condition - we want to run i has a value of 10 
+
+For Loop Example 1
+```
+for (int i = 0; i < 10; i++) {
+    System.out.print(i);
+}
+//Output - 0123456789
+```
+Syntax - For loop statement has 3 parts
+- Initialization => int i=0. Initialization happens the first time a for loop is run.
+- Condition => i<10. Condition is checked every time before the loop is executed.
+- Update (Increment or Decrement usually) => i++. Operation is invoked at the start of every loop (except for first time).
+
+
+Code
+- initialization - int i = 1
+- increment - i = i + 1 or even better i++
+- condition - i <= 10
+- statement - System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+for(initialization;condition;increment)
+	statement;
+
+Video Tip : What can possibly go wrong?
+Pause and check the exact syntax on
+
+Now we want to print our 5 table
+for(int i = 1;i <= 10;i++)
+	System.out.printf("%d * %d = %d", 5 , i , 5 * i ).println();
+
+```
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+```
+
+Video Tip : What can possibly go wrong?
+Pause and check the exact syntax on
+
+Congratulations on taking a big step in your programming career. You have written a for loop!
+
+We will return with a number of other variations of for loop - if else and logical operators later in the course.
+
+## Quick Revision of what we did until now
+We have to do a lot of work to print the 5 table!
+- Revision of all terminology
+  - literal
+  - variable
+  - in built method
+  - parameters
+  - syntax
+  - condition
+  - if statement
+  - for loop
+  - block
+
+Exercise
+- Do the whole thing again for 7 table. Kill JShell. Kill Eclipse. Repeat. Rinse. Start Again. Good Luck.
+- Print 6 and 10 Tables!
+- Print numbers from 1 to 10
+- Print numbers from 10 to 1
+- Print squares of First 10 Numbers
+- Print squares of First 10 Even Numbers
+- Print squares of First 10 Odd Numbers
