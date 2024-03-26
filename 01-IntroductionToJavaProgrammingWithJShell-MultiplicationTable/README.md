@@ -201,3 +201,39 @@ Puzzles
 - Print a few complex expressions and see if you can work out how they work
 - Use operator % 
 
+
+## Printing output
+
+Computer's cannot understand Human Languages. Computers have languages of their own - You are learn Java - which is one of the computer programming languages. For computers to understand you, we need to start understanding these programming languages. 
+
+You can adjust the playspeed of the video if I'm speaking too fast. Look at the interface for the video player and you should find a speed icon!
+
+How to write code to print something on the console or the output?
+
+```
+System.out.println("Welcome to Programming World");
+```
+
+Programming languages speak a different language - Rules are complex. These rules are called Syntax. Programming Languages don't like it when you don't follow the syntax. It's like your strict natural language instructor.
+
+What can go wrong?
+- JShell
+- Case of the letters - Upper case and lower case
+- Double Quotes
+- Syntax of method - round brackets ()
+
+Statement - An instruction to the computer. We instructed Java to print a text and it printed it.
+
+Congratulations!
+
+There are things we did not understand during our first statement. We will understand them now!
+
+> Tip 1 - Using Arrows
+
+### Method Call
+System.out.println("Welcome to Programming World")
+- This is a method call. We are calling a method. The syntax to call a method is method_name(value)
+- In this example
+	- method_name is System.out.println
+	- value we want to print is "Welcome to Programming World"
+- System.out.println is an inbuilt method provide by Java. It prints the value passed to it to the console i.e. the screen in JShell!
