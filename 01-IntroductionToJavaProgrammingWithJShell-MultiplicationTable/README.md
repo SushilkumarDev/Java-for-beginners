@@ -398,3 +398,94 @@ Exercises
 - Create three variables a,b,c and create a statement for printing sum of three variables
 - Think - How can you print the 5 table from 1 to 10 right now?
 
+
+## Variables in Depth
+- [x] Variables & Memory
+- [x] Naming a Variable
+- [x] Variable Types
+- [x] Assignment Operators
+
+
+## Assignment in Depth
+
+int goals = 0;
+
+What happens in the background? Think about it.
+
+goals = 2;
+This is not the same as 
+2 = goals;
+
+Why? 
+
+This is not mathematics.
+
+Important thing to understand is that you need to have a identifier on the Left Hand Side.
+
+goals = 5;
+
+Let's now create a couple of variables
+
+int firstNumber = 5;
+int secondNumber = 6;
+
+firstNumber = secondNumber; 
+
+What would happen?
+
+firstNumber = 5;
+
+secondNumber = 6;
+
+How do you calculate the sum and assign it to a variable sum?
+
+int number = 5;
+
+number = number + 1; //What does this do?
+number++; //what does this do?
+
+number = number - 1; //What does this do?
+number--;
+
+Puzzles
+- Compound Assignment Operators
+  - Examples : +=, -=, *= 
+
+```
+int a = 5;
+a += 5; //similar to a = a + 5;
+a *= 10;//similar to a = a * 10;
+a -= 5;//similar to a = a - 5;
+a /= 5;//similar to a = a / 5;
+```
+
+Exercise
+- Create three variables thirdNumber, fourthNumber and fifthNumber. Assign 3 values to these variables. Calculate sum of these three numbers and assign it to sumOfThreeNumbers variable.
+- Have a variable to contain the number of days. Use it to calculate the total number of hours and total number of seconds in those days.
+
+## Naming Variables
+
+Name given to a variable is called an identifier. Typically we use camel case for variable names in Java. First letter would be smaller case.
+
+int numberOfGoals = 2;
+int successfulAttempts = 1;
+int failedAttempts = 5;
+
+Programmers like rules. Actually, we hate rules. Because, there are so many syntax rules that we need to adhere to, we hate rules outside.
+
+Let's look at rules for legal Identifier Names
+- Combination of letters, numbers, $ and under-score(_)
+- Cannot start with a number
+- Cannot be a keyword - we will talk about these later!
+- No limit on length of identifier
+
+int 1test = 5;
+int test! = 5;
+
+int Test = 5; //allowed but starting with capital letter not recommended for variable name
+
+int test1, test2; //multiple variables of same type allowed but not considered best practice
+
+Exercise
+- Think of a few more valid identifier names and declare variables with those names
+- Try to think of variable names not matching the rules and see what happens!
