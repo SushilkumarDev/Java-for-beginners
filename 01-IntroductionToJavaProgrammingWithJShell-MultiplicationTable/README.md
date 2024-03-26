@@ -237,3 +237,87 @@ System.out.println("Welcome to Programming World")
 	- method_name is System.out.println
 	- value we want to print is "Welcome to Programming World"
 - System.out.println is an inbuilt method provide by Java. It prints the value passed to it to the console i.e. the screen in JShell!
+
+### Double Quotes
+Any thing in double quote is considered as text. This is called a String Literal.
+
+System.out.println(Welcome to Programming World)
+
+System.out.println("Welcome to Programming World")
+
+Puzzles
+- Different Case - System.out.println("welcome to programming world")
+
+Exercises
+- Print "Hello World"
+- Print "5 * 3"
+
+## Text vs Expression
+
+Let's make the computer do a few calculations for us.
+
+System.out.println("5 * 6");//Doesn't work
+
+System.out.println(5 * 6);//30 
+
+Anything between quotes is taken as is. It is not computed. 
+
+System.out.println(5 + 6);
+System.out.println(5 - 6);
+System.out.println(5 / 6); // Why is this Zero? Later
+
+Awesome isn't it? We have the computer doing some work for us. That's what programmers are supposed to do. Get the computer to do something useful for us.
+
+Do you know? 
+- You have successfully executed more than 10 Java Statements in a very short span of time. That's because of the magic of a new Java 9 Feature - JShell.  Without JShell, getting started would've been more difficult
+
+Tip
+- Programming is all about understand what, why and how of what we do. It is not sufficient to say it works. You should be able to explain How it works? Why it works? To do this, start questioning everything. I mean E V E R Y T H I N G!
+
+
+Exercise
+- Try to print a simple math table executing individual statements
+  	- System.out.println(5 * 1)
+  	- System.out.println(5 * 2)
+  	- System.out.println(5 * 3)
+
+
+## More advanced System.out.println
+
+I want to print 5 table in this format 
+5 * 1 = 5
+
+We have to write - System.out.println("5 * 1 = 5")
+
+This is not fun. Computer is not calculating it for us! How to get it to calculate and print the value for us?
+
+We will use a new function printf.
+
+However printf has a few constraints
+- System.out.printf("5 * 1 = 5") //No new line
+- System.out.printf("5 * 1 = 5") //It returns a value
+- System.out.printf("5 * 1 = 5").println() //Avoids all complication around it - This is called chaining of calls. Don't worry about it for now!
+
+You can ask - why are we using printf? Because, it has an additional feature.
+
+System.out.printf("5 * 1 = %d", 5 * 1).println();
+System.out.printf("5 * 2 = %d", 5 * 2).println();
+
+Now we got the computer do some calculations for us! That's cool.
+
+Each of the values we send to printf are called parameters.
+
+How about replacing the other things in the String (Any text within quotes is called a String) with a variable too?
+System.out.printf("%d %d %d", 1 , 2 , 3 ).println();
+
+System.out.printf("%d * %d = %d", 5 , 6 , 5 * 6 ).println();
+System.out.printf("%d * %d = %d", 5 , 7 , 5 * 7 ).println();
+
+Let's do a quick review
+- In built method
+- Literal
+- Passing Parameters
+
+Exercise
+- Adding three numbers 5 + 6 + 7 = 18
+
