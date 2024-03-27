@@ -298,3 +298,18 @@ jshell> /help
 jshell> /
 |  Command: '/' is ambiguous: /list, /edit, /drop, /save, /open, /vars, /methods, /types, /imports, /exit, /env, /reset, /reload, /history, /debug, /help, /set, /?, /!
 |  Type /help for help.
+
+
+jshell> /methods
+|    void clear()
+|    void sayHelloWorld(int)
+|    void sayHelloWorld()
+|    void printMultipleTimes(int)
+|    void printMultipleTimes(int,String)
+|    void test()
+|    int ireturn()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
