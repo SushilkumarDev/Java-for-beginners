@@ -231,3 +231,8 @@ jshell> /methods
 |    void printLearningExperience()
 |    void NameOfMethod()
 |    void nameOfMethod()
+
+
+jshell> /remove
+|  No such command or snippet id: /remove
+|  Type /help for help.
