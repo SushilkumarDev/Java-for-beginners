@@ -313,3 +313,48 @@ jshell> /methods
 |    void printLearningExperience()
 |    void NameOfMethod()
 |    void nameOfMethod()
+
+jshell> /methods                    
+|    void clear()
+|    void sayHelloWorld(int)
+|    void sayHelloWorld()
+|    void printMultipleTimes(int)
+|    void printMultipleTimes(int,String)
+|    void test()
+|    int ireturn()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
+
+jshell> /drop ireturn
+|  dropped method ireturn()
+
+jshell> /drop sayHelloWorld
+|  The argument references more than one import, variable, method, or class.
+|  Use one of: 
+|  /drop 21    :   void sayHelloWorld(int numberOfTimes) {
+|           for(int i=1; i<=numberOfTimes; i++)
+|         System.out.println("Hello World");
+|         }, 
+|  /drop 22    :   void sayHelloWorld() {
+|               System.out.println("Hello World");
+|         }
+
+jshell> /drop 21
+|  dropped method sayHelloWorld(int)
+
+jshell> /drop 22
+|  dropped method sayHelloWorld()
+
+jshell> /methods
+|    void clear()
+|    void printMultipleTimes(int)
+|    void printMultipleTimes(int,String)
+|    void test()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
