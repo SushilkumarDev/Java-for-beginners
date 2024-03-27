@@ -216,3 +216,18 @@ jshell> void nameOfMethod(){
 |  created method nameOfMethod()
 
 jshell> clear()
+
+ 
+jshell> /methods
+|    void clear()
+|    void sayHelloWorld(int)
+|    void sayHelloWorld()
+|    void printMultipleTimes(int)
+|    void printMultipleTimes(int,String)
+|    void test()
+|    int ireturn()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
