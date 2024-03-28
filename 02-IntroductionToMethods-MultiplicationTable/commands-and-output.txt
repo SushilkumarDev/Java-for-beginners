@@ -371,3 +371,19 @@ jshell> /drop printMultipleTimes
 |           for(int i=1; i<=numberOfTimes; i++)
 |                System.out.println(str);
 |         }
+
+
+jshell> /drop 23
+|  dropped method printMultipleTimes(int)
+
+jshell> /drop 25
+|  dropped method printMultipleTimes(int,String)
+
+jshell> /methods
+|    void clear()
+|    void test()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
