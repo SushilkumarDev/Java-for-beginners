@@ -412,3 +412,20 @@ jshell> /methods
 |    void nameOfMethod()
 
 jshell> /save backup.txt 
+
+
+jshell> /edit sayHelloWorldTwice
+|  modified method sayHelloWorldTwice()
+
+jshell> sayHelloWorldTwice()
+HelloWorld
+HelloWorld
+
+jshell> /edit printLearningExperience
+|  modified method printLearningExperience()
+
+jshell> printLearningExperience()
+I've created sdf first variable
+I've created fsadjf first method
+I've created fsajdfl first loop
+I'm excited fasdflkjfskfsd learn Java
