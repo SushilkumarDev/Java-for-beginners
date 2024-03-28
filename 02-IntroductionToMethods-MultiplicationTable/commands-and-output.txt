@@ -401,3 +401,14 @@ jshell> /methods
 |    void nameOfMethod()
 
 jshell> clear()
+
+
+jshell> /methods
+|    void clear()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
+
+jshell> /save backup.txt 
