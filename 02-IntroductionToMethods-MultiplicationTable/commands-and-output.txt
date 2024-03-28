@@ -510,3 +510,24 @@ jshell> /list
   60 : printLearningExperience()
 
 jshell> clear()
+
+ 
+jshell> /methods
+|    void clear()
+|    void sayHelloWorldThrice()
+|    void NameOfMethod()
+|    void nameOfMethod()
+|    void sayHelloWorldTwice()
+|    void printLearningExperience()
+
+jshell> /list printLearningExperience
+
+  59 : void printLearningExperience() {
+       System.out.println("I've created sdf first variable");
+       System.out.println("I've created fsadjf first method");
+       System.out.println("I've created fsajdfl first loop");
+       System.out.println("I'm excited fasdflkjfskfsd learn Java");
+       }
+
+jshell> clear()
+
