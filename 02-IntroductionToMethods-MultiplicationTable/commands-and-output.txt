@@ -429,3 +429,84 @@ I've created sdf first variable
 I've created fsadjf first method
 I've created fsajdfl first loop
 I'm excited fasdflkjfskfsd learn Java
+
+jshell> /list
+
+   2 : 3 * 4
+   3 : $2
+   4 : $2 * 3
+   6 : clear()
+   8 : for( i =1; i<=10; i++) {
+       System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+   9 : clear()
+  11 : for( i =1; i<=10; i++) {
+           System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+  12 : clear()
+  14 : for( i =1; i<=10; i++) {
+           System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+  15 : clear()
+  16 : void clear() { 
+         System.out.print("\033[H\033[2J ");
+       }
+  18 : class Test {
+       	void printOutput() {
+       		System.out.println("Text");
+       	}
+       }
+  19 : new Test().printOutput()
+  20 : System.out.println(i)
+  26 : printMultipleTimes(2, "You are awesome");
+  28 : int i;
+  30 : ireturn()
+  32 : for( i =1; i<=10; i++) {
+          System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+  33 : int table = 7;
+  34 : for( i =1; i<=10; i++) {
+       System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+  35 : table = 8
+  36 : for( i =1; i<=10; i++) {
+       System.out.printf("%d * %d = %d", table, i, table*i).println();
+       }
+  37 : System.out.println("Hello World")
+  38 : System.out.println("Hello World")
+  39 : System.out.println("Hello World")
+  40 : System.out.println("Hello World");
+  41 :  System.out.println("Hello World");
+  42 : clear()
+  43 : System.out.println("Hello World");
+  44 :  System.out.println("Hello World");
+  46 : sayHelloWorldTwice()
+  47 : sayHelloWorldTwice()
+  48 : void sayHelloWorldThrice(){
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+        System.out.println("Hello World");
+       }
+  49 : sayHelloWorldThrice()
+  51 : printLearningExperience()
+  52 : printLearningExperience()
+  53 : void NameOfMethod(){
+       }
+  54 : void nameOfMethod(){
+       }
+  55 : clear()
+  56 : clear()
+  57 : void sayHelloWorldTwice(){
+          System.out.println("HelloWorld");
+          System.out.println("HelloWorld");
+       }
+  58 : sayHelloWorldTwice()
+  59 : void printLearningExperience() {
+       System.out.println("I've created sdf first variable");
+       System.out.println("I've created fsadjf first method");
+       System.out.println("I've created fsajdfl first loop");
+       System.out.println("I'm excited fasdflkjfskfsd learn Java");
+       }
+  60 : printLearningExperience()
+
+jshell> clear()
