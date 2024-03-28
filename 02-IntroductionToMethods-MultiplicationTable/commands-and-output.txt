@@ -387,3 +387,17 @@ jshell> /methods
 |    void printLearningExperience()
 |    void NameOfMethod()
 |    void nameOfMethod()
+
+
+jshell> /drop test
+|  dropped method test()
+
+jshell> /methods
+|    void clear()
+|    void sayHelloWorldTwice()
+|    void sayHelloWorldThrice()
+|    void printLearningExperience()
+|    void NameOfMethod()
+|    void nameOfMethod()
+
+jshell> clear()
