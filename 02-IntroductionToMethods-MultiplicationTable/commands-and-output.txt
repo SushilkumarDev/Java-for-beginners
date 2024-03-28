@@ -684,3 +684,132 @@ jshell> printNumbers(10)
 8
 9
 10
+
+
+jshell> printNumbers(3)
+1
+2
+3
+
+jshell> /list printNumbers
+
+  80 : void printNumbers(int n) {
+           for(int i=1; i<=n; i++) {
+       	    System.out.println(i);
+           }
+       }
+
+jshell> /edit printNumbers
+
+jshell> void printSquaresOfNumbers(int n) {
+   ...>     for(int i=1; i<=n; i++) {
+   ...>         System.out.println(i*i);
+|  Error:
+|  not a statement
+|  	    System.out.println(i);i*i);
+|                             ^-^
+|  Error:
+|  ';' expected
+|  	    System.out.println(i);i*i);
+|                                ^
+|  Error:
+|  reached end of file while parsing
+|  	    System.out.println(i);i*i);
+|                                  ^
+
+jshell> void printSquaresOfNumbers(int n) {
+   ...>     for(int i=1; i<=n; i++) {
+   ...>          System.out.println(i*i);
+   ...>     }
+   ...> }
+|  created method printSquaresOfNumbers(int)
+
+jshell> printSquaresOfNumbers(5)
+1
+4
+9
+16
+25
+
+jshell> printSquaresOfNumbers(3)
+1
+4
+9
+
+jshell> clear()
+
+ 
+jshell> /methods
+|    void clear()
+|    void sayHelloWorldThrice()
+|    void NameOfMethod()
+|    void nameOfMethod()
+|    void sayHelloWorldTwice()
+|    void printLearningExperience()
+|    void sayHelloWorld(int)
+|    void printNumbers(int)
+|    void printSquaresOfNumbers(int)
+
+jshell> /list sayHelloWorld
+
+  76 : void sayHelloWorld(int noOfTimes) {
+       	for(int i=1; i<=noOfTimes; i++) {
+       		System.out.println("Hello World");
+       	}
+       }
+
+jshell> sayHelloWorld()
+|  Error:
+|  method sayHelloWorld in class  cannot be applied to given types;
+|    required: int
+|    found: no arguments
+|    reason: actual and formal argument lists differ in length
+|  sayHelloWorld()
+|  ^-----------^
+
+jshell> sayHelloWorld("Value")
+|  Error:
+|  incompatible types: java.lang.String cannot be converted to int
+|  sayHelloWorld("Value")
+|                ^-----^
+
+jshell> sayHelloWorld(4.5)
+|  Error:
+|  incompatible types: possible lossy conversion from double to int
+|  sayHelloWorld(4.5)
+|                ^-^
+
+jshell> sayHelloWorld(4)
+Hello World
+Hello World
+Hello World
+Hello World
+
+jshell> /save ~/Desktop/backup-middle-of-section-2-methods.txt
+
+jshell> clear()
+
+ 
+jshell> /list sayHelloWorld
+
+  76 : void sayHelloWorld(int noOfTimes) {
+       	for(int i=1; i<=noOfTimes; i++) {
+       		System.out.println("Hello World");
+       	}
+       }
+
+jshell> for( i =1; i<=10; i++) {
+   ...>     System.out.printf("%d * %d = %d", table, i, table*i).println();
+   ...> }
+8 * 1 = 8
+8 * 2 = 16
+8 * 3 = 24
+8 * 4 = 32
+8 * 5 = 40
+8 * 6 = 48
+8 * 7 = 56
+8 * 8 = 64
+8 * 9 = 72
+8 * 10 = 80
+
+jshell> clear()
