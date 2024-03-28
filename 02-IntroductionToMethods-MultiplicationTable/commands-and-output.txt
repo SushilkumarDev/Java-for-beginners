@@ -358,3 +358,16 @@ jshell> /methods
 |    void printLearningExperience()
 |    void NameOfMethod()
 |    void nameOfMethod()
+
+
+jshell> /drop printMultipleTimes
+|  The argument references more than one import, variable, method, or class.
+|  Use one of: 
+|  /drop 23    :   void printMultipleTimes(int numberOfTimes) {
+|           for(int i=1; i<=numberOfTimes; i++)
+|         System.out.println("Hello World");
+|         }, 
+|  /drop 25    :   void printMultipleTimes(int numberOfTimes, String str) {
+|           for(int i=1; i<=numberOfTimes; i++)
+|                System.out.println(str);
+|         }
