@@ -1156,3 +1156,40 @@ jshell> /save ~/Desktop/backup-middle-of-section-2-methods.txt
 
 jshell> clear()
 
+ 
+jshell> /methods
+|    void clear()
+|    void sayHelloWorldThrice()
+|    void NameOfMethod()
+|    void nameOfMethod()
+|    void sayHelloWorldTwice()
+|    void printLearningExperience()
+|    void sayHelloWorld(int)
+|    void printNumbers(int)
+|    void printSquaresOfNumbers(int)
+|    void printMultiplicationTable()
+|    void printMultiplicationTable(int)
+|    void sum(int,int)
+|    void sum(int,int,int)
+|    int sumOfTwoNumbers(int,int)
+|    int sumOfThreeNumbers(int,int,int)
+|    int calculateThirdAngle(int,int)
+
+jshell> /list printMultiplicationTable
+
+  96 : void printMultiplicationTable() {
+       	for(int i=1;i<=10;i++) {
+       		System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+       	}
+       }
+  98 : void printMultiplicationTable(int table) {
+       	for(int i=1;i<=10;i++) {
+       		System.out.printf("%d * %d = %d", table, i, table * i).println();
+       	}
+       }
+
+jshell> /save ~/Desktop/backup-middle-of-section-2-methods.txt
+
+jshell> /save ~/Desktop/backup-end-of-section-2-methods.txt
+
+jshell> 
