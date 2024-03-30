@@ -877,3 +877,48 @@ jshell> /edit printMultiplicationTable
 
 jshell> printMultiplicationTable()
 printMultiplicationTable()   
+
+
+jshell> printMultiplicationTable()
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
+
+jshell> /list printMultiplicationTable
+
+  96 : void printMultiplicationTable() {
+       	for(int i=1;i<=10;i++) {
+       		System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+       	}
+       }
+
+jshell> printMultiplicationTable(6)
+|  Error:
+|  method printMultiplicationTable in class  cannot be applied to given types;
+|    required: no arguments
+|    found: int
+|    reason: actual and formal argument lists differ in length
+|  printMultiplicationTable(6)
+|  ^----------------------^
+
+jshell> /edit printMultiplicationTable
+|  created method printMultiplicationTable(int)
+
+jshell> printMultiplicationTable(6)
+6 * 1 = 6
+6 * 2 = 12
+6 * 3 = 18
+6 * 4 = 24
+6 * 5 = 30
+6 * 6 = 36
+6 * 7 = 42
+6 * 8 = 48
+6 * 9 = 54
+6 * 10 = 60
