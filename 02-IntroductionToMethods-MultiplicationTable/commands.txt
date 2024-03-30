@@ -160,3 +160,21 @@ int sumOfTwoNumbers(int firstNumber, int secondNumber) {
 }
 sumOfTwoNumbers(1,1)
 clear()
+int sum = sumOfThreeNumbers(2,3,4);
+calculateThirdAngle(20, 50)
+clear()
+clear()
+int sumOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+      int sum = firstNumber + secondNumber + thirdNumber;
+      return sum;
+}
+sumOfThreeNumbers(1,2,3)
+sumOfThreeNumbers(15,2,3)
+int calculateThirdAngle(int angle1, int angle2) {
+       int angle3 = 180 - (angle1 + angle2);
+       return angle3;
+}
+calculateThirdAngle(20, 20)
+clear()
+calculateThirdAngle(20, 20)
+clear()
