@@ -61,3 +61,46 @@ void nameOfMethod(){
 }
 clear()
 clear()
+void sayHelloWorldTwice(){
+   System.out.println("HelloWorld");
+   System.out.println("HelloWorld");
+}
+sayHelloWorldTwice()
+void printLearningExperience() {
+System.out.println("I've created sdf first variable");
+System.out.println("I've created fsadjf first method");
+System.out.println("I've created fsajdfl first loop");
+System.out.println("I'm excited fasdflkjfskfsd learn Java");
+}
+printLearningExperience()
+clear()
+clear()
+clear()
+sayHelloWorldThrice()
+sayHelloWorldTwice()
+sayHelloWorld(1)
+sayHelloWorld(1)
+sayHelloWorld(2)
+sayHelloWorld(2)
+sayHelloWorld(4)
+sayHelloWorld(6)
+void sayHelloWorld(int noOfTimes) {
+	for(int i=1; i<=noOfTimes; i++) {
+		System.out.println("Hello World");
+	}
+}
+sayHelloWorld(6)
+sayHelloWorld(3)
+sayHelloWorld(2)
+void printNumbers(int n) {
+    for(int i=1; i<=n; i++) {
+	    System.out.println(i);
+    }
+}
+printNumbers(10)
+printNumbers(3)
+void printSquaresOfNumbers(int n) {
+    for(int i=1; i<=n; i++) {
+         System.out.println(i*i);
+    }
+}
