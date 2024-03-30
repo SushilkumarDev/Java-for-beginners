@@ -813,3 +813,28 @@ jshell> for( i =1; i<=10; i++) {
 8 * 10 = 80
 
 jshell> clear()
+
+ 
+jshell> /list sayHelloWorld
+
+  76 : void sayHelloWorld(int noOfTimes) {
+       	for(int i=1; i<=noOfTimes; i++) {
+       		System.out.println("Hello World");
+       	}
+       }
+
+jshell> int i;
+i ==> 0
+
+jshell> for(i=1;i<=10;i++)
+   ...>     System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+5 * 1 = 5
+5 * 2 = 10
+5 * 3 = 15
+5 * 4 = 20
+5 * 5 = 25
+5 * 6 = 30
+5 * 7 = 35
+5 * 8 = 40
+5 * 9 = 45
+5 * 10 = 50
