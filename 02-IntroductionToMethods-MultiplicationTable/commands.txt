@@ -1,0 +1,63 @@
+3 * 4
+$2
+$2 * 3
+clear()
+for( i =1; i<=10; i++) {
+System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+clear()
+for( i =1; i<=10; i++) {
+    System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+clear()
+for( i =1; i<=10; i++) {
+    System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+clear()
+void clear() { 
+  System.out.print("\033[H\033[2J ");
+}
+class Test {
+	void printOutput() {
+		System.out.println("Text");
+	}
+}
+new Test().printOutput()
+System.out.println(i)
+printMultipleTimes(2, "You are awesome");
+ireturn()
+for( i =1; i<=10; i++) {
+   System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+int table = 7;
+for( i =1; i<=10; i++) {
+System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+table = 8
+for( i =1; i<=10; i++) {
+System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+System.out.println("Hello World")
+System.out.println("Hello World")
+System.out.println("Hello World")
+System.out.println("Hello World");
+ System.out.println("Hello World");
+clear()
+System.out.println("Hello World");
+ System.out.println("Hello World");
+sayHelloWorldTwice()
+sayHelloWorldTwice()
+void sayHelloWorldThrice(){
+ System.out.println("Hello World");
+ System.out.println("Hello World");
+ System.out.println("Hello World");
+}
+sayHelloWorldThrice()
+printLearningExperience()
+printLearningExperience()
+void NameOfMethod(){
+}
+void nameOfMethod(){
+}
+clear()
+clear()
