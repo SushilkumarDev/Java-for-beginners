@@ -104,3 +104,59 @@ void printSquaresOfNumbers(int n) {
          System.out.println(i*i);
     }
 }
+printSquaresOfNumbers(5)
+printSquaresOfNumbers(3)
+clear()
+sayHelloWorld(4)
+clear()
+for( i =1; i<=10; i++) {
+	System.out.printf("%d * %d = %d", table, i, table*i).println();
+}
+clear()
+int i;
+for(i=1;i<=10;i++)
+    System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+for(i=1;i<=10;i++) {
+    System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+}
+void printMultiplicationTable() {
+	for(int i=1;i<=10;i++) {
+		System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+	}
+}
+printMultiplicationTable()
+
+void printMultiplicationTable(int table) {
+	for(int i=1;i<=10;i++) {
+		System.out.printf("%d * %d = %d", table, i, table * i).println();
+	}
+}
+
+printMultiplicationTable(6)
+printMultiplicationTable(7)
+printMultiplicationTable()
+printMultiplicationTable(6)
+clear()
+Math.max(1,2)
+void sum(int firstNumber,int secondNumber) {
+     int sum = firstNumber + secondNumber;
+     System.out.println(sum);
+}
+sum(5, 10)
+void sum(int firstNumber,int secondNumber, int thirdNumber) {
+     int sum = firstNumber + secondNumber + thirdNumber;
+     System.out.println(sum);
+}
+sum(5, 10, 15)
+clear()
+Math.max(4,5)
+$110
+int max = Math.max(15, 25);
+max
+sum(1, 10)
+int sumOfTwoNumbers(int firstNumber, int secondNumber) {
+    int sum = firstNumber + secondNumber;
+    return sum;
+}
+sumOfTwoNumbers(1,1)
+clear()
