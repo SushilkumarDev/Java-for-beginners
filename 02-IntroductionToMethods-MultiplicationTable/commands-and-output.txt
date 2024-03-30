@@ -1017,3 +1017,54 @@ jshell> sum(5, 10, 15)
 30
 
 jshell> clear()
+
+
+jshell> Math.max(4,5)
+$110 ==> 5
+
+jshell> $110
+$110 ==> 5
+
+jshell> int max = Math.max(15, 25)
+max ==> 25
+
+jshell> max
+max ==> 25
+
+jshell> sum(1, 10)
+11
+
+jshell> /list sum
+
+ 105 : void sum(int firstNumber,int secondNumber) {
+            int sum = firstNumber + secondNumber;
+            System.out.println(sum);
+       }
+ 107 : void sum(int firstNumber,int secondNumber, int thirdNumber) {
+            int sum = firstNumber + secondNumber + thirdNumber;
+            System.out.println(sum);
+       }
+ 115 : list sum;
+
+jshell> int sum = sum(1,10)
+|  Error:
+|  incompatible types: void cannot be converted to int
+|  int sum = sum(1,10);
+|            ^-------^
+
+jshell> int sumOfTwoNumbers(int firstNumber, int secondNumber) {
+   ...>     int sum = firstNumber + secondNumber;
+   ...>     return sum;
+   ...> }
+|  created method sumOfTwoNumbers(int,int)
+
+jshell> sumOfTwoNumbers(1,1)
+$117 ==> 2
+
+jshell> int sum = sumOfTwoNumbers(1,1)
+sum ==> 2
+
+jshell> int sum = sumOfTwoNumbers(15,15)
+sum ==> 30
+
+jshell> clear()
