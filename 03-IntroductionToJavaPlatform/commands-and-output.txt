@@ -1,0 +1,41 @@
+jshell> System.out.println("I love JShell");
+I love JShell
+
+jshell> class Country {
+   ...> }
+|  created class Country
+
+jshell> Country india = new Country()
+india ==> Country@6e06451e
+
+jshell> Country usa = new Country()
+usa ==> Country@6e1567f1
+
+jshell> class Planet {
+   ...> }
+|  created class Planet
+
+jshell> Planet planet = new Planet()
+planet ==> Planet@56ef9176
+
+jshell> Planet earth = new Planet()
+earth ==> Planet@1ed4004b
+
+jshell> Planet venus = new Planet()
+venus ==> Planet@25bbe1b6
+
+jshell> void printMultiplicationTable() {
+   ...>     for(int i=1;i<=10;i++) {
+   ...>         System.out.printf("%d * %d = %d", 5, i, 5 * i).println();
+   ...>     }
+   ...> }
+|  created method printMultiplicationTable()
+
+jshell> void printMultiplicationTable(int table) {
+   ...>     for(int i=1;i<=10;i++) {
+   ...>         System.out.printf("%d * %d = %d", table, i, table * i).println();
+   ...>     }
+   ...> }
+|  created method printMultiplicationTable(int)
+
+jshell> clear()
