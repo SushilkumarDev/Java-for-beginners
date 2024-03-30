@@ -1068,3 +1068,91 @@ jshell> int sum = sumOfTwoNumbers(15,15)
 sum ==> 30
 
 jshell> clear()
+
+
+jshell> int sumOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+   ...>       int sum = firstNumber + secondNumber + thirdNumber;
+   ...>       return sum;
+   ...> }
+|  created method sumOfThreeNumbers(int,int,int)
+
+jshell> int sum = sumOfThreeNumbers(2,3,4)
+sum ==> 9
+
+jshell> int calculateThirdAngle(int angle1, int angle2) {
+   ...>        int angle3 = 180 - (angle1 + angle2);
+   ...>        return angle3;
+   ...> }
+|  created method calculateThirdAngle(int,int)
+
+jshell> calculateThirdAngle(20, 50)
+$124 ==> 110
+
+jshell> clear()
+
+
+ 
+jshell> int sumOfNumbers(int n) {
+   ...>    for(int i=1; i<= n; i++) {
+   ...>       
+   ...> }}
+|  Error:
+|  missing return statement
+|  int sumOfNumbers(int n) {
+|                          ^
+
+jshell> int sumOfNumbers(int n) {
+   ...>      int sum = 0;
+   ...> }
+|  Error:
+|  missing return statement
+|  int sumOfNumbers(int n) {
+|                          ^
+
+jshell> REMOVE THE COMPLEX EXERCIOSESE
+|  Error:
+|  ';' expected
+|  REMOVE THE COMPLEX EXERCIOSESE;
+|            ^
+
+jshell> clear()
+
+ 
+jshell> int sumOfThreeNumbers(int firstNumber, int secondNumber, int thirdNumber) {
+   ...>       int sum = firstNumber + secondNumber + thirdNumber;
+   ...>       return sum;
+   ...> }
+|  modified method sumOfThreeNumbers(int,int,int)
+
+jshell> sumOfThreeNumbers(1,2,3)
+$128 ==> 6
+
+jshell> sumOfThreeNumbers(15,2,3)
+$129 ==> 20
+
+jshell> int calculateThirdAngle(int angle1, int angle2) {
+   ...>        int angle3 = 180 - (angle1 + angle2);
+   ...>        return angle3;
+   ...> }
+|  modified method calculateThirdAngle(int,int)
+
+jshell> calculateThirdAngle(20, 20)
+$131 ==> 140
+
+jshell> clear()
+
+ 
+jshell> /list calculateThirdAngle
+
+ 130 : int calculateThirdAngle(int angle1, int angle2) {
+              int angle3 = 180 - (angle1 + angle2);
+              return angle3;
+       }
+
+jshell> calculateThirdAngle(20, 20)
+$133 ==> 140
+
+jshell> /save ~/Desktop/backup-middle-of-section-2-methods.txt
+
+jshell> clear()
+
