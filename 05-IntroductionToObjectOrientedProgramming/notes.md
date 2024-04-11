@@ -87,3 +87,69 @@ Exercises
 	- Clean Code
 
 ```
+\com\in28minutes\program2\Aeroplane.java
+```
+package com.in28minutes.program2;
+
+//Learning : What is state of object? Each object has individual State.
+
+public class Aeroplane {
+
+	int currentSpeed;
+
+	public static void main(String[] args) {
+		Aeroplane aeroplane1 = new Aeroplane();
+		aeroplane1.currentSpeed = 500;
+
+		Aeroplane aeroplane2 = new Aeroplane();
+		aeroplane2.currentSpeed = 0;
+
+		Aeroplane aeroplane3 = new Aeroplane();
+		aeroplane3.currentSpeed = 600;
+
+		aeroplane2.currentSpeed = 300;
+	}
+}
+
+// int currentSpeed
+
+// Exercise 1 -> Create another instance of Aeroplane.
+// Exercise 2 -> Change the speed of aeroplane3 to 1000?
+- Create a new attribute name for a  Book and create three instances with right names.
+// Debug and see the values
+// We are breaking a few good programming principles!!!
+
+```
+\com\in28minutes\program3\Bike.java
+```
+package com.in28minutes.program3;
+
+//Learning : What is state of object? Each object has individual State.
+//Learning : We use methods to change state of object. Behavior.
+public class Bike {
+	int currentSpeed;
+
+	void increaseSpeed() {
+		currentSpeed = currentSpeed + 10;
+	}
+
+	public static void main(String[] args) {
+		Bike bike1 = new Bike();
+		bike1.currentSpeed = 500;
+
+		Bike bike2 = new Bike();
+		bike2.currentSpeed = 600;
+
+		bike1.increaseSpeed();
+
+		bike2.increaseSpeed();
+	}
+}
+
+// Focus on Assignment Operator
+// What is void?
+// Debug and see the values
+// We are breaking a few good programming principles!!!
+// Exercise 1 -> Create a new method in bike to decrease speed.
+// We are going a little slow
+```
