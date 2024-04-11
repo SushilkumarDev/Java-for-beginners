@@ -34,3 +34,56 @@
     SecurityCheck
       execute()
     
+# Aim
+Build a Motor Bike class with capabilities to adjust speed and gears.  We would want to create two objects honda and ducati and play with them. 
+- Understand concepts of Class, Object, State, Behavior
+
+Person is a class. Mahatma Gandhi and Nelson Madela are instances of a Class - objects.
+
+- Concepts
+  - Object Oriented Program is a bunch of objects sending messages to each other.
+  - Important Concepts are Object, Class, State (How do we represent state?) and Behavior
+  - Object
+    - Has a Type or Class
+    - Made up of other objects
+    - Has an interface
+      - Defines what messages it can receive 
+
+> Instead of Bike, directly create MotorBike.
+
+> Create seperate Runner classes where possible.
+
+\com\in28minutes\program1\Planet.java
+```
+package com.in28minutes.program1;
+
+//Question Answered : What is Class? What is Object?
+
+public class Planet 
+{
+	// name
+	// distance from sun
+
+	public static void main(String[] args) {
+		Planet earth = new Planet();
+		Planet mars = new Planet();
+		Planet venus = new Planet();
+	}
+}
+
+public class MotorBike {
+
+}
+
+MotorBike ducati = new MotorBike();
+MotorBike honda = new MotorBike();
+
+Exercises 
+- Create another instance of Planet.
+- Create another instance of MotorBike.
+- Create a new class called Book and create three instances
+	- Art Of Computer Programming
+	- Effective Java
+	- Clean Code
+
+```
