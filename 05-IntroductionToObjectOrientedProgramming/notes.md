@@ -256,3 +256,45 @@ public class MotorBike {
 // Exercise 1 -> Create a constructor with both current speed and current gear!
 // Exercise 2 -> Enhance earlier examples with constructors and use them!
 ```
+\com\in28minutes\program6\MotorBike.java
+```
+package com.in28minutes.program6;
+
+public class MotorBike {
+	int currentSpeed;
+	int currentGear;
+
+	public MotorBike(int currentSpeed) {
+		this.currentSpeed = currentSpeed;
+	}
+
+	void increaseSpeed() {
+		currentSpeed = currentSpeed + 10;
+	}
+
+	void decreaseSpeed() {
+		currentSpeed = currentSpeed - 10;
+	}
+
+	void nextGear() {
+		currentGear = currentGear + 1;
+	}
+
+	void prevGear() {
+		currentGear = currentGear - 1;
+	}
+
+	@Override
+	public String toString() {
+		return "MotorBike [currentSpeed=" + currentSpeed + ", currentGear=" + currentGear + "]";
+	}
+
+	public static void main(String[] args) {
+		MotorBike ducati = new MotorBike(500);
+		MotorBike honda = new MotorBike(600);
+		ducati.increaseSpeed();
+		honda.increaseSpeed();
+		ducati.currentSpeed = ducati.currentSpeed + 10;
+	}
+}
+```
