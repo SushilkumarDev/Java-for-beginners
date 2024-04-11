@@ -298,3 +298,25 @@ public class MotorBike {
 	}
 }
 ```
+- Make int private
+//Introduce If Condition
+- Minimum Speed
+- Maximum Speed
+- Maximum Gear
+- Minimum Gear
+- Parameterize Constructor with maximum speed, minimum speed, maximum gear, minimum gear
+
+Revise all important concepts
+- Object
+- Class
+- State
+- Behavior
+- Encapsulation
+- Constructors
+
+Puzzles
+
+- Primitives vs Reference Variables
+   - comparison
+   - initialization
+   - null
