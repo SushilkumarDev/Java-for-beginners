@@ -84,3 +84,95 @@ Exercise
    System.out.println(numbers.getNumber1());
    System.out.println(numbers.getNumber2());
 ```
+## Floating Point Data Types
+
+- To declare a float, append f. Example: float f = 123.456f;
+- Floating point literals are double by default.
+- Appending d or D at end of double literal is optional Example: ```double d = 123.456D;```
+- Same operators as Integer Data Types
+- Conversion from double to float 
+- Conversion from integer data types
+- Floating Points are not accurate
+  - BigDecimal
+    - How to explore a class in JShell?
+
+```java
+float f = 100; //Implicit Casting 
+//float avg = 36.01;//COMPILER ERROR. Default Double
+float avg = (float) 36.01;//Explicit Casting
+float avg1 = 36.01f;
+float avg2 = 36.01F; //f or F is fine
+
+```
+
+Exercise
+
+Simple Interest Formula 
+
+Total Amount = principal + principal * interest * noOfYears;
+
+```java
+ SimpleInterestCalculator calculator = 
+        new SimpleInterestCalculator("4500.00", "7.5");
+ BigDecimal totalValue = 
+        calculator.calculateTotalValue(5);// 5 years
+ System.out.println(totalSum);
+```
+
+## Boolean Data Types
+- Valid boolean values are true and false. 
+- TRUE, FALSE or True, False are invalid.
+- Operators
+
+
+```java
+boolean b = true; boolean b=false;
+boolean b = TRUE;//COMPILATION ERROR
+boolean b = 0; //COMPILER ERROR. This is not C Language
+
+//Relational Operators
+int number = 7;
+System.out.println(number > 5);//true
+System.out.println(number > 7);//false
+System.out.println(number >= 7);//true
+System.out.println(number < 9);//true
+System.out.println(number < 7);//false
+System.out.println(number <= 7);//true
+System.out.println(number == 7);//true
+System.out.println(number == 9);//false
+System.out.println(number != 9);//true
+System.out.println(number != 7);//false
+System.out.println(number = 7);//7 Be Cautious
+
+//Short Circult Operator
+System.out.println(true || true);//true
+System.out.println(true || false);//true
+System.out.println(false || true);//true
+System.out.println(false || false);//false
+
+//System.out.println(5 || 6);//COMPILER ERROR
+
+//Short circuit operators are Lazy 
+int i = 10;
+System.out.println(true || ++i==11);//true
+System.out.println(false && ++i==11);//false
+System.out.println(i);//i remains 10, as ++i expressions are not executed.
+
+//Operator & and |
+int j = 10;
+System.out.println(true | ++j==11);//true
+System.out.println(false & ++j==12);//false
+System.out.println(j);//j becomes 12, as both ++j expressions are executed
+
+//Operator exclusive-OR (^)
+System.out.println(true ^ false);//true
+System.out.println(false ^ true);//true
+System.out.println(true ^ true);//false
+System.out.println(false ^ false);//false
+
+//Not Operator (!)
+System.out.println(!false);//true
+System.out.println(!true);//false
+
+
+```
