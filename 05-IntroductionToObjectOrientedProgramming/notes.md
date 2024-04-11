@@ -153,3 +153,52 @@ public class Bike {
 // Exercise 1 -> Create a new method in bike to decrease speed.
 // We are going a little slow
 ```
+\com\in28minutes\program4\MotorBike.java
+```
+package com.in28minutes.program4;
+
+//Learning : Creating this class from scratch. From Zero
+//Learning : Creating more methods and more variables 
+//Learning : Print current state of an object
+public class MotorBike {
+	int currentSpeed;
+	int currentGear;
+
+	void increaseSpeed() {
+		currentSpeed = currentSpeed + 10;
+	}
+
+	void decreaseSpeed() {
+		currentSpeed = currentSpeed - 10;
+	}
+
+	void nextGear() {
+		currentGear = currentGear + 1;
+	}
+
+	@Override
+	public String toString() {
+		return "MotorBike [currentSpeed=" + currentSpeed + ", currentGear=" + currentGear + "]";
+	}
+
+	public static void main(String[] args) {
+		MotorBike ducati = new MotorBike();
+		ducati.currentSpeed = 500;
+
+		MotorBike honda = new MotorBike();
+		honda.currentSpeed = 600;
+
+		ducati.increaseSpeed();
+		honda.increaseSpeed();
+		ducati.nextGear();
+		System.out.println(ducati);
+	}
+
+}
+
+// Debug and see the values
+// We are breaking a few good programming principles!!!
+// State of an object should be changed only by a method on the object
+// We do not have limits on Speed or Gears!!! We will get there soon!
+// Exercise 1 -> Create the prevGear method
+```
