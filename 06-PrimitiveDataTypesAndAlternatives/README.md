@@ -176,3 +176,29 @@ System.out.println(!true);//false
 
 
 ```
+## Character Data Type
+- Defining Character Literals
+  - Unicode Representation also can be used. Prefix with \u. Example: char letterA = '\u0041';
+  - A number value can also be assigned to character. Example: char letterB = 66; Numeric value can be from 0 to 65535;
+  - Escape code can be used to represent a character that cannot be typed as literal. Example: char newLine = '\n';
+- How are characters stored? 
+  - Unicode
+  - Same as integer types
+- Same operators as Integer Data Types
+
+```java
+char ch = a;
+char a = 97;
+char ch1 = 66000; //COMPILER ERROR!
+```
+
+
+```
+MyChar myChar = new MyChar('c');
+System.out.println(myChar.isVowel());
+        //'a', 'e', 'i', 'o', 'u' and Capitals
+System.out.println(myChar.isDigit());
+System.out.println(myChar.isAlphabet());
+MyChar.printLowerCaseAlphabets();
+MyChar.printUpperCaseAlphabets();
+```
