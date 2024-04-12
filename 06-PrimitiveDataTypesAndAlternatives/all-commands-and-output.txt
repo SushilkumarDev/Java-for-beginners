@@ -173,3 +173,27 @@ i ==> 11
 
 jshell> int i = 10;
 i ==> 10
+
+jshell> int j = i--;
+j ==> 10
+
+jshell> i
+i ==> 9
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = --i;
+j ==> 9
+
+jshell> i
+i ==> 9
+
+jshell> clear()
+
+ 
+jshell> 34.5
+$51 ==> 34.5
+
+jshell> 34.56789
+$52 ==> 34.56789
