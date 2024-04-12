@@ -68,3 +68,15 @@ number.divide(new BigDecimal("100"))
 clear()
 clear()
 clear()
+boolean isValue = false;
+i > 7
+i >= 7
+i < 7
+i <= 7
+i == 6
+i == 7
+i == 8
+i = 8
+i = 7
+i == 7
+clear()
