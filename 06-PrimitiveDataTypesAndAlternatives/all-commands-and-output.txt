@@ -245,4 +245,72 @@ f ==> 34.0
 
 jshell> clear()
 
- 
+ jshell> 34.56789876 + 34.2234
+$63 ==> 68.79129875999999
+
+jshell> BigDecimal number1 = new BigDecimal("34.56789876");
+number1 ==> 34.56789876
+
+jshell> BigDecimal number2 = new BigDecimal("34.2234");
+number2 ==> 34.2234
+
+jshell> number1.add(number2);
+$66 ==> 68.79129876
+
+jshell> BigDecimal number3 = number1.add(number2);
+number3 ==> 68.79129876
+
+jshell> number1
+number1 ==> 34.56789876
+
+jshell> number1.
+abs(                     add(                     byteValue()              
+byteValueExact()         compareTo(               divide(                  
+divideAndRemainder(      divideToIntegralValue(   doubleValue()            
+equals(                  floatValue()             getClass()               
+hashCode()               intValue()               intValueExact()          
+longValue()              longValueExact()         max(                     
+min(                     movePointLeft(           movePointRight(          
+multiply(                negate(                  notify()                 
+notifyAll()              plus(                    pow(                     
+precision()              remainder(               round(                   
+scale()                  scaleByPowerOfTen(       setScale(                
+shortValue()             shortValueExact()        signum()                 
+sqrt(                    stripTrailingZeros()     subtract(                
+toBigInteger()           toBigIntegerExact()      toEngineeringString()    
+toPlainString()          toString()               ulp()                    
+unscaledValue()          wait(                    
+
+jshell> BigDecimal number1 = new BigDecimal("34.56789876");
+number1 ==> 34.56789876
+
+jshell> BigDecimal number2 = new BigDecimal("34.2234");
+number2 ==> 34.2234
+
+jshell> BigDecimal number10 = new BigDecimal(34.2234);
+number10 ==> 34.223399999999998044586391188204288482666015625
+
+jshell> BigDecimal number11 = new BigDecimal(34.56789876);
+number11 ==> 34.56789875999999850364474696107208728790283203125
+
+jshell> BigDecimal number11 = new BigDecimal("34.56789876");
+number11 ==> 34.56789876
+
+jshell> BigDecimal number11 = new BigDecimal("34.56789876");
+number11 ==> 34.56789876
+
+jshell> number10 + number11
+|  Error:
+|  bad operand types for binary operator '+'
+|    first type:  java.math.BigDecimal
+|    second type: java.math.BigDecimal
+|  number10 + number11
+|  ^-----------------^
+
+jshell> number10.add(number11)
+$76 ==> 68.791298759999998044586391188204288482666015625
+
+jshell> number10.multiply(number11)
+$77 ==> 1183.03102642298393240546033666760195046663284301757812500
+
+jshell> clear()
