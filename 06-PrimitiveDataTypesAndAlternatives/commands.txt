@@ -143,3 +143,13 @@ System.out.println(ch);
 (int)'z'
 (int)'A'
 (int)'Z'
+		for (char ch = 'A'; ch <= 'Z'; ch++) {
+			System.out.println(ch);
+
+}
+		for (char ch = 'A'; ch <= 'Z'; ch++) {
+			System.out.println(ch);
+}
+		for (char ch = 'A'; ch <= 'C'; ch++) {
+			System.out.println(ch);
+}
