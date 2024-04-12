@@ -121,3 +121,25 @@ i
 i++;
 i++;
 clear()
+char ch2 = '\u0022';
+char ch3 = '\u00A2';
+ch++
+ch
+++ch
+++ch
+ch + 5
+ch
+(int)ch
+ch
+System.out.println(ch);
+char ch = '\t';
+System.out.println(ch);
+System.out.println(ch);
+(int)'1'
+(int)'0'
+(int)'9'
+(int)'2'
+(int)'a'
+(int)'z'
+(int)'A'
+(int)'Z'
