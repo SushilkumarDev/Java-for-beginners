@@ -90,3 +90,18 @@ jshell> void clear() { System.out.print("\033[H\033[2J ");}
 |  created method clear()
 
 jshell> clear()
+
+jshell> int eight = 010;
+eight ==> 8
+
+jshell> int sixteen = 0x10;
+sixteen ==> 16
+
+jshell> int fifteen = 0XF;
+fifteen ==> 15
+
+jshell> int eight = 099;
+|  Error:
+|  integer number too large: 099
+|  int eight = 099;
+|              ^
