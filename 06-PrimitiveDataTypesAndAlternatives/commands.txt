@@ -28,3 +28,28 @@ Short.MAX_VALUE
 short s = (short) i;
 int i1 = s;
 clear()
+i
+i
+i
+i
+clear()
+34.5
+34.56789
+double dbl = 34.5678;
+float f2 = (float)dbl;
+dbl++
+dbl--
+dbl % 5
+float f = i;
+clear()
+34.56789876 + 34.2234
+number1.add(number2);
+number1
+BigDecimal number3 = number1.add(number2);
+number1
+BigDecimal number1 = new BigDecimal("34.56789876");
+BigDecimal number10 = new BigDecimal(34.2234);
+BigDecimal number11 = new BigDecimal("34.56789876");
+number10.add(number11)
+number10.multiply(number11)
+clear()
