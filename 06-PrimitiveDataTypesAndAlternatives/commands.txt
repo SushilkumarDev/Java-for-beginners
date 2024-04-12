@@ -104,3 +104,20 @@ true ^ false
 true ^ true
 !true
 !false
+int x = 6;
+!(x>7)
+!(x>7)
+clear()
+true || ++i==11
+i
+int i = 10;
+int j = 15;
+j > 15 && i++ > 5
+j
+i
+j > 15 & i++ > 5
+j
+i
+i++;
+i++;
+clear()
