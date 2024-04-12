@@ -31,3 +31,22 @@ $8 ==> 2147483647
 
 jshell> Short.MAX_VALUE
 $9 ==> 32767
+
+jshell> int i = 560;
+i ==> 560
+
+jshell> long l = 540
+l ==> 540
+
+jshell> 
+
+jshell> 
+
+jshell> Byte.SIZE
+$12 ==> 8
+
+jshell> Byte.MIN_VALUE
+$13 ==> -128
+
+jshell> Byte.MAX_VALUE
+$14 ==> 127
