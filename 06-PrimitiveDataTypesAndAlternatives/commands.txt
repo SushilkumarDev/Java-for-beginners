@@ -80,3 +80,27 @@ i = 8
 i = 7
 i == 7
 clear()
+i > 15
+clear()
+i >= 15
+i <= 25
+i >= 15 && i <= 25
+i = 30
+i >= 15 && i <= 25
+i = 5
+i >= 15 && i <= 25
+true && true
+true && false
+false && true
+false && false
+false || true
+false || true
+true || false
+true || true
+false || false
+false ^ false
+false ^ true
+true ^ false
+true ^ true
+!true
+!false
