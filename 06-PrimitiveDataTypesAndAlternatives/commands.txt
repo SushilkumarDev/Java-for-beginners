@@ -1,0 +1,30 @@
+Byte.SIZE
+Byte.BYTES
+Byte.MAX_VALUE
+Byte.MIN_VALUE
+Short.BYTES
+Integer.BYTES
+Long.BYTES
+Integer.MAX_VALUE
+Short.MAX_VALUE
+Byte.SIZE
+Byte.MIN_VALUE
+Byte.MAX_VALUE
+Short.BYTES
+Integer.BYTES
+Long.BYTES
+Integer.MAX_VALUE
+byte c = 13;
+long l = 50000000000l;
+i = (int) l
+l = i
+void clear() { System.out.print("\033[H\033[2J ");}
+clear()
+int eight = 010;
+int sixteen = 0x10;
+int fifteen = 0XF;
+int big = 0XBBAACC;
+Short.MAX_VALUE
+short s = (short) i;
+int i1 = s;
+clear()
