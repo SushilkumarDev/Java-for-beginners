@@ -222,3 +222,27 @@ jshell> float f2 = dbl
 jshell> float f2 = (float)dbl
 f2 ==> 34.5678
 
+jshell> dbl++
+$57 ==> 34.5678
+
+jshell> dbl--
+$58 ==> 35.5678
+
+jshell> dbl % 5
+$59 ==> 4.567799999999998
+
+jshell> int i = f2
+|  Error:
+|  incompatible types: possible lossy conversion from float to int
+|  int i = f2;
+|          ^^
+
+jshell> int i = (int) f2
+i ==> 34
+
+jshell> float f = i;
+f ==> 34.0
+
+jshell> clear()
+
+ 
