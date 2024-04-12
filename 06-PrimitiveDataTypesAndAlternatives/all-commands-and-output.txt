@@ -71,3 +71,22 @@ jshell> long l = 50000000000;
 |  integer number too large: 50000000000
 |  long l = 50000000000;
 |           ^
+shell> long l = 50000000000l;
+l ==> 50000000000
+
+jshell> i = l
+|  Error:
+|  incompatible types: possible lossy conversion from long to int
+|  i = l
+|      ^
+
+jshell> i = (int) l
+i ==> -1539607552
+
+jshell> l = i
+l ==> -1539607552
+
+jshell> void clear() { System.out.print("\033[H\033[2J ");}
+|  created method clear()
+
+jshell> clear()
