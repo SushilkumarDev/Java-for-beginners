@@ -197,3 +197,28 @@ $51 ==> 34.5
 
 jshell> 34.56789
 $52 ==> 34.56789
+
+jshell> float f = 34.5
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float f = 34.5;
+|            ^--^
+
+jshell> float f = 34.5f
+f ==> 34.5
+
+jshell> float f = 34.5F
+f ==> 34.5
+
+jshell> double dbl = 34.5678
+dbl ==> 34.5678
+
+jshell> float f2 = dbl
+|  Error:
+|  incompatible types: possible lossy conversion from double to float
+|  float f2 = dbl;
+|             ^-^
+
+jshell> float f2 = (float)dbl
+f2 ==> 34.5678
+
