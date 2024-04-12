@@ -105,3 +105,30 @@ jshell> int eight = 099;
 |  integer number too large: 099
 |  int eight = 099;
 |              ^
+
+jshell> int eight = 08;
+|  Error:
+|  integer number too large: 08
+|  int eight = 08;
+|              ^
+
+jshell> int big = 0XBBAACC;
+big ==> 12298956
+
+jshell> byte b = 128
+|  Error:
+|  incompatible types: possible lossy conversion from int to byte
+|  byte b = 128;
+|           ^-^
+
+jshell> short s = 123456
+|  Error:
+|  incompatible types: possible lossy conversion from int to short
+|  short s = 123456;
+|            ^----^
+
+jshell> Short.MAX_VALUE
+$33 ==> 32767
+
+jshell> int i = 3456
+i ==> 3456
