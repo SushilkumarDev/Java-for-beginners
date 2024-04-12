@@ -50,3 +50,24 @@ $13 ==> -128
 
 jshell> Byte.MAX_VALUE
 $14 ==> 127
+
+jshell> Short.BYTES
+$15 ==> 2
+
+jshell> Integer.BYTES
+$16 ==> 4
+
+jshell> Long.BYTES
+$17 ==> 8
+
+jshell> Integer.MAX_VALUE
+$18 ==> 2147483647
+
+jshell> int i = 100000;
+i ==> 100000
+
+jshell> long l = 50000000000;
+|  Error:
+|  integer number too large: 50000000000
+|  long l = 50000000000;
+|           ^
