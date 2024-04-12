@@ -314,3 +314,61 @@ jshell> number10.multiply(number11)
 $77 ==> 1183.03102642298393240546033666760195046663284301757812500
 
 jshell> clear()
+
+jshell> BigDecimal number = new BigDecimal("11.5");
+number ==> 11.5
+
+jshell> BigDecimal number2 = new BigDecimal("23.45678");
+number2 ==> 23.45678
+
+jshell> number.add(number2)
+$81 ==> 34.95678
+
+jshell> int i = 5
+i ==> 5
+
+jshell> number.add(i)
+|  Error:
+|  incompatible types: int cannot be converted to java.math.BigDecimal
+|  number.add(i)
+|             ^
+
+jshell> number.add(new BigDecimal(i))
+$83 ==> 16.5
+
+jshell> number.multiply(new BigDecimal(i))
+$84 ==> 57.5
+
+jshell> number.divide(100)
+|  Error:
+|  incompatible types: int cannot be converted to java.math.BigDecimal
+|  number.divide(100)
+|                ^-^
+
+jshell> number.divide(new BigDecimal(100))
+$85 ==> 0.115
+
+jshell> number.divide(new BigDecimal("100.012"))
+|  java.lang.ArithmeticException thrown: Non-terminating decimal expansion; no exact representable decimal result.
+|        at BigDecimal.divide (BigDecimal.java:1716)
+|        at (#87:1)
+
+jshell> number.divide(new BigDecimal("100.12"))
+|  java.lang.ArithmeticException thrown: Non-terminating decimal expansion; no exact representable decimal result.
+|        at BigDecimal.divide (BigDecimal.java:1716)
+|        at (#88:1)
+
+jshell> number.divide(new BigDecimal("100.1"))
+|  java.lang.ArithmeticException thrown: Non-terminating decimal expansion; no exact representable decimal result.
+|        at BigDecimal.divide (BigDecimal.java:1716)
+|        at (#89:1)
+
+jshell> number.divide(new BigDecimal("1001"))
+|  java.lang.ArithmeticException thrown: Non-terminating decimal expansion; no exact representable decimal result.
+|        at BigDecimal.divide (BigDecimal.java:1716)
+|        at (#90:1)
+
+jshell> number.divide(new BigDecimal("100"))
+$91 ==> 0.115
+
+jshell> clear()
