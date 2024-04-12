@@ -1,0 +1,9 @@
+Last login: Fri Apr 12 11:22:26 on ttys001
+Kali Linux:~ Kali$ Byte.SIZE
+-bash: Byte.SIZE: command not found
+Kali Linux:~ Kali$ jshell
+|  Welcome to JShell -- Version 9.0.1
+|  For an introduction type: /help intro
+
+jshell> Byte.SIZE
+$1 ==> 8
