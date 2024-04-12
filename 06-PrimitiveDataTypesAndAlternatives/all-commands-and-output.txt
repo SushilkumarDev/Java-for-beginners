@@ -132,3 +132,23 @@ $33 ==> 32767
 
 jshell> int i = 3456
 i ==> 3456
+
+jshell> short s = i
+|  Error:
+|  incompatible types: possible lossy conversion from int to short
+|  short s = i;
+|            ^
+
+jshell> short s = (int) i
+|  Error:
+|  incompatible types: possible lossy conversion from int to short
+|  short s = (int) i;
+|            ^-----^
+
+jshell> short s = (short) i
+s ==> 3456
+
+jshell> int i1 = s
+i1 ==> 3456
+
+jshell> clear()
