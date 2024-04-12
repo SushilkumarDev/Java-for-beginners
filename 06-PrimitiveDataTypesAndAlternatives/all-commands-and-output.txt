@@ -152,3 +152,24 @@ jshell> int i1 = s
 i1 ==> 3456
 
 jshell> clear()
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = i++;
+j ==> 10
+
+jshell> i
+i ==> 11
+
+jshell> int i = 10;
+i ==> 10
+
+jshell> int j = ++i;
+j ==> 11
+
+jshell> i
+i ==> 11
+
+jshell> int i = 10;
+i ==> 10
