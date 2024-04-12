@@ -53,3 +53,18 @@ BigDecimal number11 = new BigDecimal("34.56789876");
 number10.add(number11)
 number10.multiply(number11)
 clear()
+igDecimal number = new BigDecimal("11.5");
+BigDecimal number2 = new BigDecimal("23.45678");
+number.add(number2)
+number.add(new BigDecimal(i))
+number.multiply(new BigDecimal(i))
+number.divide(new BigDecimal(100))
+number.divide(new BigDecimal("100.01234"))
+number.divide(new BigDecimal("100.012"))
+number.divide(new BigDecimal("100.12"))
+number.divide(new BigDecimal("100.1"))
+number.divide(new BigDecimal("1001"))
+number.divide(new BigDecimal("100"))
+clear()
+clear()
+clear()
