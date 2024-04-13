@@ -453,3 +453,20 @@ Thrown Exceptions:
 NumberFormatException - if in is not a valid representation of a BigDecimal .
 
 <press tab to see next documentation>
+
+jshell> new BigDecimal(
+BigDecimal(char[] in, MathContext mc)
+Translates a character array representation of a BigDecimal into a BigDecimal ,
+accepting the same sequence of characters as the #BigDecimal(String) constructor and
+with rounding according to the context settings.
+
+Parameters:
+in - char array that is the source of characters.
+mc - the context to use.
+
+Thrown Exceptions:
+ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY
+                      .
+NumberFormatException - if in is not a valid representation of a BigDecimal .
+
+<press tab to see next documentation>
