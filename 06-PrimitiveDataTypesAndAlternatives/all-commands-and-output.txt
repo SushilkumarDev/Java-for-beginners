@@ -669,3 +669,35 @@ jshell> !(x>7)
 $138 ==> true
 
 jshell> clear()
+
+jshell> int i = 10
+i ==> 10
+
+jshell> int j = 15
+j ==> 15
+
+jshell> j > 15 && i++ > 5
+$145 ==> false
+
+jshell> j
+j ==> 15
+
+jshell> i
+i ==> 10
+
+jshell> j > 15 & i++ > 5
+$148 ==> false
+
+jshell> j
+j ==> 15
+
+jshell> i
+i ==> 11
+
+jshell> i++;
+$151 ==> 11
+
+jshell> i++;
+$152 ==> 12
+
+jshell> clear()
