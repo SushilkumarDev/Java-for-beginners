@@ -440,3 +440,16 @@ NumberFormatException - if in is not a valid representation of a BigDecimal or t
                         defined subarray is not wholly within in .
 
 <press tab to see next documentation>
+
+jshell> new BigDecimal(
+BigDecimal(char[] in)
+Translates a character array representation of a BigDecimal into a BigDecimal ,
+accepting the same sequence of characters as the #BigDecimal(String) constructor.
+
+Parameters:
+in - char array that is the source of characters.
+
+Thrown Exceptions:
+NumberFormatException - if in is not a valid representation of a BigDecimal .
+
+<press tab to see next documentation>
