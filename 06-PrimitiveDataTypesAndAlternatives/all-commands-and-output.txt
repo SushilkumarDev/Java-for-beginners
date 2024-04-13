@@ -701,3 +701,46 @@ jshell> i++;
 $152 ==> 12
 
 jshell> clear()
+
+jshell> char ch = a
+|  Error:
+|  cannot find symbol
+|    symbol:   variable a
+|  char ch = a;
+|            ^
+
+jshell> char ch = 'a'
+ch ==> 'a'
+
+jshell> char ch = 'ab'
+|  Error:
+|  unclosed character literal
+|  char ch = 'ab'
+|            ^
+
+jshell> char ch = 'a'
+ch ==> 'a'
+
+jshell> char ch2 = '\u0022'
+ch2 ==> '"'
+
+jshell> char ch3 = '\u00A2'
+ch3 ==> '¢'
+
+jshell> char ch = 65
+ch ==> 'A'
+
+jshell> ch++
+$159 ==> 'A'
+
+jshell> ch
+ch ==> 'B'
+
+jshell> ++ch
+$161 ==> 'C'
+
+jshell> ++ch
+$162 ==> 'D'
+
+jshell> ch + 5
+$163 ==> 73
