@@ -401,3 +401,21 @@ BigDecimal(long val)
 BigDecimal(long val, MathContext mc)
 
 <press tab again to see documentation>
+
+
+jshell> new BigDecimal(
+BigDecimal(char[] in, int offset, int len)
+Translates a character array representation of a BigDecimal into a BigDecimal ,
+accepting the same sequence of characters as the #BigDecimal(String) constructor,
+while allowing a sub-array to be specified.
+
+Parameters:
+in - char array that is the source of characters.
+offset - first character in the array to inspect.
+len - number of characters to consider.
+
+Thrown Exceptions:
+NumberFormatException - if in is not a valid representation of a BigDecimal or the
+                        defined subarray is not wholly within in .
+
+<press tab to see next documentation>
