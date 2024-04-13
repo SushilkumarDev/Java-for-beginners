@@ -587,3 +587,70 @@ jshell> i > 15
 $111 ==> false
 
 jshell> clear()
+
+ 
+jshell> int i = 17
+i ==> 17
+
+jshell> i >= 15
+$114 ==> true
+
+jshell> i <= 25
+$115 ==> true
+
+jshell> i >= 15 && i <= 25
+$116 ==> true
+
+jshell> i = 30
+i ==> 30
+
+jshell> i >= 15 && i <= 25
+$118 ==> false
+
+jshell> i = 5
+i ==> 5
+
+jshell> i >= 15 && i <= 25
+$120 ==> false
+
+jshell> true && true
+$121 ==> true
+
+jshell> true && false
+$122 ==> false
+
+jshell> false && true
+$123 ==> false
+
+jshell> false && false
+$124 ==> false
+
+jshell> false || true
+$126 ==> true
+
+jshell> true || false
+$127 ==> true
+
+jshell> true || true
+$128 ==> true
+
+jshell> false || false
+$129 ==> false
+
+jshell> false ^ false
+$130 ==> false
+
+jshell> false ^ true
+$131 ==> true
+
+jshell> true ^ false
+$132 ==> true
+
+jshell> true ^ true
+$133 ==> false
+
+jshell> !true
+$134 ==> false
+
+jshell> !false
+$135 ==> true
