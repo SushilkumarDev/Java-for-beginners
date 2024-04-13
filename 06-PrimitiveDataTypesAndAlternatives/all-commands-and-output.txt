@@ -579,3 +579,11 @@ jshell> i == 7
 $108 ==> true
 
 jshell> clear()
+
+jshell> int i = 10
+i ==> 10
+
+jshell> i > 15
+$111 ==> false
+
+jshell> clear()
