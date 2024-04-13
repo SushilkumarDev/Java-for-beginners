@@ -520,3 +520,62 @@ toPlainString()          toString()               ulp()
 unscaledValue()          wait(                    
 
 jshell> clear()
+
+
+jshell> boolean isValue = true
+isValue ==> true
+
+jshell> boolean isValue = false
+isValue ==> false
+
+jshell> boolean isValid = false
+isValid ==> false
+
+jshell> boolean isValid = False
+|  Error:
+|  cannot find symbol
+|    symbol:   variable False
+|  boolean isValid = False;
+|                    ^---^
+
+jshell> boolean isValid = FALSE
+|  Error:
+|  cannot find symbol
+|    symbol:   variable FALSE
+|  boolean isValid = FALSE;
+|                    ^---^
+
+jshell> int i = 7;
+i ==> 7
+
+jshell> i > 7
+$99 ==> false
+
+jshell> i >= 7
+$100 ==> true
+
+jshell> i < 7
+$101 ==> false
+
+jshell> i <= 7
+$102 ==> true
+
+jshell> i == 6
+$103 ==> false
+
+jshell> i == 7
+$104 ==> true
+
+jshell> i == 8
+$105 ==> false
+
+jshell> i = 8
+i ==> 8
+
+jshell> i = 7
+i ==> 7
+
+jshell> i == 7
+$108 ==> true
+
+jshell> clear()
