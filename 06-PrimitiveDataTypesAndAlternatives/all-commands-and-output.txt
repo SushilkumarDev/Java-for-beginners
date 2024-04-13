@@ -470,3 +470,53 @@ ArithmeticException - if the result is inexact but the rounding mode is UNNECESS
 NumberFormatException - if in is not a valid representation of a BigDecimal .
 
 <press tab to see next documentation>
+
+jshell> new BigDecimal(    
+$1        $12       $13       $14       $15       $16       $17       $18       
+$2        $3        $33       $4        $5        $51       $52       $57       
+$58       $59       $6        $63       $7        $8        $9        big       
+c         dbl       eight     f         f2        fifteen   i         i1        
+j         l         s         sixteen   
+
+Signatures:
+BigDecimal(char[] in, int offset, int len)
+BigDecimal(char[] in, int offset, int len, MathContext mc)
+BigDecimal(char[] in)
+BigDecimal(char[] in, MathContext mc)
+BigDecimal(String val)
+BigDecimal(String val, MathContext mc)
+BigDecimal(double val)
+BigDecimal(double val, MathContext mc)
+BigDecimal(BigInteger val)
+BigDecimal(BigInteger val, MathContext mc)
+BigDecimal(BigInteger unscaledVal, int scale)
+BigDecimal(BigInteger unscaledVal, int scale, MathContext mc)
+BigDecimal(int val)
+BigDecimal(int val, MathContext mc)
+BigDecimal(long val)
+BigDecimal(long val, MathContext mc)
+
+<press tab again to see documentation> 
+
+jshell> clear()
+
+ 
+jshell> number1.
+abs(                     add(                     byteValue()              
+byteValueExact()         compareTo(               divide(                  
+divideAndRemainder(      divideToIntegralValue(   doubleValue()            
+equals(                  floatValue()             getClass()               
+hashCode()               intValue()               intValueExact()          
+longValue()              longValueExact()         max(                     
+min(                     movePointLeft(           movePointRight(          
+multiply(                negate(                  notify()                 
+notifyAll()              plus(                    pow(                     
+precision()              remainder(               round(                   
+scale()                  scaleByPowerOfTen(       setScale(                
+shortValue()             shortValueExact()        signum()                 
+sqrt(                    stripTrailingZeros()     subtract(                
+toBigInteger()           toBigIntegerExact()      toEngineeringString()    
+toPlainString()          toString()               ulp()                    
+unscaledValue()          wait(                    
+
+jshell> clear()
