@@ -858,3 +858,12 @@ W
 X
 Y
 Z
+
+jshell>   for (char ch = 'A'; ch <= 'C'; ch++) {
+   ...>             System.out.println(ch);
+   ...> }
+A
+B
+C
+
+jshell> }
