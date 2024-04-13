@@ -744,3 +744,17 @@ $162 ==> 'D'
 
 jshell> ch + 5
 $163 ==> 73
+
+jshell> ch
+ch ==> 'D'
+
+jshell> (int)ch
+$165 ==> 68
+
+jshell> char ch = '\n'
+ch ==> '\n'
+
+jshell> ch
+ch ==> '\n'
+
+jshell> System.out.println(ch);
