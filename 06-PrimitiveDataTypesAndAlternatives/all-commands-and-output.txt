@@ -654,3 +654,18 @@ $134 ==> false
 
 jshell> !false
 $135 ==> true
+
+jshell> !x>7
+|  Error:
+|  cannot find symbol
+|    symbol:   variable x
+|  !x>7
+|   ^
+
+jshell> int x = 6
+x ==> 6
+
+jshell> !(x>7)
+$138 ==> true
+
+jshell> clear()
