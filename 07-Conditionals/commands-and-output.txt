@@ -55,3 +55,35 @@ jshell> clear()
 |    symbol:   method clear()
 |  clear()
 |  ^---^
+
+jshell> void clear() { System.out.print("\033[H\033[2J ");}
+|  created method clear()
+
+jshell> clear
+|  Error:
+|  cannot find symbol
+|    symbol:   variable clear
+|  clear
+|  ^---^
+
+jshell> clear()
+
+ 
+jshell> int i = 0;
+i ==> 0
+
+jshell> if(i) {
+   ...>    System.out.println("i");
+   ...> }
+|  Error:
+|  incompatible types: int cannot be converted to boolean
+|  if(i) {
+|     ^
+
+jshell> if(i=1) {
+   ...>    System.out.println("i");
+   ...> }
+|  Error:
+|  incompatible types: int cannot be converted to boolean
+|  if(i=1) {
+|     ^-^
