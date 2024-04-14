@@ -364,3 +364,19 @@ switch (number) {
 //case number://COMPILER ERROR. Should be constant.
 }    
 ```
+
+#### Switch Exercises
+- ```public static boolean isWeekDay(int dayNumber) {``` 
+  - input - number of day 0 (Sunday) to 6(Saturday)
+  - return if the day is a Week Day.   
+- ```public static String determineNameOfMonth(int monthNumber) {```
+  - input - number of month 1(January) to 12(December)
+  - output - Name of month
+- ```public static String determineNameOfDay(int dayNumber) {```
+  - input - number of day 0 (Sunday) to 6(Saturday)
+  - Return the day of week in text
+
+- Conditional Operator
+  - Conditional Operator is a Ternary Operator (3 Operands)
+  - syntax : ```booleanCondition ? ResultIfTrue: ResultIfFalse;```
+  - age >= 18 ? "Can Vote": "Cannot Vote"
