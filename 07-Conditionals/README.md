@@ -225,3 +225,33 @@ public class BasicMenu {
 }
 
 ```
+### Switch Statement
+- Choose between a set of options.
+
+```
+//Example 1
+
+int number = 2;
+switch (number) {
+case 1:
+    System.out.println(1);
+    break;
+case 2:
+    System.out.println(2);//PRINTED
+    break;
+case 3:
+    System.out.println(3);
+    break;
+default:
+    System.out.println("Default");
+    break;
+}
+// Output of above example is 2.The case which is matched is executed.
+
+```
+Important Tips
+- There is a break statement in every case. If there is no break statement, switch continues to execute other cases.
+- There is a case named default.  If none of the cases match default case is executed.
+
+
+```
