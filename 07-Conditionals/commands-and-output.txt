@@ -1,0 +1,21 @@
+Last login: Mon Jan 29 12:46:01 on ttys001
+Rangas-MacBook-Pro:~ rangaraokaranam$ jshell
+|  Welcome to JShell -- Version 9.0.1
+|  For an introduction type: /help intro
+
+jshell> if(true) {
+   ...>    System.out.println("True");
+   ...> }
+True
+
+jshell> if(false) {
+   ...>    System.out.println("True");
+   ...> }
+
+jshell> int i = 3
+i ==> 3
+
+jshell> if(i==3) {
+   ...>    System.out.println("True");
+   ...> }
+True
