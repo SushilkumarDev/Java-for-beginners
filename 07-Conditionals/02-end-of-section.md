@@ -272,3 +272,21 @@ public class SwitchStatementRunner {
 			break;
 		}
 	}
+    	private static void puzzle5() {
+		long l = 15;
+		/*switch(l){
+		
+		}*/
+	}
+
+	private static void puzzle6() {
+		int number = 10;
+		int i = number * 2;
+		switch (number) {
+		 //case number>5: System.out.println("number>5");
+		}
+	}
+
+}
+```
+---
