@@ -49,3 +49,28 @@ switch (i) {
    default : System.out.println("default"); break;
 }
 clear()
+boolean isEven;
+int i =5;
+if(i%2==0) {
+  isEven = true;
+} else {
+  isEven = false;
+}
+isEven
+i = 6
+if(i%2==0) {
+  isEven = false;
+}
+if(i%2==0) {
+  isEven = true;
+} else {
+  isEven = false;
+}
+isEven
+isEven = ( i%2==0 ? true : false  )
+i = 6
+isEven = ( i%2==0 ? true : false  )
+i = 7
+isEven = ( i%2==0 ? true : false  )
+i = 6
+String even = ( i%2 ==0 ? "YES" : "NO" );
