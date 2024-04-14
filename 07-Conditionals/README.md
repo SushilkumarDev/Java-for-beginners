@@ -31,3 +31,31 @@ Result is - 8
 ```
 
 ```
+## Basics of If Statement
+
+- Conditionally execute code! 
+
+> Code inside If is executed only if the condition is true.
+
+// Basic Example
+```
+if(true){
+    System.out.println("Will be printed");
+}
+
+if(false){
+    System.out.println("Will NOT be printed");//Not executed
+}
+
+//Example 1
+int x = 5;
+
+if(x==5){
+    System.out.println("x is 5");//executed since x==5 is true
+}
+
+//Example 2
+x = 6;
+if(x==5){
+    System.out.println("x is 5");//Not executed since x==5 is false
+}
