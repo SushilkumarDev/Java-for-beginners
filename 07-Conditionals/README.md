@@ -59,3 +59,20 @@ x = 6;
 if(x==5){
     System.out.println("x is 5");//Not executed since x==5 is false
 }
+//Example 3
+int y = 10;
+
+if(y==10){
+    System.out.println("Y is 10");//executed-condn y==10 is true
+} else {
+    System.out.println("Y is Not 10");
+}
+
+//Example 4
+y = 11;
+
+if(y==10){
+    System.out.println("Y is 10");//NOT executed
+} else {
+    System.out.println("Y is Not 10");//executed
+}
