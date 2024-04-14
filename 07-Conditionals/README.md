@@ -279,4 +279,23 @@ Default
 Since there is no break after case 2, execution falls through to case 3. There is no break in case 3 as well. So, execution falls through to default. 
 
 > Code in switch is executed from a matching case until a break or end of switch statement is encountered.
-
+Switch Statement Example 3 , Few Break's
+```
+number = 2;
+switch (number) {
+case 1:
+    System.out.println(1);
+    break;
+case 2:
+case 3:
+    System.out.println("Number is 2 or 3");
+    break;
+default:
+    System.out.println("Default");
+    break;
+}
+```
+Program Output 
+```
+Number is 2 or 3.
+```
