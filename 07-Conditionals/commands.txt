@@ -1,0 +1,18 @@
+if(true) {
+   System.out.println("True");
+}
+if(false) {
+   System.out.println("True");
+}
+if(i==3) {
+   System.out.println("True");
+}
+if(i<2) {
+    System.out.println("True");
+}
+if(i<=3 || i>=35) {
+    System.out.println("True");
+}
+if(i<=3 && i>=35) {
+    System.out.println("True");
+}
