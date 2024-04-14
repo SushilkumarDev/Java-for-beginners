@@ -16,3 +16,16 @@ if(i<=3 || i>=35) {
 if(i<=3 && i>=35) {
     System.out.println("True");
 }
+if (i==3) {
+   System.out.println("True");
+} else {
+   System.out.println("i is not 3");
+}
+i = 5
+if (i==3) {
+   System.out.println("True");
+} else {
+   System.out.println("i is not 3");
+}
+void clear() { System.out.print("\033[H\033[2J ");}
+clear()
