@@ -136,3 +136,25 @@ else
 //Output is "l<20" followed by "Who am I?" on next line. 
 //else belong to the last if before it unless brackets ({}) are used.
 ```
+Puzzle 3
+
+```
+int m = 15;
+
+if(m>20)
+    if(m<20)
+System.out.println("m>20");
+    else
+System.out.println("Who am I?");
+
+//Nothing is printed to output. 
+
+//Code above is similar to the code snippet shown below
+
+if(m>20) {//Condn is false. So, code in if is not executed
+    if(m<20)
+System.out.println("m>20");
+    else
+System.out.println("Who am I?");
+}
+```
