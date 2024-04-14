@@ -29,3 +29,34 @@ public class IfStatementRunner {
 		}
 		
 	}
+    	private static void puzzle2() {
+		int l = 15;
+
+		if (l < 20)
+			System.out.println("l<20");//
+		if (l > 20)
+			System.out.println("l>20");
+		else
+			System.out.println("Who am I?");//
+	}
+
+	
+	
+	private static void puzzle3() {
+		int m = 15;
+
+		if(m>20) 
+		    if(m<20)
+		System.out.println("m>20");
+		    else
+		System.out.println("Who am I?");
+	}
+
+
+	private static void puzzle5() {
+		int number = 5;
+		if(number < 0) 
+		    number = number + 10; 
+		number++; 
+		System.out.println(number);
+	}
