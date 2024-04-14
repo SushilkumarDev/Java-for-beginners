@@ -185,3 +185,19 @@ jshell> String even = ( i%2 ==0 ? "YES" : 4)
 |      int cannot be converted to java.lang.String
 |  String even = ( i%2 ==0 ? "YES" : 4);
 |                                    ^
+
+jshell> String even = ( i%2 ==0 ? "YES" : true)
+|  Error:
+|  incompatible types: bad type in conditional expression
+|      boolean cannot be converted to java.lang.String
+|  String even = ( i%2 ==0 ? "YES" : true);
+|                                    ^--^
+
+jshell> String even = ( i%2 ==0 ? "YES" : "NO" )
+even ==> "YES"
+
+jshell> 
+<press tab again to see all possible completions; total possible completions: 549>
+jshell> /save /in28Minutes/git/java-a-course-for-beginners/7-Conditionals/commands.txt
+
+jshell> 
