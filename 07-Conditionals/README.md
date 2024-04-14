@@ -347,3 +347,20 @@ Output
 ```
 Default
 ```
+#### Switch statement Example 6
+
+
+Switch can be used only with char, byte, short, int, String or enum
+```
+long l = 15;
+/*switch(l){//COMPILER ERROR. Not allowed.
+}*/
+```
+Case value should be a compile time constant.
+```
+number = 10;
+switch (number) {
+//case number>5://COMPILER ERROR. Cannot have a condition
+//case number://COMPILER ERROR. Should be constant.
+}    
+```
