@@ -158,3 +158,28 @@ System.out.println("m>20");
 System.out.println("Who am I?");
 }
 ```
+Puzzles Continued
+
+```
+
+//Puzzle 4
+
+int x1 = 0;
+//Condition in if should always be boolean
+//if(x1) {} //COMPILER ERROR
+//if(x1=0) {}//COMPILER ERROR. Using = instead of ==
+//If else condition should be boolean
+```
+
+```
+//Puzzle 5
+
+boolean isTrue = false;
+
+if(isTrue==true){
+    System.out.println("TRUE TRUE");//Will not be printed
+}
+
+if(isTrue=true){
+    System.out.println("TRUE");//Will be printed.
+}
