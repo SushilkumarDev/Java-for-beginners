@@ -99,3 +99,10 @@ if(z==10){
 } else {
     System.out.println("Z is Something Else.");//executed
 }
+//If else Example: without Blocks
+int number = 5;
+if(number < 0) 
+    number = number + 10; //Not executed
+    number++; //This statement is not part of if. Executed.
+System.out.println(number);//prints 6
+```
