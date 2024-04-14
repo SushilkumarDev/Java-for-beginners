@@ -76,3 +76,26 @@ if(y==10){
 } else {
     System.out.println("Y is Not 10");//executed
 }
+//Example 5
+int z = 15;
+//Only one condition is executed. Rest of the conditions are skipped.
+if(z==10){
+    System.out.println("Z is 10");//NOT executed
+} else if(z==12){
+    System.out.println("Z is 12");//NOT executed
+} else if(z==15){
+    System.out.println("Z is 15");//executed. 
+} else {
+    System.out.println("Z is Something Else.");//NOT executed
+}
+
+z = 18;
+if(z==10){
+    System.out.println("Z is 10");//NOT executed
+} else if(z==12){
+    System.out.println("Z is 12");//NOT executed
+} else if(z==15){
+    System.out.println("Z is 15");//NOT executed
+} else {
+    System.out.println("Z is Something Else.");//executed
+}
