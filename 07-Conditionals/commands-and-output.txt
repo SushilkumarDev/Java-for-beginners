@@ -87,3 +87,38 @@ jshell> if(i=1) {
 |  incompatible types: int cannot be converted to boolean
 |  if(i=1) {
 |     ^-^
+jshell> if(i==1) {
+   ...>    System.out.println("i");
+   ...> }
+
+jshell> int i = 5;
+i ==> 5
+
+jshell> switch (i) {
+   ...>    case 1 : System.out.println("1");
+   ...>    case 5 : System.out.println("5");
+   ...>    default : System.out.println("default");
+   ...> }
+5
+default
+
+jshell> i = 1
+i ==> 1
+
+jshell> switch (i) {
+   ...>    case 1 : System.out.println("1");
+   ...>    case 5 : System.out.println("5");
+   ...>    default : System.out.println("default");
+   ...> }
+1
+5
+default
+
+jshell> switch (i) {
+   ...>    case 1 : System.out.println("1"); break;
+   ...>    case 5 : System.out.println("5"); break;
+   ...>    default : System.out.println("default"); break;
+   ...> }
+1
+
+jshell> clear()
