@@ -122,3 +122,32 @@ jshell> switch (i) {
 1
 
 jshell> clear()
+
+
+jshell> boolean isEven;
+isEven ==> false
+
+jshell> int i =5;
+i ==> 5
+
+jshell> if(i%2==0) {
+   ...>   isEven = true;
+   ...> } else {
+   ...>   isEven = false;
+   ...> }
+
+jshell> isEven
+isEven ==> false
+
+jshell> i = 6
+i ==> 6
+
+jshell> if(i%2==0) {
+   ...>   isEven = false;
+   ...> }
+
+jshell> if(i%2==0) {
+   ...>   isEven = true;
+   ...> } else {
+   ...>   isEven = false;
+   ...> }
