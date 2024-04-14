@@ -255,3 +255,28 @@ Important Tips
 
 
 ```
+//Switch Statement Example 2 , No Breaks
+number = 2;
+switch (number) {
+case 1:
+    System.out.println(1);
+case 2:
+    System.out.println(2);
+case 3:
+    System.out.println(3);
+default:
+    System.out.println("Default");
+}
+```
+
+Output of above switch
+```
+2
+3
+Default
+```
+
+Since there is no break after case 2, execution falls through to case 3. There is no break in case 3 as well. So, execution falls through to default. 
+
+> Code in switch is executed from a matching case until a break or end of switch statement is encountered.
+
