@@ -106,3 +106,33 @@ if(number < 0)
     number++; //This statement is not part of if. Executed.
 System.out.println(number);//prints 6
 ```
+## If else Puzzles
+
+```
+//Puzzle 1
+int k = 15;
+if (k > 20) {
+    System.out.println(1);
+} else if (k > 10) {
+    System.out.println(2);
+} else if (k < 20) {
+    System.out.println(3);
+} else {
+    System.out.println(4);
+}
+```
+//Output is 2. 
+//Once a condition in nested-if-else is true the rest of the code is not executed.  
+```
+//Puzzle 2
+int l = 15;
+
+if(l<20)
+    System.out.println("l<20");
+if(l>20)
+    System.out.println("l>20");
+else
+    System.out.println("Who am I?");
+//Output is "l<20" followed by "Who am I?" on next line. 
+//else belong to the last if before it unless brackets ({}) are used.
+```
