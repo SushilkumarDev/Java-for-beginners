@@ -29,3 +29,23 @@ if (i==3) {
 }
 void clear() { System.out.print("\033[H\033[2J ");}
 clear()
+if(i==1) {
+   System.out.println("i");
+}
+switch (i) {
+   case 1 : System.out.println("1");
+   case 5 : System.out.println("5");
+   default : System.out.println("default");
+}
+i = 1
+switch (i) {
+   case 1 : System.out.println("1");
+   case 5 : System.out.println("5");
+   default : System.out.println("default");
+}
+switch (i) {
+   case 1 : System.out.println("1"); break;
+   case 5 : System.out.println("5"); break;
+   default : System.out.println("default"); break;
+}
+clear()
