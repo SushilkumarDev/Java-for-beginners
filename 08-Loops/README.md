@@ -13,3 +13,11 @@ for (int i = 0; i < 10; i++) {
 //Output - 0123456789
 
 ```
+Syntax - For loop statement has 3 parts
+- Initialization => int i=0. Initialization happens the first time a for loop is run.
+- Condition => i<10. Condition is checked every time before the loop is executed.
+- Operation (Increment or Decrement usually) => i++. Operation is invoked at the start of every loop (except for first time).
+
+For Loop Puzzles
+- Any of 3 parts in a for loop can be empty.
+- There can be multiple statements in Initialization or Operation separated by commas
