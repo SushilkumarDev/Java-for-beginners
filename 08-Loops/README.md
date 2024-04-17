@@ -104,3 +104,18 @@ do{
 }while(count < 5);
 //output is 5
 ```
+
+
+#### Exercise
+- Ask user for a number. 
+- Print the cube of the number. 
+- Do this repeatedly until user enters a negative number.
+
+```
+Enter a number: 5
+Cube is 125
+Enter a number: 3
+Cube is 27
+Enter a number: -1
+Thank You! Have Fun!
+```
