@@ -72,3 +72,23 @@ do {
    i++;
 } while (i<5);
 clear()
+for(i=1;i<=10;i++) {
+   if(i==5)
+      break;
+   System.out.print(i + " ");
+}
+for(i=1;i<=10;i++) {
+   if(i%2==0)
+      break;
+   System.out.print(i + " ");
+}
+for(i=1;i<=10;i++) {
+   if(i%2==0)
+     continue;
+   System.out.print(i + " ");
+}
+for(i=1;i<=10;i++) {
+   if(i%2!=0)
+     continue;
+   System.out.print(i + " ");
+}
