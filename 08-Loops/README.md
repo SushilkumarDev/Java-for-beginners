@@ -80,3 +80,27 @@ player.printCubesUptoLimit();
 //For limit = 30, output would be 1 8 27
 
 ```
+
+### Do While Loop
+- The difference between a while and a do while is that the code in do while is executed at least once. 
+- In a do while loop, condition check occurs after the code in loop is executed once.
+
+Do While loop Example 1
+```java
+int count = 0;
+do{
+    System.out.print(count);
+    count++;
+}while(count < 5);//while this condn is true, loop is executed.
+//output is 01234
+```
+
+Do While loop Example 2
+```java
+count = 5;
+do{
+    System.out.print(count);
+    count++;
+}while(count < 5);
+//output is 5
+```
