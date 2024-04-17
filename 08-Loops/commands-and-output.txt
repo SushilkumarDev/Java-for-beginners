@@ -107,3 +107,33 @@ jshell> while (i <5) {
 2
 3
 4
+
+
+
+jshell> i
+i ==> 5
+
+jshell> i = 6
+i ==> 6
+
+jshell> while (i < 5) {
+   ...>    System.out.println(i);
+   ...>    i++;
+   ...> }
+
+jshell> i = -2
+i ==> -2
+
+//Infinite Loop
+jshell> while (i < 5) {
+   ...>    System.out.println(i);
+   ...> }
+-2
+-2
+-2
+-2
+-2
+-2
+-2
+....
+....
