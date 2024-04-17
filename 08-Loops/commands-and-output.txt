@@ -49,3 +49,25 @@ jshell> for (int i = 1; i<= 10; i = i + 2) {
 jshell> for (int i = 11; i<= 10; i = i + 2) {
    ...>    System.out.print (i + " ");
    ...> }
+jshell> for (int i = 11; i<= 20;) {
+   ...>    System.out.print (i + " ");
+   ...>    i++;
+   ...> }
+11 12 13 14 15 16 17 18 19 20 
+jshell> int i = 20
+i ==> 20
+
+jshell> for (; i<= 30;i++) {
+   ...>    System.out.print (i + " ");
+   ...> }
+20 21 22 23 24 25 26 27 28 29 30 
+jshell> clear()
+
+ 
+jshell> 9 % 2 
+$12 ==> 1
+
+jshell> 9 % 3
+$13 ==> 0
+
+jshell> clear()
