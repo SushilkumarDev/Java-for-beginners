@@ -10,3 +10,27 @@ jshell> void clear() { System.out.print("\033[H\033[2J ");}
 |  created method clear()
 
 jshell> clear()
+
+
+
+jshell> for(init;condition;update) {
+   ...> }
+|  Error:
+|  not a statement
+|  for(init;condition;update) {
+|      ^--^
+|  Error:
+|  not a statement
+|  for(init;condition;update) {
+|                     ^----^
+|  Error:
+|  cannot find symbol
+|    symbol:   variable condition
+|  for(init;condition;update) {
+|           ^-------^
+
+jshell> clear()
+
+
+
+
