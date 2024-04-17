@@ -137,3 +137,20 @@ jshell> while (i < 5) {
 -2
 ....
 ....
+
+jshell> while (i < 5) {
+   ...>    System.out.println(i);
+   ...>    i++;
+   ...> }
+-2
+-1
+0
+1
+2
+3
+4
+
+jshell> i
+i ==> 5
+
+jshell> clear()
