@@ -21,3 +21,25 @@ Syntax - For loop statement has 3 parts
 For Loop Puzzles
 - Any of 3 parts in a for loop can be empty.
 - There can be multiple statements in Initialization or Operation separated by commas
+
+
+#### Exercises
+
+```java
+MyNumber number = new MyNumber(9);
+
+number.isPrime(); //Is a number Prime? 
+//Hint : 5 => true, 7 => true, 11 => true, 6 => false
+
+int sum = number.sumUptoN();//Sum of numbers upto n?
+//1 + 2 + 3 + 4 + 5 + 6
+
+int sumOfDivisors = number.sumOfDivisors();
+
+number.printANumberTriangle();
+//1
+//1 2
+//1 2 3
+//1 2 3 4 
+//1 2 3 4 5
+```
