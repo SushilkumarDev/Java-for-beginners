@@ -43,3 +43,26 @@ number.printANumberTriangle();
 //1 2 3 4 
 //1 2 3 4 5
 ```
+
+
+### While Loop
+
+```
+int count = 0;
+
+while(count < 5){//while this condn is true, loop is executed.
+    System.out.print(count);
+    count++;
+}
+//Output - 01234
+```
+
+```java
+count = 5;
+while(count < 5){//condn is false. So, code in while is not executed.
+    System.out.print(count);
+    count++;
+}//Nothing is printed to output
+```
+
+> Do not forget the increment!
