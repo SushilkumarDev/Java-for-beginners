@@ -21,3 +21,24 @@ for (; i<= 30;i++) {
    System.out.print (i + " ");
 }
 clear()
+9 % 2
+9 % 3
+clear()
+if (i>2) {
+   System.out.println("i>2");
+}
+int i = 3;
+if (i>2) {
+   System.out.println("i>2");
+}
+i = 0
+while (i <5) {
+   System.out.println(i);
+   i++;
+}
+i
+i = 6
+while (i < 5) {
+   System.out.println(i);
+   i++;
+}
