@@ -42,3 +42,13 @@ while (i < 5) {
    System.out.println(i);
    i++;
 }
+i = -2
+while (i < 5) {
+   System.out.println(i);
+}
+while (i < 5) {
+   System.out.println(i);
+   i++;
+}
+i
+clear()
