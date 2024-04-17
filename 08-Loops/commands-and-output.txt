@@ -154,3 +154,13 @@ jshell> i
 i ==> 5
 
 jshell> clear()
+jshell> while (i < 5) {
+   ...>    System.out.print(i + " ");
+   ...>    i++;
+   ...> }
+
+jshell> i
+i ==> 5
+
+jshell> i = 1
+i ==> 1
