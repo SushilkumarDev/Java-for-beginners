@@ -209,3 +209,42 @@ for (int j = 0; j < 2; j++) {
 //So 05 and 05 are not printed to the console.
 
 ```
+
+## Choosing a Loop
+- Do you know how many times to run? 
+  - For Loop
+- Do you when to end the loop? 
+  - While
+- Do you want to execute the loop atleast once? 
+  - Do While
+
+Actually you can write code with any of the loops. 
+> Its readability that matters.
+
+Thinking Exercise 
+> What would we use for the Menu 
+> If we would want to run the Menu again and again?
+```
+Enter Number1: 
+2
+
+Enter Number2: 
+4
+
+1 - Add
+2 - Subtract
+3 - Divide
+4 - Multiply
+5 - Exit
+
+Choose Operation: 4
+Result is 8
+
+Choose Operation: 1
+Result is 6
+
+Choose Operation: 5
+
+Thank You!
+
+```
