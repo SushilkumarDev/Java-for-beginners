@@ -193,3 +193,19 @@ while (i < 10) {
 }
 //Output - 1234678910
 ```
+
+Continue statement takes execution to next iteration of inner most loop.
+```java
+for (int j = 0; j < 2; j++) {
+    for (int k = 0; k < 10; k++) {
+       if (k == 5) {
+          continue;//skips to next iteration of k loop
+        }
+        System.out.print(j + "" + k);
+    }
+}
+//Output - 000102030406070809101112131416171819
+//When k==5 the print statement in the loop is skipped due to continue. 
+//So 05 and 05 are not printed to the console.
+
+```
