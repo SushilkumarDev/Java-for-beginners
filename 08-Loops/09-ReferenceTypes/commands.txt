@@ -110,3 +110,21 @@ String.join(",", "A", "B")
 "abcd".replace("ab", "xyz");
 String str = "jdsfja ";
 clear()
+"123" + "123" + "1234" + "123456"
+sb.append(" 123")
+sb
+sb
+sb.setCharAt(1,'e')
+sb
+StringBuilder sb = new StringBuilder("test");
+clear()
+Integer integer1 = new Integer("5234");
+Integer integer2 = new Integer("5234");
+clear()
+Integer i1 = new Integer(5);
+Integer i2 = new Integer(5);
+Integer i3 = Integer.valueOf(5);
+Integer i4 = Integer.valueOf(5);
+i1 == i2
+i3 == i4
+clear()
