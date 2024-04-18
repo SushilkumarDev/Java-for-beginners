@@ -148,3 +148,18 @@ break;
 }
 //Output - 012345
 ```
+Break statement takes execution out of inner most loop.
+```java
+for (int j = 0; j < 2; j++) {
+    for (int k = 0; k < 10; k++) {
+System.out.print(j + "" + k);
+if (k == 5) {
+    break;//Takes out of loop using k
+}
+    }
+}
+//Output - 000102030405101112131415
+//Each time the value of k is 5 the break statement is executed. 
+//The break statement takes execution out of the k loop and proceeds to the next value of j.
+
+```
