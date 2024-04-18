@@ -29,3 +29,20 @@ cat == ref
 dog == dog2
 void clear() { System.out.print("\033[H\033[2J ");}
 clear()
+1
+2
+12.34
+"Test".length()
+BigDecimal bd = new BigDecimal("1.0");
+str.charAt(0)
+str.charAt(2)
+str.charAt(3)
+String biggerString = "This is a lot of text";
+str.substring(5)
+biggerString.substring(5)
+biggerString.substring(5,13)
+str.charAt(13)
+biggerString.charAt(13)
+biggerString.charAt(456)
+void clear() { System.out.print("\033[H\033[2J ");}
+clear()
