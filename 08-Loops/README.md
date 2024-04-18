@@ -119,3 +119,19 @@ Cube is 27
 Enter a number: -1
 Thank You! Have Fun!
 ```
+### Break Statement
+
+Break statement breaks out of a loop
+
+Example 1
+```java
+for (int i = 0; i < 10; i++) {
+    System.out.print(i);
+    if (i == 5) {
+         break;
+    }
+}
+
+//Output - 012345
+//Even though the for loop runs from 0 to 10, execution stops at i==5 because of the break statement. ÒBreak statementÓ stops the execution of the loop and takes execution to the first statement after the loop.
+```
