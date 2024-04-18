@@ -135,3 +135,16 @@ for (int i = 0; i < 10; i++) {
 //Output - 012345
 //Even though the for loop runs from 0 to 10, execution stops at i==5 because of the break statement. ÒBreak statementÓ stops the execution of the loop and takes execution to the first statement after the loop.
 ```
+
+Break can be used in a while also.
+```java
+int i = 0;
+while (i < 10) {
+    System.out.print(i);
+    if (i == 5) {
+break;
+    }
+    i++;
+}
+//Output - 012345
+```
