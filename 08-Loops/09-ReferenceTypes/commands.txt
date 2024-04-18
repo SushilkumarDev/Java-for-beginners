@@ -92,3 +92,21 @@ str2.trim()
 String str2 = "  in28Minutes is awesome.   ";
 str2.trim()
 clear()
+1 + 2
+"1" + "2"
+"1" + 2
+"1" + 23
+1 + 23
+1 + 2 + "3"
+"1" + 2 + 3
+System.out.println("Value is " + 20)
+System.out.println("Value is " + 20 + 20)
+System.out.println("Value is " + (20 + 20))
+String.join(",", "2", "3", "4")
+String.join(",", "A", "B","C")
+String.join(",", "A")
+String.join(",", "A", "B")
+"abcd".replace('a', 'z');
+"abcd".replace("ab", "xyz");
+String str = "jdsfja ";
+clear()
