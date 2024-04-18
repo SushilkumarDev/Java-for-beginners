@@ -139,3 +139,17 @@ Integer.toHexString(eight);
 Integer eightyEight = Integer.valueOf(88);
 Integer.toHexString(eightyEight);
 clear()
+seven++
+seven
+seven == sevenAgain
+Integer seven = 7;
+Integer sevenAgain = 7;
+seven == sevenAgain
+Integer.MAX_VALUE
+Integer.MIN_VALUE
+Integer.SIZE
+Integer.BYTES
+clear()
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+clear()
