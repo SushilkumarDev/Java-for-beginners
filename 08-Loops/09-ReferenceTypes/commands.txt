@@ -76,3 +76,19 @@ str.equals("value")
 str.equals("VAlue")
 str.equalsIgnoreCase("VAlue")
 clear()
+str.concat("is awesome");
+str
+String anotherString = str.concat(" is awesome");
+str
+anotherString
+String string2 = anotherString.concat(".");
+str
+anotherString
+string2
+clear()
+str.toUpperCase()
+str.toLowerCase()
+str2.trim()
+String str2 = "  in28Minutes is awesome.   ";
+str2.trim()
+clear()
