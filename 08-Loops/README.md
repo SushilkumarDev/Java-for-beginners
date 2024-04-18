@@ -163,3 +163,21 @@ if (k == 5) {
 //The break statement takes execution out of the k loop and proceeds to the next value of j.
 
 ```
+### Continue Statement
+- Continue statement skips rest of the statements in the loop and starts next iteration
+
+```java
+for (int i = 0; i < 10; i++) {
+    if (i == 5) {
+      continue;
+    }
+    System.out.print(i);
+}
+
+//Output => 012346789
+
+//Note that the output does not contain 5. 
+//When i==5 continue is executed. Continue skips rest of the code and goes to next loop iteration. 
+//So, the print statement is not executed when i==5.
+
+```
