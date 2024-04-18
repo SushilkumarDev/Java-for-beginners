@@ -52,3 +52,10 @@ for(int i= 0; i<someString.length(); i++) {
     System.out.println(someString.charAt(i));
 }
 clear()
+someString.indexOf("lot")
+someString.charAt(10)
+someString.charAt('i')
+someString.indexOf('i')
+someString.lastIndexOf('i')
+someString.contains("text")
+clear()
