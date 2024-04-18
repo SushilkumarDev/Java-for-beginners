@@ -46,3 +46,9 @@ biggerString.charAt(13)
 biggerString.charAt(456)
 void clear() { System.out.print("\033[H\033[2J ");}
 clear()
+someString.length()
+someString.charAt(5)
+for(int i= 0; i<someString.length(); i++) {
+    System.out.println(someString.charAt(i));
+}
+clear()
