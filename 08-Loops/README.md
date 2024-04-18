@@ -181,3 +181,15 @@ for (int i = 0; i < 10; i++) {
 //So, the print statement is not executed when i==5.
 
 ```
+Continue can be used in a while also
+```java
+int i = 0;
+while (i < 10) {
+    i++;
+    if (i == 5) {
+        continue;
+    }
+    System.out.print(i);
+}
+//Output - 1234678910
+```
