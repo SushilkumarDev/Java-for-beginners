@@ -118,4 +118,17 @@ jshell> someString.charAt('i')
 |        at StringLatin1.charAt (StringLatin1.java:44)
 |        at String.charAt (String.java:704)
 |        at (#27:1)
+jshell> someString.indexOf('i')
+$28 ==> 2
+
+jshell> someString.lastIndexOf('i')
+$29 ==> 25
+
+jshell> someString.contains("text")
+$30 ==> true
+
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> clear()
 
