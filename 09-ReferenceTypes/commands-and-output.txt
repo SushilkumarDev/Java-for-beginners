@@ -248,3 +248,39 @@ $68 ==> "in28Minutes is awesome."
 
 jshell> clear()
 
+
+
+
+
+
+
+
+jshell> 1 + 2
+$70 ==> 3
+
+jshell> "1" + "2"
+$71 ==> "12"
+
+jshell> "1" + 2
+$72 ==> "12"
+
+jshell> "1" + 23
+$73 ==> "123"
+
+jshell> 1 + 23
+$74 ==> 24
+
+jshell> 1 + 2 + "3"
+$75 ==> "33"
+
+jshell> "1" + 2 + 3
+$76 ==> "123"
+
+jshell> int i = 20;
+i ==> 20
+
+jshell> System.out.println("Value is " + 20)
+Value is 20
+
+jshell> System.out.println("Value is " + 20 + 20)
+Value is 2020
