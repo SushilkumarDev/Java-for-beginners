@@ -171,3 +171,14 @@ LocalDate hundredYearsBefore = today.minusYears(100);
 today
 LocalDateTime now = LocalDateTime.now();
 clear()
+LocalDate today = LocalDate.now();
+LocalDate yesterady = LocalDate.of(2018, 01, 31);
+LocalDate yesterday = LocalDate.of(2018, 01, 31);
+today
+yesterday
+today.withYear(2016)
+today.withDayOfMonth(20)
+today.withMonth(3)
+today.withDayOfYear(120)
+today.isBefore(yesterday)
+today.isAfter(yesterday)
