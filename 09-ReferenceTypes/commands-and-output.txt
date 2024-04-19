@@ -60,3 +60,45 @@ jshell> void clear() { System.out.print("\033[H\033[2J ");}
 |  created method clear()
 
 jshell> clear()
+
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> someString.length()
+$20 ==> 27
+
+jshell> someString.charAt(5)
+$21 ==> 'i'
+
+jshell> for(int i= 0; i<someString.length(); i++) {
+   ...>     System.out.println(someString.charAt(i));
+   ...> }
+T
+h
+i
+s
+ 
+i
+s
+ 
+a
+ 
+l
+o
+t
+ 
+o
+f
+ 
+t
+e
+x
+t
+ 
+a
+g
+a
+i
+n
+
+jshell> clear()
