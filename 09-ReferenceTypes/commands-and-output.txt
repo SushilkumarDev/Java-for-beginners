@@ -156,4 +156,34 @@ $39 ==> true
 
 jshell> someString.endsWith("againfsda")
 $40 ==> false
+jshell> someString.empty()
+|  Error:
+|  cannot find symbol
+|    symbol:   method empty()
+|  someString.empty()
+|  ^--------------^
 
+jshell> someString.isEmpty()
+$41 ==> false
+
+jshell> "fjsadlkfj".isEmpty()
+$42 ==> false
+
+jshell> "".isEmpty()
+$43 ==> true
+
+jshell> "true".equals("true")
+$44 ==> true
+
+jshell> "value".equals("value")
+$45 ==> true
+
+jshell> Str str = "value"
+|  Error:
+|  cannot find symbol
+|    symbol:   class Str
+|  Str str = "value";
+|  ^-^
+
+jshell> String str = "value"
+str ==> "value"
