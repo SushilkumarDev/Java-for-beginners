@@ -1,0 +1,8 @@
+jshell> "Test".length()
+$1 ==> 4
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> BigDecimal bd = new BigDecimal("1.0");
+bd ==> 1.0
