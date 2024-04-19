@@ -197,3 +197,30 @@ jshell> str.equalsIgnoreCase("VAlue")
 $49 ==> true
 
 jshell> clear()
+
+jshell> String str = "in28Minutes"
+str ==> "in28Minutes"
+
+jshell> str.concat("is awesome");
+$52 ==> "in28Minutesis awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> String anotherString = str.concat(" is awesome");
+anotherString ==> "in28Minutes is awesome"
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutes is awesome"
+
+jshell> String string2 = anotherString.concat(".");
+string2 ==> "in28Minutes is awesome."
+
+jshell> str
+str ==> "in28Minutes"
+
+jshell> anotherString
+anotherString ==> "in28Minutes is awesome"
