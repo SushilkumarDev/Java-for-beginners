@@ -355,3 +355,15 @@ jshell> sb
 sb ==> TEst 123
 
 jshell> sb.setCharAt(1,'e')
+
+
+jshell> sb
+sb ==> Test 123
+
+jshell> StringBuilder sb = new StringBuilder("test");
+sb ==> test
+
+jshell> clear()
+
+
+
