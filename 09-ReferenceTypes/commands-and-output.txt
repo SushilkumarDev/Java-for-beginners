@@ -132,3 +132,28 @@ someString ==> "This is a lot of text again"
 
 jshell> clear()
 
+ 
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> someString.startsWith("This")
+$34 ==> true
+
+jshell> someString.startsWith("jfsdklfj")
+$35 ==> false
+
+jshell> someString.endsWith("jfsdklfj")
+$36 ==> false
+
+jshell> someString.endsWith("in")
+$37 ==> true
+
+jshell> someString.endsWith("ain")
+$38 ==> true
+
+jshell> someString.endsWith("again")
+$39 ==> true
+
+jshell> someString.endsWith("againfsda")
+$40 ==> false
+
