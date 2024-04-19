@@ -325,3 +325,33 @@ replaceFirst(          split(                 startsWith(
 subSequence(           substring(             toCharArray()          
 toLowerCase(           toString()             toUpperCase(           
 trim()                 wait(                  
+
+jshell> String.
+CASE_INSENSITIVE_ORDER   class                    copyValueOf(             
+format(                  join(                    valueOf(                 
+
+jshell> clear()
+
+ 
+jshell> "123" + "123" + "1234" + "123456"
+$89 ==> "1231231234123456"
+
+jshell> StringBuffer sb = "TEst";
+|  Error:
+|  incompatible types: java.lang.String cannot be converted to java.lang.StringBuffer
+|  StringBuffer sb = "TEst";
+|                    ^----^
+
+jshell> StringBuffer sb = new StringBuffer("TEst");
+sb ==> TEst
+
+jshell> sb.append
+append(            appendCodePoint(   
+
+jshell> sb.append(" 123")
+$91 ==> TEst 123
+
+jshell> sb
+sb ==> TEst 123
+
+jshell> sb.setCharAt(1,'e')
