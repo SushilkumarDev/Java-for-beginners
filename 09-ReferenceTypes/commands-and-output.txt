@@ -6,3 +6,27 @@ str ==> "Test"
 
 jshell> BigDecimal bd = new BigDecimal("1.0");
 bd ==> 1.0
+
+jshell> String str = new String("Test")
+str ==> "Test"
+
+jshell> String str = "Test"
+str ==> "Test"
+
+jshell> str.charAt(0)
+$6 ==> 'T'
+
+jshell> str.charAt(2)
+$7 ==> 's'
+
+jshell> str.charAt(3)
+$8 ==> 't'
+
+jshell> String biggerString = "This is a lot of text"
+biggerString ==> "This is a lot of text"
+
+jshell> biggerString.substring(5)
+$11 ==> "is a lot of text"
+
+jshell> biggerString.substring(5,13)
+$12 ==> "is a lot"
