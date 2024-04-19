@@ -309,3 +309,19 @@ $86 ==> "xyzcd"
 
 jshell> String str = "jdsfja "
 str ==> "jdsfja "
+
+jshell> str.
+charAt(                chars()                codePointAt(           
+codePointBefore(       codePointCount(        codePoints()           
+compareTo(             compareToIgnoreCase(   concat(                
+contains(              contentEquals(         endsWith(              
+equals(                equalsIgnoreCase(      getBytes(              
+getChars(              getClass()             hashCode()             
+indexOf(               intern()               isEmpty()              
+lastIndexOf(           length()               matches(               
+notify()               notifyAll()            offsetByCodePoints(    
+regionMatches(         replace(               replaceAll(            
+replaceFirst(          split(                 startsWith(            
+subSequence(           substring(             toCharArray()          
+toLowerCase(           toString()             toUpperCase(           
+trim()                 wait(                  
