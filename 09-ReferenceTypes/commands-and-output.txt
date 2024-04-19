@@ -30,3 +30,9 @@ $11 ==> "is a lot of text"
 
 jshell> biggerString.substring(5,13)
 $12 ==> "is a lot"
+
+jshell> str.charAt(13)
+|  java.lang.StringIndexOutOfBoundsException thrown: String index out of range: 13
+|        at StringLatin1.charAt (StringLatin1.java:44)
+|        at String.charAt (String.java:704)
+|        at (#13:1)
