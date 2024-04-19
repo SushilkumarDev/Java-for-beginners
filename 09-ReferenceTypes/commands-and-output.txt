@@ -224,3 +224,27 @@ str ==> "in28Minutes"
 
 jshell> anotherString
 anotherString ==> "in28Minutes is awesome"
+
+jshell> string2
+string2 ==> "in28Minutes is awesome."
+
+jshell> clear()
+
+ 
+jshell> String str = "in28Minutes is awesome."
+str ==> "in28Minutes is awesome."
+
+jshell> str.toUpperCase()
+$63 ==> "IN28MINUTES IS AWESOME."
+
+jshell> str.toLowerCase()
+$64 ==> "in28minutes is awesome."
+
+jshell> String str2 = "  in28Minutes is awesome.   "
+str2 ==> "  in28Minutes is awesome.   "
+
+jshell> str2.trim()
+$68 ==> "in28Minutes is awesome."
+
+jshell> clear()
+
