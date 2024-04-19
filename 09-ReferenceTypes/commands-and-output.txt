@@ -36,3 +36,12 @@ jshell> str.charAt(13)
 |        at StringLatin1.charAt (StringLatin1.java:44)
 |        at String.charAt (String.java:704)
 |        at (#13:1)
+
+jshell> biggerString.charAt(13)
+$14 ==> ' '
+
+jshell> biggerString.charAt(456)
+|  java.lang.StringIndexOutOfBoundsException thrown: String index out of range: 456
+|        at StringLatin1.charAt (StringLatin1.java:44)
+|        at String.charAt (String.java:704)
+|        at (#15:1)
