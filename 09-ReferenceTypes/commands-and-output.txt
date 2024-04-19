@@ -45,3 +45,18 @@ jshell> biggerString.charAt(456)
 |        at StringLatin1.charAt (StringLatin1.java:44)
 |        at String.charAt (String.java:704)
 |        at (#15:1)
+
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> clear()
+|  Error:
+|  cannot find symbol
+|    symbol:   method clear()
+|  clear()
+|  ^---^
+
+jshell> void clear() { System.out.print("\033[H\033[2J ");}
+|  created method clear()
+
+jshell> clear()
