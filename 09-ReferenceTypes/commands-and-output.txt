@@ -187,3 +187,13 @@ jshell> Str str = "value"
 
 jshell> String str = "value"
 str ==> "value"
+jshell> str.equals("value")
+$47 ==> true
+
+jshell> str.equals("VAlue")
+$48 ==> false
+
+jshell> str.equalsIgnoreCase("VAlue")
+$49 ==> true
+
+jshell> clear()
