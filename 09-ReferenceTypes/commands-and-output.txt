@@ -284,3 +284,28 @@ Value is 20
 
 jshell> System.out.println("Value is " + 20 + 20)
 Value is 2020
+
+
+jshell> System.out.println("Value is " + (20 + 20))
+Value is 40
+
+jshell> String.join(",", "2", "3", "4")
+$81 ==> "2,3,4"
+
+jshell> String.join(",", "A", "B","C")
+$82 ==> "A,B,C"
+
+jshell> String.join(",", "A")
+$83 ==> "A"
+
+jshell> String.join(",", "A", "B")
+$84 ==> "A,B"
+
+jshell> "abcd".replace('a', 'z');
+$85 ==> "zbcd"
+
+jshell> "abcd".replace("ab", "xyz");
+$86 ==> "xyzcd"
+
+jshell> String str = "jdsfja "
+str ==> "jdsfja "
