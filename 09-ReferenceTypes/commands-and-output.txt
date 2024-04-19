@@ -102,3 +102,20 @@ i
 n
 
 jshell> clear()
+
+ 
+jshell> String someString = "This is a lot of text again"
+someString ==> "This is a lot of text again"
+
+jshell> someString.indexOf("lot")
+$25 ==> 10
+
+jshell> someString.charAt(10)
+$26 ==> 'l'
+
+jshell> someString.charAt('i')
+|  java.lang.StringIndexOutOfBoundsException thrown: String index out of range: 105
+|        at StringLatin1.charAt (StringLatin1.java:44)
+|        at String.charAt (String.java:704)
+|        at (#27:1)
+
