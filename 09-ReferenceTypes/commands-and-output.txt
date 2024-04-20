@@ -367,3 +367,28 @@ jshell> clear()
 
 
 
+jshell> int i = 5
+i ==> 5
+
+jshell> Integer integer = new Integer(5);
+integer ==> 5
+
+jshell> Integer integer1 = new Integer(5);
+integer1 ==> 5
+
+jshell> Integer integer = Integer.valueOf(5);
+integer ==> 5
+
+jshell> Integer integer1 = Integer.valueOf(5);
+integer1 ==> 5
+
+jshell> Integer integer = new Integer("5234");
+integer ==> 5234
+
+jshell> Integer integer1 = new Integer("5234");
+integer1 ==> 5234
+
+jshell> Integer integer2 = new Integer("5234");
+integer2 ==> 5234
+
+jshell> clear()
