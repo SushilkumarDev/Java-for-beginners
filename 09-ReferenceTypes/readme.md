@@ -172,3 +172,55 @@ Integer.toString(seven, 2);
 ```
 
 Storing into a collection
+
+
+#### Creation of Wrapper Classes
+
+Prefer valueOf instead of Constructors!
+
+```
+Integer seven = 
+    Integer.valueOf("111", 2);//binary 111 is converted to 7
+
+Integer hundred = 
+    Integer.valueOf("100");//100 is stored in variable
+```
+
+
+```
+Integer number = new Integer(55);//int
+Integer number2 = new Integer("55");//String
+
+Float number3 = new Float(55.0);//double argument
+Float number4 = new Float(55.0f);//float argument
+Float number5 = new Float("55.0f");//String
+
+Character c1 = new Character('C');//Only char constructor
+//Character c2 = new Character(124);//COMPILER ERROR
+
+Boolean b = new Boolean(true);
+
+//"true" "True" "tRUe" - all String Values give True
+//Anything else gives false
+Boolean b1 = new Boolean("true");//value stored - true
+Boolean b2 = new Boolean("True");//value stored - true
+Boolean b3 = new Boolean("False");//value stored - false
+Boolean b4 = new Boolean("SomeString");//value stored - false
+
+b = false;
+
+```
+
+#### Convert Wrappers to Primitives
+
+xxxValue methods help in creating primitives
+
+```
+Integer integer = Integer.valueOf(57);
+int primitive = seven.intValue();//57
+float primitiveFloat = seven.floatValue();//57.0f
+
+Float floatWrapper = Float.valueOf(57.0f);
+int floatToInt = floatWrapper.intValue();//57
+float floatToFloat = floatWrapper.floatValue();//57.0f
+```
