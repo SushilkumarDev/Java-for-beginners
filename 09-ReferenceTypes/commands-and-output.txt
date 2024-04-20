@@ -533,3 +533,32 @@ jshell> LocalTime now = LocalTime.now()
 now ==> 15:51:09.642001
 
 jshell> clear()
+
+jshell> LocalDate today = LocalDate.now()
+today ==> 2018-02-01
+
+jshell> import java.time.*
+
+jshell> today.getYear()
+getYear()   
+
+jshell> today.getYear()
+$149 ==> 2018
+
+jshell> today.getDayOf()
+getDayOfMonth()   getDayOfWeek()    getDayOfYear()    
+
+jshell> today.getDayOfWeek()
+$150 ==> THURSDAY
+
+jshell> today.getDayOfMonth()
+$151 ==> 1
+
+jshell> today.getDayOfYear()
+$152 ==> 32
+
+jshell> today.getMonth()
+$153 ==> FEBRUARY
+
+jshell> today.getMonthValue()
+$154 ==> 2
