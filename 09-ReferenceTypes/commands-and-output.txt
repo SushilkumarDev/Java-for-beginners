@@ -476,3 +476,16 @@ jshell> Integer.BYTES
 $137 ==> 4
 
 jshell> clear()
+
+ 
+jshell> LocalDate now = LocalDate.now()
+|  Error:
+|  cannot find symbol
+|    symbol:   class LocalDate
+|  LocalDate now = LocalDate.now();
+|  ^-------^
+|  Error:
+|  cannot find symbol
+|    symbol:   variable LocalDate
+|  LocalDate now = LocalDate.now();
+|                  ^-------^
