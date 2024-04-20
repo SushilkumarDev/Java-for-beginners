@@ -392,3 +392,24 @@ jshell> Integer integer2 = new Integer("5234");
 integer2 ==> 5234
 
 jshell> clear()
+
+
+jshell> Integer i1 = new Integer(5)
+i1 ==> 5
+
+jshell> Integer i2 = new Integer(5)
+i2 ==> 5
+
+jshell> Integer i3 = Integer.valueOf(5)
+i3 ==> 5
+
+jshell> Integer i4 = Integer.valueOf(5)
+i4 ==> 5
+
+jshell> i1 == i2
+$111 ==> false
+
+jshell> i3 == i4
+$112 ==> true
+
+jshell> clear()
