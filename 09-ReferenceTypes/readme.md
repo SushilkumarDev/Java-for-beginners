@@ -98,3 +98,35 @@ str.endsWith("78")
 str.startsWith("01");
 str.isEmpty();
 ```
+
+## String Puzzles
+
+- Modification of a String 
+- Strings are immutable. Value of a String Object once created cannot be modified. Any modification on a String object creates a new String object.
+
+```
+String str3 = "value1";
+str3.concat("value2");
+System.out.println(str3); //value1
+str.toLowerCase()
+str.toUpperCase()
+"012301230123".replace('0', '4')
+" abcd  ".trim()
+```
+
+String Concatenation Operator
+- RULE1: Expressions are evaluated from left to right.
+    - Except if there are parenthesis.
+- RULE2: number + number = number
+- RULE3: number + String = String
+
+```
+System.out.println(5 + "Test" + 5); //5Test5
+System.out.println(5 + 5 + "Test"); //10Test
+System.out.println("5" + 5 + "Test"); //55Test
+System.out.println("5" + "5" + "25"); //5525
+System.out.println(5 + 5 + "25"); //1025
+System.out.println("" + 5 + 5 + "25"); //5525
+System.out.println(5 + (5 + "25")); //5525
+System.out.println(5 + 5 + 25); //35
+```
