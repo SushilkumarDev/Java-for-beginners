@@ -254,3 +254,39 @@ System.out.println(Integer
 System.out.println(Integer
 .toOctalString(wrapperEight));//String Output:10
 ```
+
+#### Wrapper Constants
+```
+jshell> Integer.MAX_VALUE
+$2 ==> 2147483647
+
+jshell> Integer.MIN_VALUE
+$3 ==> -2147483648
+
+jshell> Integer.SIZE
+$4 ==> 32
+
+jshell> Integer.BYTES
+$5 ==> 4
+```
+
+#### Autoboxing
+- Autoboxing is the automatic conversion that the Java compiler makes between the primitive types and their corresponding object wrapper classes.
+- Auto Boxing helps in saving memory by reusing already created Wrapper objects. 
+- Auto Boxing uses the static valueOf methods.                
+
+```
+Integer ten = new Integer(10);
+ten++;
+//allowed. Java does the work behind the screen for us
+//But the value of ten is not incremented!
+
+```
+
+Two wrapper objects created using boxing are same object.
+```
+Integer nineC = 9;
+Integer nineD = 9;
+System.out.println(nineC == nineD);//true
+System.out.println(nineC.equals(nineD));//true
+```
