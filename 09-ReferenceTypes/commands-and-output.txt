@@ -413,3 +413,39 @@ jshell> i3 == i4
 $112 ==> true
 
 jshell> clear()
+
+
+jshell> Integer integer = Integer.valueOf("4567");
+integer ==> 4567
+
+jshell> int i = integer.intValue();
+i ==> 4567
+
+jshell> Float f = Float.valueOf("12.45")
+f ==> 12.45
+
+jshell> f.floatValue()
+$117 ==> 12.45
+
+jshell> f.intValue()
+$118 ==> 12
+
+jshell> Integer eight = Integer.valueOf(8);
+eight ==> 8
+
+jshell> Integer.toBinaryString(
+toBinaryString(   
+
+jshell> Integer.toBinaryString(eight);
+$120 ==> "1000"
+
+jshell> Integer.toHexString(eight);
+$121 ==> "8"
+
+jshell> Integer eightyEight = Integer.valueOf(88);
+eightyEight ==> 88
+
+jshell> Integer.toHexString(eightyEight);
+$123 ==> "58"
+
+jshell> clear()
