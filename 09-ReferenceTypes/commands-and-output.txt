@@ -607,3 +607,46 @@ getMinute()       getMonth()        getMonthValue()   getNano()
 getSecond()       getYear()         
 
 jshell> clear()
+
+jshell> LocalDate today = LocalDate.now()
+today ==> 2018-02-01
+
+jshell> LocalDate yesterady = LocalDate.of(2018, 01. 31)
+|  Error:
+|  ')' expected
+|  LocalDate yesterady = LocalDate.of(2018, 01. 31);
+|                                              ^
+
+jshell> LocalDate yesterady = LocalDate.of(2018, 01, 31)
+yesterady ==> 2018-01-31
+
+jshell> LocalDate yesterday = LocalDate.of(2018, 01, 31)
+yesterday ==> 2018-01-31
+
+jshell> today
+today ==> 2018-02-01
+
+jshell> yesterday
+yesterday ==> 2018-01-31
+
+jshell> today.withYear(2016)
+$171 ==> 2016-02-01
+
+jshell> today.withDayOfMonth(20)
+$172 ==> 2018-02-20
+
+jshell> today.withMonth(3)
+$173 ==> 2018-03-01
+
+jshell> today.withDayOfYear(120)
+$174 ==> 2018-04-30
+
+jshell> today.isBefore(yesterday)
+$175 ==> false
+
+jshell> today.isAfter(yesterday)
+$176 ==> true
+
+jshell> /save /in28Minutes/git/java-a-course-for-beginners/9-ReferenceTypes/commands.txt
+
+jshell> 
