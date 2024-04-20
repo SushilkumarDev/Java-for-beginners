@@ -224,3 +224,33 @@ Float floatWrapper = Float.valueOf(57.0f);
 int floatToInt = floatWrapper.intValue();//57
 float floatToFloat = floatWrapper.floatValue();//57.0f
 ```
+
+#### Creating Primitives from other Data Types
+
+parseXxx methods are similar to valueOf but they return primitive values
+
+```
+int hundredPrimitive = 
+    Integer.parseInt("100");//100 is stored in variable
+
+int sevenPrimitive = 
+    Integer.parseInt("111", 2);//binary 111 is converted to 7
+
+```
+
+#### Conversion between Numeric Systems
+
+Yyyy can be Hex,Binary,Octal
+
+```
+Integer wrapperEight = new Integer(8);
+
+System.out.println(Integer
+.toString(wrapperEight, 2));//String Output: 1000
+System.out.println(Integer
+.toHexString(wrapperEight));//String Output:8 
+System.out.println(Integer
+.toBinaryString(wrapperEight));//String Output:1000
+System.out.println(Integer
+.toOctalString(wrapperEight));//String Output:10
+```
