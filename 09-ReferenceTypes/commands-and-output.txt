@@ -449,3 +449,30 @@ jshell> Integer.toHexString(eightyEight);
 $123 ==> "58"
 
 jshell> clear()
+
+
+jshell> Integer seven = Integer.valueOf(7);
+seven ==> 7
+
+jshell> Integer seven = 7;
+seven ==> 7
+
+jshell> Integer sevenAgain = 7;
+sevenAgain ==> 7
+
+jshell> seven == sevenAgain
+$133 ==> true
+
+jshell> Integer.MAX_VALUE
+$134 ==> 2147483647
+
+jshell> Integer.MIN_VALUE
+$135 ==> -2147483648
+
+jshell> Integer.SIZE
+$136 ==> 32
+
+jshell> Integer.BYTES
+$137 ==> 4
+
+jshell> clear()
