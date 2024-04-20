@@ -44,3 +44,24 @@ animal1 = animal2;
 
 What will happen? What would happen if the same was done with primitive variables?
 
+#### == (equals) operator
+- Equality for Primitives only compares values
+- For reference variables, == compares if they are referring to the same object.
+
+```
+int a = 5;
+int b = 5;
+System.out.println(a == b);//true
+```
+
+```
+Integer aReference = new Integer(5);
+Integer bReference = new Integer(5);
+
+System.out.println(aReference == bReference);//false
+
+bReference = aReference;
+
+//Now both are referring to same object
+System.out.println(aReference == bReference);//true
+```
