@@ -586,3 +586,24 @@ $160 ==> 2118-02-01
 
 jshell> today.minusYears(100)
 $161 ==> 1918-02-01
+
+jshell> LocalDate hundredYearsBefore = today.minusYears(100)
+hundredYearsBefore ==> 1918-02-01
+
+jshell> today
+today ==> 2018-02-01
+
+jshell> LocalDateTime now = LocalDateTime.now()
+now ==> 2018-02-01T16:03:37.567117
+
+jshell> now.plus
+plus(          plusDays(      plusHours(     plusMinutes(   plusMonths(    
+plusNanos(     plusSeconds(   plusWeeks(     plusYears(     
+
+jshell> now.get
+get(              getChronology()   getClass()        getDayOfMonth()   
+getDayOfWeek()    getDayOfYear()    getHour()         getLong(          
+getMinute()       getMonth()        getMonthValue()   getNano()         
+getSecond()       getYear()         
+
+jshell> clear()
