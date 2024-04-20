@@ -1,0 +1,20 @@
+int mark1;
+mark1 = 100
+int mark2 = 75;
+int mark3 = 60;
+int mark4 = 56;
+sum = mark1 + mark2 + mark3 + mark4;
+for(int mark:marks)
+   sum+= mark;
+sum;
+sum
+for(int mark:marks)
+   sum+= mark;
+sum
+int sum = 0;
+for(int mark:marks) {
+  sum = sum + mark;
+}
+sum
+void clear() { System.out.print("\033[H\033[2J ");}
+clear()
