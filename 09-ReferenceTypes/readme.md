@@ -290,3 +290,44 @@ Integer nineD = 9;
 System.out.println(nineC == nineD);//true
 System.out.println(nineC.equals(nineD));//true
 ```
+
+### Basic of LocalDate API
+
+```
+import java.time.LocalDate;
+LocalDate now = LocalDate.now();
+
+//Get Specific Data from the date
+now.getDayOfMonth()
+now.getDayOfWeek()
+now.getDayOfYear()
+now.getEra()
+now.getMonth()
+now.getMonthValue()
+
+//Get General Data from the date
+now.isLeapYear()
+now.lengthOfMonth()
+now.lengthOfYear()
+
+//Compare with other dates
+now.isBefore(LocalDate.now())
+now.isBefore(LocalDate.of(2020,1,1))
+
+//Addition and Subtraction of Days, Months, Year
+now.plusDays(10)
+now.plusMonths(10)
+now.plusYears(10)
+now.minusDays(10)
+
+//Setting specific attribute - Day, Month, Year to a specific value
+now.withDayOfMonth(2)
+now.withDayOfYear(200)
+now.withMonth(5)
+now.withYear(2019)
+
+```
+
+LocalDateTime offers similar API for Date & Time.
+
+Local Time offers similar API from Time.
