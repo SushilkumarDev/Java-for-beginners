@@ -562,3 +562,27 @@ $153 ==> FEBRUARY
 
 jshell> today.getMonthValue()
 $154 ==> 2
+
+jshell> today.isLeapYear()
+isLeapYear()   
+
+jshell> today.isLeapYear()
+$155 ==> false
+
+jshell> today.lengthOfYear()
+$156 ==> 365
+
+jshell> today.lengthOfMonth()
+$157 ==> 28
+
+jshell> today.plusDays(100)
+$158 ==> 2018-05-12
+
+jshell> today.plusMonths(100)
+$159 ==> 2026-06-01
+
+jshell> today.plusYears(100)
+$160 ==> 2118-02-01
+
+jshell> today.minusYears(100)
+$161 ==> 1918-02-01
