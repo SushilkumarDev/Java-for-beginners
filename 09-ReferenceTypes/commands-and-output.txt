@@ -489,3 +489,47 @@ jshell> LocalDate now = LocalDate.now()
 |    symbol:   variable LocalDate
 |  LocalDate now = LocalDate.now();
 |                  ^-------^
+
+jshell> /imports
+|    import java.io.*
+|    import java.math.*
+|    import java.net.*
+|    import java.nio.file.*
+|    import java.util.*
+|    import java.util.concurrent.*
+|    import java.util.function.*
+|    import java.util.prefs.*
+|    import java.util.regex.*
+|    import java.util.stream.*
+
+jshell> import java.time.LocalDate
+
+jshell> LocalDate now = LocalDate.now()
+now ==> 2018-02-01
+
+jshell> LocalDateTime now = LocalDateTime.now()
+|  Error:
+|  cannot find symbol
+|    symbol:   class LocalDateTime
+|  LocalDateTime now = LocalDateTime.now();
+|  ^-----------^
+|  Error:
+|  cannot find symbol
+|    symbol:   variable LocalDateTime
+|  LocalDateTime now = LocalDateTime.now();
+|                      ^-----------^
+
+jshell> import java.time.LocalDateTime
+
+jshell> import java.time.*
+
+jshell> LocalDateTime now = LocalDateTime.now()
+now ==> 2018-02-01T15:50:48.423164
+
+jshell> LocalDate now = LocalDate.now()
+now ==> 2018-02-01
+
+jshell> LocalTime now = LocalTime.now()
+now ==> 15:51:09.642001
+
+jshell> clear()
