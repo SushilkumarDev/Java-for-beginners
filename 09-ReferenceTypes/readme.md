@@ -65,3 +65,36 @@ bReference = aReference;
 //Now both are referring to same object
 System.out.println(aReference == bReference);//true
 ```
+### String Class
+- A String class can store a sequence of characters. 
+- String is not a primitive in Java but a Class in its own right.
+
+
+```
+//Get Data From String
+"This is a piece of Text".length()
+
+//Get Characters from String
+str.charAt(0)
+str.charAt(1)
+str.charAt(20)
+str.charAt(22)
+str.charAt(-22)
+
+//Get Substring from String
+str.substring(11)
+str.substring(11, 15)
+
+//Searching Content of a String
+str.indexOf('C')
+"test".indexOf("te")
+str.lastIndexOf('C')
+"test".lastIndexOf("te")
+
+//Checking Content of a String
+str.equalsIgnoreCase("test");
+str.contains("ABCD");
+str.endsWith("78")
+str.startsWith("01");
+str.isEmpty();
+```
