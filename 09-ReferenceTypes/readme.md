@@ -130,3 +130,45 @@ System.out.println("" + 5 + 5 + "25"); //5525
 System.out.println(5 + (5 + "25")); //5525
 System.out.println(5 + 5 + 25); //35
 ```
+
+#### String vs StringBuffer vs StringBuilder
+- Immutability : String
+- Thread Safety : String(immutable), StringBuffer
+
+### Wrapper Classes
+
+#### What are Wrapper Classes?
+
+- A wrapper class wraps (encloses) around a data type and gives it an object appearance
+- Wrapper classes are final and immutable.
+
+Types
+- Wrapper: Boolean,Byte,Character,Double,Float,Integer,Long,Short 
+- Primitive: boolean,byte,char ,double, float, int , long,short
+
+
+#### Why Wrapper Classes?
+
+Creation from other data types
+
+```java
+Integer hundred = Integer.valueOf("100");
+Boolean value = Boolean.valueOf("True");
+```
+
+Utility Methods
+
+```
+//Conversion
+
+Float floatWrapper = Float.valueOf(57.0f);
+int floatToInt = floatWrapper.intValue();//57
+
+Integer seven = 
+    Integer.valueOf("111", 2);
+
+Integer.toString(seven, 2);
+
+```
+
+Storing into a collection
