@@ -146,3 +146,45 @@ jshell> class Person {
 
 jshell> Person[] persons = new Person[5]
 persons ==> Person[5] { null, null, null, null, null }
+
+jshell> int[5] marks;
+|  Error:
+|  ']' expected
+|  int[5] marks;
+|      ^
+
+jshell> int[] marks = new int[];
+|  Error:
+|  array dimension missing
+|  int[] marks = new int[];
+|                ^-------^
+
+jshell> int[] marks = new int[5];
+marks ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> int[6]
+|  Error:
+|  ']' expected
+|  int[6]
+|      ^
+
+jshell> marks[6]
+|  java.lang.ArrayIndexOutOfBoundsException thrown: 6
+|        at (#54:1)
+
+jshell> int[] marks = {1,2,3,4.0};
+|  Error:
+|  incompatible types: possible lossy conversion from double to int
+|  int[] marks = {1,2,3,4.0};
+|                       ^-^
+
+jshell> int[] marks = {1,2,3,4,5}
+marks ==> int[5] { 1, 2, 3, 4, 5 }
+
+jshell> System.out.println(marks);
+[I@6c49835d
+
+jshell> System.out.println(Arrays.toString(marks));
+[1, 2, 3, 4, 5]
+
+jshell> clear()
