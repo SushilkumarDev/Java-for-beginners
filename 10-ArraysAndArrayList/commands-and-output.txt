@@ -369,3 +369,32 @@ newMarksWithOneDeleted ==> int[2] { 0, 0 }
 jshell> clear()
 
 
+jshell> ArrayList arrayList = new ArrayList()
+arrayList ==> []
+
+jshell> arrayList.add("Apple");
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.ArrayList
+|  arrayList.add("Apple");
+|  ^--------------------^
+$103 ==> true
+
+jshell> arrayList.add("Bat");
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.ArrayList
+|  arrayList.add("Bat");
+|  ^------------------^
+$104 ==> true
+
+jshell> arrayList.add("Cat");
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.ArrayList
+|  arrayList.add("Cat");
+|  ^------------------^
+$105 ==> true
+
+jshell> arrayList
+arrayList ==> [Apple, Bat, Cat]
+
+jshell> arrayList.remove("Cat")
+$107 ==> true
