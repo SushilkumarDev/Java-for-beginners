@@ -398,3 +398,41 @@ arrayList ==> [Apple, Bat, Cat]
 
 jshell> arrayList.remove("Cat")
 $107 ==> true
+
+jshell> arrayList
+arrayList ==> [Apple, Bat]
+
+jshell> arrayList.add(1);
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.ArrayList
+|  arrayList.add(1);
+|  ^--------------^
+$109 ==> true
+
+jshell> arrayList
+arrayList ==> [Apple, Bat, 1]
+
+jshell> ArrayList<String> items = new ArrayList<String>()
+items ==> []
+
+jshell> items.add("Apple");
+$112 ==> true
+
+jshell> items.add(1)
+|  Error:
+|  no suitable method found for add(int)
+|      method java.util.Collection.add(java.lang.String) is not applicable
+|        (argument mismatch; int cannot be converted to java.lang.String)
+|      method java.util.List.add(java.lang.String) is not applicable
+|        (argument mismatch; int cannot be converted to java.lang.String)
+|      method java.util.AbstractCollection.add(java.lang.String) is not applicable
+|        (argument mismatch; int cannot be converted to java.lang.String)
+|      method java.util.AbstractList.add(java.lang.String) is not applicable
+|        (argument mismatch; int cannot be converted to java.lang.String)
+|      method java.util.ArrayList.add(java.lang.String) is not applicable
+|        (argument mismatch; int cannot be converted to java.lang.String)
+|  items.add(1)
+|  ^-------^
+
+jshell> items.add("Bat")
+$113 ==> true
