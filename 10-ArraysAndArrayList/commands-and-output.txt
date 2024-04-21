@@ -188,3 +188,25 @@ jshell> System.out.println(Arrays.toString(marks));
 [1, 2, 3, 4, 5]
 
 jshell> clear()
+
+jshell> int[] marks = {100, 99, 95, 96, 100}
+marks ==> int[5] { 100, 99, 95, 96, 100 }
+
+jshell> for(int mark:marks) 
+   ...>    System.out.println(mark);
+100
+99
+95
+96
+100
+
+jshell> for(int i=0; i<marks.length; i++) {
+   ...>    System.out.println(marks[i]);
+   ...> }
+100
+99
+95
+96
+100
+
+jshell> clear()
