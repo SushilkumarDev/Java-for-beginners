@@ -127,3 +127,22 @@ jshell> for(int i=0; i< marks.length; i++) {
 6
 7
 8
+
+jshell> clear()
+
+ 
+jshell> int[] marks = new int[5]
+marks ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> double[] values = new double[5]
+values ==> double[5] { 0.0, 0.0, 0.0, 0.0, 0.0 }
+
+jshell> boolean[] test = new boolean[5]
+test ==> boolean[5] { false, false, false, false, false }
+
+jshell> class Person {
+   ...> }
+|  created class Person
+
+jshell> Person[] persons = new Person[5]
+persons ==> Person[5] { null, null, null, null, null }
