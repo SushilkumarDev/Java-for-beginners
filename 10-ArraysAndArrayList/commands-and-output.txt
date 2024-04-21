@@ -24,3 +24,14 @@ marks ==> int[3] { 75, 60, 56 }
 
 jshell> int sum = 0
 sum ==> 0
+jshell> for(int mark:marks) {
+   ...>   sum = sum + mark;
+   ...> }
+
+jshell> sum
+sum ==> 191
+
+jshell> void clear() { System.out.print("\033[H\033[2J ");}
+|  created method clear()
+
+jshell> clear()
