@@ -97,3 +97,21 @@ jshell> marks3.length
 $41 ==> 5
 
 jshell> clear()
+
+
+jshell> int[] marks = {1,2,3,4,5,6,7,8}
+marks ==> int[8] { 1, 2, 3, 4, 5, 6, 7, 8 }
+
+jshell> marks.length
+$44 ==> 8
+
+jshell> for(int i=0; i< marks.length-1; i++) {
+   ...>     System.out.println(marks[i]);
+   ...> }
+1
+2
+3
+4
+5
+6
+7
