@@ -329,3 +329,43 @@ jshell> void print(int... value, String name) {
 
 jshell> clear()
 
+jshell> class Person {
+   ...> }
+|  modified class Person
+
+jshell> Person[] persons = new Person[5];
+persons ==> Person[5] { null, null, null, null, null }
+
+jshell> persons[1] = new Person();
+$90 ==> Person@394e1a0f
+
+jshell> persons
+persons ==> Person[5] { null, Person@394e1a0f, null, null, null }
+
+jshell> persons[0] = new Person();
+$93 ==> Person@1e965684
+
+jshell> persons
+persons ==> Person[5] { Person@1e965684, Person@394e1a0f, null, null, null }
+
+jshell> Person[] person2 = { new Person(), new Person()};
+person2 ==> Person[2] { Person@3b088d51, Person@1786dec2 }
+
+jshell> String[] textValues = {"Apple", "Ball", "Cat"}
+textValues ==> String[3] { "Apple", "Ball", "Cat" }
+
+jshell> clear()
+
+ 
+jshell> int[] marks = {12 ,34, 45}
+marks ==> int[3] { 12, 34, 45 }
+
+jshell> int[] newMarks = new int[marks.length +1]
+newMarks ==> int[4] { 0, 0, 0, 0 }
+
+jshell> int[] newMarksWithOneDeleted = new int[marks.length -1]
+newMarksWithOneDeleted ==> int[2] { 0, 0 }
+
+jshell> clear()
+
+
