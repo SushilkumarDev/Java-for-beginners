@@ -106,3 +106,21 @@ int[] marks = {12 ,34, 45};
 int[] newMarks = new int[marks.length +1];
 int[] newMarksWithOneDeleted = new int[marks.length -1];
 clear()
+ArrayList arrayList = new ArrayList();
+arrayList.add("Apple");
+arrayList.add("Bat");
+arrayList.add("Cat");
+arrayList
+arrayList.remove("Cat")
+arrayList
+arrayList.add(1);
+arrayList
+ArrayList<String> items = new ArrayList<String>();
+items.add("Apple");
+items.add("Bat")
+items.add("Cat")
+items
+items.remove("Cat")
+items
+items.remove(0)
+items
