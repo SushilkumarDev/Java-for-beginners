@@ -244,3 +244,78 @@ jshell> array3
 array3 ==> int[3] { 2, 3, 3 }
 
 jshell> clear()
+
+
+jshell> int sum(int i, int j) {
+   ...> }
+|  Error:
+|  missing return statement
+|  int sum(int i, int j) {
+|                        ^
+
+jshell> int sum(int i, int j) {
+   ...>    return i + j;
+   ...> }
+|  created method sum(int,int)
+
+jshell> sum(1,2)
+$76 ==> 3
+
+jshell> sum(1,2,3)
+|  Error:
+|  method sum in class  cannot be applied to given types;
+|    required: int,int
+|    found: int,int,int
+|    reason: actual and formal argument lists differ in length
+|  sum(1,2,3)
+|  ^-^
+
+jshell> int sum(int i, int j, int k) {
+   ...>    return i + j + k;
+   ...> }
+|  created method sum(int,int,int)
+
+jshell> void print(int... values) {
+   ...>    System.out.println(Arrays.toString(values));
+   ...> }
+|  created method print(int...)
+
+jshell> print(1)
+[1]
+
+jshell> print(1,2)
+[1, 2]
+
+jshell> print(1,2,3)
+[1, 2, 3]
+
+jshell> int sum(int... values) {
+   ...>     int sum = 0;
+   ...>     for(int value:values) {
+   ...>        sum += value;
+   ...>     }
+   ...> }
+|  Error:
+|  missing return statement
+|  int sum(int... values) {
+|                         ^
+
+jshell> int sum(int... values) {
+   ...>     int sum = 0;
+   ...>     for(int value:values) {
+   ...>        sum += value;
+   ...>     }
+   ...>     return sum;
+   ...> }
+|  created method sum(int...)
+
+jshell> sum(1,2)
+$83 ==> 3
+
+jshell> sum(1,2,3,4)
+$84 ==> 10
+
+jshell> sum(1,2,3,4,5,6)
+$85 ==> 21
+
+jshell> clear()
