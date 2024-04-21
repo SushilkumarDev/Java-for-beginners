@@ -436,3 +436,25 @@ jshell> items.add(1)
 
 jshell> items.add("Bat")
 $113 ==> true
+
+jshell> items.add("Cat")
+$114 ==> true
+
+jshell> items
+items ==> [Apple, Bat, Cat]
+
+jshell> items.remove("Cat")
+$116 ==> true
+
+jshell> items
+items ==> [Apple, Bat]
+
+jshell> items.remove(0)
+$118 ==> "Apple"
+
+jshell> items
+items ==> [Bat]
+
+jshell> /save /in28Minutes/git/java-a-course-for-beginners/10-ArraysAndArrayList/commands.txt
+
+jshell> 
