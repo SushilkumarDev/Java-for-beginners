@@ -210,3 +210,37 @@ jshell> for(int i=0; i<marks.length; i++) {
 100
 
 jshell> clear()
+
+
+jshell> int[] marks = new int[5];
+marks ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> Arrays.fill(marks,100)
+
+jshell> marks
+marks ==> int[5] { 100, 100, 100, 100, 100 }
+
+jshell> int[] array1 = {1,2,3}
+array1 ==> int[3] { 1, 2, 3 }
+
+jshell> int[] array2 = {1,2,3}
+array2 ==> int[3] { 1, 2, 3 }
+
+jshell> Arrays.equals(array1, array2)
+$68 ==> true
+
+jshell> int[] array3 = {3,2,3}
+array3 ==> int[3] { 3, 2, 3 }
+
+jshell> Arrays.equals(array1, array2)
+$70 ==> true
+
+jshell> Arrays.equals(array1, array3)
+$71 ==> false
+
+jshell> Arrays.sort(array3)
+
+jshell> array3
+array3 ==> int[3] { 2, 3, 3 }
+
+jshell> clear()
