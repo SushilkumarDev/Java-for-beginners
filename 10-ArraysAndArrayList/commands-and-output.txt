@@ -77,3 +77,23 @@ $34 ==> 5
 
 jshell> marks3
 marks3 ==> int[5] { 1, 2, 3, 4, 5 }
+
+jshell> marks2
+marks2 ==> int[0] {  }
+
+jshell> int[] marks2 = {1,2,3,4,5}
+marks2 ==> int[5] { 1, 2, 3, 4, 5 }
+
+jshell> int[] marks3 = new int[5]
+marks3 ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> marks2.length
+$39 ==> 5
+
+jshell> marks.length
+$40 ==> 3
+
+jshell> marks3.length
+$41 ==> 5
+
+jshell> clear()
