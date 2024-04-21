@@ -35,3 +35,45 @@ jshell> void clear() { System.out.print("\033[H\033[2J ");}
 |  created method clear()
 
 jshell> clear()
+
+jshell> int[] marks = {1,2,3}
+marks ==> int[3] { 1, 2, 3 }
+
+jshell> int[] marks2 = {1,2,3,4,5}
+marks2 ==> int[5] { 1, 2, 3, 4, 5 }
+
+jshell> int[] marks2 = {1}
+marks2 ==> int[1] { 1 }
+
+jshell> int[] marks2 = {}
+marks2 ==> int[0] {  }
+
+jshell> int[] marks3 = new int[5];
+marks3 ==> int[5] { 0, 0, 0, 0, 0 }
+
+jshell> marks3[0]
+$27 ==> 0
+
+jshell> marks3[0] = 10
+$28 ==> 10
+
+jshell> marks3[0]
+$29 ==> 10
+
+jshell> marks3[0] = 1
+$30 ==> 1
+
+jshell> marks3[1] = 2
+$31 ==> 2
+
+jshell> marks3[2] = 3
+$32 ==> 3
+
+jshell> marks3[3] = 4
+$33 ==> 4
+
+jshell> marks3[4] = 5
+$34 ==> 5
+
+jshell> marks3
+marks3 ==> int[5] { 1, 2, 3, 4, 5 }
