@@ -1,0 +1,26 @@
+jshell> int mark1;
+mark1 ==> 0
+
+jshell> mark1 = 100
+mark1 ==> 100
+
+jshell> int mark2 = 75
+mark2 ==> 75
+
+jshell> int mark3 = 60
+mark3 ==> 60
+
+jshell> int sum = mark1 + mark2 + mark3;
+sum ==> 235
+
+jshell> int mark4 = 56
+mark4 ==> 56
+
+jshell> sum = mark1 + mark2 + mark3 + mark4;
+sum ==> 291
+
+jshell> int[] marks = { 75, 60, 56}
+marks ==> int[3] { 75, 60, 56 }
+
+jshell> int sum = 0
+sum ==> 0
