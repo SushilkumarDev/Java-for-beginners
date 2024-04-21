@@ -102,3 +102,7 @@ persons
 Person[] person2 = { new Person(), new Person()};
 String[] textValues = {"Apple", "Ball", "Cat"};
 clear()
+int[] marks = {12 ,34, 45};
+int[] newMarks = new int[marks.length +1];
+int[] newMarksWithOneDeleted = new int[marks.length -1];
+clear()
