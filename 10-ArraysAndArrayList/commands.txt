@@ -86,3 +86,19 @@ int sum(int... values) {
     }
     return sum;
 }
+sum(1,2)
+sum(1,2,3,4)
+sum(1,2,3,4,5,6)
+clear()
+clear()
+class Person {
+}
+Person[] persons = new Person[5];
+persons[1] = new Person();
+persons
+persons[0] = new Person();
+persons[0] = new Person();
+persons
+Person[] person2 = { new Person(), new Person()};
+String[] textValues = {"Apple", "Ball", "Cat"};
+clear()
