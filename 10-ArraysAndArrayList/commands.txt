@@ -66,3 +66,23 @@ Arrays.equals(array1, array3)
 Arrays.sort(array3)
 array3
 clear()
+int sum(int i, int j) {
+   return i + j;
+}
+sum(1,2)
+int sum(int i, int j, int k) {
+   return i + j + k;
+}
+void print(int... values) {
+   System.out.println(Arrays.toString(values));
+}
+print(1)
+print(1,2)
+print(1,2,3)
+int sum(int... values) {
+    int sum = 0;
+    for(int value:values) {
+       sum += value;
+    }
+    return sum;
+}
