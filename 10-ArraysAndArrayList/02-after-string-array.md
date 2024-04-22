@@ -54,3 +54,20 @@ public class Student {
 	public int getNumberOfMarks() {
 		return marks.length;
 	}
+	public int getTotalSumOfMarks() {
+		int sum = 0;
+		for (int mark : marks) {
+			sum += mark;
+		}
+		return sum;
+	}
+
+	public int getMaximumMark() {
+		int maximum = Integer.MIN_VALUE; // 95, 98, 10
+		for (int mark : marks) {
+			if (mark > maximum) {
+				maximum = mark;
+			}
+		}
+		return maximum;
+	}
