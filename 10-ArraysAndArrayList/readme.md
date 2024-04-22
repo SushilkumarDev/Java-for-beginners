@@ -180,3 +180,13 @@ Person[] personsAgain = { new Person(),new Person(),new Person()};
 	- Longest String
 - Print days of the week backwards
 
+## Let's add methods to add and delete elements
+```
+student.addNewMark(35);
+student.removeMarkAtIndex(5);
+```
+
+## Let's do ArrayList
+Basics of ArrayList
+
+## Using ArrayList for Previous Example
