@@ -99,3 +99,42 @@ short[] shorts = new short[5];
 //ints = (int[])shorts;//COMPILER ERROR
 
 ```
+
+## More Basics about Arrays
+
+Enhanced for loop can be used to loop around array's or List's.
+```
+int[] numbers = {1,2,3,4,5};
+
+for(int number:numbers){
+    System.out.print(number);
+}
+//Output - 12345
+```
+
+Changing content of an array
+```
+Arrays.fill(marks, 100); //All array values will be 100
+```
+
+Comparing Arrays
+
+```
+int[] numbers1 = { 1, 2, 3 };
+int[] numbers2 = { 4, 5, 6 };
+
+System.out.println(Arrays
+.equals(numbers1, numbers2)); //false
+
+int[] numbers3 = { 1, 2, 3 };
+
+System.out.println(Arrays
+.equals(numbers1, numbers3)); //true
+```
+
+Sorting an Array
+```
+int rollNos[] = { 12, 5, 7, 9 };
+Arrays.sort(rollNos);
+System.out.println(Arrays.toString(rollNos));//[5, 7, 9, 12]
+```
