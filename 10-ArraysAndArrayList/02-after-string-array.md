@@ -71,3 +71,23 @@ public class Student {
 		}
 		return maximum;
 	}
+    	public int getMinimumMark() {
+		int minimum = Integer.MAX_VALUE; // 95, 98, 10
+		for (int mark : marks) {
+			if (mark < minimum) {
+				minimum = mark;
+			}
+		}
+		return minimum;
+	}
+
+	public BigDecimal getAverageMarks() {
+		int sum = getTotalSumOfMarks();
+		int number = getNumberOfMarks();
+
+		return new BigDecimal(sum).divide(new BigDecimal(number), 3, RoundingMode.UP);
+	}
+
+}
+```
+---
