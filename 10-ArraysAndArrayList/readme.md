@@ -171,3 +171,12 @@ persons[2] = new Person();
 Person[] personsAgain = { new Person(),new Person(),new Person()};
 
 ```
+#### Exercise
+
+- Create a string array with days of the week
+   - "Sunday", "Monday", "Tuesday", "Wednesday"
+   - "Thursday", "Friday", "Saturday"
+- Find the day with most number of letters in it 
+	- Longest String
+- Print days of the week backwards
+
