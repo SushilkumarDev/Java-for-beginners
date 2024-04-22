@@ -138,3 +138,36 @@ int rollNos[] = { 12, 5, 7, 9 };
 Arrays.sort(rollNos);
 System.out.println(Arrays.toString(rollNos));//[5, 7, 9, 12]
 ```
+
+## Let's create Student class now
+
+```
+Student student = new Student (name, list of marks);
+int number = student.getNumberOfMarks();
+int sum = student.getTotalSumOfMarks();
+int maximumMark = student.getMaximumMark();
+int minimumMark = student.getMinimumMark();
+BigDecimal average = student.getAverageMarks();
+```
+## Variable Arguments
+
+## Variable Argument Puzzles
+
+## Arrays of Strings and Objects
+
+```
+Person[] persons = new Person[3];
+
+//By default, an array of 3 reference variables is created.
+//The person objects are not created
+System.out.println(persons[0]);//null
+
+//Let's create the new objects
+persons[0] = new Person();
+persons[1] = new Person();
+persons[2] = new Person();
+
+//Creating and initializing person array in one statement
+Person[] personsAgain = { new Person(),new Person(),new Person()};
+
+```
