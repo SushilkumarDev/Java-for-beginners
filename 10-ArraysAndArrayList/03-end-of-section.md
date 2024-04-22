@@ -65,3 +65,33 @@ public class Student {
 		}
 		return sum;
 	}
+    	public int getMaximumMark() {
+		return Collections.max(marks);
+	}
+
+	public int getMinimumMark() {
+		return Collections.min(marks);
+	}
+
+	public BigDecimal getAverageMarks() {
+		int sum = getTotalSumOfMarks();
+		int number = getNumberOfMarks();
+
+		return new BigDecimal(sum).divide(new BigDecimal(number), 3, RoundingMode.UP);
+	}
+
+	public String toString() {
+		return name + marks;
+	}
+
+	public void addNewMark(int mark) {
+		marks.add(mark);
+	}
+
+	public void removeMarkAtIndex(int index) {
+		marks.remove(index);
+		
+	}
+}
+```
+---
