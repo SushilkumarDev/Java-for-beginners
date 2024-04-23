@@ -51,3 +51,28 @@ $11 ==> true
 
 jshell> pet instanceof Dog
 $12 ==> true
+
+jshell> pet instanceof String
+|  Error:
+|  incompatible types: Pet cannot be converted to java.lang.String
+|  pet instanceof String
+|  ^-^
+
+jshell> pet instanceof Animal
+$13 ==> true
+
+jshell> pet instanceof Object
+$14 ==> true
+
+jshell> Animal animal = new Animal()
+animal ==> Animal@3632be31
+
+jshell> animal instanceof pet
+|  Error:
+|  cannot find symbol
+|    symbol:   class pet
+|  animal instanceof pet
+|                    ^-^
+
+jshell> animal instanceof Pet
+$16 ==> false
