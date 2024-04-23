@@ -129,3 +129,23 @@ jshell> abstract class AbstractAnimal {
    ...>     abstract public void bark();
    ...> }
 |  created class AbstractAnimal
+
+jshell> class Dog extends AbstractAnimal {
+   ...> }
+|  Error:
+|  Dog is not abstract and does not override abstract method bark() in AbstractAnimal
+|  class Dog extends AbstractAnimal {
+|  ^---------------------------------...
+
+jshell> class Dog extends AbstractAnimal {
+   ...>     public void bark() {
+   ...>        System.out.println("Bow Bow");
+   ...>     }
+   ...> }
+|  created class Dog
+
+jshell> Dog dog = new Dog()
+dog ==> Dog@5a8e6209
+
+jshell> dog.bark()
+Bow Bow
