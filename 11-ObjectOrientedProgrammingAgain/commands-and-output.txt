@@ -36,3 +36,18 @@ Groom
 
 jshell> Pet pet = new Dog()
 pet ==> Dog@4fe3c938
+
+jshell> pet.groom()
+Groom
+
+jshell> Dog dog = new Pet()
+|  Error:
+|  incompatible types: Pet cannot be converted to Dog
+|  Dog dog = new Pet();
+|            ^-------^
+
+jshell> pet instanceof Pet
+$11 ==> true
+
+jshell> pet instanceof Dog
+$12 ==> true
