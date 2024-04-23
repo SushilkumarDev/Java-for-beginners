@@ -51,3 +51,11 @@ class Implementation implements Interface2 {
 abstract class ImplementationAbstract implements Interface2 {
    public void method1() { }
 }
+interface Interface3 {
+  int test = 5;
+}
+interface Interface4 {
+    default void print() {
+       System.out.println("default");
+    }
+}
