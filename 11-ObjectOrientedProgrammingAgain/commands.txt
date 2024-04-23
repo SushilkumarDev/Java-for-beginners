@@ -59,3 +59,11 @@ interface Interface4 {
        System.out.println("default");
     }
 }
+class Test implements Interface4 {
+}
+test.print()
+class Test1 implements Interface4 {
+   public void print() {
+      System.out.println("override");
+   }
+}
