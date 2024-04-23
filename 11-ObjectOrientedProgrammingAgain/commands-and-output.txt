@@ -105,3 +105,27 @@ jshell> class Animal {
 
 jshell> Animal animal = new Animal()
 animal ==> Animal@335eadca
+
+jshell> animal.bark()
+TEst
+
+jshell> class AbstractAnimal {
+   ...>    public void bark();
+   ...> }
+|  Error:
+|  missing method body, or declare abstract
+|     public void bark();
+|     ^-----------------^
+
+jshell> class AbstractAnimal {
+   ...>    abstract public void bark();
+   ...> }
+|  Error:
+|  AbstractAnimal is not abstract and does not override abstract method bark() in AbstractAnimal
+|  class AbstractAnimal {
+|  ^---------------------...
+
+jshell> abstract class AbstractAnimal {
+   ...>     abstract public void bark();
+   ...> }
+|  created class AbstractAnimal
