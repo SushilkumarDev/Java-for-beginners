@@ -11,3 +11,13 @@ jshell> class Dog extends Animal, Pet {
 |  '{' expected
 |  class Dog extends Animal, Pet {
 |                          ^
+jshell> class Animal {
+   ...> }
+|  modified class Animal
+
+jshell> class Pet extends Animal {
+   ...>      public void groom() {
+   ...>         System.out.println("Groom");
+   ...>      }
+   ...> }
+|  replaced class Pet
