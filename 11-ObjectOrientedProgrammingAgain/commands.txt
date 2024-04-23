@@ -30,3 +30,17 @@ class Dog extends AbstractAnimal {
        System.out.println("Bow Bow");
     }
 }
+Dog dog = new Dog();
+dog.bark()
+clear()
+abstract class AbstractTest {
+}
+abstract class Algorithm1 extends AbstractAlgorithm {
+}
+abstract class AbstractAlgorithm {
+     private int stepCount;
+     public int getStepCount() {
+          return stepCount();
+     }
+}
+clear()
