@@ -94,3 +94,14 @@ jshell> void clear() { System.out.print("\033[H\033[2J ");}
 |  created method clear()
 
 jshell> clear()
+
+jshell> class Animal {
+   ...>    public void bark() {
+   ...>        System.out.println("TEst");
+   ...>    }
+   ...> }
+|  replaced class Animal
+|    update replaced variable animal, reset to null
+
+jshell> Animal animal = new Animal()
+animal ==> Animal@335eadca
