@@ -21,3 +21,18 @@ jshell> class Pet extends Animal {
    ...>      }
    ...> }
 |  replaced class Pet
+jshell> class Dog extends Pet {
+   ...> }
+|  created class Dog
+
+jshell> Dog dog = new Dog();
+dog ==> Dog@72d818d1
+
+jshell> dog.toString()
+$7 ==> "Dog@72d818d1"
+
+jshell> dog.groom()
+Groom
+
+jshell> Pet pet = new Dog()
+pet ==> Dog@4fe3c938
