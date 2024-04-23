@@ -3,3 +3,21 @@ class Pet extends Animal {
         System.out.println("Groom");
      }
 }
+dog.toString()
+dog.groom()
+Pet pet = new Dog();
+pet.groom()
+pet instanceof Pet
+pet instanceof Dog
+pet instanceof Animal
+pet instanceof Object
+animal instanceof Pet
+animal instanceof Dog
+animal instanceof Object
+void clear() { System.out.print("\033[H\033[2J ");}
+clear()
+class Animal {
+   public void bark() {
+       System.out.println("TEst");
+   }
+}
