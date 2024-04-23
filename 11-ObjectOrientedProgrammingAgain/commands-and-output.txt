@@ -1,0 +1,7 @@
+jshell> class Animal {
+   ...> }
+|  created class Animal
+
+jshell> class Pet {
+   ...> }
+|  created class Pet
