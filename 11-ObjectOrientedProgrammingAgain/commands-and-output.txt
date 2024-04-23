@@ -76,3 +76,21 @@ jshell> animal instanceof pet
 
 jshell> animal instanceof Pet
 $16 ==> false
+
+jshell> animal instanceof Dog
+$17 ==> false
+
+jshell> animal instanceof Object
+$18 ==> true
+
+jshell> clear()
+|  Error:
+|  cannot find symbol
+|    symbol:   method clear()
+|  clear()
+|  ^---^
+
+jshell> void clear() { System.out.print("\033[H\033[2J ");}
+|  created method clear()
+
+jshell> clear()
