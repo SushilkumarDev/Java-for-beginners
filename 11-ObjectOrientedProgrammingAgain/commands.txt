@@ -67,3 +67,12 @@ class Test1 implements Interface4 {
       System.out.println("override");
    }
 }
+Test1 test = new Test1();
+test.print()
+interface Interface1 {
+ void method1();
+}
+interface Interface2 {
+ void method2();
+}
+clear()
