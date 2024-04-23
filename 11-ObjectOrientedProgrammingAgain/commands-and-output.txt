@@ -5,3 +5,9 @@ jshell> class Animal {
 jshell> class Pet {
    ...> }
 |  created class Pet
+jshell> class Dog extends Animal, Pet {
+   ...> }
+|  Error:
+|  '{' expected
+|  class Dog extends Animal, Pet {
+|                          ^
