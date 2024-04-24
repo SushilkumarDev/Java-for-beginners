@@ -270,3 +270,16 @@ test ==> Test@6ebc05a6
 
 jshell> test.print()
 default
+
+jshell> class Test1 implements Interface4 {
+   ...>    public void print() {
+   ...>       System.out.println("override");
+   ...>    }
+   ...> }
+|  created class Test1
+
+jshell> Test1 test = new Test1();
+test ==> Test1@3d99d22e
+
+jshell> test.print()
+override
