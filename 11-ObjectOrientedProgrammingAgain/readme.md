@@ -45,3 +45,25 @@ Book > id, name, author
 
  System.out.println(book);
  ```
+## Inheritance Basics
+
+### Inheritance Basics
+
+public class Person name,phone,email;
+
+- Student 
+  - college
+  - class
+- Employee 
+  - title
+  - employer
+  - employeeGrade
+  - salary
+  - toString (print all values including those of Person)
+
+### Apply Inheritance to Savings Account
+
+### More about Inheritance
+- Method Overriding
+- Is a relationship is mandatory
+- Example in Java Api : HashMap & TreeMap extend AbstractMap.
