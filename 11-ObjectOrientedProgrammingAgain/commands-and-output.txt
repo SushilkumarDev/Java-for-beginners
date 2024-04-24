@@ -176,4 +176,19 @@ jshell> class Algorithm1 extends AbstractAlgorithm {
 
 jshell> abstract class Algorithm1 extends AbstractAlgorithm {
    ...> }
-|  created class Algorithm1
+|  created class 
+
+jshell> abstract class AbstractAlgorithm {
+   ...>      private int stepCount;
+   ...> }
+|  replaced class AbstractAlgorithm
+
+jshell> abstract class AbstractAlgorithm {
+   ...>      private int stepCount;
+   ...>      public int getStepCount() {
+   ...>           return stepCount();
+   ...>      }
+   ...> }
+|  replaced class AbstractAlgorithm, however, it cannot be instantiated or its methods invoked until method stepCount() is declared
+
+jshell> clear()
