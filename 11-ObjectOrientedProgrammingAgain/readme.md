@@ -273,3 +273,16 @@ Polymorphism is defined as "Same Code" having "Different Behavior".
 
 - Survey
   - id, title, description, list of questions
+
+### Why Inheritance?
+
+How do we create a new kind of Account called Savings Account?
+- annualInterestRate
+- calculateMonthlyInterest()
+
+Another kind of Account for Senior Citizens?
+- homeDeliveryOfCash()
+
+- An example of an abstract class in the JDK is AbstractMap, which is part of the Collections Framework. Its subclasses (which include HashMap, TreeMap, and ConcurrentHashMap) share many methods (including get, put, isEmpty, containsKey, and containsValue) that AbstractMap defines. 
+- An example abstract method : public abstract Set<Entry<K,V>> entrySet();
+- [Another Example - Spring AbstractController] (https://github.com/spring-projects/spring-framework/blob/master/spring-webmvc/src/main/java/org/springframework/web/servlet/mvc/AbstractController.java)
