@@ -123,3 +123,26 @@ public class ConstructorExamples {
     }
 }
 ```
+## Abstract Class
+
+### Basics of an Abstract Class
+
+- An abstract class is a class that cannot be instantiated, but must be inherited from. An abstract class may be fully implemented, but is more usually partially implemented or not implemented at all, thereby encapsulating common methodality for inherited classes.
+An abstract class cannot be instantiated.
+
+### One more example of an Abstract Class
+
+Cooking Recipe
+- firstStep - Review Availability of Oven, Stove and Utensils
+- The usual recipe steps
+- lastSteps - Switch off microwave oven, stove and clean everything!
+
+### Abstract Class Puzzles
+Abstract class can contain instance and static variables
+//An Abstract method does not contain body.
+//Abstract Class can contain ZERO or more abstract methods
+//Abstract method does not have a body
+//Abstract class can contain fully defined non-abstract methods. 
+
+// A concrete sub class should implement all abstract methods.
+// Below class gives compilation error if uncommented
