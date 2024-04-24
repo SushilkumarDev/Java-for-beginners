@@ -214,3 +214,25 @@ Interface methods are by default public and abstract. A concrete default method 
 A class can implement multiple interfaces. It should implement all the method declared in all Interfaces being implemented.
 
 A class should implement all the methods in an interface, unless it is declared abstract.
+
+## Exerices Interface and Abstract Class
+
+### Interface
+interface Flyable 
+- void fly();
+- Bird "with wings"
+- Aeroplane "with fuel"
+- Flyable flyingObjects = {new Bird(), new Aeroplane()};
+- Loop and invoke fly method
+
+### Abstract Class
+
+abstract class Animal
+- void bark()
+- Dog "Bow Bow"
+- Cat "Meow Meow"
+- Animal[] animals = {new Cat(), new Dog()};
+- Loop and invoke bark method
+
+## Polymorphism
+Polymorphism is defined as "Same Code" having "Different Behavior".  
