@@ -225,3 +225,21 @@ jshell> class Implementation implements Interface2 {
    ...>    public void method1() { }
    ...> }
 |  created class Implementation
+
+jshell> abstract class ImplementationAbstract implements Interface2 {
+   ...>    public void method1() { }
+   ...> }
+|  created class ImplementationAbstract
+
+jshell> interface Interface3 {
+   ...>   int test;
+   ...> }
+|  Error:
+|  = expected
+|    int test;
+|            ^
+
+jshell> interface Interface3 {
+   ...>   int test = 5;
+   ...> }
+|  created interface Interface3
