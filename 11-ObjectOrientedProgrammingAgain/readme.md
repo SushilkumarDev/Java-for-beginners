@@ -67,3 +67,32 @@ public class Person name,phone,email;
 - Method Overriding
 - Is a relationship is mandatory
 - Example in Java Api : HashMap & TreeMap extend AbstractMap.
+
+## Inheritance Puzzles
+
+Every Class extends Object class
+
+Super class reference variable can hold an object of sub class
+
+```
+//Object is super class of all java classes
+Object object = new Hero(); 
+```
+Multiple Inheritance results in a number of complexities. Java does not support Multiple Inheritance.
+
+```
+class Dog extends Animal, Pet { //COMPILER ERROR
+}
+```
+
+We can create an inheritance chain.
+```
+class Pet extends Animal {
+}
+
+class Dog extends Pet {
+}
+```
+instanceof operator checks if an object is of a particular type.
+
+- Can be used with Interfaces and Classes
