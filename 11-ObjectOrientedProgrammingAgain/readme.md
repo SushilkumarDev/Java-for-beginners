@@ -96,3 +96,30 @@ class Dog extends Pet {
 instanceof operator checks if an object is of a particular type.
 
 - Can be used with Interfaces and Classes
+
+
+### Inheritance and Constructors
+ - A constructor can call the constructor of a super class using the super() method call. Only constraint is that it should be the first statement.
+ - Another constructor in the same class can be invoked from a constructor, using this({parameters}) method call.
+ - If a super class constructor is not explicitly called from a sub class constructor, super class (no argument) constructor is automatically invoked (as first line) from a sub class constructor.
+
+Constructors are NOT inherited.
+```
+class Animal {
+    String name;
+
+    public Animal(String name) {
+this.name = name;
+System.out.println("Animal Constructor with name");
+    }
+}
+
+class Dog extends Animal {
+}
+
+public class ConstructorExamples {
+    public static void main(String[] args) {
+// Dog dog = new Dog("Terry");//COMPILER ERROR
+    }
+}
+```
