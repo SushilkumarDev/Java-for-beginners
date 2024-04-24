@@ -283,3 +283,32 @@ test ==> Test1@3d99d22e
 
 jshell> test.print()
 override
+
+jshell> interface Interface1 {
+   ...>  void method1();
+   ...> }
+|  modified interface Interface1
+
+jshell> interface Interface2 {
+   ...>  void method2();
+   ...> }
+|  replaced interface Interface2
+
+jshell> class Impl implements Interface1, Interface2 {
+   ...>      void method2() {
+   ...>      }
+   ...>      void method1() {
+   ...>      }
+   ...> }
+|  Error:
+|  method1() in Impl cannot implement method1() in Interface1
+|    attempting to assign weaker access privileges; was public
+|       void method1() {
+|       ^---------------...
+|  Error:
+|  method2() in Impl cannot implement method2() in Interface2
+|    attempting to assign weaker access privileges; was public
+|       void method2() {
+|       ^---------------...
+
+jshell> clear()
