@@ -243,3 +243,30 @@ jshell> interface Interface3 {
    ...>   int test = 5;
    ...> }
 |  created interface Interface3
+
+jshell> interace Interface4 {
+   ...>     default void print() {
+   ...>        System.out.println("default");
+   ...>     }
+   ...> }
+|  Error:
+|  ';' expected
+|  interace Interface4 {
+|                     ^
+
+jshell> interface Interface4 {
+   ...>     default void print() {
+   ...>        System.out.println("default");
+   ...>     }
+   ...> }
+|  created interface Interface4
+
+jshell> class Test implements Interface4 {
+   ...> }
+|  created class Test
+
+jshell> Test test = new Test();
+test ==> Test@6ebc05a6
+
+jshell> test.print()
+default
