@@ -149,3 +149,11 @@ dog ==> Dog@5a8e6209
 
 jshell> dog.bark()
 Bow Bow
+
+jshell> AbstractAnimal animal = new AbstractAnimal()
+|  Error:
+|  AbstractAnimal is abstract; cannot be instantiated
+|  AbstractAnimal animal = new AbstractAnimal();
+|                          ^------------------^
+
+jshell> clear()
