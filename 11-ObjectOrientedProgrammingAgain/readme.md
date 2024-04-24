@@ -236,3 +236,40 @@ abstract class Animal
 
 ## Polymorphism
 Polymorphism is defined as "Same Code" having "Different Behavior".  
+
+#### Interface vs Abstract Class
+- Real Difference - Apple vs Orange
+- Syntactical Differences
+  - Methods and members of an abstract class can have any visibility.  All methods of an interface must be  public.
+  - A concrete child class of an Abstract Class must define all the abstract methods. An Abstract child class can have abstract methods. An interface extending another interface need not provide default implementation for methods inherited from the parent interface. 
+  - A child class can only extend a single class. An interface can extend multiple interfaces. A class can implement multiple interfaces.
+  - A child class can define abstract methods with the same or less restrictive visibility, whereas a class implementing an interface must define all interface methods as public
+
+  - public class CheckingAccount {
+  - Customer customer > Name, Address
+  - int id
+  - BigDecimal balance
+  - Date dateCreated
+  - private ArrayList<Transaction> transactions 
+    >  type, date, amount, balance, description;
+  - BigDecimal overDraftLimit;
+  - boolean withdraw(BigDecimal amount)
+  - void deposit(BigDecimal amount)
+  - void currencyExchange(BigDecimal amount, String from, String to)
+  - void payBill(String billType, String to, BigDecimal amount)
+
+- Social Media Application like Facebook
+ - users (name, address, hobbies)
+   - friends 
+   - posts (description, link, image)
+      - likes
+      - comments
+
+- Book
+  - id, name
+  - Author > name address
+  - Publisher > name address
+  - Reviews > rating, description
+
+- Survey
+  - id, title, description, list of questions
