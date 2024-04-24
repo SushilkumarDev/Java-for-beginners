@@ -192,3 +192,20 @@ jshell> abstract class AbstractAlgorithm {
 |  replaced class AbstractAlgorithm, however, it cannot be instantiated or its methods invoked until method stepCount() is declared
 
 jshell> clear()
+
+jshell> interface Interface1 {
+   ...>   void method1();
+   ...> }
+|  created interface Interface1
+
+jshell> interface Interface2 extends Interface1 {
+   ...>   void method2();
+   ...> }
+|  created interface Interface2
+
+jshell> class Implementation implements Interface2 {
+   ...> }
+|  Error:
+|  Implementation is not abstract and does not override abstract method method2() in Interface2
+|  class Implementation implements Interface2 {
+|  ^-------------------------------------------...
