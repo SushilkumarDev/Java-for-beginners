@@ -191,3 +191,26 @@ VideoGameConsole
    - Company responsible for sorting will work on implementing the interface.
    - Company writing the application will use a dummy implementation of the interface.
 
+### Interface Puzzles
+- Can you extend an interface?
+- Can a class implement multiple interfaces?
+- What are the new features in interfaces introduced in Java 8?
+- Tips and Tricks
+    - Variables in an interface are always public, static, final. Variables in an interface cannot be declared private.
+    - Interface methods are by default public and abstract. Before Java 8, A concrete method (fully defined method) cannot be created in an interface.
+    - An interface can extend another interface.An interface cannot extend a class.
+    - A class can implement multiple interfaces. 
+    - An example of a class in the JDK that implements several interfaces is HashMap, which implements the interfaces Serializable, Cloneable, and Map. By reading this list of interfaces, you can infer that an instance of HashMap (regardless of the developer or company who implemented the class) can be cloned, is serializable (which means that it can be converted into a byte stream; see the section Serializable Objects), and has the methodality of a map.
+
+## Interface Puzzles
+An interface reference variable can hold an object of an instance of an interface implementation
+instanceof can be used with interfaces as well. 
+- However, A class can implement multiple interfaces. But, thats not Multiple inheritance in my book.
+- An example of a class in the JDK that implements several interfaces is HashMap, which implements the interfaces Serializable, Cloneable, and Map<K, V>. By reading this list of interfaces, you can infer that an instance of HashMap (regardless of the developer or company who implemented the class) can be cloned, is serializable (which means that it can be converted into a byte stream; see the section Serializable Objects), and has the methodality of a map.
+Variables in an interface are always public, static, final. Variables in an interface cannot be declared private.
+
+Interface methods are by default public and abstract. A concrete default method (fully defined method) can be created in an interface. Consider the example below:
+
+A class can implement multiple interfaces. It should implement all the method declared in all Interfaces being implemented.
+
+A class should implement all the methods in an interface, unless it is declared abstract.
