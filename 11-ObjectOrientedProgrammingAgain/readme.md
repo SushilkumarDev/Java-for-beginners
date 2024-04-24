@@ -169,3 +169,25 @@ VideoGameConsole
 > MarioGame
 > PacmanGame
 > ChessGame
+
+### Exercise
+- Aeroplane, Bird
+
+### Interfaces in Java API
+- Comparator interface - creating implementations for sorting!
+
+### One more way to think about an interface
+
+- Two systems talking to each other
+
+    - An interface is a contract: the guy writing the interface says, "hey, I accept things looking that way"
+    - Interface represents common actions between Multiple Classes.
+    - An interface defines a contract for responsibilities (methods) of a class.
+
+- Interface vs Implementation
+  - Two Companies are working on a complex project. Let’s take a simple example. One company is responsible for sorting.
+   - First they agree on an interface.
+   - inferface Sortable { public List<String> sort(List<String> items) }
+   - Company responsible for sorting will work on implementing the interface.
+   - Company writing the application will use a dummy implementation of the interface.
+
