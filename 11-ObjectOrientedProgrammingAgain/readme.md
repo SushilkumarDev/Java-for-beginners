@@ -146,3 +146,26 @@ Abstract class can contain instance and static variables
 
 // A concrete sub class should implement all abstract methods.
 // Below class gives compilation error if uncommented
+
+## Interface Basics
+
+A lot of confusion between Interface and Abstract Class. They are very different. We need to get our thinking right about interfaces. Interfaces have nothing to do with Inheritance.
+
+What does the word interface represent to you? Think about it.
+
+What is the interface that a Video game console provides you with?
+
+Interface of a Video game console exposes what actions you can perform with it.
+ - It exposes the interfaces for the buttons
+      - Left, right, up, down, green, red, blue
+
+What would the game writer do? Provide implementations for those methods. 
+
+Thats the best way to think about interfaces! What are the actions that can be performed? Represent that as an interface. 
+
+### First example with an interface
+
+VideoGameConsole
+> MarioGame
+> PacmanGame
+> ChessGame
