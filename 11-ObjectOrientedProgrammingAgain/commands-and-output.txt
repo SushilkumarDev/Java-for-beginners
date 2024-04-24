@@ -209,3 +209,19 @@ jshell> class Implementation implements Interface2 {
 |  Implementation is not abstract and does not override abstract method method2() in Interface2
 |  class Implementation implements Interface2 {
 |  ^-------------------------------------------...
+
+jshell> class Implementation implements Interface2 {
+   ...>    void method2() { }
+jshell> class Implementation implements Interface2 {
+   ...>    public void method2() { }
+   ...> }
+|  Error:
+|  Implementation is not abstract and does not override abstract method method1() in Interface1
+|  class Implementation implements Interface2 {
+|  ^-------------------------------------------...
+
+jshell> class Implementation implements Interface2 {
+   ...>    public void method2() { }
+   ...>    public void method1() { }
+   ...> }
+|  created class Implementation
