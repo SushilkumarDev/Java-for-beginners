@@ -1,0 +1,28 @@
+jshell> class Student {
+   ...>    int year;
+   ...>    String country;
+   ...> }
+|  created class Student
+
+jshell> class Student {
+   ...>      Student(int year, String country) {
+   ...>          this.year = year;
+   ...>          this.country = country;
+   ...>      }
+   ...>      int year;
+   ...>      String country;
+   ...> }
+|  replaced class Student
+
+jshell> List list = List.of(1,2,3,4,5,6,7,1,2);
+list ==> [1, 2, 3, 4, 5, 6, 7, 1, 2]
+
+jshell> list.
+add(               addAll(            clear()            contains(          
+containsAll(       equals(            forEach(           get(               
+getClass()         hashCode()         indexOf(           isEmpty()          
+iterator()         lastIndexOf(       listIterator(      notify()           
+notifyAll()        parallelStream()   remove(            removeAll(         
+removeIf(          replaceAll(        retainAll(         set(               
+size()             sort(              spliterator()      stream()           
+subList(           toArray(           toString()         wait(              
