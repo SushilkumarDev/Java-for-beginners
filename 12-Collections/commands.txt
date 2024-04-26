@@ -10,3 +10,24 @@ words.indexOf("Cat")
 words
 words.indexOf("Dog")
 clear()
+words.add("Dog")
+List<String> wordsLinkedList = new LinkedList<String>(words);
+List<String> wordsVector = new Vector<String>(words);
+wordsArrayList.add("Dog")
+wordsArrayList
+wordsArrayList.add("Elephant")
+wordsArrayList.add(2, "Ball")
+wordsArrayList
+wordsArrayList.add("Ball")
+wordsArrayList
+List<String> newList = List.of("Yak","Zebra");
+wordsArrayList.addAll(newList)
+wordsArrayList
+wordsArrayList.set(6, "Fish")
+wordsArrayList
+wordsArrayList.remove(2)
+wordsArrayList
+wordsArrayList.remove("Dog")
+wordsArrayList
+wordsArrayList.remove("Dog")
+clear()
