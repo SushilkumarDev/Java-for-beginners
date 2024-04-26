@@ -95,3 +95,25 @@ List<Integer> numbersAl = new ArrayList<>(numbers);
 Collections.sort(numbersAl);
 numbersAl
 clear()
+set.add("Apple");
+Set<String> hashset = new HashSet<>(set);
+hashset.add("Apple")
+hashset
+Set<String> set = Set.of("A", "Z","D", "C", "B");
+hashSet.add("A")
+hashSet.add("B")
+hashSet
+hashSet.add("C")
+hashSet
+hashSet.add("CA")
+hashSet
+hashSet.add("CAfsadfa")
+hashSet
+treeSet.add("Cat")
+treeSet.add("Bat")
+treeSet.add("Apple")
+treeSet
+hashSet.add("Cat");
+hashSet.add("Bat");
+hashSet.add("Apple");
+hashSet
