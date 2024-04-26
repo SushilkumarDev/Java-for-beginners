@@ -192,3 +192,16 @@ numbers.subSet(34,false,65,false)
 numbers.headSet(50)
 numbers.tailSet(50)
 clear()
+Queue<String> queue = new PriorityQueue<>();
+queue.poll()
+queue.offer("Apple")
+queue.addAll(List.of("Zebra", "Monkey", "Cat"))
+queue
+queue.poll()
+queue
+queue.poll()
+queue.poll()
+queue.poll()
+queue.poll()
+clear()
+clear()
