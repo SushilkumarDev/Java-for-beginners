@@ -227,3 +227,22 @@ hashmap
 Map<String, Integer> map = Map.of("A",3,"Z",5,"B",10);
 Map<String, Integer> linkedHashmap = new LinkedHashMap<>(map);
 clear()
+HashMap<String, Integer> hashmap = new HashMap<>();
+hashmap.put("Z",5)
+hashmap.put("A",15)
+hashmap.put("F",25)
+hashmap.put("L",250)
+hashmap
+LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+hashmap
+linkedHashMap.put("F",25)
+linkedHashMap.put("A",15)
+linkedHashMap.put("Z",5)
+linkedHashMap.put("L",250)
+linkedHashMap
+treemap.put("F",25)
+treemap.put("A",15)
+treemap.put("Z",5)
+treemap.put("L",250)
+treemap
+clear()
