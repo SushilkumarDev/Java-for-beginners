@@ -134,3 +134,19 @@ hashSet.add(589);
 hashSet.add(58);
 hashSet.add(5);
 hashSet
+Set<Integer> linkedHashSet = new LinkedHashSet<>();
+linkedHashSet.add(589789);
+linkedHashSet.add(58978);
+linkedHashSet.add(5897);
+linkedHashSet.add(589);
+linkedHashSet.add(58);
+linkedHashSet.add(5);
+linkedHashSet
+Set<Integer> treeSet = new TreeSet<>();
+treeSet.add(584567);
+treeSet.add(58456);
+treeSet.add(5845);
+treeSet.add(584);
+treeSet.add(58);
+treeSet.add(5);
+treeSet
