@@ -117,3 +117,12 @@ hashSet.add("Cat");
 hashSet.add("Bat");
 hashSet.add("Apple");
 hashSet
+hashSet.add("Dog");
+hashSet
+hashSet.add("Elephant");
+hashSet.add(5);
+hashSet.add(4);
+hashSet.add(3);
+hashSet.add(2);
+hashSet.add(1);
+hashSet
