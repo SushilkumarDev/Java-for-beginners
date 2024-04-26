@@ -47,3 +47,18 @@ for(String word:words) {
         words.remove(word);
    }
 }
+for(String word:wordsArrayList) {
+   if(word.endsWith("at")) {
+        wordsArrayList.remove(word);
+   }
+}
+wordsArrayList
+for(String word:words) {
+   if(word.endsWith("at"))
+      System.out.println(word);
+}
+for(String word:wordsAl) {
+   if(word.endsWith("at")) {
+        words.remove(word);
+   }
+}
