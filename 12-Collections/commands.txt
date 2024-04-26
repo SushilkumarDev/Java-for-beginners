@@ -79,3 +79,15 @@ while(iterator.hasNext()) {
 }
 wordsAl
 clear()
+List value = List.of("A", 'A' , 1, 1.0);
+value.get(2)
+value.get(2) instanceof Integer
+value.get(1) instanceof Character
+value.get(3) instanceof Double
+numbers.indexOf(101);
+numbersAl.indexOf(101)
+numbersAl.remove(101);
+numbersAl.remove(101)
+numbersAl.remove(Integer.valueOf(101))
+numbersAl
+clear()
