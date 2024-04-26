@@ -126,3 +126,11 @@ hashSet.add(3);
 hashSet.add(2);
 hashSet.add(1);
 hashSet
+Set<Integer> hashSet = new HashSet<>();
+hashSet.add(589789);
+hashSet.add(58978);
+hashSet.add(5897);
+hashSet.add(589);
+hashSet.add(58);
+hashSet.add(5);
+hashSet
