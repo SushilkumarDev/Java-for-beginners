@@ -205,3 +205,25 @@ queue.poll()
 queue.poll()
 clear()
 clear()
+map.put("R",1);
+map
+map.get("Z")
+map.get("A")
+map.get("C")
+map.size()
+map.isEmpty()
+map.containsKey("A")
+map.containsKey("F")
+map.containsValue(3)
+map
+map.containsValue(4)
+map.keySet()
+map.values()
+map
+hashmap.put("F",5)
+hashmap
+hashmap.put("Z",11)
+hashmap
+Map<String, Integer> map = Map.of("A",3,"Z",5,"B",10);
+Map<String, Integer> linkedHashmap = new LinkedHashMap<>(map);
+clear()
