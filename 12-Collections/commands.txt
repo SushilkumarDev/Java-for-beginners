@@ -62,3 +62,20 @@ for(String word:wordsAl) {
         words.remove(word);
    }
 }
+for(String word:wordsAl) {
+   if(word.endsWith("at")) {
+        wordsAl.remove(word);
+   }
+}
+wordsAl
+clear()
+List<String> words = List.of("Apple", "Bat" , "Cat");
+List<String> wordsAl = new ArrayList<>(words);
+Iterator<String> iterator = wordsAl.iterator();
+while(iterator.hasNext()) {
+     if(iterator.next().endsWith("at")) {
+          iterator.remove();
+     }
+}
+wordsAl
+clear()
