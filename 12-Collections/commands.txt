@@ -91,3 +91,7 @@ numbersAl.remove(101)
 numbersAl.remove(Integer.valueOf(101))
 numbersAl
 clear()
+List<Integer> numbersAl = new ArrayList<>(numbers);
+Collections.sort(numbersAl);
+numbersAl
+clear()
