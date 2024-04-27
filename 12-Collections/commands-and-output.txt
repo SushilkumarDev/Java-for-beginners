@@ -150,3 +150,17 @@ E List<E extends Object>.remove(int index)
 Removes the element at the specified position in this list (optional
 operation).Shifts any subsequent elements to the left (subtracts one from their
 indices). Returns the element that was removed from the list.
+
+Parameters:
+index - the index of the element to be removed
+
+Returns:
+the element previously at the specified position
+
+Thrown Exceptions:
+UnsupportedOperationException - if the remove operation is not supported by this
+                                list
+IndexOutOfBoundsException - if the index is out of range ( index < 0 || index >=
+                            size() )
+
+<press tab again to see all possible completions; total possible completions: 551>
