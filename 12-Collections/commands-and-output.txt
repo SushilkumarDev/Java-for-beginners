@@ -216,4 +216,13 @@ ConcurrentSkipListMap                    ConcurrentSkipListSet
 ConnectException                         Console                                  
 Consumer                                 ContentHandler                           
 ContentHandlerFactory                    CookieHandler                            
-CookieManager                            CookiePolicy                                                                       
+CookieManager                            CookiePolicy      
+CookieStore                              CopyOnWriteArrayList                     
+CopyOnWriteArraySet                      CopyOption                               
+CountDownLatch                           CountedCompleter                         
+Currency                                 CyclicBarrier                            
+DataInput                                DataInputStream                          
+DataOutput                               DataOutputStream                         
+DatagramPacket                           DatagramSocket                           
+DatagramSocketImpl                       DatagramSocketImplFactory                
+Date                                     DelayQueue                                                                                                
