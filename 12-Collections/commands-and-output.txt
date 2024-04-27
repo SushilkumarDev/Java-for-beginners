@@ -268,4 +268,16 @@ FormatterClosedException                 Function
 FunctionalInterface                      Future                                   
 FutureTask                               GregorianCalendar                        
 HashMap                                  HashSet                                  
-Hashtable                                HttpCookie                                                                                                                                                         
+Hashtable                                HttpCookie           
+HttpRetryException                       HttpURLConnection                        
+IDN                                      IOError                                  
+IOException                              IdentityHashMap                          
+IllegalAccessError                       IllegalAccessException                   
+IllegalArgumentException                 IllegalCallerException                   
+IllegalFormatCodePointException          IllegalFormatConversionException         
+IllegalFormatException                   IllegalFormatFlagsException              
+IllegalFormatPrecisionException          IllegalFormatWidthException              
+IllegalMonitorStateException             IllegalStateException                    
+IllegalThreadStateException              IllformedLocaleException                 
+IncompatibleClassChangeError             IndexOutOfBoundsException                
+Inet4Address                             Inet6Address                                                                                                                                                     
