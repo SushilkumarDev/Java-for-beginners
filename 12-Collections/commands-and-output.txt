@@ -191,4 +191,16 @@ BootstrapMethodError                     BrokenBarrierException
 BufferedInputStream                      BufferedOutputStream                     
 BufferedReader                           BufferedWriter                           
 Builder                                  Byte                                     
-ByteArrayInputStream                     ByteArrayOutputStream                             
+ByteArrayInputStream                     ByteArrayOutputStream     
+CacheRequest                             CacheResponse                            
+Calendar                                 Callable                                 
+CancellationException                    CharArrayReader                          
+CharArrayWriter                          CharConversionException                  
+CharSequence                             Character                                
+Class                                    ClassCastException                       
+ClassCircularityError                    ClassFormatError                         
+ClassLoader                              ClassNotFoundException                   
+ClassValue                               CloneNotSupportedException               
+Cloneable                                Closeable                                
+ClosedDirectoryStreamException           ClosedFileSystemException                
+ClosedWatchServiceException              Collection                                                     
