@@ -88,3 +88,24 @@ $11 ==> 6
 
 jshell> list
 list ==> [1, 2, 3, 4, 5, 7, 5]
+jshell> list.remove(5)
+$11 ==> 6
+
+jshell> list
+list ==> [1, 2, 3, 4, 5, 7, 5]
+
+jshell> list.remove
+remove(      removeAll(   removeIf(    
+
+jshell> list.
+add(               addAll(            clear()            contains(          
+containsAll(       equals(            forEach(           get(               
+getClass()         hashCode()         indexOf(           isEmpty()          
+iterator()         lastIndexOf(       listIterator(      notify()           
+notifyAll()        parallelStream()   remove(            removeAll(         
+removeIf(          replaceAll(        retainAll(         set(               
+size()             sort(              spliterator()      stream()           
+subList(           toArray(           toString()         wait(              
+
+jshell> list.remove(
+$11    $4     $7     $9     list   
