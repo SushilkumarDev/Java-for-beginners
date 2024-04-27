@@ -280,4 +280,15 @@ IllegalFormatPrecisionException          IllegalFormatWidthException
 IllegalMonitorStateException             IllegalStateException                    
 IllegalThreadStateException              IllformedLocaleException                 
 IncompatibleClassChangeError             IndexOutOfBoundsException                
-Inet4Address                             Inet6Address                                                                                                                                                     
+Inet4Address                             Inet6Address      
+InetAddress                              InetSocketAddress                        
+InheritableThreadLocal                   InputMismatchException                   
+InputStream                              InputStreamReader                        
+InstantiationError                       InstantiationException                   
+IntBinaryOperator                        IntConsumer                              
+IntFunction                              IntPredicate                             
+IntStream                                IntSummaryStatistics                     
+IntSupplier                              IntToDoubleFunction                      
+IntToLongFunction                        IntUnaryOperator                         
+Integer                                  InterfaceAddress                         
+InternalError                            InterruptedException                                                                                                                                                      
