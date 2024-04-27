@@ -109,3 +109,24 @@ subList(           toArray(           toString()         wait(
 
 jshell> list.remove(
 $11    $4     $7     $9     list   
+
+Signatures:
+boolean List<E extends Object>.remove(Object o)
+E List<E extends Object>.remove(int index)
+
+<press tab again to see documentation>
+
+jshell> list.remove(
+boolean List<E extends Object>.remove(Object o)
+Removes the first occurrence of the specified element from this list, if it is
+present (optional operation).If this list does not contain the element, it is
+unchanged. More formally, removes the element with the lowest index i such that
+Objects.equals(o, get(i)) (if such an element exists). Returns true if this list
+contained the specified element (or equivalently, if this list changed as a result
+of the call).
+
+Parameters:
+o - element to be removed from this list, if present
+
+Returns:
+true if this list contained the specified element
