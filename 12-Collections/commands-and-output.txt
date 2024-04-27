@@ -256,4 +256,16 @@ FileSystemException                      FileSystemLoopException
 FileSystemNotFoundException              FileSystems                              
 FileVisitOption                          FileVisitResult                          
 FileVisitor                              FileWriter                               
-FilenameFilter                           Files                                                                                                                                                          
+FilenameFilter                           Files      
+FilterInputStream                        FilterOutputStream                       
+FilterReader                             FilterWriter                             
+Float                                    Flow                                     
+Flushable                                ForkJoinPool                             
+ForkJoinTask                             ForkJoinWorkerThread                     
+FormatFlagsConversionMismatchException   Formattable                              
+FormattableFlags                         Formatter                                
+FormatterClosedException                 Function                                 
+FunctionalInterface                      Future                                   
+FutureTask                               GregorianCalendar                        
+HashMap                                  HashSet                                  
+Hashtable                                HttpCookie                                                                                                                                                         
