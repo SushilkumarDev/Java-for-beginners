@@ -424,4 +424,21 @@ UnaryOperator                            UncheckedIOException
 UnknownError                             UnknownFormatConversionException         
 UnknownFormatFlagsException              UnknownHostException                     
 UnknownServiceException                  UnsatisfiedLinkError                     
-UnsupportedClassVersionError             UnsupportedEncodingException                                                                                                                                                                                                                           
+UnsupportedClassVersionError             UnsupportedEncodingException     
+UnsupportedOperationException            Vector                                   
+VerifyError                              Version                                  
+VirtualMachineError                      Void                                     
+WatchEvent                               WatchKey                                 
+WatchService                             Watchable                                
+WeakHashMap                              WriteAbortedException                    
+Writer                                   apple                                    
+boolean                                  byte                                     
+char                                     com                                      
+double                                   float                                    
+int                                      java                                     
+javafx                                   javax                                    
+jdk                                      list                                     
+long                                     netscape                                 
+oracle                                   org                                      
+short                                    sun                                      
+void                                     
