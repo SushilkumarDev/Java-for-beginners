@@ -235,4 +235,14 @@ DoubleFunction                           DoublePredicate
 DoubleStream                             DoubleSummaryStatistics                  
 DoubleSupplier                           DoubleToIntFunction                      
 DoubleToLongFunction                     DoubleUnaryOperator                      
-DuplicateFormatFlagsException            EOFException                                                                                                         
+DuplicateFormatFlagsException            EOFException      
+EmptyStackException                      Enum                                     
+EnumConstantNotPresentException          EnumMap                                  
+EnumSet                                  Enumeration                              
+Error                                    EventListener                            
+EventListenerProxy                       EventObject                              
+Exception                                ExceptionInInitializerError              
+Exchanger                                ExecutionException                       
+Executor                                 ExecutorCompletionService                
+ExecutorService                          Executors                                
+Externalizable                           File                                                                                                                                        
