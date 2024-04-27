@@ -245,4 +245,15 @@ Exception                                ExceptionInInitializerError
 Exchanger                                ExecutionException                       
 Executor                                 ExecutorCompletionService                
 ExecutorService                          Executors                                
-Externalizable                           File                                                                                                                                        
+Externalizable                           File        
+FileAlreadyExistsException               FileDescriptor                           
+FileFilter                               FileInputStream                          
+FileNameMap                              FileNotFoundException                    
+FileOutputStream                         FilePermission                           
+FileReader                               FileStore                                
+FileSystem                               FileSystemAlreadyExistsException         
+FileSystemException                      FileSystemLoopException                  
+FileSystemNotFoundException              FileSystems                              
+FileVisitOption                          FileVisitResult                          
+FileVisitor                              FileWriter                               
+FilenameFilter                           Files                                                                                                                                                          
