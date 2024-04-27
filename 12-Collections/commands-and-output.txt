@@ -329,4 +329,16 @@ NotLinkException                         NotSerializableException
 NullPointerException                     Number                                   
 NumberFormatException                    ObjDoubleConsumer                        
 ObjIntConsumer                           ObjLongConsumer                          
-Object                                   ObjectInput                                                                                                                                                                                               
+Object                                   ObjectInput     
+ObjectInputFilter                        ObjectInputStream                        
+ObjectInputValidation                    ObjectOutput                             
+ObjectOutputStream                       ObjectStreamClass                        
+ObjectStreamConstants                    ObjectStreamException                    
+ObjectStreamField                        Objects                                  
+Observable                               Observer                                 
+OpenOption                               Optional                                 
+OptionalDataException                    OptionalDouble                           
+OptionalInt                              OptionalLong                             
+OutOfMemoryError                         OutputStream                             
+OutputStreamWriter                       Override                                 
+Package                                  PasswordAuthentication                                                                                                                                                                                              
