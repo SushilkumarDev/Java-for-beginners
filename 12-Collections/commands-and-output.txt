@@ -356,4 +356,16 @@ PriorityQueue                            Process
 ProcessBuilder                           ProcessHandle                            
 Properties                               PropertyPermission                       
 PropertyResourceBundle                   ProtocolException                        
-ProtocolFamily                           ProviderMismatchException                                                                                                                                                                                            
+ProtocolFamily                           ProviderMismatchException       
+ProviderNotFoundException                Proxy                                    
+ProxySelector                            PushbackInputStream                      
+PushbackReader                           Queue                                    
+Random                                   RandomAccess                             
+RandomAccessFile                         ReadOnlyFileSystemException              
+Readable                                 Reader                                   
+RecursiveAction                          RecursiveTask                            
+ReflectiveOperationException             RejectedExecutionException               
+RejectedExecutionHandler                 ResourceBundle                           
+ResponseCache                            RoundingMode                             
+Runnable                                 RunnableFuture                           
+RunnableScheduledFuture                  Runtime                                                                                                                                                                                                      
