@@ -442,3 +442,28 @@ long                                     netscape
 oracle                                   org                                      
 short                                    sun                                      
 void                                     
+
+
+jshell> list.remove(
+$11    $4     $7     $9     list   
+
+Signatures:
+boolean List<E extends Object>.remove(Object o)
+E List<E extends Object>.remove(int index)
+
+<press tab again to see documentation>
+
+jshell> list.remove(Integer.valueOf(5))
+$13 ==> true
+
+jshell> list
+list ==> [1, 2, 3, 4, 7, 5]
+
+jshell> list.remove(Integer.valueOf(5))
+$15 ==> true
+
+jshell> list.remove(Integer.valueOf(5))
+$16 ==> false
+
+jshell> list
+list ==> [1, 2, 3, 4, 7]
