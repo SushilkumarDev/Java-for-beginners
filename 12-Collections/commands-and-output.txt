@@ -467,3 +467,13 @@ $16 ==> false
 
 jshell> list
 list ==> [1, 2, 3, 4, 7]
+
+jshell> list.
+add(               addAll(            clear()            contains(          
+containsAll(       equals(            forEach(           get(               
+getClass()         hashCode()         indexOf(           isEmpty()          
+iterator()         lastIndexOf(       listIterator(      notify()           
+notifyAll()        parallelStream()   remove(            removeAll(         
+removeIf(          replaceAll(        retainAll(         set(               
+size()             sort(              spliterator()      stream()           
+subList(           toArray(           toString()         wait(              
