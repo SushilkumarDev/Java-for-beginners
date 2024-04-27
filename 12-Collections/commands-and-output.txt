@@ -225,4 +225,14 @@ DataInput                                DataInputStream
 DataOutput                               DataOutputStream                         
 DatagramPacket                           DatagramSocket                           
 DatagramSocketImpl                       DatagramSocketImplFactory                
-Date                                     DelayQueue                                                                                                
+Date                                     DelayQueue              
+Delayed                                  Deprecated                               
+Deque                                    Dictionary                               
+DirectoryIteratorException               DirectoryNotEmptyException               
+DirectoryStream                          Double                                   
+DoubleBinaryOperator                     DoubleConsumer                           
+DoubleFunction                           DoublePredicate                          
+DoubleStream                             DoubleSummaryStatistics                  
+DoubleSupplier                           DoubleToIntFunction                      
+DoubleToLongFunction                     DoubleUnaryOperator                      
+DuplicateFormatFlagsException            EOFException                                                                                                         
