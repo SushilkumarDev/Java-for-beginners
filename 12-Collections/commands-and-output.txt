@@ -130,3 +130,23 @@ o - element to be removed from this list, if present
 
 Returns:
 true if this list contained the specified element
+ 
+ Thrown Exceptions:
+ClassCastException - if the type of the specified element is incompatible with this
+                     list ( optional )
+NullPointerException - if the specified element is null and this list does not
+
+<press tab again to see next page>
+
+jshell> list.remove(
+                       permit null elements ( optional )
+UnsupportedOperationException - if the remove operation is not supported by this
+                                list
+
+<press tab to see next documentation>
+
+jshell> list.remove(
+E List<E extends Object>.remove(int index)
+Removes the element at the specified position in this list (optional
+operation).Shifts any subsequent elements to the left (subtracts one from their
+indices). Returns the element that was removed from the list.
