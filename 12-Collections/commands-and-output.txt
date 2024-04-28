@@ -477,3 +477,14 @@ notifyAll()        parallelStream()   remove(            removeAll(
 removeIf(          replaceAll(        retainAll(         set(               
 size()             sort(              spliterator()      stream()           
 subList(           toArray(           toString()         wait(              
+jshell> list
+list ==> [1, 2, 3, 4, 7]
+
+jshell> for(Integer number:list) {
+   ...>    if(number%2==0) 
+   ...>        list.remove(number);
+   ...> }
+|  java.util.ConcurrentModificationException thrown: 
+|        at ArrayList$Itr.checkForComodification (ArrayList.java:939)
+|        at ArrayList$Itr.next (ArrayList.java:893)
+|        at (#19:1)
