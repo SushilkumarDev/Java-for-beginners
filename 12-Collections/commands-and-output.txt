@@ -488,3 +488,20 @@ jshell> for(Integer number:list) {
 |        at ArrayList$Itr.checkForComodification (ArrayList.java:939)
 |        at ArrayList$Itr.next (ArrayList.java:893)
 |        at (#19:1)
+jshell> Iterator iterator = list.iterator()
+iterator()   
+
+jshell> Iterator iterator = list.iterator();
+iterator ==> java.util.ArrayList$Itr@7d0587f1
+
+jshell> while(iterator.hasNext()) {
+   ...>       Integer number = iterator.
+hashCode()   
+
+<press tab again to see all possible completions>
+   ...>       Integer number = iterator.next();
+   ...>       if(number%2==0)
+   ...>           iterator.remove()
+remove()   
+   ...>           iterator.remove();
+   ...> }
