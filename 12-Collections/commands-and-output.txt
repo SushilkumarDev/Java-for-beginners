@@ -531,3 +531,19 @@ jshell> List list = IntStream.range(1,100)
 |              ^--------------------^
 
 jshell> List list = IntStream.range(
+   allMatch(             anyMatch(             asDoubleStream()      
+asLongStream()        average()             boxed()               
+close()               collect(              count()               
+distinct()            dropWhile(            equals(               
+filter(               findAny()             findFirst()           
+flatMap(              forEach(              forEachOrdered(       
+getClass()            hashCode()            isParallel()          
+iterator()            limit(                map(                  
+mapToDouble(          mapToLong(            mapToObj(             
+max()                 min()                 noneMatch(            
+notify()              notifyAll()           onClose(              
+parallel()            peek(                 reduce(               
+sequential()          skip(                 sorted()              
+spliterator()         sum()                 summaryStatistics()   
+takeWhile(            toArray()             toString()            
+unordered()           wait(                 
