@@ -595,3 +595,18 @@ jshell> List<Integer> list = new TreeSet<>(list);
 |      reason: no instance(s) of type variable(s) E exist so that java.util.TreeSet<E> conforms to java.util.List<java.lang.Integer>
 |  List<Integer> list = new TreeSet<>(list);
 |                           ^-------^
+
+
+shell> Set<Integer> set = new TreeSet<>(list);
+|  Error:
+|  cannot find symbol
+|    symbol:   variable list
+|  Set<Integer> set = new TreeSet<>(list);
+|                                   ^--^
+
+jshell> list
+|  Error:
+|  cannot find symbol
+|    symbol:   variable list
+|  list
+|  ^--^
