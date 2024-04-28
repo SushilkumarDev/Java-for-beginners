@@ -505,3 +505,29 @@ hashCode()
 remove()   
    ...>           iterator.remove();
    ...> }
+   |  Error:
+|  incompatible types: java.lang.Object cannot be converted to java.lang.Integer
+|        Integer number = iterator.next();
+|                         ^-------------^
+
+jshell> Iterator<Integer> iterator = list.iterator();
+iterator ==> java.util.ArrayList$Itr@5d76b067
+
+jshell> while(iterator.hasNext()) {
+   ...>       Integer number = iterator.next();
+   ...>       if(number%2==0)
+   ...>           iterator.remove();
+   ...> }
+   jshell> iterator.hasNext()
+$23 ==> false
+
+jshell> list
+list ==> [1, 3, 7]
+
+jshell> List list = IntStream.range(1,100)
+|  Error:
+|  incompatible types: java.util.stream.IntStream cannot be converted to java.util.List
+|  List list = IntStream.range(1,100);
+|              ^--------------------^
+
+jshell> List list = IntStream.range(
