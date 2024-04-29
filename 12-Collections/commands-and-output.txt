@@ -1053,3 +1053,25 @@ jshell> public void p(String str) { System.out.println(str);}
 
 jshell> p("Create an ArrayList of Students and play with it");
 Create an ArrayList of Students and play with it
+
+jshell> class Student {
+   ...>        private int id;
+   ...>        private String name;
+   ...>        Student(int id, String name) {
+   ...>           this.id = id; this.name = name;
+   ...>        }
+   ...> }
+|  created class Student
+
+jshell> ArrayList<Student> students = new ArrayList<>(List.of(new Student(1, "Ranga"), new Student(2, "Adam"), new Student(3, "Eve"))
+   ...> )
+students ==> [Student@1e397ed7, Student@490ab905, Student@56ac3a89]
+
+jshell> students.add(new Student(7, "Raja"))
+$5 ==> true
+
+jshell> students.remove(new Student(1, "Ranga"))
+$6 ==> false
+
+jshell> p("We will fix this later")
+We will fix this later
