@@ -1021,3 +1021,35 @@ jshell> while (arraylistIterator.hasNext()) {
 97
 98
 99
+
+jshell> p("Exercise - Create a class Student with marks stored as a list. Average, Sum, Create a new List with marks > 80, Remove marks for a subject")
+Exercise - Create a class Student with marks stored as a list. Average, Sum, Create a new List with marks > 80, Remove marks for a subject
+
+jshell> p("**** Collections only work with Objects")
+**** Collections only work with Objects
+
+jshell> /save /in28Minutes/git/java-a-course-for-beginners/collections1.txt
+
+jshell> exit
+|  Error:
+|  cannot find symbol
+|    symbol:   variable exit
+|  exit
+|  ^--^
+
+jshell> /exit
+|  Goodbye
+Rangas-MacBook-Pro:~ rangaraokaranam$ jshell
+|  Welcome to JShell -- Version 9.0.1
+|  For an introduction type: /help intro
+        }public void p(String str) { System.out.println(str);}
+|  Error:
+|  illegal start of statement
+|  }public void p(String str) { System.out.println(str);}
+|  ^
+
+jshell> public void p(String str) { System.out.println(str);}
+|  created method p(String)
+
+jshell> p("Create an ArrayList of Students and play with it");
+Create an ArrayList of Students and play with it
