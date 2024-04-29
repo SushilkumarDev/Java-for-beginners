@@ -1101,3 +1101,81 @@ $15 ==> true
 
 jshell> Collections.sort(numbers); System.out.println(numbers);
 [four, one, three, two, two]
+
+jshell> Collections.sort(students);
+|  Error:
+|  no suitable method found for sort(java.util.ArrayList<Student>)
+|      method java.util.Collections.<T>sort(java.util.List<T>) is not applicable
+|        (inference variable T has incompatible bounds
+|          equality constraints: Student
+|          upper bounds: java.lang.Comparable<? super T>)
+|      method java.util.Collections.<T>sort(java.util.List<T>,java.util.Comparator<? super T>) is not applicable
+|        (cannot infer type-variable(s) T
+|          (actual and formal argument lists differ in length))
+|  Collections.sort(students);
+|  ^--------------^
+
+jshell> class AscendingSorter implements Comparator<Student> {public int compare(Student student1, Student student2) {if (student1.id > student2.id) { return 1; }
+   ...> if (student1.id < student2.id) { return -1;}
+   ...> return 0; }}
+|  Error:
+|  id has private access in Student
+|  class AscendingSorter implements Comparator<Student> {public int compare(Student student1, Student student2) {if (student1.id > student2.id) { return 1; }
+|                                                                                                                    ^---------^
+|  Error:
+|  id has private access in Student
+|  class AscendingSorter implements Comparator<Student> {public int compare(Student student1, Student student2) {if (student1.id > student2.id) { return 1; }
+|                                                                                                                                  ^---------^
+|  Error:
+|  id has private access in Student
+|  if (student1.id < student2.id) { return -1;}
+|      ^---------^
+|  Error:
+|  id has private access in Student
+|  if (student1.id < student2.id) { return -1;}
+|                    ^---------^
+
+jshell> class Student {
+   ...>        public String name;
+   ...>        public String name;
+   ...> }
+|  Error:
+|  variable name is already defined in class Student
+|         public String name;
+|         ^-----------------^
+
+jshell> class Student {
+   ...>        public String name;
+   ...>        public int id;
+   ...>        public Student(String name, int id) {
+   ...>          this.name=name;
+   ...>          this.id =id;
+   ...>        }
+   ...> }
+|  created class Student
+
+jshell> ArrayList<Student> students = new ArrayList<>(List.of(new Student(1, "Ranga"), new Student(2, "Adam"), new Student(3, "Eve"))
+   ...> )
+|  Error:
+|  incompatible types: int cannot be converted to java.lang.String
+|  ArrayList<Student> students = new ArrayList<>(List.of(new Student(1, "Ranga"), new Student(2, "Adam"), new Student(3, "Eve"))
+|                                                                    ^
+|  Error:
+|  incompatible types: int cannot be converted to java.lang.String
+|  ArrayList<Student> students = new ArrayList<>(List.of(new Student(1, "Ranga"), new Student(2, "Adam"), new Student(3, "Eve"))
+|                                                                                             ^
+|  Error:
+|  incompatible types: int cannot be converted to java.lang.String
+|  ArrayList<Student> students = new ArrayList<>(List.of(new Student(1, "Ranga"), new Student(2, "Adam"), new Student(3, "Eve"))
+|                                                                                                                     ^
+
+jshell> ArrayList<Student> students = new ArrayList<>(List.of(new Student("Ranga", 100), new Student("Adam",2)));
+students ==> [Student@3159c4b8, Student@73846619]
+
+jshell> class AscendingSorter implements Comparator<Student> {public int compare(Student student1, Student student2) {if (student1.id > student2.id) { return 1; }
+   ...> if (student1.id < student2.id) { return -1;}
+   ...> return 0; }}
+|  created class AscendingSorter
+
+jshell> 
+
