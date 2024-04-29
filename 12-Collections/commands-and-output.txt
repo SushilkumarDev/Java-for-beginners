@@ -766,3 +766,10 @@ jshell> list.add(5)
 |        at ImmutableCollections.uoe (ImmutableCollections.java:71)
 |        at ImmutableCollections$AbstractImmutableList.add (ImmutableCollections.java:77)
 |        at (#55:1)
+
+jshell> List arrayList = new ArrayList(list);
+|  Warning:
+|  unchecked call to ArrayList(java.util.Collection<? extends E>) as a member of the raw type java.util.ArrayList
+|  List arrayList = new ArrayList(list);
+|                   ^-----------------^
+arrayList ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
