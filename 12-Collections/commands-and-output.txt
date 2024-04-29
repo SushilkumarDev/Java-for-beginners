@@ -831,3 +831,32 @@ jshell> List<Integer> arrayList = new ArrayList<>(list);
 |  List<Integer> arrayList = new ArrayList<>(list);
 |                            ^-------------------^
 arrayList ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+jshell> arrayList.add(11)
+$60 ==> true
+
+jshell> list
+list ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+jshell> arrayList
+arrayList ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+jshell> arrayList.add(0, 15)
+
+jshell> arrayList
+arrayList ==> [15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+jshell> arrayList.add(3)
+$65 ==> true
+
+jshell> arrayList
+arrayList ==> [15, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 3]
+
+jshell> p("Array List can have duplicates")
+Array List can have duplicates
+
+jshell> arrayList.set(0,0)
+$68 ==> 15
+
+jshell> arrayList
+arrayList ==> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 3]
