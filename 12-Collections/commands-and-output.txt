@@ -756,3 +756,13 @@ $53 ==> 5
 
 jshell> p("By default List.of provides immutable list");
 By default List.of provides immutable list
+
+jshell> list.add(5)
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.List
+|  list.add(5)
+|  ^---------^
+|  java.lang.UnsupportedOperationException thrown: 
+|        at ImmutableCollections.uoe (ImmutableCollections.java:71)
+|        at ImmutableCollections$AbstractImmutableList.add (ImmutableCollections.java:77)
+|        at (#55:1)
