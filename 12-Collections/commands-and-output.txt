@@ -795,3 +795,18 @@ jshell> List<Integer> arrayList = new ArrayList<>(list);
 |  List<Integer> arrayList = new ArrayList<>(list);
 |                            ^-------------------^
 arrayList ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+jshell> List<Integer> arrayList = new ArrayList<Integer>(list);
+|  Warning:
+|  unchecked method invocation: constructor <init> in class java.util.ArrayList is applied to given types
+|    required: java.util.Collection<? extends E>
+|    found: java.util.List
+|  List<Integer> arrayList = new ArrayList<Integer>(list);
+|                            ^--------------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Collection<? extends E>
+|    found:    java.util.List
+|  List<Integer> arrayList = new ArrayList<Integer>(list);
+|                                                   ^--^
+arrayList ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
