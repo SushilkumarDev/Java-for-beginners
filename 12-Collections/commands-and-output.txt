@@ -869,3 +869,24 @@ jshell> arrayList.remove(15)
 |        at Objects.checkIndex (Objects.java:372)
 |        at ArrayList.remove (ArrayList.java:517)
 |        at (#70:1)
+
+jshell> arrayList.remove(Integer.valueOf(15))
+$71 ==> false
+
+jshell> arrayList.remove(Integer.valueOf(3))
+$72 ==> true
+
+jshell> arrayList
+arrayList ==> [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 3]
+
+jshell> arrayList.remove(Integer.valueOf(3))
+$74 ==> true
+
+jshell> arrayList
+arrayList ==> [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11]
+
+jshell> arrayList.contains(Integer.valueOf(5))
+$76 ==> true
+
+jshell> arrayList.contains(5)
+$77 ==> true
