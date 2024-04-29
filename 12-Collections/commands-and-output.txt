@@ -717,3 +717,12 @@ jshell> p("Arrays are not dynamic. Once an array of a particular size is declare
 |  ')' expected
 |  p("Arrays are not dynamic. Once an array of a particular size is declared, the size cannot be modified. To add a new element to the array, a new array has to be created with bigger size and all the elements from the old array copied to new array."
 |                                                                                                                                                                                                                                                         ^
+
+jshell> p("Arrays are not dynamic. Once an array of a particular size is declared, the size cannot be modified. To add a new element to the array, a new array has to be created with bigger size and all the elements from the old array copied to new array.");
+Arrays are not dynamic. Once an array of a particular size is declared, the size cannot be modified. To add a new element to the array, a new array has to be created with bigger size and all the elements from the old array copied to new array.
+
+jshell> p("Collections are used in situations where data is dynamic. Collections allow adding an element, deleting an element and host of other operations. There are a number of Collections in Java allowing to choose the right Collection for the right context.");
+Collections are used in situations where data is dynamic. Collections allow adding an element, deleting an element and host of other operations. There are a number of Collections in Java allowing to choose the right Collection for the right context.
+
+jshell> p("Types of Collections - List, Set, Map and Queue")
+Types of Collections - List, Set, Map and Queue
