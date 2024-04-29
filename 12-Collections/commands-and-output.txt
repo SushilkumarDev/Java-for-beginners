@@ -708,3 +708,12 @@ jshell> public void p(String str) { System.out.println(str);}
 
 jshell> p("Why do we need collections?")
 Why do we need collections?
+
+
+jshell> p("Arrays are not dynamic. Once an array of a particular size is declared, the size cannot be modified. To add a new element to the array, a new array has to be created with bigger size and all the elements from the old array copied to new array."
+   ...> ;
+   ...> )
+|  Error:
+|  ')' expected
+|  p("Arrays are not dynamic. Once an array of a particular size is declared, the size cannot be modified. To add a new element to the array, a new array has to be created with bigger size and all the elements from the old array copied to new array."
+|                                                                                                                                                                                                                                                         ^
