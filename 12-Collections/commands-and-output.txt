@@ -726,3 +726,33 @@ Collections are used in situations where data is dynamic. Collections allow addi
 
 jshell> p("Types of Collections - List, Set, Map and Queue")
 Types of Collections - List, Set, Map and Queue
+
+jshell> p("Lets start with list - list is an interface");
+Lets start with list - list is an interface
+
+jshell> List list = List.of(1,2,3,4,5,6,7,8,9,10);
+list ==> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+jshell> p("This is Java 9 new feature to create a list");
+This is Java 9 new feature to create a list
+
+jshell> p("Get details from a list");
+Get details from a list
+
+jshell> list.size()
+$49 ==> 10
+
+jshell> list.isEmpty()
+$50 ==> false
+
+jshell> list.get(0)
+$51 ==> 1
+
+jshell> list.indexOf(6)
+$52 ==> 5
+
+jshell> list.lastIndexOf(6)
+$53 ==> 5
+
+jshell> p("By default List.of provides immutable list");
+By default List.of provides immutable list
