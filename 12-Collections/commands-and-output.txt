@@ -860,3 +860,12 @@ $68 ==> 15
 
 jshell> arrayList
 arrayList ==> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 3]
+
+jshell> arrayList.remove(15)
+|  java.lang.IndexOutOfBoundsException thrown: Index 15 out-of-bounds for length 13
+|        at Preconditions.outOfBounds (Preconditions.java:64)
+|        at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+|        at Preconditions.checkIndex (Preconditions.java:248)
+|        at Objects.checkIndex (Objects.java:372)
+|        at ArrayList.remove (ArrayList.java:517)
+|        at (#70:1)
