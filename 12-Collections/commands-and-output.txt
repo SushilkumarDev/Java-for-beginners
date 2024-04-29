@@ -1075,3 +1075,29 @@ $6 ==> false
 
 jshell> p("We will fix this later")
 We will fix this later
+
+jshell> p("You can play around with it")
+You can play around with it
+
+jshell> p("Lets now try to sort elements in ArrayList")
+Lets now try to sort elements in ArrayList
+
+jshell> List<String> numbers = new ArrayList<String>(); numbers.add("one");
+numbers ==> []
+$11 ==> true
+
+jshell> numbers.add("two");
+$12 ==> true
+
+jshell> numbers.add("two");
+$13 ==> true
+
+jshell> numbers.add("three");
+$14 ==> true
+
+jshell> numbers.add("four"); System.out.println(numbers);
+$15 ==> true
+[one, two, two, three, four]
+
+jshell> Collections.sort(numbers); System.out.println(numbers);
+[four, one, three, two, two]
