@@ -1378,3 +1378,15 @@ $52 ==> [25, 35, 45, 55]
 
 jshell> treeSet.subSet(25,55);
 $53 ==> [25, 35, 45]
+
+jshell> treeSet.headSet(25);
+$54 ==> [5]
+
+jshell> treeSet.tailSet(25);
+$55 ==> [25, 35, 45, 55]
+
+jshell> treeSet.pollFirst();
+$56 ==> 5
+
+jshell> treeSet.pollLast();
+$57 ==> 55
