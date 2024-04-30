@@ -1189,3 +1189,24 @@ implements Comparable<Cricketer> and code for method public int compareTo(Cricke
 
 jshell> p("Alternatives to ArrayList");
 Alternatives to ArrayList
+
+jshell> p("What is Vector class? How is it different from an ArrayList?")
+What is Vector class? How is it different from an ArrayList?
+
+jshell> p("Vector has the same operations as an ArrayList. However, all methods in Vector are synchronized. So, we can use Vector if we share a list between two threads and we would want to them synchronized.");
+Vector has the same operations as an ArrayList. However, all methods in Vector are synchronized. So, we can use Vector if we share a list between two threads and we would want to them synchronized.
+
+jshell> p("What is LinkedList? What interfaces does it implement? How is it different from an ArrayList?")
+What is LinkedList? What interfaces does it implement? How is it different from an ArrayList?
+
+jshell> p("Set @@@@@@@@@")
+Set @@@@@@@@@
+
+jshell> p("Set interface does not allow duplication")
+Set interface does not allow duplication
+
+jshell> Set set = Set.of("1","2","3","1");//Fails
+|  java.lang.IllegalArgumentException thrown: duplicate element: 1
+|        at ImmutableCollections$SetN.<init> (ImmutableCollections.java:463)
+|        at Set.of (Set.java:520)
+|        at (#31:1)
