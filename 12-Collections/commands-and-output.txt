@@ -1280,3 +1280,18 @@ HashSet does not support ordering. The order in which elements are inserted is n
 
 jshell> p("LinkedHashSet maintains order") 
 LinkedHashSet maintains order
+
+jshell> p("TreeSet stores element’s in Sorted Order.
+|  Error:
+|  unclosed string literal
+|  p("TreeSet stores element’s in Sorted Order.
+|    ^
+
+jshell> p("TreeSet stores element’s in Sorted Order.");
+TreeSet stores element’s in Sorted Order.
+
+jshell> p("Set<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
+<press tab again to see all possible completions; total possible completions: 563>
+
+jshell> Set<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
+treeSet ==> [5, 25, 35, 45, 55]
