@@ -1309,3 +1309,17 @@ jshell> numbersTreeSet.floor(25);//25
 |    symbol:   variable numbersTreeSet
 |  numbersTreeSet.floor(25);//25
 |  ^------------^
+
+jshell> treeSet.lower(25);//5
+|  Error:
+|  cannot find symbol
+|    symbol:   method lower(int)
+|  treeSet.lower(25);//5
+|  ^-----------^
+
+jshell> treeSet.floor(25);//25
+|  Error:
+|  cannot find symbol
+|    symbol:   method floor(int)
+|  treeSet.floor(25);//25
+|  ^-----------^
