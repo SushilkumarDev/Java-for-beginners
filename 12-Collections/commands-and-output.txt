@@ -1459,3 +1459,17 @@ $66 ==> "Apple"
 jshell> queue.poll()
 $67 ==> "Apple"
 
+jshell> queue
+queue ==> [Ball, Cat, Zebra]
+
+jshell> queue.poll()
+$69 ==> "Ball"
+
+jshell> queue.add("Bat")
+$70 ==> true
+
+jshell> queue
+queue ==> [Bat, Zebra, Cat]
+
+jshell> queue.poll()
+$72 ==> "Bat"
