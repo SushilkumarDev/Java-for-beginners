@@ -1210,3 +1210,27 @@ jshell> Set set = Set.of("1","2","3","1");//Fails
 |        at ImmutableCollections$SetN.<init> (ImmutableCollections.java:463)
 |        at Set.of (Set.java:520)
 |        at (#31:1)
+
+
+jshell> Set set = Set.of("1","2","3");//Fails
+set ==> [1, 3, 2]
+
+jshell> Set hashSet = new HashSet<>(Set.of("1","2","3"))
+hashSet ==> [1, 2, 3]
+
+jshell> hashSet.add("4")
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.Set
+|  hashSet.add("4")
+|  ^--------------^
+$34 ==> true
+
+jshell> hashSet
+hashSet ==> [1, 2, 3, 4]
+
+jshell> hashSet.add("2")
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.Set
+|  hashSet.add("2")
+|  ^--------------^
+$36 ==> false
