@@ -1323,3 +1323,23 @@ jshell> treeSet.floor(25);//25
 |    symbol:   method floor(int)
 |  treeSet.floor(25);//25
 |  ^-----------^
+
+jshell> treeSet.floor(Integer.valueOf(25));//25
+|  Error:
+|  cannot find symbol
+|    symbol:   method floor(java.lang.Integer)
+|  treeSet.floor(Integer.valueOf(25));//25
+|  ^-----------^
+
+jshell> Set<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
+treeSet ==> [5, 25, 35, 45, 55]
+
+jshell> treeSet.floor(25);
+|  Error:
+|  cannot find symbol
+|    symbol:   method floor(int)
+|  treeSet.floor(25);
+|  ^-----------^
+
+jshell> TreeSet<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
+treeSet ==> [5, 25, 35, 45, 55]
