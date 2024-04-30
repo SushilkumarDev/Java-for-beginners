@@ -1295,3 +1295,17 @@ jshell> p("Set<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
 
 jshell> Set<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
 treeSet ==> [5, 25, 35, 45, 55]
+
+jshell> numbersTreeSet.lower(25);//5
+|  Error:
+|  cannot find symbol
+|    symbol:   variable numbersTreeSet
+|  numbersTreeSet.lower(25);//5
+|  ^------------^
+
+jshell> numbersTreeSet.floor(25);//25
+|  Error:
+|  cannot find symbol
+|    symbol:   variable numbersTreeSet
+|  numbersTreeSet.floor(25);//25
+|  ^------------^
