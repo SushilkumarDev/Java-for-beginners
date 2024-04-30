@@ -1234,3 +1234,22 @@ jshell> hashSet.add("2")
 |  hashSet.add("2")
 |  ^--------------^
 $36 ==> false
+
+jshell> hashSet.add("2.5")
+|  Warning:
+|  unchecked call to add(E) as a member of the raw type java.util.Set
+|  hashSet.add("2.5")
+|  ^----------------^
+$37 ==> true
+
+jshell> hashSet
+hashSet ==> [1, 2, 3, 4, 2.5]
+
+jshell> hashSet.
+add(               addAll(            clear()            contains(          
+containsAll(       equals(            forEach(           getClass()         
+hashCode()         isEmpty()          iterator()         notify()           
+notifyAll()        parallelStream()   remove(            removeAll(         
+removeIf(          retainAll(         size()             spliterator()      
+stream()           toArray(           toString()         wait(              
+
