@@ -1440,3 +1440,22 @@ jshell> queue.addAll("Apple", "Zebra" , "Ball");
 |    reason: actual and formal argument lists differ in length
 |  queue.addAll("Apple", "Zebra" , "Ball");
 |  ^----------^
+
+jshell> queue.addAll(List.of("Apple", "Zebra" , "Ball"));
+$62 ==> true
+
+jshell> queue
+queue ==> [Apple, Zebra, Ball]
+
+jshell> queue.add("Cat");
+$64 ==> true
+
+jshell> queue
+queue ==> [Apple, Cat, Ball, Zebra]
+
+jshell> queue.peek()
+$66 ==> "Apple"
+
+jshell> queue.poll()
+$67 ==> "Apple"
+
