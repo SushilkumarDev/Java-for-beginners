@@ -1512,3 +1512,32 @@ jshell> Queue<String> queue = new PriorityQueue<>(reverseComparator);
 |  Queue<String> queue = new PriorityQueue<>(reverseComparator);
 |                        ^------------------------------------^
 queue ==> []
+
+jshell> String s2) { return Integer.compare(s1.length(), s2.length());} };
+jshell> queue.addAll(List.of("Apple", "Zebra" , "Ball"))
+$75 ==> true
+
+jshell> queue
+queue ==> [Ball, Zebra, Apple]
+
+jshell> queue.poll()
+$77 ==> "Ball"
+
+jshell> queue.add("Cat");
+$78 ==> true
+
+jshell> queue
+queue ==> [Cat, Zebra, Apple]
+
+jshell> queue.poll()
+$80 ==> "Cat"
+
+jshell> queu
+|  Error:
+|  cannot find symbol
+|    symbol:   variable queu
+|  queu
+|  ^--^
+
+jshell> queue
+queue ==> [Apple, Zebra]
