@@ -1590,3 +1590,21 @@ $91 ==> [1, 6, 5]
 
 jshell> map.entrySet()
 entrySet()   
+
+jshell> map.entrySet()
+$92 ==> [A=1, The=6, An=5]
+
+jshell> map.get
+get(            getClass()      getOrDefault(   
+
+jshell> map.get("The")
+$93 ==> 6
+
+jshell> map.get("Unknown")
+$94 ==> null
+
+jshell> Map<String, Integer> map = new HashMap<>(Map.of("A",1,"An",5,"The",6));
+map ==> {The=6, A=1, An=5}
+
+jshell> map.put("The", 10)
+$96 ==> 6
