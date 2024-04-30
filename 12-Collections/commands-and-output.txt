@@ -1358,3 +1358,23 @@ $50 ==> 35
 
 jshell> treeSet.ceiling(25);
 $51 ==> 25
+
+jshell> treeSet.subset(25,55);
+|  Error:
+|  cannot find symbol
+|    symbol:   method subset(int,int)
+|  treeSet.subset(25,55);
+|  ^------------^
+
+jshell> treeSet.subset(25,true,55,true);
+|  Error:
+|  cannot find symbol
+|    symbol:   method subset(int,boolean,int,boolean)
+|  treeSet.subset(25,true,55,true);
+|  ^------------^
+
+jshell> treeSet.subSet(25,true,55,true);
+$52 ==> [25, 35, 45, 55]
+
+jshell> treeSet.subSet(25,55);
+$53 ==> [25, 35, 45]
