@@ -1263,3 +1263,20 @@ $39 ==> true
 jshell> hashSet
 hashSet ==> [0, 1, 2, 3, 4, 2.5]
 
+jshell> p("HashSet does not support ordering. The order in which elements are inserted is not maintained.
+|  Error:
+|  unclosed string literal
+|  p("HashSet does not support ordering. The order in which elements are inserted is not maintained.
+|    ^
+
+jshell> p("HashSet does not support ordering. The order in which elements are inserted is not maintained.
+|  Error:
+|  unclosed string literal
+|  p("HashSet does not support ordering. The order in which elements are inserted is not maintained.
+|    ^
+
+jshell> p("HashSet does not support ordering. The order in which elements are inserted is not maintained.")
+HashSet does not support ordering. The order in which elements are inserted is not maintained.
+
+jshell> p("LinkedHashSet maintains order") 
+LinkedHashSet maintains order
