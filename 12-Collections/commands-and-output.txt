@@ -1541,3 +1541,37 @@ jshell> queu
 
 jshell> queue
 queue ==> [Apple, Zebra]
+
+jshell> p("For a capacity-constrained queue, the difference is that add() always returns true and throws an exception if it can't add the element, whereas offer() is allowed to return false if it can't add the element. However, this doesn't apply to PriorityQueue ; the two functions are synonymous.")
+For a capacity-constrained queue, the difference is that add() always returns true and throws an exception if it can't add the element, whereas offer() is allowed to return false if it can't add the element. However, this doesn't apply to PriorityQueue ; the two functions are synonymous.
+
+jshell> p("&**** MAP")
+&**** MAP
+
+jshell> p("Map interface does not extend Collection interface. So, it does not inherit any of the methods from the Collection interface.
+|  Error:
+|  unclosed string literal
+|  p("Map interface does not extend Collection interface. So, it does not inherit any of the methods from the Collection interface.
+|    ^
+
+jshell> p("Map interface does not extend Collection interface. So, it does not inherit any of the methods from the Collection interface.");
+Map interface does not extend Collection interface. So, it does not inherit any of the methods from the Collection interface.
+
+jshell> p("Set interface can be used for an exercise problem - Find unique characters in a String");
+Set interface can be used for an exercise problem - Find unique characters in a String
+
+jshell> p("Set interface can be used for an exercise problem - Find unique characters in a String in Sorted Order - Exercise 2");
+Set interface can be used for an exercise problem - Find unique characters in a String in Sorted Order - Exercise 2
+
+jshell> p("Set interface can be used for an exercise problem - Find unique characters in a String in Order They are found in the string - Exercise 3");
+Set interface can be used for an exercise problem - Find unique characters in a String in Order They are found in the string - Exercise 3
+
+jshell> p("Set interface can be used for an exercise problem - Find unique words in a String");
+Set interface can be used for an exercise problem - Find unique words in a String
+
+jshell> Map<String, Integer> map = Map.of("A",1,"An",5,"The",6);
+map ==> {A=1, The=6, An=5}
+
+jshell> map.keySet()
+$90 ==> [A, The, An]
+
