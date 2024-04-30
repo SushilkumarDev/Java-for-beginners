@@ -1179,3 +1179,13 @@ jshell> class AscendingSorter implements Comparator<Student> {public int compare
 
 jshell> 
 
+jshell> Collections.sort(students, new AscendingSorter())
+
+jshell> students
+students ==> [Student@73846619, Student@3159c4b8]
+
+jshell> p("implements Comparable<Cricketer> and code for method public int compareTo(Cricketer that) {")
+implements Comparable<Cricketer> and code for method public int compareTo(Cricketer that) {
+
+jshell> p("Alternatives to ArrayList");
+Alternatives to ArrayList
