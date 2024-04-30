@@ -1343,3 +1343,18 @@ jshell> treeSet.floor(25);
 
 jshell> TreeSet<Integer> treeSet = new TreeSet<Integer>(Set.of(55,25,35,5,45));
 treeSet ==> [5, 25, 35, 45, 55]
+
+jshell> treeSet.floor(25);
+$47 ==> 25
+
+jshell> treeSet.lower(25);//5
+$48 ==> 5
+
+jshell> treeSet.floor(25);//25
+$49 ==> 25
+
+jshell> treeSet.higher(25);//35
+$50 ==> 35
+
+jshell> treeSet.ceiling(25);
+$51 ==> 25
