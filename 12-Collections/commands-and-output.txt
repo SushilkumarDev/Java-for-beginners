@@ -1473,3 +1473,17 @@ queue ==> [Bat, Zebra, Cat]
 
 jshell> queue.poll()
 $72 ==> "Bat"
+
+jshell> Comparator reverseComparator = new Comparator<String>() { public int compare(String paramT1,
+   ...> String paramT2) { return Integer.compare(o1.length(), o2.length());
+   ...> } };
+|  Error:
+|  cannot find symbol
+|    symbol: variable o1
+|  String paramT2) { return Integer.compare(o1.length(), o2.length());
+|                                           ^^
+|  Error:
+|  cannot find symbol
+|    symbol: variable o2
+|  String paramT2) { return Integer.compare(o1.length(), o2.length());
+|                                                        
