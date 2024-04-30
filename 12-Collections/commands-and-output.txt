@@ -1487,3 +1487,28 @@ jshell> Comparator reverseComparator = new Comparator<String>() { public int com
 |    symbol: variable o2
 |  String paramT2) { return Integer.compare(o1.length(), o2.length());
 |                                                        
+
+jshell> Comparator reverseComparator = new Comparator<String>() { public int compare(String s1,
+   ...> String s2) { return Integer.compare(s1.length(), s2.length());} };
+reverseComparator ==> 1@7e2d773b
+
+jshell> Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|  Warning:
+|  unchecked method invocation: constructor <init> in class java.util.PriorityQueue is applied to given types
+|    required: java.util.Comparator<? super E>
+|    found: java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                        ^------------------------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Comparator<? super E>
+|    found:    java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                                            ^---------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Queue<java.lang.String>
+|    found:    java.util.PriorityQueue
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                        ^------------------------------------^
+queue ==> []
