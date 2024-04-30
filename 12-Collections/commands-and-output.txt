@@ -1403,3 +1403,11 @@ jshell> Queue queue = Queue.of(3,4,1,2,9,8,3);
 |    symbol:   method of(int,int,int,int,int,int,int)
 |  Queue queue = Queue.of(3,4,1,2,9,8,3);
 |                ^------^
+
+jshell> Queue queue = Queue.class
+jshell> Queue queue = Queue.class
+jshell> Queue<Integer> queue = new PriorityQueue<>();
+queue ==> []
+
+jshell> queue.add
+add(      addAll(   
