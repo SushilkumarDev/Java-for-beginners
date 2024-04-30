@@ -1575,3 +1575,18 @@ map ==> {A=1, The=6, An=5}
 jshell> map.keySet()
 $90 ==> [A, The, An]
 
+jshell> map.valueSet()
+|  Error:
+|  cannot find symbol
+|    symbol:   method valueSet()
+|  map.valueSet()
+|  ^----------^
+
+jshell> map.values()
+values()   
+
+jshell> map.values()
+$91 ==> [1, 6, 5]
+
+jshell> map.entrySet()
+entrySet()   
