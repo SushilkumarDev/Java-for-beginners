@@ -1906,3 +1906,17 @@ jshell> Integer k = doSomething(i);
 
 jshell> Integer i = 5;
 i ==> 5
+
+jshell> Integer k = doSomething(i);
+k ==> 5
+
+jshell> /save /in28Minutes/git/java-a-course-for-beginners/collections2.txt
+
+jshell> /exit
+|  Goodbye
+Rangas-MacBook-Pro:~ rangaraokaranam$ jshell
+|  Welcome to JShell -- Version 9.0.1
+|  For an introduction type: /help intro
+
+jshell> public void p(String str) { System.out.println(str);}
+|  created method p(String)
