@@ -1920,3 +1920,14 @@ Rangas-MacBook-Pro:~ rangaraokaranam$ jshell
 
 jshell> public void p(String str) { System.out.println(str);}
 |  created method p(String)
+
+jshell> static List<Integer> numbers = List.of(1, 2, 5, 7, 9, 18, 12);
+|  Warning:
+|  Modifier 'static'  not permitted in top-level declarations, ignored
+|  static List<Integer> numbers = List.of(1, 2, 5, 7, 9, 18, 12);
+|  ^----^
+numbers ==> [1, 2, 5, 7, 9, 18, 12]
+
+jshell> List<Integer> numbers = List.of(1, 2, 5, 7, 9, 18, 12);
+numbers ==> [1, 2, 5, 7, 9, 18, 12]
+
