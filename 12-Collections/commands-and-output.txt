@@ -1785,3 +1785,27 @@ jshell> Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
 |  Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
 |                        ^-------------------------------------------^
 queue ==> []
+
+jshell> queue.addAll(List.of("Apple","Ball","Check","Elephant"))
+$124 ==> true
+
+jshell> queue
+queue ==> [Elephant, Apple, Check, Ball]
+
+jshell> queue.poll()
+$126 ==> "Elephant"
+
+jshell> class MyList {
+   ...> private List<String> values;
+   ...> void add(String value) { values.add(value);
+   ...> }
+   ...> void remove(String value) { values.remove(value);
+   ...> }
+   ...> }
+|  created class MyList
+
+jshell> MyList myList = new MyList(); myList.add("Value 1"); myList.add("Value 2");
+myList ==> MyList@5ed828d
+|  java.lang.NullPointerException thrown: 
+|        at MyList.add (#127:3)
+|        at (#129:1)
