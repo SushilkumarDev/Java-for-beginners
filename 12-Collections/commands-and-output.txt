@@ -1886,3 +1886,23 @@ How can we restrict Generics to a super class of particular class? T super Numbe
 
 jshell> p("Generic Method");
 Generic Method
+
+jshell> static <X extends Number> X doSomething(X number){ X result = number;
+   ...> //do something with result
+   ...> return result;
+   ...> }
+|  Warning:
+|  Modifier 'static'  not permitted in top-level declarations, ignored
+|  static <X extends Number> X doSomething(X number){ X result = number;
+|  ^----^
+|  created method doSomething(X)
+
+jshell> Integer k = doSomething(i);
+|  Error:
+|  cannot find symbol
+|    symbol:   variable i
+|  Integer k = doSomething(i);
+|                          ^
+
+jshell> Integer i = 5;
+i ==> 5
