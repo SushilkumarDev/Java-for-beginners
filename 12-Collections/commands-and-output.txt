@@ -1809,3 +1809,23 @@ myList ==> MyList@5ed828d
 |  java.lang.NullPointerException thrown: 
 |        at MyList.add (#127:3)
 |        at (#129:1)
+
+jshell> class MyList {
+   ...> private List<String> values = new ArrayList<String>;
+|  Error:
+|  '(' or '[' expected
+|  private List<String> values = new ArrayList<String>;
+|                                                     ^
+|  Error:
+|  reached end of file while parsing
+|  private List<String> values = new ArrayList<String>;
+|                                                      ^
+
+jshell> class MyList {
+   ...> private List<String> values = new ArrayList<String>();
+   ...> void add(String value) { values.add(value);
+   ...> }
+   ...> void remove(String value) { values.remove(value);
+   ...> }
+   ...> }
+|  modified class MyList
