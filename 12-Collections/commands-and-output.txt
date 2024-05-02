@@ -1931,3 +1931,14 @@ numbers ==> [1, 2, 5, 7, 9, 18, 12]
 jshell> List<Integer> numbers = List.of(1, 2, 5, 7, 9, 18, 12);
 numbers ==> [1, 2, 5, 7, 9, 18, 12]
 
+jshell> for(Number number:numbers) {
+   ...>     if(number%2 ==0)
+   ...>         System.out.println(number);
+   ...> }
+|  Error:
+|  bad operand types for binary operator '%'
+|    first type:  java.lang.Number
+|    second type: int
+|      if(number%2 ==0)
+|         ^------^
+
