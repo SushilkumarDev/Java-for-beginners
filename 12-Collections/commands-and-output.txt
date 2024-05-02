@@ -1870,3 +1870,19 @@ jshell> g("In MyListGeneric, Type T is defined as part of class declaration. Any
 |  ')' expected
 |  g("In MyListGeneric, Type T is defined as part of class declaration. Any Java Type can be used a type for this class. If we would want to restrict the types allowed for a Generic Type, we can use a Generic Restrictions. Consider the example class below: In declaration of the class, we specified a constraint "T extends Number". We can use the class MyListRestricted with any class extending (any sub class of) Number - Float, Integer, Double etc.");
 |                                                                                                                                                                                                                                                                                                                        
+
+jshell> g("In MyListGeneric, Type T is defined as part of class declaration. Any Java Type can be used a type for this class. If we would want to restrict the types allowed for a Generic Type, we can use a Generic Restrictions. Consider the example class below: In declaration of the class, we specified a constraint T extends Number. We can use the class MyListRestricted with any class extending (any sub class of) Number - Float, Integer, Double etc.");
+|  Error:
+|  cannot find symbol
+|    symbol:   method g(java.lang.String)
+|  g("In MyListGeneric, Type T is defined as part of class declaration. Any Java Type can be used a type for this class. If we would want to restrict the types allowed for a Generic Type, we can use a Generic Restrictions. Consider the example class below: In declaration of the class, we specified a constraint T extends Number. We can use the class MyListRestricted with any class extending (any sub class of) Number - Float, Integer, Double etc.");
+|  ^
+
+jshell> p("In MyListGeneric, Type T is defined as part of class declaration. Any Java Type can be used a type for this class. If we would want to restrict the types allowed for a Generic Type, we can use a Generic Restrictions. Consider the example class below: In declaration of the class, we specified a constraint T extends Number. We can use the class MyListRestricted with any class extending (any sub class of) Number - Float, Integer, Double etc.");
+In MyListGeneric, Type T is defined as part of class declaration. Any Java Type can be used a type for this class. If we would want to restrict the types allowed for a Generic Type, we can use a Generic Restrictions. Consider the example class below: In declaration of the class, we specified a constraint T extends Number. We can use the class MyListRestricted with any class extending (any sub class of) Number - Float, Integer, Double etc.
+
+jshell> p("How can we restrict Generics to a super class of particular class? T super Number");
+How can we restrict Generics to a super class of particular class? T super Number
+
+jshell> p("Generic Method");
+Generic Method
