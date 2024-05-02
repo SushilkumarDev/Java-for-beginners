@@ -1654,3 +1654,33 @@ jshell> map.lowerKey("An",true)
 
 jshell> map.floorKey("An")
 $106 ==> "An"
+
+jshell> map.higherKey("An")
+$107 ==> "The"
+
+jshell> map
+map ==> {A=1, An=5, The=6}
+
+jshell> map.ceilingKey("An")
+$109 ==> "An"
+
+jshell> map.firstEntry()
+$110 ==> A=1
+
+jshell> map.lastEntry()
+$111 ==> The=6
+
+jshell> p("fsfaljk");
+fsfaljk
+
+jshell> p("Find number of occurances of each word in a String");
+Find number of occurances of each word in a String
+
+jshell> p("Find number of occurances of each vowel in a String");
+Find number of occurances of each vowel in a String
+
+jshell> p("Find number of occurances of all characters in a String");
+Find number of occurances of all characters in a String
+
+jshell> p("Collections class static methods ******")
+Collections class static methods ******
