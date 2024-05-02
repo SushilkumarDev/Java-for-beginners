@@ -1608,3 +1608,21 @@ map ==> {The=6, A=1, An=5}
 
 jshell> map.put("The", 10)
 $96 ==> 6
+
+jshell> map
+map ==> {The=10, A=1, An=5}
+
+jshell> map.put("A",5)
+$98 ==> 1
+
+jshell> map.put("New",5)
+$99 ==> null
+
+jshell> map
+map ==> {The=10, A=5, New=5, An=5}
+
+jshell> Map<String, Integer> map = new TreeMap<>(Map.of("A",1,"An",5,"The",6));
+map ==> {A=1, An=5, The=6}
+
+jshell> map.put("New",10)
+$102 ==> null
