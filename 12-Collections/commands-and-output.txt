@@ -1962,3 +1962,16 @@ We are passing a funtion to another function
 jshell> int sum = 0;
 sum ==> 0
 
+jshell> for(Number number:numbers) {
+   ...>     if(number.intValue()%2 ==0)
+   ...>           sum += number;
+   ...> }
+|  Error:
+|  bad operand types for binary operator '+'
+|    first type:  int
+|    second type: java.lang.Number
+|            sum += number;
+|            ^-----------^
+
+jshell> Integer sum = 0;
+sum ==> 0
