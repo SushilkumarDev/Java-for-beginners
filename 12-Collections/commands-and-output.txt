@@ -1975,3 +1975,20 @@ jshell> for(Number number:numbers) {
 
 jshell> Integer sum = 0;
 sum ==> 0
+
+jshell> for(Number number:numbers) {
+   ...>     if(number.intValue()%2 ==0)
+   ...>           sum += number;
+   ...> }
+|  Error:
+|  bad operand types for binary operator '+'
+|    first type:  java.lang.Integer
+|    second type: java.lang.Number
+|            sum += number;
+|            ^-----------^
+
+jshell> clear()
+
+
+
+
