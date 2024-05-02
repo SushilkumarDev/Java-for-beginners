@@ -1684,3 +1684,33 @@ Find number of occurances of all characters in a String
 
 jshell> p("Collections class static methods ******")
 Collections class static methods ******
+
+jshell> list.reverse()
+|  Error:
+|  cannot find symbol
+|    symbol:   variable list
+|  list.reverse()
+|  ^--^
+
+jshell> Collections.reverse(list)
+|  Error:
+|  cannot find symbol
+|    symbol:   variable list
+|  Collections.reverse(list)
+|                      ^--^
+
+jshell> list
+|  Error:
+|  cannot find symbol
+|    symbol:   variable list
+|  list
+|  ^--^
+
+jshell> Collections.reverse(set)
+|  Error:
+|  incompatible types: java.util.Set cannot be converted to java.util.List<?>
+|  Collections.reverse(set)
+|                      ^-^
+
+jshell> set
+set ==> [1, 3, 2]
