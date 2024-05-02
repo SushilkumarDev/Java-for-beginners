@@ -1840,3 +1840,20 @@ jshell> class MyListGeneric<T> { private List<T> values = new ArrayList<T>();
    ...> }
    ...> }
 |  created class MyListGeneric
+
+jshell> MyListGeneric<String> myListString = new MyListGeneric<String>(); myListString.add("Value 1");
+myListString ==> MyListGeneric@757942a1
+
+jshell> myListString.add("Value 2");
+
+jshell> MyListGeneric<Integer> myListInteger = new MyListGeneric<Integer>(); myListInteger.add(1);
+myListInteger ==> MyListGeneric@37374a5e
+
+jshell> myListInteger.add(2);
+
+jshell> p("If a generic is declared as part of class declaration, it can be used any where a type can be used in a class - method (return type or argument), member variable etc. For Example: See how T is used as a parameter and return type in the class MyListGeneric.")
+If a generic is declared as part of class declaration, it can be used any where a type can be used in a class - method (return type or argument), member variable etc. For Example: See how T is used as a parameter and return type in the class MyListGeneric.
+
+jshell> class MyListRestricted<T extends Number> {
+   ...> }
+|  created class MyListRestricted
