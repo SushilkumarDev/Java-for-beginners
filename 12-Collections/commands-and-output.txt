@@ -1728,3 +1728,60 @@ jshell> Collections.reverse(list)
 
 jshell> list
 list ==> [4, 2, 3]
+
+jshell> Comparator reverseReverseComparator = Collections.reverseOrder(reverseComparator)
+|  Warning:
+|  unchecked method invocation: method reverseOrder in class java.util.Collections is applied to given types
+|    required: java.util.Comparator<T>
+|    found: java.util.Comparator
+|  Comparator reverseReverseComparator = Collections.reverseOrder(reverseComparator);
+|                                        ^-----------------------------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Comparator<T>
+|    found:    java.util.Comparator
+|  Comparator reverseReverseComparator = Collections.reverseOrder(reverseComparator);
+|                                                                 ^---------------^
+reverseReverseComparator ==> java.util.Collections$ReverseComparator2@fe2d773b
+
+jshell> Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|  Warning:
+|  unchecked method invocation: constructor <init> in class java.util.PriorityQueue is applied to given types
+|    required: java.util.Comparator<? super E>
+|    found: java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                        ^------------------------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Comparator<? super E>
+|    found:    java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                                            ^---------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Queue<java.lang.String>
+|    found:    java.util.PriorityQueue
+|  Queue<String> queue = new PriorityQueue<>(reverseComparator);
+|                        ^------------------------------------^
+queue ==> []
+
+jshell> Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
+|  Warning:
+|  unchecked method invocation: constructor <init> in class java.util.PriorityQueue is applied to given types
+|    required: java.util.Comparator<? super E>
+|    found: java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
+|                        ^-------------------------------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Comparator<? super E>
+|    found:    java.util.Comparator
+|  Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
+|                                            ^----------------------^
+|  Warning:
+|  unchecked conversion
+|    required: java.util.Queue<java.lang.String>
+|    found:    java.util.PriorityQueue
+|  Queue<String> queue = new PriorityQueue<>(reverseReverseComparator);
+|                        ^-------------------------------------------^
+queue ==> []
