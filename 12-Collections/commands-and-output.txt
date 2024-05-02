@@ -1626,3 +1626,16 @@ map ==> {A=1, An=5, The=6}
 
 jshell> map.put("New",10)
 $102 ==> null
+
+jshell> map
+map ==> {A=1, An=5, New=10, The=6}
+
+jshell> System.out.println(map.lowerKey("An"))
+|  Error:
+|  cannot find symbol
+|    symbol:   method lowerKey(java.lang.String)
+|  System.out.println(map.lowerKey("An"))
+|                     ^----------^
+
+jshell> TreeMap<String, Integer> map = new TreeMap<>(Map.of("A",1,"An",5,"The",6));
+map ==> {A=1, An=5, The=6}
