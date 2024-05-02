@@ -1829,3 +1829,14 @@ jshell> class MyList {
    ...> }
    ...> }
 |  modified class MyList
+
+jshell> MyList myList = new MyList(); myList.add("Value 1"); myList.add("Value 2");
+myList ==> MyList@1b26f7b2
+
+jshell> class MyListGeneric<T> { private List<T> values = new ArrayList<T>();
+   ...> void add(T value) { values.add(value);
+   ...> }
+   ...> void remove(T value) { values.remove(value);
+   ...> }
+   ...> }
+|  created class MyListGeneric
