@@ -2498,3 +2498,16 @@ jshell> queue.poll()
 $199 ==> null
 
 jshell> clear()
+
+ 
+jshell> Test
+|  Error:
+|  cannot find symbol
+|    symbol:   variable Test
+|  Test
+|  ^--^
+
+jshell> clear()
+
+
+
