@@ -2383,3 +2383,28 @@ numbers ==> []
 
 jshell> numbers.add(765432);
 $162 ==> true
+
+jshell> numbers.add(76543);
+$163 ==> true
+
+jshell> numbers.add(7654);
+$164 ==> true
+
+jshell> numbers.add(765);
+$165 ==> true
+
+jshell> numbers.add(76);
+$166 ==> true
+
+jshell> numbers
+numbers ==> [76, 765, 7654, 76543, 765432]
+
+jshell> numbers.add(76)
+$168 ==> false
+
+jshell> List<Character> characters = List.of('A','Z','A', 'B', 'Z','F'); 
+characters ==> [A, Z, A, B, Z, F]
+
+jshell> clear()
+
+
