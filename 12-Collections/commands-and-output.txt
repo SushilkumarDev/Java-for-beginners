@@ -2246,3 +2246,21 @@ boolean List<E extends Object>.remove(Object o)
 E List<E extends Object>.remove(int index)
 
 <press tab again to see documentation>
+
+jshell> numbersAl.remove(101)
+|  java.lang.IndexOutOfBoundsException thrown: Index 101 out-of-bounds for length 5
+|        at Preconditions.outOfBounds (Preconditions.java:64)
+|        at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+|        at Preconditions.checkIndex (Preconditions.java:248)
+|        at Objects.checkIndex (Objects.java:372)
+|        at ArrayList.remove (ArrayList.java:517)
+|        at (#73:1)
+
+jshell> numbersAl.remove(Integer.valueOf(101))
+$74 ==> true
+
+jshell> numbersAl
+numbersAl ==> [102, 103, 104, 105]
+
+jshell> clear()
+
