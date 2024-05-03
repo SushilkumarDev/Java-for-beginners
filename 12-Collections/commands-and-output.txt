@@ -2200,3 +2200,17 @@ $66 ==> true
 
 jshell> value.get(3) instanceof Double
 $67 ==> true
+
+jshell> List<String> textValues = List.of("A", 'A' , 1, 1.0)
+|  Error:
+|  incompatible types: inference variable E has incompatible bounds
+|      equality constraints: java.lang.String
+|      lower bounds: java.lang.Double,java.lang.Integer,java.lang.Character,java.lang.String
+|  List<String> textValues = List.of("A", 'A' , 1, 1.0);
+|                            ^------------------------^
+
+jshell> List<Integer> numbers = List.of(101,102,103,104,105);
+numbers ==> [101, 102, 103, 104, 105]
+
+jshell> numbers.indexOf(101);
+$69 ==> 0
