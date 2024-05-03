@@ -2185,3 +2185,18 @@ jshell> wordsAl
 wordsAl ==> [Apple]
 
 jshell> clear()
+
+jshell> List value = List.of("A", 'A' , 1, 1.0)
+value ==> [A, A, 1, 1.0]
+
+jshell> value.get(2)
+$64 ==> 1
+
+jshell> value.get(2) instanceof Integer
+$65 ==> true
+
+jshell> value.get(1) instanceof Character
+$66 ==> true
+
+jshell> value.get(3) instanceof Double
+$67 ==> true
