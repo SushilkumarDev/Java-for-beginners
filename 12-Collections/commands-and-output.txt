@@ -2118,3 +2118,25 @@ Cat
 
 jshell> Iterator wordsIterator = words.iterator();
 wordsIterator ==> java.util.AbstractList$Itr@3712b94
+
+jshell> while(wordsIterator.hasNext()) {
+   ...>       System.out.println(wordsIterator.next());
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> List<String> words = List.of("Apple", "Bat" , "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsAl = new ArrayList<>(words);
+wordsAl ==> [Apple, Bat, Cat]
+
+jshell> for(String word:words) {
+   ...>    if(word.endsWith("at")
+   ...>       System.out.println(word);
+   ...> }
+|  Error:
+|  ')' expected
+|     if(word.endsWith("at")
+|                        
