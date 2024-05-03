@@ -2229,3 +2229,20 @@ jshell> numbersAl.remove(101);
 |        at Objects.checkIndex (Objects.java:372)
 |        at ArrayList.remove (ArrayList.java:517)
 |        at (#72:1)
+
+jshell> numbersAl.remove(
+$10               $12               $15               $19               
+$21               $24               $27               $29               
+$31               $33               $35               $5                
+$6                $64               $65               $66               
+$67               $69               $7                $71               
+$72               $8                $9                iterator          
+newList           numbers           numbersAl         value             
+words             wordsAl           wordsArrayList    wordsIterator     
+wordsLinkedList   wordsVector       
+
+Signatures:
+boolean List<E extends Object>.remove(Object o)
+E List<E extends Object>.remove(int index)
+
+<press tab again to see documentation>
