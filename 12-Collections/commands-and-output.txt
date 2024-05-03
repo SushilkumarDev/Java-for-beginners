@@ -2027,3 +2027,12 @@ jshell> words.indexOf("Dog")
 $12 ==> -1
 
 jshell> clear()
+
+jshell> List<String> words = List.of("Apple", "Bat" , "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> words.add("Dog")
+|  java.lang.UnsupportedOperationException thrown: 
+|        at ImmutableCollections.uoe (ImmutableCollections.java:71)
+|        at ImmutableCollections$AbstractImmutableList.add (ImmutableCollections.java:77)
+|        at (#15:1)
