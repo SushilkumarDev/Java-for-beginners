@@ -2426,3 +2426,38 @@ $177 ==> 34
 jshell> numbers.ceiling(36)
 $178 ==> 54
 
+jshell> numbers.upper(34)
+|  Error:
+|  cannot find symbol
+|    symbol:   method upper(int)
+|  numbers.upper(34)
+|  ^-----------^
+
+jshell> numbers.higher(34)
+$179 ==> 54
+
+jshell> numbers
+numbers ==> [12, 34, 54, 65, 99]
+
+jshell> numbers.subSet(20,80)
+$181 ==> [34, 54, 65]
+
+jshell> numbers.subSet(34,54)
+$182 ==> [34]
+
+jshell> numbers.subSet(34,65)
+$183 ==> [34, 54]
+
+jshell> numbers.subSet(34,true,65,true)
+$184 ==> [34, 54, 65]
+
+jshell> numbers.subSet(34,false,65,false)
+$185 ==> [54]
+
+jshell> numbers.headSet(50)
+$186 ==> [12, 34]
+
+jshell> numbers.tailSet(50)
+$187 ==> [54, 65, 99]
+
+jshell> clear()
