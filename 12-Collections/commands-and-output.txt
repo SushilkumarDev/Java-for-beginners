@@ -2356,3 +2356,30 @@ $152 ==> true
 
 jshell> numbers.add(7654);
 $153 ==> true
+
+jshell> numbers.add(765);
+$154 ==> true
+
+jshell> numbers.add(76);
+$155 ==> true
+
+jshell> numbers
+numbers ==> [765432, 76543, 7654, 765, 76]
+
+jshell> numbers.add(765789);
+$157 ==> true
+
+jshell> numbers
+numbers ==> [765432, 76543, 7654, 765, 76, 765789]
+
+jshell> numbers.add(76)
+$159 ==> false
+
+jshell> numbers
+numbers ==> [765432, 76543, 7654, 765, 76, 765789]
+
+jshell> Set<Integer> numbers = new TreeSet<>();
+numbers ==> []
+
+jshell> numbers.add(765432);
+$162 ==> true
