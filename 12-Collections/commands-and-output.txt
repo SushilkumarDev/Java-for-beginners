@@ -2140,3 +2140,9 @@ jshell> for(String word:words) {
 |  ')' expected
 |     if(word.endsWith("at")
 |                        
+jshell> for(String word:words) {
+   ...>    if(word.endsWith("at"))
+   ...>       System.out.println(word);
+   ...> }
+Bat
+Cat
