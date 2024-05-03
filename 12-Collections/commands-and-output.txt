@@ -2146,3 +2146,21 @@ jshell> for(String word:words) {
    ...> }
 Bat
 Cat
+
+jshell> for(String word:wordsAl) {
+   ...>    if(word.endsWith("at")) {
+   ...>         words.remove(word);
+   ...>    }
+   ...> }
+|  java.lang.UnsupportedOperationException thrown: 
+|        at ImmutableCollections.uoe (ImmutableCollections.java:71)
+|        at ImmutableCollections$AbstractImmutableList.remove (ImmutableCollections.java:81)
+|        at (#50:3)
+
+jshell> for(String word:wordsAl) {
+   ...>    if(word.endsWith("at")) {
+   ...>         wordsAl.remove(word);
+   ...>    }
+   ...> }
+
+jshell> clear()
