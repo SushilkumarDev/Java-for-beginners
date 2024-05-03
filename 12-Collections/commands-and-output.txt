@@ -2164,3 +2164,24 @@ jshell> for(String word:wordsAl) {
    ...> }
 
 jshell> clear()
+
+ 
+jshell> List<String> words = List.of("Apple", "Bat" , "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsAl = new ArrayList<>(words);
+wordsAl ==> [Apple, Bat, Cat]
+
+jshell> Iterator<String> iterator = wordsAl.iterator();
+iterator ==> java.util.ArrayList$Itr@467aecef
+
+jshell> while(iterator.hasNext()) {
+   ...>      if(iterator.next().endsWith("at")) {
+   ...>           iterator.remove();
+   ...>      }
+   ...> }
+
+jshell> wordsAl
+wordsAl ==> [Apple]
+
+jshell> clear()
