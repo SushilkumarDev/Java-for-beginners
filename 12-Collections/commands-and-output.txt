@@ -2077,3 +2077,21 @@ wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant, Ball, Yak, Zebra]
 
 jshell> wordsArrayList.set(6, "Fish")
 $29 ==> "Ball"
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant, Fish, Yak, Zebra]
+
+jshell> wordsArrayList.remove(2)
+$31 ==> "Ball"
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog, Elephant, Fish, Yak, Zebra]
+
+jshell> wordsArrayList.remove("Dog")
+$33 ==> true
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Elephant, Fish, Yak, Zebra]
+
+jshell> wordsArrayList.remove("Dog")
+$35 ==> false
