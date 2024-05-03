@@ -2461,3 +2461,25 @@ jshell> numbers.tailSet(50)
 $187 ==> [54, 65, 99]
 
 jshell> clear()
+
+ 
+jshell> Queue<String> queue = new PriorityQueue<>();
+queue ==> []
+
+jshell> queue.poll()
+$190 ==> null
+
+jshell> queue.offer("Apple")
+$191 ==> true
+
+jshell> queue.addAll(List.of("Zebra", "Monkey", "Cat"))
+$192 ==> true
+
+jshell> queue
+queue ==> [Apple, Cat, Monkey, Zebra]
+
+jshell> queue.poll()
+$194 ==> "Apple"
+
+jshell> queue
+queue ==> [Cat, Zebra, Monkey]
