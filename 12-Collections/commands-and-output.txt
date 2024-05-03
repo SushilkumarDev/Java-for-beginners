@@ -2214,3 +2214,18 @@ numbers ==> [101, 102, 103, 104, 105]
 
 jshell> numbers.indexOf(101);
 $69 ==> 0
+
+jshell> List<Integer> numbersAl = new ArrayList<>(numbers);
+numbersAl ==> [101, 102, 103, 104, 105]
+
+jshell> numbersAl.indexOf(101)
+$71 ==> 0
+
+jshell> numbersAl.remove(101);
+|  java.lang.IndexOutOfBoundsException thrown: Index 101 out-of-bounds for length 5
+|        at Preconditions.outOfBounds (Preconditions.java:64)
+|        at Preconditions.outOfBoundsCheckIndex (Preconditions.java:70)
+|        at Preconditions.checkIndex (Preconditions.java:248)
+|        at Objects.checkIndex (Objects.java:372)
+|        at ArrayList.remove (ArrayList.java:517)
+|        at (#72:1)
