@@ -2048,3 +2048,18 @@ wordsVector ==> [Apple, Bat, Cat]
 
 jshell> wordsArrayList.add("Dog")
 $19 ==> true
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Cat, Dog]
+
+jshell> wordsArrayList.add("Elephant")
+$21 ==> true
+
+jshell> wordsArrayList.add(2, "Ball")
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant]
+
+jshell> wordsArrayList.add("Ball")
+$24 ==> true
+
