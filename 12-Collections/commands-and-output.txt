@@ -2540,3 +2540,26 @@ jshell> map.isEmpty()
 $209 ==> false
 
 
+jshell> map.containsKey("A")
+$210 ==> true
+
+jshell> map.containsKey("F")
+$211 ==> false
+
+jshell> map.containsValue(3)
+$212 ==> true
+
+jshell> map
+map ==> {Z=10, A=3, B=5}
+
+jshell> map.containsValue(4)
+$214 ==> false
+
+jshell> map.keySet()
+$215 ==> [Z, A, B]
+
+jshell> map.values()
+$216 ==> [10, 3, 5]
+
+jshell> map
+map ==> {Z=10, A=3, B=5}
