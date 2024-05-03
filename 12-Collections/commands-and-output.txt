@@ -2483,3 +2483,18 @@ $194 ==> "Apple"
 
 jshell> queue
 queue ==> [Cat, Zebra, Monkey]
+
+
+jshell> queue.poll()
+$196 ==> "Cat"
+
+jshell> queue.poll()
+$197 ==> "Monkey"
+
+jshell> queue.poll()
+$198 ==> "Zebra"
+
+jshell> queue.poll()
+$199 ==> null
+
+jshell> clear()
