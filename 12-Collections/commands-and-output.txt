@@ -2063,3 +2063,17 @@ wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant]
 jshell> wordsArrayList.add("Ball")
 $24 ==> true
 
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant, Ball]
+
+jshell> List<String> newList = List.of("Yak","Zebra");
+newList ==> [Yak, Zebra]
+
+jshell> wordsArrayList.addAll(newList)
+$27 ==> true
+
+jshell> wordsArrayList
+wordsArrayList ==> [Apple, Bat, Ball, Cat, Dog, Elephant, Ball, Yak, Zebra]
+
+jshell> wordsArrayList.set(6, "Fish")
+$29 ==> "Ball"
