@@ -2511,3 +2511,32 @@ jshell> clear()
 
 
 
+ 
+jshell> Map<String, Integer> map = Map.of("A",3,"B",5,"Z",10); 
+map ==> {Z=10, A=3, B=5}
+
+jshell> map.put("R",1);
+|  java.lang.UnsupportedOperationException thrown: 
+|        at ImmutableCollections.uoe (ImmutableCollections.java:71)
+|        at ImmutableCollections$AbstractImmutableMap.put (ImmutableCollections.java:558)
+|        at (#203:1)
+
+jshell> map
+map ==> {Z=10, A=3, B=5}
+
+jshell> map.get("Z")
+$205 ==> 10
+
+jshell> map.get("A")
+$206 ==> 3
+
+jshell> map.get("C")
+$207 ==> null
+
+jshell> map.size()
+$208 ==> 3
+
+jshell> map.isEmpty()
+$209 ==> false
+
+
