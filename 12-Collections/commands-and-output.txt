@@ -2407,4 +2407,22 @@ characters ==> [A, Z, A, B, Z, F]
 
 jshell> clear()
 
+ 
+jshell> TreeSet<Integer> numbers = new TreeSet<>(Set.of(65,54,34,12,99))
+numbers ==> [12, 34, 54, 65, 99]
+
+jshell> numbers.floor(40)
+$174 ==> 34
+
+jshell> numbers.floor(34)
+$175 ==> 34
+
+jshell> numbers.lower(34)
+$176 ==> 12
+
+jshell> numbers.ceiling(34)
+$177 ==> 34
+
+jshell> numbers.ceiling(36)
+$178 ==> 54
 
