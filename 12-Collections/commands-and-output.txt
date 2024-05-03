@@ -2329,3 +2329,30 @@ numbers ==> []
 
 jshell> numbers.add(765432);
 $144 ==> true
+
+jshell> numbers.add(76543);
+$145 ==> true
+
+jshell> numbers.add(7654);
+$146 ==> true
+
+jshell> numbers.add(765);
+$147 ==> true
+
+jshell> numbers.add(76);
+$148 ==> true
+
+jshell> numbers
+numbers ==> [765432, 7654, 76, 765, 76543]
+
+jshell> Set<Integer> numbers = new LinkedHashSet<>();
+numbers ==> []
+
+jshell> numbers.add(765432);
+$151 ==> true
+
+jshell> numbers.add(76543);
+$152 ==> true
+
+jshell> numbers.add(7654);
+$153 ==> true
