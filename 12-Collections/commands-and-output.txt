@@ -1992,3 +1992,18 @@ jshell> clear()
 
 
 
+jshell> List<String> words = List.of("Apple", "Bat" , "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> words.length()
+|  Error:
+|  cannot find symbol
+|    symbol:   method length()
+|  words.length()
+|  ^----------^
+
+jshell> words.size()
+$5 ==> 3
+
+jshell> words.isEmpty()
+$6 ==> false
