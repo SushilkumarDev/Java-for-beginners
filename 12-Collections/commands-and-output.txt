@@ -2007,3 +2007,23 @@ $5 ==> 3
 
 jshell> words.isEmpty()
 $6 ==> false
+
+jshell> words.get(0)
+$7 ==> "Apple"
+
+jshell> words.contains("Dog");
+$8 ==> false
+
+jshell> words.contains("Cat");
+$9 ==> true
+
+jshell> words.indexOf("Cat")
+$10 ==> 2
+
+jshell> words
+words ==> [Apple, Bat, Cat]
+
+jshell> words.indexOf("Dog")
+$12 ==> -1
+
+jshell> clear()
