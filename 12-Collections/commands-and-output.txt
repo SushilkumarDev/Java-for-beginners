@@ -2563,3 +2563,23 @@ $216 ==> [10, 3, 5]
 
 jshell> map
 map ==> {Z=10, A=3, B=5}
+
+jshell> Map<String, Integer> map = Map.of("A",3,"B",5,"Z",10); 
+map ==> {Z=10, A=3, B=5}
+
+jshell> Map<String, Integer> hashmap = new HashMap<>(map);
+hashmap ==> {A=3, Z=10, B=5}
+
+jshell> hashmap.put("F",5)
+$220 ==> null
+
+jshell> hashmap
+hashmap ==> {A=3, Z=10, B=5, F=5}
+
+jshell> hashmap.put("Z",11)
+$222 ==> 10
+
+jshell> hashmap
+hashmap ==> {A=3, Z=11, B=5, F=5}
+
+jshell> clear()
