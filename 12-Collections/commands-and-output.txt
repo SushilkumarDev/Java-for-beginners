@@ -2289,3 +2289,20 @@ numbersAl ==> [3, 12, 45, 123]
 
 jshell> clear()
 
+jshell> Set<String> set = Set.of("Apple", "Banana", "Cat")
+set ==> [Banana, Apple, Cat]
+
+jshell> set.add("Apple");
+|  java.lang.UnsupportedOperationException thrown: 
+|        at ImmutableCollections.uoe (ImmutableCollections.java:71)
+|        at ImmutableCollections$AbstractImmutableSet.add (ImmutableCollections.java:281)
+|        at (#83:1)
+
+jshell> Set<String> hashset = new HashSet<>(set)
+hashset ==> [Apple, Cat, Banana]
+
+jshell> hashset.add("Apple")
+$85 ==> false
+
+jshell> hashset
+hashset ==> [Apple, Cat, Banana]
