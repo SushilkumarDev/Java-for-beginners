@@ -2036,3 +2036,15 @@ jshell> words.add("Dog")
 |        at ImmutableCollections.uoe (ImmutableCollections.java:71)
 |        at ImmutableCollections$AbstractImmutableList.add (ImmutableCollections.java:77)
 |        at (#15:1)
+
+jshell> List<String> wordsArrayList = new ArrayList<String>(words)
+wordsArrayList ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsLinkedList = new LinkedList<String>(words)
+wordsLinkedList ==> [Apple, Bat, Cat]
+
+jshell> List<String> wordsVector = new Vector<String>(words)
+wordsVector ==> [Apple, Bat, Cat]
+
+jshell> wordsArrayList.add("Dog")
+$19 ==> true
