@@ -2095,3 +2095,26 @@ wordsArrayList ==> [Apple, Bat, Cat, Elephant, Fish, Yak, Zebra]
 
 jshell> wordsArrayList.remove("Dog")
 $35 ==> false
+
+jshell> clear()
+
+ 
+jshell> List<String> words = List.of("Apple", "Bat" , "Cat");
+words ==> [Apple, Bat, Cat]
+
+jshell> for(int i=0; i < words.size(); i++) {
+   ...>      System.out.println(words.get(i));
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> for(String word:words) {
+   ...>      System.out.println(word);
+   ...> }
+Apple
+Bat
+Cat
+
+jshell> Iterator wordsIterator = words.iterator();
+wordsIterator ==> java.util.AbstractList$Itr@3712b94
