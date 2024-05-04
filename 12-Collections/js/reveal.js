@@ -181,3 +181,4 @@
 
 			// Script dependencies to load
 			dependencies: []
+            git commit -m "Finalize reveal-config.js with additional configuration settings"
