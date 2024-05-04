@@ -110,3 +110,14 @@
 			// - true: All media will autoplay, regardless of individual setting
 			// - false: No media will autoplay, regardless of individual setting
 			autoPlayMedia: null,
+
+            		// Number of milliseconds between automatically proceeding to the
+			// next slide, disabled when set to 0, this value can be overwritten
+			// by using a data-autoslide attribute on your slides
+			autoSlide: 0,
+
+			// Stop auto-sliding after user input
+			autoSlideStoppable: true,
+
+			// Use this method for navigation when auto-sliding (defaults to navigateNext)
+			autoSlideMethod: null,
