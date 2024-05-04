@@ -64,3 +64,30 @@
 			// Push each slide change to the browser history
 			history: false,
 
+            			// Enable keyboard shortcuts for navigation
+			keyboard: true,
+
+			// Optional function that blocks keyboard events when retuning false
+			keyboardCondition: null,
+
+			// Enable the slide overview mode
+			overview: true,
+
+			// Vertical centering of slides
+			center: true,
+
+			// Enables touch navigation on devices with touch input
+			touch: true,
+
+			// Loop the presentation
+			loop: false,
+
+			// Change the presentation direction to be RTL
+			rtl: false,
+
+			// Randomizes the order of slides each time the presentation loads
+			shuffle: false,
+
+			// Turns fragments on and off globally
+			fragments: true,
+
