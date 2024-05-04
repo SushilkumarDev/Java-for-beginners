@@ -188,3 +188,24 @@
 
 		// Flags if reveal.js is loaded (has dispatched the 'ready' event)
 		loaded = false,
+        	// Flags if the overview mode is currently active
+		overview = false,
+
+		// Holds the dimensions of our overview slides, including margins
+		overviewSlideWidth = null,
+		overviewSlideHeight = null,
+
+		// The horizontal and vertical index of the currently active slide
+		indexh,
+		indexv,
+
+		// The previous and current slide HTML elements
+		previousSlide,
+		currentSlide,
+
+		previousBackground,
+
+		// Slides may hold a data-state attribute which we pick up and apply
+		// as a class to the body. This list contains the combined state of
+		// all current slides.
+		state = [],
