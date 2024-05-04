@@ -372,3 +372,76 @@
 						( isChrome || /Version\/[\d\.]+.*Safari/.test( UA ) );
 
 	}
+
+        /**
+     * Loads the dependencies of reveal.js. Dependencies are
+     * defined via the configuration option 'dependencies'
+     * and will be loaded prior to starting/binding reveal.js.
+     * Some dependencies may have an 'async' flag, if so they
+     * will load after reveal.js has been started up.
+     */
+	function load() {
+
+		var scripts = [],
+			scriptsAsync = [],
+			scriptsToPreload = 0;
+
+		// Called once synchronous scripts finish loading
+		function proceed() {
+			if( scriptsAsync.length ) {
+				// Load asynchronous scripts
+				head.js.apply( null, scriptsAsync );
+			}
+
+			start();
+		}
+
+		function loadScript( s ) {
+			head.ready( s.src.match( /([\w\d_\-]*)\.?js$|[^\\\/]*$/i )[0], function() {
+				// Extension may contain callback functions
+				if( typeof s.callback === 'function' ) {
+					s.callback.apply( this );
+				}
+
+				if( --scriptsToPreload === 0 ) {
+					proceed();
+				}
+			});
+		}
+
+		for( var i = 0, len = config.dependencies.length; i < len; i++ ) {
+			var s = config.dependencies[i];
+
+			// Load if there's no condition or the condition is truthy
+			if( !s.condition || s.condition() ) {
+				if( s.async ) {
+					scriptsAsync.push( s.src );
+				}
+				else {
+					scripts.push( s.src );
+				}
+
+				loadScript( s );
+			}
+		}
+
+		if( scripts.length ) {
+			scriptsToPreload = scripts.length;
+
+			// Load synchronous scripts
+			head.js.apply( null, scripts );
+		}
+		else {
+			proceed();
+		}
+
+	}
+
+	/**
+	 * Starts up reveal.js by binding input events and navigating
+	 * to the current URL deeplink if there is one.
+	 */
+	function start() {
+
+		// Make sure we've got all the DOM elements we need
+		setupDOM();
