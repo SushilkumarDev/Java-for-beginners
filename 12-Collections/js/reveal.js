@@ -121,3 +121,15 @@
 
 			// Use this method for navigation when auto-sliding (defaults to navigateNext)
 			autoSlideMethod: null,
+
+            		// Enable slide navigation via mouse wheel
+			mouseWheel: false,
+
+			// Apply a 3D roll to links on hover
+			rollingLinks: false,
+
+			// Hides the address bar on mobile devices
+			hideAddressBar: true,
+
+			// Opens links in an iframe preview overlay
+			previewLinks: false,
