@@ -209,3 +209,40 @@
 		// as a class to the body. This list contains the combined state of
 		// all current slides.
 		state = [],
+
+        	// The current scale of the presentation (see width/height config)
+		scale = 1,
+
+		// CSS transform that is currently applied to the slides container,
+		// split into two groups
+		slidesTransform = { layout: '', overview: '' },
+
+		// Cached references to DOM elements
+		dom = {},
+
+		// Features supported by the browser, see #checkCapabilities()
+		features = {},
+
+		// Client is a mobile device, see #checkCapabilities()
+		isMobileDevice,
+
+		// Client is a desktop Chrome, see #checkCapabilities()
+		isChrome,
+
+		// Throttles mouse wheel navigation
+		lastMouseWheelStep = 0,
+
+		// Delays updates to the URL due to a Chrome thumbnailer bug
+		writeURLTimeout = 0,
+
+		// Flags if the interaction event listeners are bound
+		eventsAreBound = false,
+
+		// The current auto-slide duration
+		autoSlide = 0,
+
+		// Auto slide properties
+		autoSlidePlayer,
+		autoSlideTimeout = 0,
+		autoSlideStartTime = -1,
+		autoSlidePaused = false,
