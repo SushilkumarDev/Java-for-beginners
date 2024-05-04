@@ -271,3 +271,38 @@
 			'F':					'Fullscreen',
 			'ESC, O':				'Slide overview'
 		};
+
+        /**
+	 * Starts up the presentation if the client is capable.
+	 */
+	function initialize( options ) {
+
+		// Make sure we only initialize once
+		if( initialized === true ) return;
+
+		initialized = true;
+
+		checkCapabilities();
+
+		if( !features.transforms2d && !features.transforms3d ) {
+			document.body.setAttribute( 'class', 'no-transforms' );
+
+			// Since JS won't be running any further, we load all lazy
+			// loading elements upfront
+			var images = toArray( document.getElementsByTagName( 'img' ) ),
+				iframes = toArray( document.getElementsByTagName( 'iframe' ) );
+
+			var lazyLoadable = images.concat( iframes );
+
+			for( var i = 0, len = lazyLoadable.length; i < len; i++ ) {
+				var element = lazyLoadable[i];
+				if( element.getAttribute( 'data-src' ) ) {
+					element.setAttribute( 'src', element.getAttribute( 'data-src' ) );
+					element.removeAttribute( 'data-src' );
+				}
+			}
+
+			// If the browser doesn't support core features we won't be
+			// using JavaScript to control the presentation
+			return;
+		}
