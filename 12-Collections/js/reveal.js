@@ -161,3 +161,23 @@
 			// Amount of pixels to move the parallax background per slide step
 			parallaxBackgroundHorizontal: null,
 			parallaxBackgroundVertical: null,
+
+            		// The maximum number of pages a single slide can expand onto when printing
+			// to PDF, unlimited by default
+			pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
+
+			// Offset used to reduce the height of content within exported PDF pages.
+			// This exists to account for environment differences based on how you
+			// print to PDF. CLI printing options, like phantomjs and wkpdf, can end
+			// on precisely the total height of the document whereas in-browser
+			// printing has to end one pixel before.
+			pdfPageHeightOffset: -1,
+
+			// Number of slides away from the current that are visible
+			viewDistance: 3,
+
+			// The display mode that will be used to show slides
+			display: 'block',
+
+			// Script dependencies to load
+			dependencies: []
