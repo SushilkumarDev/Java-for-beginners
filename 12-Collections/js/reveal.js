@@ -181,4 +181,10 @@
 
 			// Script dependencies to load
 			dependencies: []
-            git commit -m "Finalize reveal-config.js with additional configuration settings"
+        },
+
+		// Flags if Reveal.initialize() has been called
+		initialized = false,
+
+		// Flags if reveal.js is loaded (has dispatched the 'ready' event)
+		loaded = false,
