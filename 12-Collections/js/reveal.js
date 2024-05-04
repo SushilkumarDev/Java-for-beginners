@@ -445,3 +445,24 @@
 
 		// Make sure we've got all the DOM elements we need
 		setupDOM();
+
+        		// Make sure we've got all the DOM elements we need
+		setupDOM();
+
+		// Listen to messages posted to this window
+		setupPostMessage();
+
+		// Prevent the slides from being scrolled out of view
+		setupScrollPrevention();
+
+		// Resets all vertical slides so that only the first is visible
+		resetVerticalSlides();
+
+		// Updates the presentation to match the current configuration values
+		configure();
+
+		// Read the initial hash
+		readURL();
+
+		// Update all backgrounds
+		updateBackground( true );
