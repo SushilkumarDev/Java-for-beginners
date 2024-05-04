@@ -133,3 +133,18 @@
 
 			// Opens links in an iframe preview overlay
 			previewLinks: false,
+
+            		// Exposes the reveal.js API through window.postMessage
+			postMessage: true,
+
+			// Dispatches all reveal.js events to the parent window through postMessage
+			postMessageEvents: false,
+
+			// Focuses body when page changes visibility to ensure keyboard shortcuts work
+			focusBodyOnPageVisibilityChange: true,
+
+			// Transition style
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
