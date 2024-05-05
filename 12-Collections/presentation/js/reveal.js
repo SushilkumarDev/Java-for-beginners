@@ -648,3 +648,69 @@
 				} );
 			}
 		} );
+	// Slide and slide background layout
+	toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR ) ).forEach( function( slide ) {
+
+		// Vertical stacks are not centred since their section
+		// children will be
+		if( slide.classList.contains( 'stack' ) === false ) {
+			// Center the slide inside of the page, giving the slide some margin
+			var left = ( pageWidth - slideWidth ) / 2,
+				top = ( pageHeight - slideHeight ) / 2;
+
+			var contentHeight = slide.scrollHeight;
+			var numberOfPages = Math.max( Math.ceil( contentHeight / pageHeight ), 1 );
+
+			// Adhere to configured pages per slide limit
+			numberOfPages = Math.min( numberOfPages, config.pdfMaxPagesPerSlide );
+
+			// Center slides vertically
+			if( numberOfPages === 1 && config.center || slide.classList.contains( 'center' ) ) {
+				top = Math.max( ( pageHeight - contentHeight ) / 2, 0 );
+			}
+
+			// Wrap the slide in a page element and hide its overflow
+			// so that no page ever flows onto another
+			var page = document.createElement( 'div' );
+			page.className = 'pdf-page';
+			page.style.height = ( ( pageHeight + config.pdfPageHeightOffset ) * numberOfPages ) + 'px';
+			slide.parentNode.insertBefore( page, slide );
+			page.appendChild( slide );
+
+			// Position the slide inside of the page
+			slide.style.left = left + 'px';
+			slide.style.top = top + 'px';
+			slide.style.width = slideWidth + 'px';
+
+			if( slide.slideBackgroundElement ) {
+				page.insertBefore( slide.slideBackgroundElement, slide );
+			}
+
+			// Inject notes if `showNotes` is enabled
+			if( config.showNotes ) {
+
+				// Are there notes for this slide?
+				var notes = getSlideNotes( slide );
+				if( notes ) {
+
+					var notesSpacing = 8;
+					var notesLayout = typeof config.showNotes === 'string' ? config.showNotes : 'inline';
+					var notesElement = document.createElement( 'div' );
+					notesElement.classList.add( 'speaker-notes' );
+					notesElement.classList.add( 'speaker-notes-pdf' );
+					notesElement.setAttribute( 'data-layout', notesLayout );
+					notesElement.innerHTML = notes;
+
+					if( notesLayout === 'separate-page' ) {
+						page.parentNode.insertBefore( notesElement, page.nextSibling );
+					}
+					else {
+						notesElement.style.left = notesSpacing + 'px';
+						notesElement.style.bottom = notesSpacing + 'px';
+						notesElement.style.width = ( pageWidth - notesSpacing*2 ) + 'px';
+						page.appendChild( notesElement );
+					}
+
+				}
+
+			}
