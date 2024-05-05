@@ -1088,3 +1088,60 @@
 	sync();
 
 }
+	/**
+	 * Binds all event listeners.
+	 */
+	function addEventListeners() {
+
+		eventsAreBound = true;
+
+		window.addEventListener( 'hashchange', onWindowHashChange, false );
+		window.addEventListener( 'resize', onWindowResize, false );
+
+		if( config.touch ) {
+			dom.wrapper.addEventListener( 'touchstart', onTouchStart, false );
+			dom.wrapper.addEventListener( 'touchmove', onTouchMove, false );
+			dom.wrapper.addEventListener( 'touchend', onTouchEnd, false );
+
+			// Support pointer-style touch interaction as well
+			if( window.navigator.pointerEnabled ) {
+				// IE 11 uses un-prefixed version of pointer events
+				dom.wrapper.addEventListener( 'pointerdown', onPointerDown, false );
+				dom.wrapper.addEventListener( 'pointermove', onPointerMove, false );
+				dom.wrapper.addEventListener( 'pointerup', onPointerUp, false );
+			}
+			else if( window.navigator.msPointerEnabled ) {
+				// IE 10 uses prefixed version of pointer events
+				dom.wrapper.addEventListener( 'MSPointerDown', onPointerDown, false );
+				dom.wrapper.addEventListener( 'MSPointerMove', onPointerMove, false );
+				dom.wrapper.addEventListener( 'MSPointerUp', onPointerUp, false );
+			}
+		}
+
+		if( config.keyboard ) {
+			document.addEventListener( 'keydown', onDocumentKeyDown, false );
+			document.addEventListener( 'keypress', onDocumentKeyPress, false );
+		}
+
+		if( config.progress && dom.progress ) {
+			dom.progress.addEventListener( 'click', onProgressClicked, false );
+		}
+
+		if( config.focusBodyOnPageVisibilityChange ) {
+			var visibilityChange;
+
+			if( 'hidden' in document ) {
+				visibilityChange = 'visibilitychange';
+			}
+			else if( 'msHidden' in document ) {
+				visibilityChange = 'msvisibilitychange';
+			}
+			else if( 'webkitHidden' in document ) {
+				visibilityChange = 'webkitvisibilitychange';
+			}
+
+			if( visibilityChange ) {
+				document.addEventListener( visibilityChange, onPageVisibilityChange, false );
+			}
+		}
+
