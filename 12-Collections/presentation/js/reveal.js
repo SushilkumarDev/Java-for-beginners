@@ -1264,3 +1264,26 @@
 	 *
 	 * @return {number}
 	 */
+	function distanceBetween( a, b ) {
+
+		var dx = a.x - b.x,
+			dy = a.y - b.y;
+
+		return Math.sqrt( dx*dx + dy*dy );
+
+	}
+
+	/**
+	 * Applies a CSS transform to the target element.
+	 *
+	 * @param {HTMLElement} element
+	 * @param {string} transform
+	 */
+	function transformElement( element, transform ) {
+
+		element.style.WebkitTransform = transform;
+		element.style.MozTransform = transform;
+		element.style.msTransform = transform;
+		element.style.transform = transform;
+
+	}
