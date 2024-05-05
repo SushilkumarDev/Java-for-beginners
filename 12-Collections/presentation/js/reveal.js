@@ -1039,3 +1039,28 @@
 		disableRollingLinks();
 	}
 
+	// Iframe link previews
+	if( config.previewLinks ) {
+		enablePreviewLinks();
+		disablePreviewLinks( '[data-preview-link=false]' );
+	}
+	else {
+		disablePreviewLinks();
+		enablePreviewLinks( '[data-preview-link]:not([data-preview-link=false])' );
+	}
+
+	// Remove existing auto-slide controls
+	if( autoSlidePlayer ) {
+		autoSlidePlayer.destroy();
+		autoSlidePlayer = null;
+	}
+
+	// Generate auto-slide controls if needed
+	if( numberOfSlides > 1 && config.autoSlide && config.autoSlideStoppable && features.canvas && features.requestAnimationFrame ) {
+		autoSlidePlayer = new Playback( dom.wrapper, function() {
+			return Math.min( Math.max( ( Date.now() - autoSlideStartTime ) / autoSlide, 0 ), 1 );
+		} );
+
+		autoSlidePlayer.on( 'click', onAutoSlidePlayerClick );
+		autoSlidePaused = false;
+	}
