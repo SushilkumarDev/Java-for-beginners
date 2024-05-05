@@ -606,3 +606,45 @@
 
 	}
 
+
+	/**
+	 * Configures the presentation for printing to a static
+	 * PDF.
+	 */
+	function setupPDF() {
+
+		var slideSize = getComputedSlideSize( window.innerWidth, window.innerHeight );
+
+		// Dimensions of the PDF pages
+		var pageWidth = Math.floor( slideSize.width * ( 1 + config.margin ) ),
+			pageHeight = Math.floor( slideSize.height * ( 1 + config.margin ) );
+
+		// Dimensions of slides within the pages
+		var slideWidth = slideSize.width,
+			slideHeight = slideSize.height;
+
+		// Let the browser know what page size we want to print
+		injectStyleSheet( '@page{size:'+ pageWidth +'px '+ pageHeight +'px; margin: 0px;}' );
+
+		// Limit the size of certain elements to the dimensions of the slide
+		injectStyleSheet( '.reveal section>img, .reveal section>video, .reveal section>iframe{max-width: '+ slideWidth +'px; max-height:'+ slideHeight +'px}' );
+
+		document.body.classList.add( 'print-pdf' );
+		document.body.style.width = pageWidth + 'px';
+		document.body.style.height = pageHeight + 'px';
+
+		// Make sure stretch elements fit on slide
+		layoutSlideContents( slideWidth, slideHeight );
+
+		// Add each slide's index as attributes on itself, we need these
+		// indices to generate slide numbers below
+		toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) ).forEach( function( hslide, h ) {
+			hslide.setAttribute( 'data-index-h', h );
+
+			if( hslide.classList.contains( 'stack' ) ) {
+				toArray( hslide.querySelectorAll( 'section' ) ).forEach( function( vslide, v ) {
+					vslide.setAttribute( 'data-index-h', h );
+					vslide.setAttribute( 'data-index-v', v );
+				} );
+			}
+		} );
