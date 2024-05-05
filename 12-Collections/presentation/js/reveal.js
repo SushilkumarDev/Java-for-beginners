@@ -897,4 +897,42 @@
 																data.backgroundPosition +
 																data.backgroundTransition );
 			}
-	
+		// Additional and optional background properties
+		if( data.backgroundSize ) element.style.backgroundSize = data.backgroundSize;
+		if( data.backgroundSize ) element.setAttribute( 'data-background-size', data.backgroundSize );
+		if( data.backgroundColor ) element.style.backgroundColor = data.backgroundColor;
+		if( data.backgroundRepeat ) element.style.backgroundRepeat = data.backgroundRepeat;
+		if( data.backgroundPosition ) element.style.backgroundPosition = data.backgroundPosition;
+		if( data.backgroundTransition ) element.setAttribute( 'data-background-transition', data.backgroundTransition );
+
+		container.appendChild( element );
+
+		// If backgrounds are being recreated, clear old classes
+		slide.classList.remove( 'has-dark-background' );
+		slide.classList.remove( 'has-light-background' );
+
+		slide.slideBackgroundElement = element;
+
+		// If this slide has a background color, add a class that
+		// signals if it is light or dark. If the slide has no background
+		// color, no class will be set
+		var computedBackgroundStyle = window.getComputedStyle( element );
+		if( computedBackgroundStyle && computedBackgroundStyle.backgroundColor ) {
+			var rgb = colorToRgb( computedBackgroundStyle.backgroundColor );
+
+			// Ignore fully transparent backgrounds. Some browsers return
+			// rgba(0,0,0,0) when reading the computed background color of
+			// an element with no background
+			if( rgb && rgb.a !== 0 ) {
+				if( colorBrightness( computedBackgroundStyle.backgroundColor ) < 128 ) {
+					slide.classList.add( 'has-dark-background' );
+				}
+				else {
+					slide.classList.add( 'has-light-background' );
+				}
+			}
+		}
+
+		return element;
+
+	}
