@@ -734,4 +734,28 @@
 					fragment.classList.add( 'visible' );
 				} );
 		
+				// Notify subscribers that the PDF layout is good to go
+				dispatchEvent( 'pdf-ready' );
+
+			}
+		
+			/**
+			 * This is an unfortunate necessity. Some actions – such as
+			 * an input field being focused in an iframe or using the
+			 * keyboard to expand text selection beyond the bounds of
+			 * a slide – can trigger our content to be pushed out of view.
+			 * This scrolling can not be prevented by hiding overflow in
+			 * CSS (we already do) so we have to resort to repeatedly
+			 * checking if the slides have been offset :(
+			 */
+			function setupScrollPrevention() {
+		
+				setInterval( function() {
+					if( dom.wrapper.scrollTop !== 0 || dom.wrapper.scrollLeft !== 0 ) {
+						dom.wrapper.scrollTop = 0;
+						dom.wrapper.scrollLeft = 0;
+					}
+				}, 1000 );
+		
+			}
 		
