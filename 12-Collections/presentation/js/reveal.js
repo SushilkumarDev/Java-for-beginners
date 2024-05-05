@@ -714,3 +714,24 @@
 				}
 
 			}
+						// Inject slide numbers if `slideNumbers` are enabled
+						if( config.slideNumber && /all|print/i.test( config.showSlideNumber ) ) {
+							var slideNumberH = parseInt( slide.getAttribute( 'data-index-h' ), 10 ) + 1,
+								slideNumberV = parseInt( slide.getAttribute( 'data-index-v' ), 10 ) + 1;
+		
+							var numberElement = document.createElement( 'div' );
+							numberElement.classList.add( 'slide-number' );
+							numberElement.classList.add( 'slide-number-pdf' );
+							numberElement.innerHTML = formatSlideNumber( slideNumberH, '.', slideNumberV );
+							page.appendChild( numberElement );
+						}
+					}
+		
+				} );
+		
+				// Show all fragments
+				toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR + ' .fragment' ) ).forEach( function( fragment ) {
+					fragment.classList.add( 'visible' );
+				} );
+		
+		
