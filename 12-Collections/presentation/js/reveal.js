@@ -1235,3 +1235,32 @@
 		return Array.prototype.slice.call( o );
 
 	}
+
+	/**
+	 * Utility for deserializing a value.
+	 *
+	 * @param {*} value
+	 * @return {*}
+	 */
+	function deserialize( value ) {
+
+		if( typeof value === 'string' ) {
+			if( value === 'null' ) return null;
+			else if( value === 'true' ) return true;
+			else if( value === 'false' ) return false;
+			else if( value.match( /^[\d\.]+$/ ) ) return parseFloat( value );
+		}
+
+		return value;
+
+	}
+
+	/**
+	 * Measures the distance in pixels between point a
+	 * and point b.
+	 *
+	 * @param {object} a point with x/y properties
+	 * @param {object} b point with x/y properties
+	 *
+	 * @return {number}
+	 */
