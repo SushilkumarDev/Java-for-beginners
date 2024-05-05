@@ -965,4 +965,47 @@
 			}
 	
 		}
+		/**
+	 * Applies the configuration settings from the config
+	 * object. May be called multiple times.
+	 *
+	 * @param {object} options
+	 */
+		function configure( options ) {
+
+			var numberOfSlides = dom.wrapper.querySelectorAll( SLIDES_SELECTOR ).length;
 	
+			dom.wrapper.classList.remove( config.transition );
+	
+			// New config options may be passed when this method
+			// is invoked through the API after initialization
+			if( typeof options === 'object' ) extend( config, options );
+	
+			// Force linear transition based on browser capabilities
+			if( features.transforms3d === false ) config.transition = 'linear';
+	
+			dom.wrapper.classList.add( config.transition );
+	
+			dom.wrapper.setAttribute( 'data-transition-speed', config.transitionSpeed );
+			dom.wrapper.setAttribute( 'data-background-transition', config.backgroundTransition );
+	
+			dom.controls.style.display = config.controls ? 'block' : 'none';
+			dom.progress.style.display = config.progress ? 'block' : 'none';
+	
+			if( config.shuffle ) {
+				shuffle();
+			}
+	
+			if( config.rtl ) {
+				dom.wrapper.classList.add( 'rtl' );
+			}
+			else {
+				dom.wrapper.classList.remove( 'rtl' );
+			}
+	
+			if( config.center ) {
+				dom.wrapper.classList.add( 'center' );
+			}
+			else {
+				dom.wrapper.classList.remove( 'center' );
+			}
