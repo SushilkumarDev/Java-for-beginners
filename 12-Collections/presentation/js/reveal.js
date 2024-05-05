@@ -1210,3 +1210,28 @@
 	}
 
 	/**
+	 * 	 * Extend object a with the properties of object b.
+	 * If there's a conflict, object b takes precedence.
+	 *
+	 * @param {object} a
+	 * @param {object} b
+	 */
+	function extend( a, b ) {
+
+		for( var i in b ) {
+			a[ i ] = b[ i ];
+		}
+
+	}
+
+	/**
+	 * Converts the target object to an array.
+	 *
+	 * @param {object} o
+	 * @return {object[]}
+	 */
+	function toArray( o ) {
+
+		return Array.prototype.slice.call( o );
+
+	}
