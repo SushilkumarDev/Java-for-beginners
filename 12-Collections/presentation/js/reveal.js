@@ -1166,3 +1166,47 @@
 	}
 
 	/**
+ * Unbinds all event listeners.
+	 */
+	function removeEventListeners() {
+
+		eventsAreBound = false;
+
+		document.removeEventListener( 'keydown', onDocumentKeyDown, false );
+		document.removeEventListener( 'keypress', onDocumentKeyPress, false );
+		window.removeEventListener( 'hashchange', onWindowHashChange, false );
+		window.removeEventListener( 'resize', onWindowResize, false );
+
+		dom.wrapper.removeEventListener( 'touchstart', onTouchStart, false );
+		dom.wrapper.removeEventListener( 'touchmove', onTouchMove, false );
+		dom.wrapper.removeEventListener( 'touchend', onTouchEnd, false );
+
+		// IE11
+		if( window.navigator.pointerEnabled ) {
+			dom.wrapper.removeEventListener( 'pointerdown', onPointerDown, false );
+			dom.wrapper.removeEventListener( 'pointermove', onPointerMove, false );
+			dom.wrapper.removeEventListener( 'pointerup', onPointerUp, false );
+		}
+		// IE10
+		else if( window.navigator.msPointerEnabled ) {
+			dom.wrapper.removeEventListener( 'MSPointerDown', onPointerDown, false );
+			dom.wrapper.removeEventListener( 'MSPointerMove', onPointerMove, false );
+			dom.wrapper.removeEventListener( 'MSPointerUp', onPointerUp, false );
+		}
+
+		if ( config.progress && dom.progress ) {
+			dom.progress.removeEventListener( 'click', onProgressClicked, false );
+		}
+
+		[ 'touchstart', 'click' ].forEach( function( eventName ) {
+			dom.controlsLeft.forEach( function( el ) { el.removeEventListener( eventName, onNavigateLeftClicked, false ); } );
+			dom.controlsRight.forEach( function( el ) { el.removeEventListener( eventName, onNavigateRightClicked, false ); } );
+			dom.controlsUp.forEach( function( el ) { el.removeEventListener( eventName, onNavigateUpClicked, false ); } );
+			dom.controlsDown.forEach( function( el ) { el.removeEventListener( eventName, onNavigateDownClicked, false ); } );
+			dom.controlsPrev.forEach( function( el ) { el.removeEventListener( eventName, onNavigatePrevClicked, false ); } );
+			dom.controlsNext.forEach( function( el ) { el.removeEventListener( eventName, onNavigateNextClicked, false ); } );
+		} );
+
+	}
+
+	/**
