@@ -795,3 +795,31 @@
 		return node;
 
 	}
+		/**
+	 * Creates the slide background elements and appends them
+	 * to the background container. One element is created per
+	 * slide no matter if the given slide has visible background.
+	 */
+		function createBackgrounds() {
+
+			var printMode = isPrintingPDF();
+	
+			// Clear prior backgrounds
+			dom.background.innerHTML = '';
+			dom.background.classList.add( 'no-transition' );
+	
+			// Iterate over all horizontal slides
+			toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) ).forEach( function( slideh ) {
+	
+				var backgroundStack = createBackground( slideh, dom.background );
+	
+				// Iterate over all vertical slides
+				toArray( slideh.querySelectorAll( 'section' ) ).forEach( function( slidev ) {
+	
+					createBackground( slidev, backgroundStack );
+	
+					backgroundStack.classList.add( 'stack' );
+	
+				} );
+	
+			} );
