@@ -1009,3 +1009,33 @@
 			else {
 				dom.wrapper.classList.remove( 'center' );
 			}
+	// Exit the paused mode if it was configured off
+	if( config.pause === false ) {
+		resume();
+	}
+
+	if( config.showNotes ) {
+		dom.speakerNotes.classList.add( 'visible' );
+		dom.speakerNotes.setAttribute( 'data-layout', typeof config.showNotes === 'string' ? config.showNotes : 'inline' );
+	}
+	else {
+		dom.speakerNotes.classList.remove( 'visible' );
+	}
+
+	if( config.mouseWheel ) {
+		document.addEventListener( 'DOMMouseScroll', onDocumentMouseScroll, false ); // FF
+		document.addEventListener( 'mousewheel', onDocumentMouseScroll, false );
+	}
+	else {
+		document.removeEventListener( 'DOMMouseScroll', onDocumentMouseScroll, false ); // FF
+		document.removeEventListener( 'mousewheel', onDocumentMouseScroll, false );
+	}
+
+	// Rolling 3D links
+	if( config.rollingLinks ) {
+		enableRollingLinks();
+	}
+	else {
+		disableRollingLinks();
+	}
+
