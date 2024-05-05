@@ -1064,3 +1064,27 @@
 		autoSlidePlayer.on( 'click', onAutoSlidePlayerClick );
 		autoSlidePaused = false;
 	}
+	// When fragments are turned off they should be visible
+	if( config.fragments === false ) {
+		toArray( dom.slides.querySelectorAll( '.fragment' ) ).forEach( function( element ) {
+			element.classList.add( 'visible' );
+			element.classList.remove( 'current-fragment' );
+		} );
+	}
+
+	// Slide numbers
+	var slideNumberDisplay = 'none';
+	if( config.slideNumber && !isPrintingPDF() ) {
+		if( config.showSlideNumber === 'all' ) {
+			slideNumberDisplay = 'block';
+		}
+		else if( config.showSlideNumber === 'speaker' && isSpeakerNotes() ) {
+			slideNumberDisplay = 'block';
+		}
+	}
+
+	dom.slideNumber.style.display = slideNumberDisplay;
+
+	sync();
+
+}
