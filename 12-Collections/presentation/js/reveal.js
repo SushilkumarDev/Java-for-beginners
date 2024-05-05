@@ -846,3 +846,55 @@
 		}
 
 	}
+		/**
+	 * Creates a background for the given slide.
+	 *
+	 * @param {HTMLElement} slide
+	 * @param {HTMLElement} container The element that the background
+	 * should be appended to
+	 * @return {HTMLElement} New background div
+	 */
+		function createBackground( slide, container ) {
+
+			var data = {
+				background: slide.getAttribute( 'data-background' ),
+				backgroundSize: slide.getAttribute( 'data-background-size' ),
+				backgroundImage: slide.getAttribute( 'data-background-image' ),
+				backgroundVideo: slide.getAttribute( 'data-background-video' ),
+				backgroundIframe: slide.getAttribute( 'data-background-iframe' ),
+				backgroundColor: slide.getAttribute( 'data-background-color' ),
+				backgroundRepeat: slide.getAttribute( 'data-background-repeat' ),
+				backgroundPosition: slide.getAttribute( 'data-background-position' ),
+				backgroundTransition: slide.getAttribute( 'data-background-transition' )
+			};
+	
+			var element = document.createElement( 'div' );
+	
+			// Carry over custom classes from the slide to the background
+			element.className = 'slide-background ' + slide.className.replace( /present|past|future/, '' );
+	
+			if( data.background ) {
+				// Auto-wrap image urls in url(...)
+				if( /^(http|file|\/\/)/gi.test( data.background ) || /\.(svg|png|jpg|jpeg|gif|bmp)([?#]|$)/gi.test( data.background ) ) {
+					slide.setAttribute( 'data-background-image', data.background );
+				}
+				else {
+					element.style.background = data.background;
+				}
+			}
+	
+			// Create a hash for this combination of background settings.
+			// This is used to determine when two slide backgrounds are
+			// the same.
+			if( data.background || data.backgroundColor || data.backgroundImage || data.backgroundVideo || data.backgroundIframe ) {
+				element.setAttribute( 'data-background-hash', data.background +
+																data.backgroundSize +
+																data.backgroundImage +
+																data.backgroundVideo +
+																data.backgroundIframe +
+																data.backgroundColor +
+																data.backgroundRepeat +
+																data.backgroundPosition +
+																data.backgroundTransition );
+			}
+	
