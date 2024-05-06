@@ -1489,3 +1489,19 @@ function transformSlides( transforms ) {
 		}
 
 	}
+	/**
+	 * Causes the address bar to hide on mobile devices,
+	 * more vertical space ftw.
+	 */
+	function removeAddressBar() {
+
+		setTimeout( function() {
+			window.scrollTo( 0, 1 );
+		}, 10 );
+
+	}
+
+	/**
+	 * Dispatches an event of the specified type from the
+	 * reveal DOM element.
+	 */
