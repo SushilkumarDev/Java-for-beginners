@@ -1584,3 +1584,20 @@ function transformSlides( transforms ) {
 	/**
 	 * Unbind preview frame links.
 	 */
+	function disablePreviewLinks( selector ) {
+
+		var anchors = toArray( document.querySelectorAll( selector ? selector : 'a' ) );
+
+		anchors.forEach( function( element ) {
+			if( /^(http|www)/gi.test( element.getAttribute( 'href' ) ) ) {
+				element.removeEventListener( 'click', onPreviewLinkClicked, false );
+			}
+		} );
+
+	}
+
+	/**
+	 * Opens a preview window for the target URL.
+	 *
+	 * @param {string} url - url for preview iframe src
+	 */
