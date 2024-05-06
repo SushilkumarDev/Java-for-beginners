@@ -1806,4 +1806,22 @@ function layoutSlideContents( width, height ) {
 			}
 	
 		}
+		/**
+	 * Retrieves the vertical index which was stored using
+	 * #setPreviousVerticalIndex() or 0 if no previous index
+	 * exists.
+	 *
+	 * @param {HTMLElement} stack The vertical stack element
+	 */
+		function getPreviousVerticalIndex( stack ) {
+
+			if( typeof stack === 'object' && typeof stack.setAttribute === 'function' && stack.classList.contains( 'stack' ) ) {
+				// Prefer manually defined start-indexv
+				var attributeName = stack.hasAttribute( 'data-start-indexv' ) ? 'data-start-indexv' : 'data-previous-indexv';
 	
+				return parseInt( stack.getAttribute( attributeName ) || 0, 10 );
+			}
+	
+			return 0;
+	
+		}
