@@ -1468,3 +1468,24 @@ function transformSlides( transforms ) {
 		return height;
 
 	}
+	/**
+	 * Checks if this instance is being used to print a PDF.
+	 */
+	function isPrintingPDF() {
+
+		return ( /print-pdf/gi ).test( window.location.search );
+
+	}
+
+	/**
+	 * Hides the address bar if we're on a mobile device.
+	 */
+	function hideAddressBar() {
+
+		if( config.hideAddressBar && isMobileDevice ) {
+			// Events that should trigger the address bar to hide
+			window.addEventListener( 'load', removeAddressBar, false );
+			window.addEventListener( 'orientationchange', removeAddressBar, false );
+		}
+
+	}
