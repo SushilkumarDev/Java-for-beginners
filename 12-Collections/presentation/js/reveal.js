@@ -1642,4 +1642,28 @@ function transformSlides( transforms ) {
 		}, 1 );
 
 	}
+	/**
+	 * Open or close help overlay window.
+	 *
+	 * @param {Boolean} [override] Flag which overrides the
+	 * toggle logic and forcibly sets the desired state. True means
+	 * help is open, false means it's closed.
+	 */
+	function toggleHelp( override ){
 
+		if( typeof override === 'boolean' ) {
+			override ? showHelp() : closeOverlay();
+		}
+		else {
+			if( dom.overlay ) {
+				closeOverlay();
+			}
+			else {
+				showHelp();
+			}
+		}
+	}
+
+	/**
+	 * Opens an overlay window with help material.
+	 */
