@@ -1791,3 +1791,19 @@ function layoutSlideContents( width, height ) {
 		return size;
 
 	}
+		/**
+	 * Stores the vertical index of a stack so that the same
+	 * vertical slide can be selected when navigating to and
+	 * from the stack.
+	 *
+	 * @param {HTMLElement} stack The vertical stack element
+	 * @param {string|number} [v=0] Index to memorize
+	 */
+		function setPreviousVerticalIndex( stack, v ) {
+
+			if( typeof stack === 'object' && typeof stack.setAttribute === 'function' ) {
+				stack.setAttribute( 'data-previous-indexv', v || 0 );
+			}
+	
+		}
+	
