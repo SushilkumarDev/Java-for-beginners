@@ -1327,3 +1327,38 @@ function transformSlides( transforms ) {
 		document.getElementsByTagName( 'head' )[0].appendChild( tag );
 
 	}
+	/**
+	 * Find the closest parent that matches the given
+	 * selector.
+	 *
+	 * @param {HTMLElement} target The child element
+	 * @param {String} selector The CSS selector to match
+	 * the parents against
+	 *
+	 * @return {HTMLElement} The matched parent or null
+	 * if no matching parent was found
+	 */
+	function closestParent( target, selector ) {
+
+		var parent = target.parentNode;
+
+		while( parent ) {
+
+			// There's some overhead doing this each time, we don't
+			// want to rewrite the element prototype but should still
+			// be enough to feature detect once at startup...
+			var matchesMethod = parent.matches || parent.matchesSelector || parent.msMatchesSelector;
+
+			// If we find a match, we're all set
+			if( matchesMethod && matchesMethod.call( parent, selector ) ) {
+				return parent;
+			}
+
+			// Keep searching
+			parent = parent.parentNode;
+
+		}
+
+		return null;
+
+	}
