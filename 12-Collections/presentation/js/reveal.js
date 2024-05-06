@@ -1421,3 +1421,20 @@ function transformSlides( transforms ) {
 		return null;
 
 	}
+		/**
+	 * Calculates brightness on a scale of 0-255.
+	 *
+	 * @param {string} color See colorToRgb for supported formats.
+	 * @see {@link colorToRgb}
+	 */
+		function colorBrightness( color ) {
+
+			if( typeof color === 'string' ) color = colorToRgb( color );
+	
+			if( color ) {
+				return ( color.r * 299 + color.g * 587 + color.b * 114 ) / 1000;
+			}
+	
+			return null;
+	
+		}
