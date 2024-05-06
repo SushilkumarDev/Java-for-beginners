@@ -1505,3 +1505,17 @@ function transformSlides( transforms ) {
 	 * Dispatches an event of the specified type from the
 	 * reveal DOM element.
 	 */
+	function dispatchEvent( type, args ) {
+
+		var event = document.createEvent( 'HTMLEvents', 1, 2 );
+		event.initEvent( type, true, true );
+		extend( event, args );
+		dom.wrapper.dispatchEvent( event );
+
+		// If we're in an iframe, post each reveal.js event to the
+		// parent window. Used by the notes plugin
+		if( config.postMessageEvents && window.parent !== window.self ) {
+			window.parent.postMessage( JSON.stringify({ namespace: 'reveal', eventName: type, state: getState() }), '*' );
+		}
+
+	}
