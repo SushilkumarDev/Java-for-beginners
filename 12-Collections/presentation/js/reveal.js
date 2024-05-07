@@ -2014,3 +2014,18 @@ function toggleOverview( override ) {
  *
  * @return {Boolean} true if the overview is active,
  * false otherwise
+ */
+function isOverview() {
+
+	return overview;
+
+}
+
+/**
+ * Checks if the current or specified slide is vertical
+ * (nested within another slide).
+ *
+ * @param {HTMLElement} [slide=currentSlide] The slide to check
+ * orientation of
+ * @return {Boolean}
+ */
