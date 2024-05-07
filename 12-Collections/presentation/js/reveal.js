@@ -1909,3 +1909,13 @@ function layoutOverview() {
 
 		}
 	} );
+	// Layout slide backgrounds
+	toArray( dom.background.childNodes ).forEach( function( hbackground, h ) {
+		transformElement( hbackground, 'translate3d(' + ( h * overviewSlideWidth ) + 'px, 0, 0)' );
+
+		toArray( hbackground.querySelectorAll( '.slide-background' ) ).forEach( function( vbackground, v ) {
+			transformElement( vbackground, 'translate3d(0, ' + ( v * overviewSlideHeight ) + 'px, 0)' );
+		} );
+	} );
+
+}
