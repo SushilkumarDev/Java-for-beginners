@@ -1991,3 +1991,26 @@ function deactivateOverview() {
 
 	}
 }
+/**
+	 * Toggles the slide overview mode on and off.
+	 *
+	 * @param {Boolean} [override] Flag which overrides the
+	 * toggle logic and forcibly sets the desired state. True means
+	 * overview is open, false means it's closed.
+	 */
+function toggleOverview( override ) {
+
+	if( typeof override === 'boolean' ) {
+		override ? activateOverview() : deactivateOverview();
+	}
+	else {
+		isOverview() ? deactivateOverview() : activateOverview();
+	}
+
+}
+
+/**
+ * Checks if the overview is currently active.
+ *
+ * @return {Boolean} true if the overview is active,
+ * false otherwise
