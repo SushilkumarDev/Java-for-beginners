@@ -1887,3 +1887,25 @@ function layoutSlideContents( width, height ) {
 
 	}
 
+/**
+	 * Uses CSS transforms to position all slides in a grid for
+	 * display inside of the overview mode.
+	 */
+function layoutOverview() {
+
+	// Layout slides
+	toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) ).forEach( function( hslide, h ) {
+		hslide.setAttribute( 'data-index-h', h );
+		transformElement( hslide, 'translate3d(' + ( h * overviewSlideWidth ) + 'px, 0, 0)' );
+
+		if( hslide.classList.contains( 'stack' ) ) {
+
+			toArray( hslide.querySelectorAll( 'section' ) ).forEach( function( vslide, v ) {
+				vslide.setAttribute( 'data-index-h', h );
+				vslide.setAttribute( 'data-index-v', v );
+
+				transformElement( vslide, 'translate3d(0, ' + ( v * overviewSlideHeight ) + 'px, 0)' );
+			} );
+
+		}
+	} );
