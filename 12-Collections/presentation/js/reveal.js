@@ -1969,3 +1969,25 @@ function deactivateOverview() {
 
 			slide.removeEventListener( 'click', onOverviewSlideClicked, true );
 		} );
+		// Clean up changes made to backgrounds
+		toArray( dom.background.querySelectorAll( '.slide-background' ) ).forEach( function( background ) {
+			transformElement( background, '' );
+		} );
+
+		transformSlides( { overview: '' } );
+
+		slide( indexh, indexv );
+
+		layout();
+
+		cueAutoSlide();
+
+		// Notify observers of the overview hiding
+		dispatchEvent( 'overviewhidden', {
+			'indexh': indexh,
+			'indexv': indexv,
+			'currentSlide': currentSlide
+		} );
+
+	}
+}
