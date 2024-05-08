@@ -466,3 +466,19 @@
 
 		// Update all backgrounds
 		updateBackground( true );
+		// Notify listeners that the presentation is ready but use a 1ms
+		// timeout to ensure it's not fired synchronously after #initialize()
+		setTimeout( function() {
+			// Enable transitions now that we're loaded
+			dom.slides.classList.remove( 'no-transition' );
+
+			loaded = true;
+
+			dom.wrapper.classList.add( 'ready' );
+
+			dispatchEvent( 'ready', {
+				'indexh': indexh,
+				'indexv': indexv,
+				'currentSlide': currentSlide
+			} );
+		}, 1 );
