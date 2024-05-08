@@ -494,7 +494,8 @@
 			else {
 				window.addEventListener( 'load', setupPDF );
 			}
+			
 		}
 
 	}
-	
+
