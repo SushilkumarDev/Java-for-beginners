@@ -449,7 +449,7 @@
         		// Make sure we've got all the DOM elements we need
 		setupDOM();
 
-		// Listen to messages posted to this window
+		// Listen to messages posted to this window+
 		setupPostMessage();
 
 		// Prevent the slides from being scrolled out of view
