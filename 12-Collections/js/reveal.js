@@ -491,10 +491,11 @@
 			if( document.readyState === 'complete' ) {
 				setupPDF();
 			}
+			
 			else {
 				window.addEventListener( 'load', setupPDF );
 			}
-			
+
 		}
 
 	}
