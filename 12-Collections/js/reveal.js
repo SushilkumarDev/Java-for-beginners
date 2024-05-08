@@ -476,13 +476,14 @@
 
 			dom.wrapper.classList.add( 'ready' );
 
+			
 			dispatchEvent( 'ready', {
 				'indexh': indexh,
 				'indexv': indexv,
 				'currentSlide': currentSlide
 			} );
 		}, 1 );
-		
+
 		// Special setup and config is required when printing to PDF
 		if( isPrintingPDF() ) {
 			removeEventListeners();
