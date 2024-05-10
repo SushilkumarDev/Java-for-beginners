@@ -2293,3 +2293,53 @@ else {
 	cueAutoSlide();
 
 }
+/**
+	 * Syncs the presentation with the current DOM. Useful
+	 * when new slides or control elements are added or when
+	 * the configuration has changed.
+	 */
+function sync() {
+
+	// Subscribe to input
+	removeEventListeners();
+	addEventListeners();
+
+	// Force a layout to make sure the current config is accounted for
+	layout();
+
+	// Reflect the current autoSlide value
+	autoSlide = config.autoSlide;
+
+	// Start auto-sliding if it's enabled
+	cueAutoSlide();
+
+	// Re-create the slide backgrounds
+	createBackgrounds();
+
+	// Write the current hash to the URL
+	writeURL();
+
+	sortAllFragments();
+
+	updateControls();
+	updateProgress();
+	updateSlideNumber();
+	updateSlidesVisibility();
+	updateBackground( true );
+	updateNotes();
+
+	formatEmbeddedContent();
+
+	// Start or stop embedded content depending on global config
+	if( config.autoPlayMedia === false ) {
+		stopEmbeddedContent( currentSlide );
+	}
+	else {
+		startEmbeddedContent( currentSlide );
+	}
+
+	if( isOverview() ) {
+		layoutOverview();
+	}
+
+}
