@@ -2135,3 +2135,13 @@ function resume() {
 
 	}
 
+/**
+	 * Checks if the auto slide mode is currently on.
+	 *
+	 * @return {Boolean}
+	 */
+function isAutoSliding() {
+
+	return !!( autoSlide && !autoSlidePaused );
+
+}
