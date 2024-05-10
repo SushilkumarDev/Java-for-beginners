@@ -2222,3 +2222,15 @@ function slide( h, v, f, o ) {
 	if( isOverview() ) {
 		updateOverview();
 	}
+	// Find the current horizontal slide and any possible vertical slides
+		// within it
+		var currentHorizontalSlide = horizontalSlides[ indexh ],
+			currentVerticalSlides = currentHorizontalSlide.querySelectorAll( 'section' );
+
+		// Store references to the previous and current slides
+		currentSlide = currentVerticalSlides[ indexv ] || currentHorizontalSlide;
+
+		// Show fragment, if specified
+		if( typeof f !== 'undefined' ) {
+			navigateFragment( f );
+		}
