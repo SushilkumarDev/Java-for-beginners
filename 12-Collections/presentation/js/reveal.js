@@ -2948,3 +2948,81 @@ return index;
 				media.load();
 			}
 		} );
+
+			// Show the corresponding background element
+			var indices = getIndices( slide );
+			var background = getSlideBackground( indices.h, indices.v );
+			if( background ) {
+				background.style.display = 'block';
+	
+				// If the background contains media, load it
+				if( background.hasAttribute( 'data-loaded' ) === false ) {
+					background.setAttribute( 'data-loaded', 'true' );
+	
+					var backgroundImage = slide.getAttribute( 'data-background-image' ),
+						backgroundVideo = slide.getAttribute( 'data-background-video' ),
+						backgroundVideoLoop = slide.hasAttribute( 'data-background-video-loop' ),
+						backgroundVideoMuted = slide.hasAttribute( 'data-background-video-muted' ),
+						backgroundIframe = slide.getAttribute( 'data-background-iframe' );
+	
+					// Images
+					if( backgroundImage ) {
+						background.style.backgroundImage = 'url('+ backgroundImage +')';
+					}
+					// Videos
+					else if ( backgroundVideo && !isSpeakerNotes() ) {
+						var video = document.createElement( 'video' );
+	
+						if( backgroundVideoLoop ) {
+							video.setAttribute( 'loop', '' );
+						}
+	
+						if( backgroundVideoMuted ) {
+							video.muted = true;
+						}
+	
+						// Inline video playback works (at least in Mobile Safari) as
+						// long as the video is muted and the `playsinline` attribute is
+						// present
+						if( isMobileDevice ) {
+							video.muted = true;
+							video.autoplay = true;
+							video.setAttribute( 'playsinline', '' );
+						}
+	
+						// Support comma separated lists of video sources
+						backgroundVideo.split( ',' ).forEach( function( source ) {
+							video.innerHTML += '<source src="'+ source +'">';
+						} );
+	
+						background.appendChild( video );
+					}
+					// Iframes
+					else if( backgroundIframe ) {
+						var iframe = document.createElement( 'iframe' );
+						iframe.setAttribute( 'allowfullscreen', '' );
+						iframe.setAttribute( 'mozallowfullscreen', '' );
+						iframe.setAttribute( 'webkitallowfullscreen', '' );
+	
+						// Only load autoplaying content when the slide is shown to
+						// avoid having it play in the background
+						if( /autoplay=(1|true|yes)/gi.test( backgroundIframe ) ) {
+							iframe.setAttribute( 'data-src', backgroundIframe );
+						}
+						else {
+							iframe.setAttribute( 'src', backgroundIframe );
+						}
+	
+						iframe.style.width  = '100%';
+						iframe.style.height = '100%';
+						iframe.style.maxHeight = '100%';
+						iframe.style.maxWidth = '100%';
+	
+						background.appendChild( iframe );
+					}
+				}
+	
+			}
+	
+		}
+	
