@@ -2092,3 +2092,17 @@ function resume() {
 	}
 
 }
+
+	/**
+	 * Toggles the paused mode on and off.
+	 */
+	function togglePause( override ) {
+
+		if( typeof override === 'boolean' ) {
+			override ? pause() : resume();
+		}
+		else {
+			isPaused() ? resume() : pause();
+		}
+
+	}
