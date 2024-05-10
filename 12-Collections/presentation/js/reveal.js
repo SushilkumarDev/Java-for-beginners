@@ -2799,3 +2799,35 @@ return index;
 				}
 	
 			} );
+			// Stop content inside of previous backgrounds
+		if( previousBackground ) {
+
+			stopEmbeddedContent( previousBackground );
+
+		}
+
+		// Start content in the current background
+		if( currentBackground ) {
+
+			startEmbeddedContent( currentBackground );
+
+			var backgroundImageURL = currentBackground.style.backgroundImage || '';
+
+			// Restart GIFs (doesn't work in Firefox)
+			if( /\.gif/i.test( backgroundImageURL ) ) {
+				currentBackground.style.backgroundImage = '';
+				window.getComputedStyle( currentBackground ).opacity;
+				currentBackground.style.backgroundImage = backgroundImageURL;
+			}
+
+			// Don't transition between identical backgrounds. This
+			// prevents unwanted flicker.
+			var previousBackgroundHash = previousBackground ? previousBackground.getAttribute( 'data-background-hash' ) : null;
+			var currentBackgroundHash = currentBackground.getAttribute( 'data-background-hash' );
+			if( currentBackgroundHash && currentBackgroundHash === previousBackgroundHash && currentBackground !== previousBackground ) {
+				dom.background.classList.add( 'no-transition' );
+			}
+
+			previousBackground = currentBackground;
+
+		}
