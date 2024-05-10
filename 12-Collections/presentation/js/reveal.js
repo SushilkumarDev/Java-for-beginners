@@ -2495,3 +2495,25 @@ function updateSlides( selector, index ) {
 				}
 			}
 		}
+	// Mark the current slide as present
+	slides[index].classList.add( 'present' );
+	slides[index].removeAttribute( 'hidden' );
+	slides[index].removeAttribute( 'aria-hidden' );
+
+	// If this slide has a state associated with it, add it
+	// onto the current state of the deck
+	var slideState = slides[index].getAttribute( 'data-state' );
+	if( slideState ) {
+		state = state.concat( slideState.split( ' ' ) );
+	}
+
+}
+else {
+	// Since there are no slides we can't be anywhere beyond the
+	// zeroth index
+	index = 0;
+}
+
+return index;
+
+}
