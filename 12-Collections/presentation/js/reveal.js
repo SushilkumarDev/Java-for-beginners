@@ -2059,3 +2059,21 @@ function enterFullscreen() {
 	}
 
 }
+	/**
+	 * Enters the paused mode which fades everything on screen to
+	 * black.
+	 */
+	function pause() {
+
+		if( config.pause ) {
+			var wasPaused = dom.wrapper.classList.contains( 'paused' );
+
+			cancelAutoSlide();
+			dom.wrapper.classList.add( 'paused' );
+
+			if( wasPaused === false ) {
+				dispatchEvent( 'paused' );
+			}
+		}
+
+	}
