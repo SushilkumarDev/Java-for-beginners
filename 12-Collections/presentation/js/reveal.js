@@ -2388,3 +2388,19 @@ function sortAllFragments() {
 	} );
 
 }
+/**
+	 * Randomly shuffles all slides in the deck.
+	 */
+function shuffle() {
+
+	var slides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
+
+	slides.forEach( function( slide ) {
+
+		// Insert this slide next to another random slide. This may
+		// cause the slide to insert before itself but that's fine.
+		dom.slides.insertBefore( slide, slides[ Math.floor( Math.random() * slides.length ) ] );
+
+	} );
+
+}
