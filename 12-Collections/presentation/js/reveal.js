@@ -2906,3 +2906,45 @@ return index;
 		}
 
 	}
+
+	/**
+	 * Called when the given slide is within the configured view
+	 * distance. Shows the slide element and loads any content
+	 * that is set to load lazily (data-src).
+	 *
+	 * @param {HTMLElement} slide Slide to show
+	 */
+	/**
+	 * Called when the given slide is within the configured view
+	 * distance. Shows the slide element and loads any content
+	 * that is set to load lazily (data-src).
+	 *
+	 * @param {HTMLElement} slide Slide to show
+	 */
+	function showSlide( slide ) {
+
+		// Show the slide element
+		slide.style.display = config.display;
+
+		// Media elements with data-src attributes
+		toArray( slide.querySelectorAll( 'img[data-src], video[data-src], audio[data-src]' ) ).forEach( function( element ) {
+			element.setAttribute( 'src', element.getAttribute( 'data-src' ) );
+			element.removeAttribute( 'data-src' );
+		} );
+
+		// Media elements with <source> children
+		toArray( slide.querySelectorAll( 'video, audio' ) ).forEach( function( media ) {
+			var sources = 0;
+
+			toArray( media.querySelectorAll( 'source[data-src]' ) ).forEach( function( source ) {
+				source.setAttribute( 'src', source.getAttribute( 'data-src' ) );
+				source.removeAttribute( 'data-src' );
+				sources += 1;
+			} );
+
+			// If we rewrote sources for this video/audio element, we need
+			// to manually tell it to load from its new origin
+			if( sources > 0 ) {
+				media.load();
+			}
+		} );
