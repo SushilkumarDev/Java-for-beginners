@@ -2234,3 +2234,18 @@ function slide( h, v, f, o ) {
 		if( typeof f !== 'undefined' ) {
 			navigateFragment( f );
 		}
+// Dispatch an event if the slide changed
+var slideChanged = ( indexh !== indexhBefore || indexv !== indexvBefore );
+if( slideChanged ) {
+	dispatchEvent( 'slidechanged', {
+		'indexh': indexh,
+		'indexv': indexv,
+		'previousSlide': previousSlide,
+		'currentSlide': currentSlide,
+		'origin': o
+	} );
+}
+else {
+	// Ensure that the previous slide is never the same as the current
+	previousSlide = null;
+}
