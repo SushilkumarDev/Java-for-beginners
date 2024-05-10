@@ -2738,3 +2738,64 @@ return index;
 		}
 
 	}
+
+		/**
+	 * Updates the background elements to reflect the current
+	 * slide.
+	 *
+	 * @param {boolean} includeAll If true, the backgrounds of
+	 * all vertical slides (not just the present) will be updated.
+	 */
+		function updateBackground( includeAll ) {
+
+			var currentBackground = null;
+	
+			// Reverse past/future classes when in RTL mode
+			var horizontalPast = config.rtl ? 'future' : 'past',
+				horizontalFuture = config.rtl ? 'past' : 'future';
+	
+			// Update the classes of all backgrounds to match the
+			// states of their slides (past/present/future)
+			toArray( dom.background.childNodes ).forEach( function( backgroundh, h ) {
+	
+				backgroundh.classList.remove( 'past' );
+				backgroundh.classList.remove( 'present' );
+				backgroundh.classList.remove( 'future' );
+	
+				if( h < indexh ) {
+					backgroundh.classList.add( horizontalPast );
+				}
+				else if ( h > indexh ) {
+					backgroundh.classList.add( horizontalFuture );
+				}
+				else {
+					backgroundh.classList.add( 'present' );
+	
+					// Store a reference to the current background element
+					currentBackground = backgroundh;
+				}
+	
+				if( includeAll || h === indexh ) {
+					toArray( backgroundh.querySelectorAll( '.slide-background' ) ).forEach( function( backgroundv, v ) {
+	
+						backgroundv.classList.remove( 'past' );
+						backgroundv.classList.remove( 'present' );
+						backgroundv.classList.remove( 'future' );
+	
+						if( v < indexv ) {
+							backgroundv.classList.add( 'past' );
+						}
+						else if ( v > indexv ) {
+							backgroundv.classList.add( 'future' );
+						}
+						else {
+							backgroundv.classList.add( 'present' );
+	
+							// Only if this is the present horizontal and vertical slide
+							if( h === indexh ) currentBackground = backgroundv;
+						}
+	
+					} );
+				}
+	
+			} );
