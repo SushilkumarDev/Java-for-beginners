@@ -2271,3 +2271,25 @@ else {
 				}, 0 );
 			}
 		}
+	// Handle embedded content
+	if( slideChanged || !previousSlide ) {
+		stopEmbeddedContent( previousSlide );
+		startEmbeddedContent( currentSlide );
+	}
+
+	// Announce the current slide contents, for screen readers
+	dom.statusDiv.textContent = getStatusText( currentSlide );
+
+	updateControls();
+	updateProgress();
+	updateBackground();
+	updateParallax();
+	updateSlideNumber();
+	updateNotes();
+
+	// Update the URL hash
+	writeURL();
+
+	cueAutoSlide();
+
+}
