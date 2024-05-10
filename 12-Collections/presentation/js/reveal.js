@@ -2592,3 +2592,34 @@ return index;
 		}
 
 	}
+
+		/**
+	 * Pick up notes from the current slide and display them
+	 * to the viewer.
+	 *
+	 * @see {@link config.showNotes}
+	 */
+		function updateNotes() {
+
+			if( config.showNotes && dom.speakerNotes && currentSlide && !isPrintingPDF() ) {
+	
+				dom.speakerNotes.innerHTML = getSlideNotes() || '';
+	
+			}
+	
+		}
+	
+		/**
+		 * Updates the progress bar to reflect the current slide.
+		 */
+		function updateProgress() {
+	
+			// Update progress if enabled
+			if( config.progress && dom.progressbar ) {
+	
+				dom.progressbar.style.width = getProgress() * dom.wrapper.offsetWidth + 'px';
+	
+			}
+	
+		}
+	
