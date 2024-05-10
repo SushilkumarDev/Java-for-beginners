@@ -2077,3 +2077,18 @@ function enterFullscreen() {
 		}
 
 	}
+/**
+	 * Exits from the paused mode.
+	 */
+function resume() {
+
+	var wasPaused = dom.wrapper.classList.contains( 'paused' );
+	dom.wrapper.classList.remove( 'paused' );
+
+	cueAutoSlide();
+
+	if( wasPaused ) {
+		dispatchEvent( 'resumed' );
+	}
+
+}
