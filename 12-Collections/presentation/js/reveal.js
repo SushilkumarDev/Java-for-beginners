@@ -2106,3 +2106,20 @@ function resume() {
 		}
 
 	}
+	/**
+	 * Checks if we are currently in the paused mode.
+	 *
+	 * @return {Boolean}
+	 */
+	function isPaused() {
+
+		return dom.wrapper.classList.contains( 'paused' );
+
+	}
+
+	/**
+	 * Toggles the auto slide mode on and off.
+	 *
+	 * @param {Boolean} [override] Flag which sets the desired state.
+	 * True means autoplay starts, false means it stops.
+	 */
