@@ -2037,3 +2037,25 @@ function isVerticalSlide( slide ) {
 	return slide && slide.parentNode && !!slide.parentNode.nodeName.match( /section/i );
 
 }
+/**
+	 * Handling the fullscreen functionality via the fullscreen API
+	 *
+	 * @see http://fullscreen.spec.whatwg.org/
+	 * @see https://developer.mozilla.org/en-US/docs/DOM/Using_fullscreen_mode
+	 */
+function enterFullscreen() {
+
+	var element = document.documentElement;
+
+	// Check which implementation is available
+	var requestMethod = element.requestFullscreen ||
+						element.webkitRequestFullscreen ||
+						element.webkitRequestFullScreen ||
+						element.mozRequestFullScreen ||
+						element.msRequestFullscreen;
+
+	if( requestMethod ) {
+		requestMethod.apply( element );
+	}
+
+}
