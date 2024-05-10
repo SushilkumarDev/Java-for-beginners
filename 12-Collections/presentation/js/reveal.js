@@ -2213,3 +2213,12 @@ function slide( h, v, f, o ) {
 		// Dispatch custom event matching the state's name
 		dispatchEvent( state[i] );
 	}
+	// Clean up the remains of the previous state
+	while( stateBefore.length ) {
+		document.documentElement.classList.remove( stateBefore.pop() );
+	}
+
+	// Update the overview if it's currently active
+	if( isOverview() ) {
+		updateOverview();
+	}
