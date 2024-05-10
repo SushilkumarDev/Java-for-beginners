@@ -2123,3 +2123,15 @@ function resume() {
 	 * @param {Boolean} [override] Flag which sets the desired state.
 	 * True means autoplay starts, false means it stops.
 	 */
+	function toggleAutoSlide( override ) {
+
+		if( typeof override === 'boolean' ) {
+			override ? resumeAutoSlide() : pauseAutoSlide();
+		}
+
+		else {
+			autoSlidePaused ? resumeAutoSlide() : pauseAutoSlide();
+		}
+
+	}
+
