@@ -2145,3 +2145,55 @@ function isAutoSliding() {
 	return !!( autoSlide && !autoSlidePaused );
 
 }
+/**
+	 * Steps from the current point in the presentation to the
+	 * slide which matches the specified horizontal and vertical
+	 * indices.
+	 *
+	 * @param {number} [h=indexh] Horizontal index of the target slide
+	 * @param {number} [v=indexv] Vertical index of the target slide
+	 * @param {number} [f] Index of a fragment within the
+	 * target slide to activate
+	 * @param {number} [o] Origin for use in multimaster environments
+	 */
+function slide( h, v, f, o ) {
+
+	// Remember where we were at before
+	previousSlide = currentSlide;
+
+	// Query all horizontal slides in the deck
+	var horizontalSlides = dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR );
+
+	// Abort if there are no slides
+	if( horizontalSlides.length === 0 ) return;
+
+	// If no vertical index is specified and the upcoming slide is a
+	// stack, resume at its previous vertical index
+	if( v === undefined && !isOverview() ) {
+		v = getPreviousVerticalIndex( horizontalSlides[ h ] );
+	}
+
+	// If we were on a vertical stack, remember what vertical index
+	// it was on so we can resume at the same position when returning
+	if( previousSlide && previousSlide.parentNode && previousSlide.parentNode.classList.contains( 'stack' ) ) {
+		setPreviousVerticalIndex( previousSlide.parentNode, indexv );
+	}
+
+	// Remember the state before this slide
+	var stateBefore = state.concat();
+
+	// Reset the state array
+	state.length = 0;
+
+	var indexhBefore = indexh || 0,
+		indexvBefore = indexv || 0;
+
+	// Activate and transition to the new slide
+	indexh = updateSlides( HORIZONTAL_SLIDES_SELECTOR, h === undefined ? indexh : h );
+	indexv = updateSlides( VERTICAL_SLIDES_SELECTOR, v === undefined ? indexv : v );
+
+	// Update the visibility of slides now that the indices have changed
+	updateSlidesVisibility();
+
+	layout();
+
