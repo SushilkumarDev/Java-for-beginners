@@ -2249,3 +2249,25 @@ else {
 	// Ensure that the previous slide is never the same as the current
 	previousSlide = null;
 }
+	// Solves an edge case where the previous slide maintains the
+		// 'present' class when navigating between adjacent vertical
+		// stacks
+		if( previousSlide ) {
+			previousSlide.classList.remove( 'present' );
+			previousSlide.setAttribute( 'aria-hidden', 'true' );
+
+			// Reset all slides upon navigate to home
+			// Issue: #285
+			if ( dom.wrapper.querySelector( HOME_SLIDE_SELECTOR ).classList.contains( 'present' ) ) {
+				// Launch async task
+				setTimeout( function () {
+					var slides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR + '.stack') ), i;
+					for( i in slides ) {
+						if( slides[i] ) {
+							// Reset stack
+							setPreviousVerticalIndex( slides[i], 0 );
+						}
+					}
+				}, 0 );
+			}
+		}
