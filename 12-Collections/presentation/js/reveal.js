@@ -3567,3 +3567,37 @@ return index;
 
 	}
 	
+		/**
+	 * Returns the background element for the given slide.
+	 * All slides, even the ones with no background properties
+	 * defined, have a background element so as long as the
+	 * index is valid an element will be returned.
+	 *
+	 * @param {number} x Horizontal background index
+	 * @param {number} y Vertical background index
+	 * @return {(HTMLElement[]|*)}
+	 */
+		function getSlideBackground( x, y ) {
+
+			// When printing to PDF the slide backgrounds are nested
+			// inside of the slides
+			if( isPrintingPDF() ) {
+				var slide = getSlide( x, y );
+				if( slide ) {
+					return slide.slideBackgroundElement;
+				}
+	
+				return undefined;
+			}
+	
+			var horizontalBackground = dom.wrapper.querySelectorAll( '.backgrounds>.slide-background' )[ x ];
+			var verticalBackgrounds = horizontalBackground && horizontalBackground.querySelectorAll( '.slide-background' );
+	
+			if( verticalBackgrounds && verticalBackgrounds.length && typeof y === 'number' ) {
+				return verticalBackgrounds ? verticalBackgrounds[ y ] : undefined;
+			}
+	
+			return horizontalBackground;
+	
+		}
+	
