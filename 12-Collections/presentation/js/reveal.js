@@ -3732,4 +3732,34 @@ function sortFragments( fragments ) {
 		} );
 
 		return sorted;
+
 	}
+		/**
+	 * Navigate to the specified slide fragment.
+	 *
+	 * @param {?number} index The index of the fragment that
+	 * should be shown, -1 means all are invisible
+	 * @param {number} offset Integer offset to apply to the
+	 * fragment index
+	 *
+	 * @return {boolean} true if a change was made in any
+	 * fragments visibility as part of this call
+	 */
+		function navigateFragment( index, offset ) {
+
+			if( currentSlide && config.fragments ) {
+	
+				var fragments = sortFragments( currentSlide.querySelectorAll( '.fragment' ) );
+				if( fragments.length ) {
+	
+					// If no index is specified, find the current
+					if( typeof index !== 'number' ) {
+						var lastVisibleFragment = sortFragments( currentSlide.querySelectorAll( '.fragment.visible' ) ).pop();
+	
+						if( lastVisibleFragment ) {
+							index = parseInt( lastVisibleFragment.getAttribute( 'data-fragment-index' ) || 0, 10 );
+						}
+						else {
+							index = -1;
+						}
+					}
