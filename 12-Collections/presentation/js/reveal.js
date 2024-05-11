@@ -3071,3 +3071,25 @@ return index;
 		return routes;
 
 	}
+	/**
+	 * Returns an object describing the available fragment
+	 * directions.
+	 *
+	 * @return {{prev: boolean, next: boolean}}
+	 */
+	function availableFragments() {
+
+		if( currentSlide && config.fragments ) {
+			var fragments = currentSlide.querySelectorAll( '.fragment' );
+			var hiddenFragments = currentSlide.querySelectorAll( '.fragment:not(.visible)' );
+
+			return {
+				prev: fragments.length - hiddenFragments.length > 0,
+				next: !!hiddenFragments.length
+			};
+		}
+		else {
+			return { prev: false, next: false };
+		}
+
+	}
