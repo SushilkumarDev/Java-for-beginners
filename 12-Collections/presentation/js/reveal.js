@@ -3188,3 +3188,22 @@ return index;
 
 	}
 
+	/**
+	 * Starts playing an embedded video/audio element after
+	 * it has finished loading.
+	 *
+	 * @param {object} event
+	 */
+	function startEmbeddedMedia( event ) {
+
+		var isAttachedToDOM = !!closestParent( event.target, 'html' ),
+			isVisible  		= !!closestParent( event.target, '.present' );
+
+		if( isAttachedToDOM && isVisible ) {
+			event.target.currentTime = 0;
+			event.target.play();
+		}
+
+		event.target.removeEventListener( 'loadeddata', startEmbeddedMedia );
+
+	}
