@@ -3627,3 +3627,24 @@ return index;
 	
 			return null;
 		}
+			/**
+	 * Retrieves the current state of the presentation as
+	 * an object. This state can then be restored at any
+	 * time.
+	 *
+	 * @return {{indexh: number, indexv: number, indexf: number, paused: boolean, overview: boolean}}
+	 */
+	function getState() {
+
+		var indices = getIndices();
+
+		return {
+			indexh: indices.h,
+			indexv: indices.v,
+			indexf: indices.f,
+			paused: isPaused(),
+			overview: isOverview()
+		};
+
+	}
+
