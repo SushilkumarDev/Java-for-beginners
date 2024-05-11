@@ -3477,3 +3477,56 @@ return index;
 	
 		}
 	
+			/**
+	 * Retrieves the h/v location and fragment of the current,
+	 * or specified, slide.
+	 *
+	 * @param {HTMLElement} [slide] If specified, the returned
+	 * index will be for this slide rather than the currently
+	 * active one
+	 *
+	 * @return {{h: number, v: number, f: number}}
+	 */
+	function getIndices( slide ) {
+
+		// By default, return the current indices
+		var h = indexh,
+			v = indexv,
+			f;
+
+		// If a slide is specified, return the indices of that slide
+		if( slide ) {
+			var isVertical = isVerticalSlide( slide );
+			var slideh = isVertical ? slide.parentNode : slide;
+
+			// Select all horizontal slides
+			var horizontalSlides = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) );
+
+			// Now that we know which the horizontal slide is, get its index
+			h = Math.max( horizontalSlides.indexOf( slideh ), 0 );
+
+			// Assume we're not vertical
+			v = undefined;
+
+			// If this is a vertical slide, grab the vertical index
+			if( isVertical ) {
+				v = Math.max( toArray( slide.parentNode.querySelectorAll( 'section' ) ).indexOf( slide ), 0 );
+			}
+		}
+
+		if( !slide && currentSlide ) {
+			var hasFragments = currentSlide.querySelectorAll( '.fragment' ).length > 0;
+			if( hasFragments ) {
+				var currentFragment = currentSlide.querySelector( '.current-fragment' );
+				if( currentFragment && currentFragment.hasAttribute( 'data-fragment-index' ) ) {
+					f = parseInt( currentFragment.getAttribute( 'data-fragment-index' ), 10 );
+				}
+				else {
+					f = currentSlide.querySelectorAll( '.fragment.visible' ).length - 1;
+				}
+			}
+		}
+
+		return { h: h, v: v, f: f };
+
+	}
