@@ -3538,5 +3538,15 @@ return index;
 
 			return toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR + ':not(.stack)' ));
 		}
+		/**
+	 * Retrieves the total number of slides in this presentation.
+	 *
+	 * @return {number}
+	 */
+		function getTotalSlides() {
+
+			return getSlides().length;
+	
+		}
 	
 	
