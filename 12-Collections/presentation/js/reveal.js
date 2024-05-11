@@ -3672,3 +3672,28 @@ function setState( state ) {
 	}
 
 }
+
+/**
+	 * Return a sorted fragments list, ordered by an increasing
+	 * "data-fragment-index" attribute.
+	 *
+	 * Fragments will be revealed in the order that they are returned by
+	 * this function, so you can use the index attributes to control the
+	 * order of fragment appearance.
+	 *
+	 * To maintain a sensible default fragment order, fragments are presumed
+	 * to be passed in document order. This function adds a "fragment-index"
+	 * attribute to each node if such an attribute is not already present,
+	 * and sets that attribute to an integer value which is the position of
+	 * the fragment within the fragments list.
+	 *
+	 * @param {object[]|*} fragments
+	 * @return {object[]} sorted Sorted array of fragments
+	 */
+function sortFragments( fragments ) {
+
+	fragments = toArray( fragments );
+
+	var ordered = [],
+		unordered = [],
+		sorted = [];
