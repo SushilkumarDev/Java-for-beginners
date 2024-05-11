@@ -3530,3 +3530,14 @@ return index;
 		return { h: h, v: v, f: f };
 
 	}
+
+		/**
+	 * Retrieves all slides in this presentation.
+	 */
+		function getSlides() {
+
+			return toArray( dom.wrapper.querySelectorAll( SLIDES_SELECTOR + ':not(.stack)' ));
+	
+		}
+	
+	
