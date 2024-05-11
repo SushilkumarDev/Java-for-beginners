@@ -3732,5 +3732,4 @@ function sortFragments( fragments ) {
 		} );
 
 		return sorted;
-
 	}
