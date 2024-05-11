@@ -3162,3 +3162,29 @@ return index;
 
 				}
 			} );
+			// Normal iframes
+			toArray( element.querySelectorAll( 'iframe[src]' ) ).forEach( function( el ) {
+				if( closestParent( el, '.fragment' ) && !closestParent( el, '.fragment.visible' ) ) {
+					return;
+				}
+
+				startEmbeddedIframe( { target: el } );
+			} );
+
+			// Lazy loading iframes
+			toArray( element.querySelectorAll( 'iframe[data-src]' ) ).forEach( function( el ) {
+				if( closestParent( el, '.fragment' ) && !closestParent( el, '.fragment.visible' ) ) {
+					return;
+				}
+
+				if( el.getAttribute( 'src' ) !== el.getAttribute( 'data-src' ) ) {
+					el.removeEventListener( 'load', startEmbeddedIframe ); // remove first to avoid dupes
+					el.addEventListener( 'load', startEmbeddedIframe );
+					el.setAttribute( 'src', el.getAttribute( 'data-src' ) );
+				}
+			} );
+
+		}
+
+	}
+
