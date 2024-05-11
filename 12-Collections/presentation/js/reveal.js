@@ -3697,3 +3697,18 @@ function sortFragments( fragments ) {
 	var ordered = [],
 		unordered = [],
 		sorted = [];
+		// Group ordered and unordered elements
+		fragments.forEach( function( fragment, i ) {
+			if( fragment.hasAttribute( 'data-fragment-index' ) ) {
+				var index = parseInt( fragment.getAttribute( 'data-fragment-index' ), 10 );
+
+				if( !ordered[index] ) {
+					ordered[index] = [];
+				}
+
+				ordered[index].push( fragment );
+			}
+			else {
+				unordered.push( [ fragment ] );
+			}
+		} );
