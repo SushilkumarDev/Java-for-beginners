@@ -3880,3 +3880,17 @@ return false;
 			else {
 				autoSlide = config.autoSlide;
 			}
+// If there are media elements with data-autoplay,
+			// automatically set the autoSlide duration to the
+			// length of that media. Not applicable if the slide
+			// is divided up into fragments.
+			// playbackRate is accounted for in the duration.
+			if( currentSlide.querySelectorAll( '.fragment' ).length === 0 ) {
+				toArray( currentSlide.querySelectorAll( 'video, audio' ) ).forEach( function( el ) {
+					if( el.hasAttribute( 'data-autoplay' ) ) {
+						if( autoSlide && (el.duration * 1000 / el.playbackRate ) > autoSlide ) {
+							autoSlide = ( el.duration * 1000 / el.playbackRate ) + 1000;
+						}
+					}
+				} );
+			}
