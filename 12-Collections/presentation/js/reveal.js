@@ -4168,3 +4168,41 @@ function isSwipePrevented( target ) {
 			}
 
 		}
+	// 2. System defined key bindings
+	if( triggered === false ) {
+
+		// Assume true and try to prove false
+		triggered = true;
+
+		switch( event.keyCode ) {
+			// p, page up
+			case 80: case 33: navigatePrev(); break;
+			// n, page down
+			case 78: case 34: navigateNext(); break;
+			// h, left
+			case 72: case 37: navigateLeft(); break;
+			// l, right
+			case 76: case 39: navigateRight(); break;
+			// k, up
+			case 75: case 38: navigateUp(); break;
+			// j, down
+			case 74: case 40: navigateDown(); break;
+			// home
+			case 36: slide( 0 ); break;
+			// end
+			case 35: slide( Number.MAX_VALUE ); break;
+			// space
+			case 32: isOverview() ? deactivateOverview() : event.shiftKey ? navigatePrev() : navigateNext(); break;
+			// return
+			case 13: isOverview() ? deactivateOverview() : triggered = false; break;
+			// two-spot, semicolon, b, v, period, Logitech presenter tools "black screen" button
+			case 58: case 59: case 66: case 86: case 190: case 191: togglePause(); break;
+			// f
+			case 70: enterFullscreen(); break;
+			// a
+			case 65: if ( config.autoSlideStoppable ) toggleAutoSlide( autoSlideWasPaused ); break;
+			default:
+				triggered = false;
+		}
+
+	}
