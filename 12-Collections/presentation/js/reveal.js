@@ -4326,3 +4326,21 @@ function isSwipePrevented( target ) {
 
 			}
 		}
+	// There's a bug with swiping on some Android devices unless
+		// the default action is always prevented
+		else if( UA.match( /android/gi ) ) {
+			event.preventDefault();
+		}
+
+	}
+
+	/**
+	 * Handler for the 'touchend' event.
+	 *
+	 * @param {object} event
+	 */
+	function onTouchEnd( event ) {
+
+		touch.captured = false;
+
+	}
