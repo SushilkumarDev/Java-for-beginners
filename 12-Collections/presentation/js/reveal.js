@@ -4064,4 +4064,20 @@ function isSwipePrevented( target ) {
 	return false;
 
 }
+// --------------------------------------------------------------------//
+	// ----------------------------- EVENTS -------------------------------//
+	// --------------------------------------------------------------------//
 
+	/**
+	 * Called by all event handlers that are based on user
+	 * input.
+	 *
+	 * @param {object} [event]
+	 */
+	function onUserInput( event ) {
+
+		if( config.autoSlideStoppable ) {
+			pauseAutoSlide();
+		}
+
+	}
