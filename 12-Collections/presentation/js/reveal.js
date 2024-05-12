@@ -3998,3 +3998,36 @@ return false;
 
 	}
 
+	/**
+	 * Navigates backwards, prioritized in the following order:
+	 * 1) Previous fragment
+	 * 2) Previous vertical slide
+	 * 3) Previous horizontal slide
+	 */
+	function navigatePrev() {
+
+		// Prioritize revealing fragments
+		if( previousFragment() === false ) {
+			if( availableRoutes().up ) {
+				navigateUp();
+			}
+			else {
+				// Fetch the previous horizontal slide, if there is one
+				var previousSlide;
+
+				if( config.rtl ) {
+					previousSlide = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR + '.future' ) ).pop();
+				}
+				else {
+					previousSlide = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR + '.past' ) ).pop();
+				}
+
+				if( previousSlide ) {
+					var v = ( previousSlide.querySelectorAll( 'section' ).length - 1 ) || undefined;
+					var h = indexh - 1;
+					slide( h, v );
+				}
+			}
+		}
+
+	}
