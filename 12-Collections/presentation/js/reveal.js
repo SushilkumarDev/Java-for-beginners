@@ -4518,3 +4518,21 @@ function isSwipePrevented( target ) {
 		}
 
 	}
+
+		/**
+	 * Handles clicks on links that are set to preview in the
+	 * iframe overlay.
+	 *
+	 * @param {object} event
+	 */
+		function onPreviewLinkClicked( event ) {
+
+			if( event.currentTarget && event.currentTarget.hasAttribute( 'href' ) ) {
+				var url = event.currentTarget.getAttribute( 'href' );
+				if( url ) {
+					showPreview( url );
+					event.preventDefault();
+				}
+			}
+	
+		}
