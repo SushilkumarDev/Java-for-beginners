@@ -3916,3 +3916,85 @@ return false;
 		}
 
 	}
+	/**
+	 * Cancels any ongoing request to auto-slide.
+	 */
+	function cancelAutoSlide() {
+
+		clearTimeout( autoSlideTimeout );
+		autoSlideTimeout = -1;
+
+	}
+
+	function pauseAutoSlide() {
+
+		if( autoSlide && !autoSlidePaused ) {
+			autoSlidePaused = true;
+			dispatchEvent( 'autoslidepaused' );
+			clearTimeout( autoSlideTimeout );
+
+			if( autoSlidePlayer ) {
+				autoSlidePlayer.setPlaying( false );
+			}
+		}
+
+	}
+
+	function resumeAutoSlide() {
+
+		if( autoSlide && autoSlidePaused ) {
+			autoSlidePaused = false;
+			dispatchEvent( 'autoslideresumed' );
+			cueAutoSlide();
+		}
+
+	}
+
+	function navigateLeft() {
+
+		// Reverse for RTL
+		if( config.rtl ) {
+			if( ( isOverview() || nextFragment() === false ) && availableRoutes().left ) {
+				slide( indexh + 1 );
+			}
+		}
+		// Normal navigation
+		else if( ( isOverview() || previousFragment() === false ) && availableRoutes().left ) {
+			slide( indexh - 1 );
+		}
+
+	}
+
+	function navigateRight() {
+
+		// Reverse for RTL
+		if( config.rtl ) {
+			if( ( isOverview() || previousFragment() === false ) && availableRoutes().right ) {
+				slide( indexh - 1 );
+			}
+		}
+		// Normal navigation
+		else if( ( isOverview() || nextFragment() === false ) && availableRoutes().right ) {
+			slide( indexh + 1 );
+		}
+
+	}
+
+	function navigateUp() {
+
+		// Prioritize hiding fragments
+		if( ( isOverview() || previousFragment() === false ) && availableRoutes().up ) {
+			slide( indexh, indexv - 1 );
+		}
+
+	}
+
+	function navigateDown() {
+
+		// Prioritize revealing fragments
+		if( ( isOverview() || nextFragment() === false ) && availableRoutes().down ) {
+			slide( indexh, indexv + 1 );
+		}
+
+	}
+
