@@ -4095,4 +4095,76 @@ function isSwipePrevented( target ) {
 			}
 	
 		}
-	
+	/**
+	 * Handler for the document level 'keydown' event.
+	 *
+	 * @param {object} event
+	 */
+	function onDocumentKeyDown( event ) {
+
+		// If there's a condition specified and it returns false,
+		// ignore this event
+		if( typeof config.keyboardCondition === 'function' && config.keyboardCondition() === false ) {
+			return true;
+		}
+
+		// Remember if auto-sliding was paused so we can toggle it
+		var autoSlideWasPaused = autoSlidePaused;
+
+		onUserInput( event );
+
+		// Check if there's a focused element that could be using
+		// the keyboard
+		var activeElementIsCE = document.activeElement && document.activeElement.contentEditable !== 'inherit';
+		var activeElementIsInput = document.activeElement && document.activeElement.tagName && /input|textarea/i.test( document.activeElement.tagName );
+		var activeElementIsNotes = document.activeElement && document.activeElement.className && /speaker-notes/i.test( document.activeElement.className);
+
+		// Disregard the event if there's a focused element or a
+		// keyboard modifier key is present
+		if( activeElementIsCE || activeElementIsInput || activeElementIsNotes || (event.shiftKey && event.keyCode !== 32) || event.altKey || event.ctrlKey || event.metaKey ) return;
+
+		// While paused only allow resume keyboard events; 'b', 'v', '.'
+		var resumeKeyCodes = [66,86,190,191];
+		var key;
+
+		// Custom key bindings for togglePause should be able to resume
+		if( typeof config.keyboard === 'object' ) {
+			for( key in config.keyboard ) {
+				if( config.keyboard[key] === 'togglePause' ) {
+					resumeKeyCodes.push( parseInt( key, 10 ) );
+				}
+			}
+		}
+
+		if( isPaused() && resumeKeyCodes.indexOf( event.keyCode ) === -1 ) {
+			return false;
+		}
+
+		var triggered = false;
+
+		// 1. User defined key bindings
+		if( typeof config.keyboard === 'object' ) {
+
+			for( key in config.keyboard ) {
+
+				// Check if this binding matches the pressed key
+				if( parseInt( key, 10 ) === event.keyCode ) {
+
+					var value = config.keyboard[ key ];
+
+					// Callback function
+					if( typeof value === 'function' ) {
+						value.apply( null, [ event ] );
+					}
+					// String shortcuts to reveal.js API
+					else if( typeof value === 'string' && typeof Reveal[ value ] === 'function' ) {
+						Reveal[ value ].call();
+					}
+
+					triggered = true;
+
+				}
+
+			}
+
+		}
