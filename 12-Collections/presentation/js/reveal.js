@@ -3763,3 +3763,31 @@ function sortFragments( fragments ) {
 							index = -1;
 						}
 					}
+// If an offset is specified, apply it to the index
+if( typeof offset === 'number' ) {
+	index += offset;
+}
+
+var fragmentsShown = [],
+	fragmentsHidden = [];
+
+toArray( fragments ).forEach( function( element, i ) {
+
+	if( element.hasAttribute( 'data-fragment-index' ) ) {
+		i = parseInt( element.getAttribute( 'data-fragment-index' ), 10 );
+	}
+
+	// Visible fragments
+	if( i <= index ) {
+		if( !element.classList.contains( 'visible' ) ) fragmentsShown.push( element );
+		element.classList.add( 'visible' );
+		element.classList.remove( 'current-fragment' );
+
+		// Announce the fragments one by one to the Screen Reader
+		dom.statusDiv.textContent = getStatusText( element );
+
+		if( i === index ) {
+			element.classList.add( 'current-fragment' );
+			startEmbeddedContent( element );
+		}
+	}
