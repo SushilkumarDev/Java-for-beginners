@@ -3862,3 +3862,21 @@ return false;
 			var fragmentAutoSlide = fragment ? fragment.getAttribute( 'data-autoslide' ) : null;
 			var parentAutoSlide = currentSlide.parentNode ? currentSlide.parentNode.getAttribute( 'data-autoslide' ) : null;
 			var slideAutoSlide = currentSlide.getAttribute( 'data-autoslide' );
+
+				// Pick value in the following priority order:
+			// 1. Current fragment's data-autoslide
+			// 2. Current slide's data-autoslide
+			// 3. Parent slide's data-autoslide
+			// 4. Global autoSlide setting
+			if( fragmentAutoSlide ) {
+				autoSlide = parseInt( fragmentAutoSlide, 10 );
+			}
+			else if( slideAutoSlide ) {
+				autoSlide = parseInt( slideAutoSlide, 10 );
+			}
+			else if( parentAutoSlide ) {
+				autoSlide = parseInt( parentAutoSlide, 10 );
+			}
+			else {
+				autoSlide = config.autoSlide;
+			}
