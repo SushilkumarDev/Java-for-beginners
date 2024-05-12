@@ -4385,3 +4385,51 @@ function isSwipePrevented( target ) {
 		}
 
 	}
+		/**
+	 * Handles mouse wheel scrolling, throttled to avoid skipping
+	 * multiple slides.
+	 *
+	 * @param {object} event
+	 */
+		function onDocumentMouseScroll( event ) {
+
+			if( Date.now() - lastMouseWheelStep > 600 ) {
+	
+				lastMouseWheelStep = Date.now();
+	
+				var delta = event.detail || -event.wheelDelta;
+				if( delta > 0 ) {
+					navigateNext();
+				}
+				else if( delta < 0 ) {
+					navigatePrev();
+				}
+	
+			}
+	
+		}
+		/**
+	 * Clicking on the progress bar results in a navigation to the
+	 * closest approximate horizontal slide using this equation:
+	 *
+	 * ( clickX / presentationWidth ) * numberOfSlides
+	 *
+	 * @param {object} event
+	 */
+		function onProgressClicked( event ) {
+
+			onUserInput( event );
+	
+			event.preventDefault();
+	
+			var slidesTotal = toArray( dom.wrapper.querySelectorAll( HORIZONTAL_SLIDES_SELECTOR ) ).length;
+			var slideIndex = Math.floor( ( event.clientX / dom.wrapper.offsetWidth ) * slidesTotal );
+	
+			if( config.rtl ) {
+				slideIndex = slidesTotal - slideIndex;
+			}
+	
+			slide( slideIndex );
+	
+		}
+	
