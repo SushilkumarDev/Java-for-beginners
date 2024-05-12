@@ -4344,3 +4344,31 @@ function isSwipePrevented( target ) {
 		touch.captured = false;
 
 	}
+
+	/**
+	 * Convert pointer down to touch start.
+	 *
+	 * @param {object} event
+	 */
+	function onPointerDown( event ) {
+
+		if( event.pointerType === event.MSPOINTER_TYPE_TOUCH || event.pointerType === "touch" ) {
+			event.touches = [{ clientX: event.clientX, clientY: event.clientY }];
+			onTouchStart( event );
+		}
+
+	}
+
+	/**
+	 * Convert pointer move to touch move.
+	 *
+	 * @param {object} event
+	 */
+	function onPointerMove( event ) {
+
+		if( event.pointerType === event.MSPOINTER_TYPE_TOUCH || event.pointerType === "touch" )  {
+			event.touches = [{ clientX: event.clientX, clientY: event.clientY }];
+			onTouchMove( event );
+		}
+
+	}
