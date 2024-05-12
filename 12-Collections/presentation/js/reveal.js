@@ -3791,3 +3791,32 @@ toArray( fragments ).forEach( function( element, i ) {
 			startEmbeddedContent( element );
 		}
 	}
+		// Hidden fragments
+		else {
+			if( element.classList.contains( 'visible' ) ) fragmentsHidden.push( element );
+			element.classList.remove( 'visible' );
+			element.classList.remove( 'current-fragment' );
+		}
+
+	} );
+
+	if( fragmentsHidden.length ) {
+		dispatchEvent( 'fragmenthidden', { fragment: fragmentsHidden[0], fragments: fragmentsHidden } );
+	}
+
+	if( fragmentsShown.length ) {
+		dispatchEvent( 'fragmentshown', { fragment: fragmentsShown[0], fragments: fragmentsShown } );
+	}
+
+	updateControls();
+	updateProgress();
+
+	return !!( fragmentsShown.length || fragmentsHidden.length );
+
+}
+
+}
+
+return false;
+
+}
