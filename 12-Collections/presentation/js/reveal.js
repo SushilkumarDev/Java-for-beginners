@@ -4222,3 +4222,25 @@ function isSwipePrevented( target ) {
 
 			event.preventDefault && event.preventDefault();
 		}
+		function onTouchStart( event ) {
+
+			if( isSwipePrevented( event.target ) ) return true;
+	
+			touch.startX = event.touches[0].clientX;
+			touch.startY = event.touches[0].clientY;
+			touch.startCount = event.touches.length;
+	
+			// If there's two touches we need to memorize the distance
+			// between those two points to detect pinching
+			if( event.touches.length === 2 && config.overview ) {
+				touch.startSpan = distanceBetween( {
+					x: event.touches[1].clientX,
+					y: event.touches[1].clientY
+				}, {
+					x: touch.startX,
+					y: touch.startY
+				} );
+			}
+	
+		}
+	
