@@ -4243,4 +4243,48 @@ function isSwipePrevented( target ) {
 			}
 	
 		}
+		/**
+	 * Handler for the 'touchmove' event.
+	 *
+	 * @param {object} event
+	 */
+		function onTouchMove( event ) {
+
+			if( isSwipePrevented( event.target ) ) return true;
 	
+			// Each touch should only trigger one action
+			if( !touch.captured ) {
+				onUserInput( event );
+	
+				var currentX = event.touches[0].clientX;
+				var currentY = event.touches[0].clientY;
+	
+				// If the touch started with two points and still has
+				// two active touches; test for the pinch gesture
+				if( event.touches.length === 2 && touch.startCount === 2 && config.overview ) {
+	
+					// The current distance in pixels between the two touch points
+					var currentSpan = distanceBetween( {
+						x: event.touches[1].clientX,
+						y: event.touches[1].clientY
+					}, {
+						x: touch.startX,
+						y: touch.startY
+					} );
+	
+					// If the span is larger than the desire amount we've got
+					// ourselves a pinch
+					if( Math.abs( touch.startSpan - currentSpan ) > touch.threshold ) {
+						touch.captured = true;
+	
+						if( currentSpan < touch.startSpan ) {
+							activateOverview();
+						}
+						else {
+							deactivateOverview();
+						}
+					}
+	
+					event.preventDefault();
+	
+				}
