@@ -4432,4 +4432,34 @@ function isSwipePrevented( target ) {
 			slide( slideIndex );
 	
 		}
+		/**
+	 * Event handler for navigation control buttons.
+	 */
+		function onNavigateLeftClicked( event ) { event.preventDefault(); onUserInput(); navigateLeft(); }
+		function onNavigateRightClicked( event ) { event.preventDefault(); onUserInput(); navigateRight(); }
+		function onNavigateUpClicked( event ) { event.preventDefault(); onUserInput(); navigateUp(); }
+		function onNavigateDownClicked( event ) { event.preventDefault(); onUserInput(); navigateDown(); }
+		function onNavigatePrevClicked( event ) { event.preventDefault(); onUserInput(); navigatePrev(); }
+		function onNavigateNextClicked( event ) { event.preventDefault(); onUserInput(); navigateNext(); }
 	
+		/**
+		 * Handler for the window level 'hashchange' event.
+		 *
+		 * @param {object} [event]
+		 */
+		function onWindowHashChange( event ) {
+	
+			readURL();
+	
+		}
+	
+		/**
+		 * Handler for the window level 'resize' event.
+		 *
+		 * @param {object} [event]
+		 */
+		function onWindowResize( event ) {
+	
+			layout();
+	
+		}
