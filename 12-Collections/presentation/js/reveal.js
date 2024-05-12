@@ -4031,3 +4031,22 @@ return false;
 		}
 
 	}
+/**
+	 * The reverse of #navigatePrev().
+	 */
+function navigateNext() {
+
+	// Prioritize revealing fragments
+	if( nextFragment() === false ) {
+		if( availableRoutes().down ) {
+			navigateDown();
+		}
+		else if( config.rtl ) {
+			navigateLeft();
+		}
+		else {
+			navigateRight();
+		}
+	}
+
+}
