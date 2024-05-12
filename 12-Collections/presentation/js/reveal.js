@@ -4372,3 +4372,16 @@ function isSwipePrevented( target ) {
 		}
 
 	}
+	/**
+	 * Convert pointer up to touch end.
+	 *
+	 * @param {object} event
+	 */
+	function onPointerUp( event ) {
+
+		if( event.pointerType === event.MSPOINTER_TYPE_TOUCH || event.pointerType === "touch" )  {
+			event.touches = [{ clientX: event.clientX, clientY: event.clientY }];
+			onTouchEnd( event );
+		}
+
+	}
