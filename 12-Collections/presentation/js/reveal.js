@@ -4288,3 +4288,41 @@ function isSwipePrevented( target ) {
 					event.preventDefault();
 	
 				}
+					// There was only one touch point, look for a swipe
+			else if( event.touches.length === 1 && touch.startCount !== 2 ) {
+
+				var deltaX = currentX - touch.startX,
+					deltaY = currentY - touch.startY;
+
+				if( deltaX > touch.threshold && Math.abs( deltaX ) > Math.abs( deltaY ) ) {
+					touch.captured = true;
+					navigateLeft();
+				}
+				else if( deltaX < -touch.threshold && Math.abs( deltaX ) > Math.abs( deltaY ) ) {
+					touch.captured = true;
+					navigateRight();
+				}
+				else if( deltaY > touch.threshold ) {
+					touch.captured = true;
+					navigateUp();
+				}
+				else if( deltaY < -touch.threshold ) {
+					touch.captured = true;
+					navigateDown();
+				}
+
+				// If we're embedded, only block touch events if they have
+				// triggered an action
+				if( config.embedded ) {
+					if( touch.captured || isVerticalSlide( currentSlide ) ) {
+						event.preventDefault();
+					}
+				}
+				// Not embedded? Block them all to avoid needless tossing
+				// around of the viewport in iOS
+				else {
+					event.preventDefault();
+				}
+
+			}
+		}
