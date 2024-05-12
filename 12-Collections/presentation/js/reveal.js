@@ -3894,3 +3894,25 @@ return false;
 					}
 				} );
 			}
+
+			// Cue the next auto-slide if:
+			// - There is an autoSlide value
+			// - Auto-sliding isn't paused by the user
+			// - The presentation isn't paused
+			// - The overview isn't active
+			// - The presentation isn't over
+			if( autoSlide && !autoSlidePaused && !isPaused() && !isOverview() && ( !Reveal.isLastSlide() || availableFragments().next || config.loop === true ) ) {
+				autoSlideTimeout = setTimeout( function() {
+					typeof config.autoSlideMethod === 'function' ? config.autoSlideMethod() : navigateNext();
+					cueAutoSlide();
+				}, autoSlide );
+				autoSlideStartTime = Date.now();
+			}
+
+			if( autoSlidePlayer ) {
+				autoSlidePlayer.setPlaying( autoSlideTimeout !== -1 );
+			}
+
+		}
+
+	}
