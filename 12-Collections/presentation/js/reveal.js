@@ -3820,3 +3820,27 @@ toArray( fragments ).forEach( function( element, i ) {
 return false;
 
 }
+	/**
+	 * Navigate to the next slide fragment.
+	 *
+	 * @return {boolean} true if there was a next fragment,
+	 * false otherwise
+	 */
+	function nextFragment() {
+
+		return navigateFragment( null, 1 );
+
+	}
+
+	/**
+	 * Navigate to the previous slide fragment.
+	 *
+	 * @return {boolean} true if there was a previous fragment,
+	 * false otherwise
+	 */
+	function previousFragment() {
+
+		return navigateFragment( null, -1 );
+
+	}
+
