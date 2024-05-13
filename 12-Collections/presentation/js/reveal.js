@@ -4842,3 +4842,26 @@ function isSwipePrevented( target ) {
 	getConfig: function() {
 		return config;
 	},
+
+	// Helper method, retrieves query string as a key/value hash
+	getQueryHash: function() {
+		var query = {};
+
+		location.search.replace( /[A-Z0-9]+?=([\w\.%-]*)/gi, function(a) {
+			query[ a.split( '=' ).shift() ] = a.split( '=' ).pop();
+		} );
+
+		// Basic deserialization
+		for( var i in query ) {
+			var value = query[ i ];
+
+			query[ i ] = deserialize( unescape( value ) );
+		}
+
+		return query;
+	},
+
+	// Returns true if we're currently on the first slide
+	isFirstSlide: function() {
+		return ( indexh === 0 && indexv === 0 );
+	},
