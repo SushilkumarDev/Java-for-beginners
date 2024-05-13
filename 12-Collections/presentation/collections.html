@@ -197,3 +197,36 @@ class LinkedHashSet  implements Set {
 ```
 ---
 ```java
+
+// A,C,B
+// A,B,C
+class TreeSet  implements Set,NavigableSet {
+  // 3,5,7
+  // sorted - natural order
+  // implements NavigableSet
+}
+```
+---
+# Queue
+- Arranged in order of processing - A to-do list for example
+- Queue interface extends Collection. So, it supports all Collection Methods.
+
+---
+```java
+interface Queue<E> extends Collection<E> {
+  boolean add(E paramE);
+  boolean offer(E paramE);
+  E remove();
+  E poll();
+  E peek();
+}
+```
+---
+```java
+
+class PriorityQueue  implements Queue {
+  // sorted - natural order
+  //
+
+}
+```
