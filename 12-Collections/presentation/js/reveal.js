@@ -4644,4 +4644,85 @@ function isSwipePrevented( target ) {
 			}
 	
 		};
+		/**
+	 * Renders the current progress and playback state.
+	 */
+		Playback.prototype.render = function() {
+
+			var progress = this.playing ? this.progress : 0,
+				radius = ( this.diameter2 ) - this.thickness,
+				x = this.diameter2,
+				y = this.diameter2,
+				iconSize = 28;
+	
+			// Ease towards 1
+			this.progressOffset += ( 1 - this.progressOffset ) * 0.1;
+	
+			var endAngle = ( - Math.PI / 2 ) + ( progress * ( Math.PI * 2 ) );
+			var startAngle = ( - Math.PI / 2 ) + ( this.progressOffset * ( Math.PI * 2 ) );
+	
+			this.context.save();
+			this.context.clearRect( 0, 0, this.diameter, this.diameter );
+	
+			// Solid background color
+			this.context.beginPath();
+			this.context.arc( x, y, radius + 4, 0, Math.PI * 2, false );
+			this.context.fillStyle = 'rgba( 0, 0, 0, 0.4 )';
+			this.context.fill();
+	
+			// Draw progress track
+			this.context.beginPath();
+			this.context.arc( x, y, radius, 0, Math.PI * 2, false );
+			this.context.lineWidth = this.thickness;
+			this.context.strokeStyle = '#666';
+			this.context.stroke();
+	
+			if( this.playing ) {
+				// Draw progress on top of track
+				this.context.beginPath();
+				this.context.arc( x, y, radius, startAngle, endAngle, false );
+				this.context.lineWidth = this.thickness;
+				this.context.strokeStyle = '#fff';
+				this.context.stroke();
+			}
+	
+			this.context.translate( x - ( iconSize / 2 ), y - ( iconSize / 2 ) );
+	
+			// Draw play/pause icons
+			if( this.playing ) {
+				this.context.fillStyle = '#fff';
+				this.context.fillRect( 0, 0, iconSize / 2 - 4, iconSize );
+				this.context.fillRect( iconSize / 2 + 4, 0, iconSize / 2 - 4, iconSize );
+			}
+			else {
+				this.context.beginPath();
+				this.context.translate( 4, 0 );
+				this.context.moveTo( 0, 0 );
+				this.context.lineTo( iconSize - 4, iconSize / 2 );
+				this.context.lineTo( 0, iconSize );
+				this.context.fillStyle = '#fff';
+				this.context.fill();
+			}
+	
+			this.context.restore();
+	
+		};
+	
+		Playback.prototype.on = function( type, listener ) {
+			this.canvas.addEventListener( type, listener, false );
+		};
+	
+		Playback.prototype.off = function( type, listener ) {
+			this.canvas.removeEventListener( type, listener, false );
+		};
+	
+		Playback.prototype.destroy = function() {
+	
+			this.playing = false;
+	
+			if( this.canvas.parentNode ) {
+				this.container.removeChild( this.canvas );
+			}
+	
+		};
 	
