@@ -230,3 +230,47 @@ class PriorityQueue  implements Queue {
 
 }
 ```
+---
+# Map
+
+- Key - Value Pair
+  - {["key1",value1],["key2",value2],["key3",value3]}
+- Example - A,C,A,C,E,C,M,D,H,A
+   - {("A",3),("C",3)}
+
+---
+
+# Map Interface
+
+```java
+
+interface Map<K, V> {
+  int size();
+  boolean isEmpty();
+  boolean containsKey(Object paramObject);
+  boolean containsValue(Object paramObject);
+  V get(Object key);
+  V put(K key, V value);
+  V remove(Object key);
+  void putAll(Map<? extends K, ? extends V> paramMap);
+  void clear();
+  Set<K> keySet();
+  Collection<V> values();
+  Set<Entry<K, V>> entrySet();
+  boolean equals(Object paramObject);
+  int hashcode();
+  public static abstract interface Entry<K, V> {
+    K getKey();
+
+    V getValue();
+
+    V setValue(V paramV);
+
+    boolean equals(Object paramObject);
+
+    int hashcode();
+  }
+}
+```
+---
+```java
