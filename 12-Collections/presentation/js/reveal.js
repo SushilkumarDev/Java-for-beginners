@@ -4625,3 +4625,23 @@ function isSwipePrevented( target ) {
 	
 		};
 	
+		Playback.prototype.animate = function() {
+
+			var progressBefore = this.progress;
+	
+			this.progress = this.progressCheck();
+	
+			// When we loop, offset the progress so that it eases
+			// smoothly rather than immediately resetting
+			if( progressBefore > 0.8 && this.progress < 0.2 ) {
+				this.progressOffset = this.progress;
+			}
+	
+			this.render();
+	
+			if( this.playing ) {
+				features.requestAnimationFrameMethod.call( window, this.animate.bind( this ) );
+			}
+	
+		};
+	
