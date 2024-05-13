@@ -4536,3 +4536,72 @@ function isSwipePrevented( target ) {
 			}
 	
 		}
+		/**
+	 * Handles click on the auto-sliding controls element.
+	 *
+	 * @param {object} [event]
+	 */
+	function onAutoSlidePlayerClick( event ) {
+
+		// Replay
+		if( Reveal.isLastSlide() && config.loop === false ) {
+			slide( 0, 0 );
+			resumeAutoSlide();
+		}
+		// Resume
+		else if( autoSlidePaused ) {
+			resumeAutoSlide();
+		}
+		// Pause
+		else {
+			pauseAutoSlide();
+		}
+
+	}
+	// --------------------------------------------------------------------//
+	// ------------------------ PLAYBACK COMPONENT ------------------------//
+	// --------------------------------------------------------------------//
+
+
+	/**
+	 * Constructor for the playback component, which displays
+	 * play/pause/progress controls.
+	 *
+	 * @param {HTMLElement} container The component will append
+	 * itself to this
+	 * @param {function} progressCheck A method which will be
+	 * called frequently to get the current progress on a range
+	 * of 0-1
+	 */
+	function Playback( container, progressCheck ) {
+
+		// Cosmetics
+		this.diameter = 100;
+		this.diameter2 = this.diameter/2;
+		this.thickness = 6;
+
+		// Flags if we are currently playing
+		this.playing = false;
+
+		// Current progress on a 0-1 range
+		this.progress = 0;
+
+		// Used to loop the animation smoothly
+		this.progressOffset = 1;
+
+		this.container = container;
+		this.progressCheck = progressCheck;
+
+		this.canvas = document.createElement( 'canvas' );
+		this.canvas.className = 'playback';
+		this.canvas.width = this.diameter;
+		this.canvas.height = this.diameter;
+		this.canvas.style.width = this.diameter2 + 'px';
+		this.canvas.style.height = this.diameter2 + 'px';
+		this.context = this.canvas.getContext( '2d' );
+
+		this.container.appendChild( this.canvas );
+
+		this.render();
+
+	}
