@@ -4881,3 +4881,7 @@ function isSwipePrevented( target ) {
 			return false;
 		},
 
+// Checks if reveal.js has been loaded and is ready for use
+isReady: function() {
+	return loaded;
+},
