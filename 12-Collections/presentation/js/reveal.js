@@ -4726,3 +4726,24 @@ function isSwipePrevented( target ) {
 	
 		};
 	
+
+	// --------------------------------------------------------------------//
+	// ------------------------------- API --------------------------------//
+	// --------------------------------------------------------------------//
+
+
+	Reveal = {
+		VERSION: VERSION,
+
+		initialize: initialize,
+		configure: configure,
+		sync: sync,
+
+		// Navigation methods
+		slide: slide,
+		left: navigateLeft,
+		right: navigateRight,
+		up: navigateUp,
+		down: navigateDown,
+		prev: navigatePrev,
+		next: navigateNext,
