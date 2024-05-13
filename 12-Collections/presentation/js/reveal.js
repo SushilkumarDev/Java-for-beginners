@@ -4605,3 +4605,23 @@ function isSwipePrevented( target ) {
 		this.render();
 
 	}
+
+		/**
+	 * @param value
+	 */
+		Playback.prototype.setPlaying = function( value ) {
+
+			var wasPlaying = this.playing;
+	
+			this.playing = value;
+	
+			// Start repainting if we weren't already
+			if( !wasPlaying && this.playing ) {
+				this.animate();
+			}
+			else {
+				this.render();
+			}
+	
+		};
+	
