@@ -4885,3 +4885,29 @@ function isSwipePrevented( target ) {
 isReady: function() {
 	return loaded;
 },
+	// Forward event binding to the reveal DOM element
+	addEventListener: function( type, listener, useCapture ) {
+		if( 'addEventListener' in window ) {
+			( dom.wrapper || document.querySelector( '.reveal' ) ).addEventListener( type, listener, useCapture );
+		}
+	},
+	removeEventListener: function( type, listener, useCapture ) {
+		if( 'addEventListener' in window ) {
+			( dom.wrapper || document.querySelector( '.reveal' ) ).removeEventListener( type, listener, useCapture );
+		}
+	},
+
+	// Programatically triggers a keyboard event
+	triggerKey: function( keyCode ) {
+		onDocumentKeyDown( { keyCode: keyCode } );
+	},
+
+	// Registers a new shortcut to include in the help overlay
+	registerKeyboardShortcut: function( key, value ) {
+		keyboardShortcuts[key] = value;
+	}
+};
+
+return Reveal;
+
+}));
