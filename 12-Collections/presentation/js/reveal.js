@@ -4865,3 +4865,19 @@ function isSwipePrevented( target ) {
 	isFirstSlide: function() {
 		return ( indexh === 0 && indexv === 0 );
 	},
+
+		// Returns true if we're currently on the last slide
+		isLastSlide: function() {
+			if( currentSlide ) {
+				// Does this slide has next a sibling?
+				if( currentSlide.nextElementSibling ) return false;
+
+				// If it's vertical, does its parent have a next sibling?
+				if( isVerticalSlide( currentSlide ) && currentSlide.parentNode.nextElementSibling ) return false;
+
+				return true;
+			}
+
+			return false;
+		},
+
