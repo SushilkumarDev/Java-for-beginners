@@ -106,3 +106,47 @@ interface Collection<E> extends Iterable<E> {
   int hashcode();
 }
 ```
+---
+# List
+- Cares about which position each object is in
+- Elements can be added in by specifying position - where should it be added in
+- If element is added without specifying position - it is added at the end
+
+---
+
+# List Interface
+
+```java
+interface List<E> extends Collection<E> {
+
+  boolean addAll(int paramInt, Collection<? extends E> paramCollection);
+
+  E get(int position);
+
+  E set(int position, E paramE);
+
+  void add(int position, E paramE);
+
+  E remove(int paramInt);
+
+  int indexOf(Object paramObject);
+
+  int lastIndexOf(Object paramObject);
+
+  ListIterator<E> listIterator();
+
+  ListIterator<E> listIterator(int paramInt);
+
+  List<E> subList(int paramInt1, int paramInt2);
+}
+```
+---
+```java
+
+class ArrayList  implements List<E>{
+  // Insertion and Deletion are slower compared to LinkedList
+  // almost constant time - access
+}
+```
+---
+```java
