@@ -73,3 +73,36 @@ SpringModules
 - Queue
 - Map
 ---
+
+# Collection Interface
+```java
+interface Collection<E> extends Iterable<E> {
+  int size();
+
+  boolean isEmpty();
+
+  boolean contains(Object paramObject);
+
+  Iterator<E> iterator();
+
+  Object[] toArray();
+
+  boolean add(E paramE);
+
+  boolean remove(Object paramObject);
+
+  boolean containsAll(Collection<?> paramCollection);
+
+  boolean addAll(Collection<? extends E> paramCollection);
+
+  boolean removeAll(Collection<?> paramCollection);
+
+  boolean retainAll(Collection<?> paramCollection);
+
+  void clear();
+
+  boolean equals(Object paramObject);
+
+  int hashcode();
+}
+```
