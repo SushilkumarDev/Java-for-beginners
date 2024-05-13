@@ -274,3 +274,21 @@ interface Map<K, V> {
 ```
 ---
 ```java
+class HashMap  implements Map {
+    // unsorted, unordered
+    // key's hashcode() is used
+  }
+  ```
+  ---
+  ```java
+  
+  class Hashtable  implements Map {
+    // Synchronized - Thread Safe - version of HashMap
+    // unsorted, unordered
+    // key's hashcode() is used
+    // HashMap allows a key with null value. Hashtable doesn't.
+  }
+  ```
+  ---
+  ```java
+  
