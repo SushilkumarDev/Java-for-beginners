@@ -4747,3 +4747,17 @@ function isSwipePrevented( target ) {
 		down: navigateDown,
 		prev: navigatePrev,
 		next: navigateNext,
+
+			// Fragment methods
+			navigateFragment: navigateFragment,
+			prevFragment: previousFragment,
+			nextFragment: nextFragment,
+	
+			// Deprecated aliases
+			navigateTo: slide,
+			navigateLeft: navigateLeft,
+			navigateRight: navigateRight,
+			navigateUp: navigateUp,
+			navigateDown: navigateDown,
+			navigatePrev: navigatePrev,
+			navigateNext: navigateNext,
