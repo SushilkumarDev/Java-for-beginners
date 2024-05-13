@@ -4817,3 +4817,28 @@ function isSwipePrevented( target ) {
 		// Returns the slide element at the specified index
 		getSlide: getSlide,
 
+	// Returns the slide background element at the specified index
+	getSlideBackground: getSlideBackground,
+
+	// Returns the speaker notes string for a slide, or null
+	getSlideNotes: getSlideNotes,
+
+	// Returns the previous slide element, may be null
+	getPreviousSlide: function() {
+		return previousSlide;
+	},
+
+	// Returns the current slide element
+	getCurrentSlide: function() {
+		return currentSlide;
+	},
+
+	// Returns the current scale of the presentation content
+	getScale: function() {
+		return scale;
+	},
+
+	// Returns the current configuration object
+	getConfig: function() {
+		return config;
+	},
