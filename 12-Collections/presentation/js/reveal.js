@@ -4761,3 +4761,19 @@ function isSwipePrevented( target ) {
 			navigateDown: navigateDown,
 			navigatePrev: navigatePrev,
 			navigateNext: navigateNext,
+
+				// Forces an update in slide layout
+		layout: layout,
+
+		// Randomizes the order of slides
+		shuffle: shuffle,
+
+		// Returns an object with the available routes as booleans (left/right/top/bottom)
+		availableRoutes: availableRoutes,
+
+		// Returns an object with the available fragments as booleans (prev/next)
+		availableFragments: availableFragments,
+
+		// Toggles a help overlay with keyboard shortcuts
+		toggleHelp: toggleHelp,
+
