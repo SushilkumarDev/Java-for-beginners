@@ -4777,3 +4777,24 @@ function isSwipePrevented( target ) {
 		// Toggles a help overlay with keyboard shortcuts
 		toggleHelp: toggleHelp,
 
+	// Toggles the overview mode on/off
+	toggleOverview: toggleOverview,
+
+	// Toggles the "black screen" mode on/off
+	togglePause: togglePause,
+
+	// Toggles the auto slide mode on/off
+	toggleAutoSlide: toggleAutoSlide,
+
+	// State checks
+	isOverview: isOverview,
+	isPaused: isPaused,
+	isAutoSliding: isAutoSliding,
+
+	// Adds or removes all internal event listeners (such as keyboard)
+	addEventListeners: addEventListeners,
+	removeEventListeners: removeEventListeners,
+
+	// Facility for persisting and restoring the presentation state
+	getState: getState,
+	setState: setState,
