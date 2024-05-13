@@ -165,3 +165,35 @@ class LinkedList  implements List<E> {
   }
   ```
   ---
+
+  # Set Interface
+```java
+// Unique things only - Does not allow duplication.
+// If obj1.equals(obj2) then only one of them can be in the Set.
+interface Set<E> extends Collection<E> {
+
+}
+```
+---
+```java
+
+// A, X , B
+// X, A ,B
+class HashSet  implements Set {
+  // unordered, unsorted - iterates in random order
+  // uses hashcode()
+}
+```
+---
+```java
+
+// A, X, B
+// A, X, B
+class LinkedHashSet  implements Set {
+  // ordered - iterates in order of insertion
+  // unsorted
+  // uses hashcode()
+}
+```
+---
+```java
