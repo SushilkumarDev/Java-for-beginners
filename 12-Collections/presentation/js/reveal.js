@@ -4798,3 +4798,22 @@ function isSwipePrevented( target ) {
 	// Facility for persisting and restoring the presentation state
 	getState: getState,
 	setState: setState,
+
+		// Presentation progress
+		getSlidePastCount: getSlidePastCount,
+
+		// Presentation progress on range of 0-1
+		getProgress: getProgress,
+
+		// Returns the indices of the current, or specified, slide
+		getIndices: getIndices,
+
+		// Returns an Array of all slides
+		getSlides: getSlides,
+
+		// Returns the total number of slides
+		getTotalSlides: getTotalSlides,
+
+		// Returns the slide element at the specified index
+		getSlide: getSlide,
+
