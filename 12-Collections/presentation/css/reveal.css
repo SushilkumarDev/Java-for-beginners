@@ -79,3 +79,30 @@ body {
     .reveal .slides section .fragment.zoom-in.visible {
       -webkit-transform: none;
               transform: none; }
+
+              .reveal .slides section .fragment.fade-out {
+                opacity: 1;
+                visibility: inherit; }
+                .reveal .slides section .fragment.fade-out.visible {
+                  opacity: 0;
+                  visibility: hidden; }
+              
+              .reveal .slides section .fragment.semi-fade-out {
+                opacity: 1;
+                visibility: inherit; }
+                .reveal .slides section .fragment.semi-fade-out.visible {
+                  opacity: 0.5;
+                  visibility: inherit; }
+              
+              .reveal .slides section .fragment.strike {
+                opacity: 1;
+                visibility: inherit; }
+                .reveal .slides section .fragment.strike.visible {
+                  text-decoration: line-through; }
+              
+              .reveal .slides section .fragment.fade-up {
+                -webkit-transform: translate(0, 20%);
+                        transform: translate(0, 20%); }
+                .reveal .slides section .fragment.fade-up.visible {
+                  -webkit-transform: translate(0, 0);
+                          transform: translate(0, 0); }
