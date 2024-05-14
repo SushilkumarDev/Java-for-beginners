@@ -405,3 +405,21 @@
 .reveal .slides > section > section.past,
 .reveal .slides > section > section.future {
   opacity: 0; }
+
+  /*********************************************
+ * Mixins for readability of transitions
+ *********************************************/
+/*********************************************
+ * SLIDE TRANSITION
+ * Aliased 'linear' for backwards compatibility
+ *********************************************/
+.reveal.slide section {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden; }
+  
+  .reveal .slides > section[data-transition=slide].past,
+  .reveal .slides > section[data-transition~=slide-out].past,
+  .reveal.slide .slides > section:not([data-transition]).past {
+    -webkit-transform: translate(-150%, 0);
+            transform: translate(-150%, 0); }
+  
