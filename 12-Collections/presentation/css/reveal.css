@@ -363,3 +363,10 @@
     -webkit-transition-duration: 400ms;
             transition-duration: 400ms; }
   
+            .reveal .slides section[data-transition-speed="slow"] {
+                -webkit-transition-duration: 1200ms;
+                        transition-duration: 1200ms; }
+              
+              .reveal .slides > section.stack {
+                padding-top: 0;
+                padding-bottom: 0; }
