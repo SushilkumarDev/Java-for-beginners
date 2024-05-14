@@ -151,3 +151,12 @@ body {
                                       
                                       .reveal .slides section .fragment.highlight-blue.visible {
                                         color: #1b91ff; }                        
+                                        .reveal .slides section .fragment.highlight-current-red.current-fragment {
+                                            color: #ff2c2d; }
+                                          
+                                          .reveal .slides section .fragment.highlight-current-green.current-fragment {
+                                            color: #17ff2e; }
+                                          
+                                          .reveal .slides section .fragment.highlight-current-blue.current-fragment {
+                                            color: #1b91ff; }
+                                          
