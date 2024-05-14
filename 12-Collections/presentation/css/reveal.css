@@ -235,3 +235,44 @@ body {
     -webkit-appearance: none;
     -webkit-tap-highlight-color: transparent; }
   
+    .reveal .controls .enabled {
+        opacity: 0.7;
+        cursor: pointer; }
+      
+      .reveal .controls .enabled:active {
+        margin-top: 1px; }
+      
+      .reveal .controls .navigate-left {
+        top: 42px;
+        border-right-width: 22px;
+        border-right-color: #000; }
+      
+      .reveal .controls .navigate-left.fragmented {
+        opacity: 0.3; }
+      
+      .reveal .controls .navigate-right {
+        left: 74px;
+        top: 42px;
+        border-left-width: 22px;
+        border-left-color: #000; }
+      
+      .reveal .controls .navigate-right.fragmented {
+        opacity: 0.3; }
+      
+      .reveal .controls .navigate-up {
+        left: 42px;
+        border-bottom-width: 22px;
+        border-bottom-color: #000; }
+      
+      .reveal .controls .navigate-up.fragmented {
+        opacity: 0.3; }
+      
+      .reveal .controls .navigate-down {
+        left: 42px;
+        top: 74px;
+        border-top-width: 22px;
+        border-top-color: #000; }
+      
+      .reveal .controls .navigate-down.fragmented {
+        opacity: 0.3; }
+      
