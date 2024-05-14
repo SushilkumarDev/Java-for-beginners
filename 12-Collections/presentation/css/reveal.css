@@ -444,3 +444,27 @@
 .reveal.linear section {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden; }
+
+          .reveal .slides > section[data-transition=linear].past,
+          .reveal .slides > section[data-transition~=linear-out].past,
+          .reveal.linear .slides > section:not([data-transition]).past {
+            -webkit-transform: translate(-150%, 0);
+                    transform: translate(-150%, 0); }
+          
+          .reveal .slides > section[data-transition=linear].future,
+          .reveal .slides > section[data-transition~=linear-in].future,
+          .reveal.linear .slides > section:not([data-transition]).future {
+            -webkit-transform: translate(150%, 0);
+                    transform: translate(150%, 0); }
+          
+          .reveal .slides > section > section[data-transition=linear].past,
+          .reveal .slides > section > section[data-transition~=linear-out].past,
+          .reveal.linear .slides > section > section:not([data-transition]).past {
+            -webkit-transform: translate(0, -150%);
+                    transform: translate(0, -150%); }
+          
+          .reveal .slides > section > section[data-transition=linear].future,
+          .reveal .slides > section > section[data-transition~=linear-in].future,
+          .reveal.linear .slides > section > section:not([data-transition]).future {
+            -webkit-transform: translate(0, 150%);
+                    transform: translate(0, 150%); }
