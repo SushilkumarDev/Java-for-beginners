@@ -530,3 +530,36 @@
                      .reveal.convex .slides > section > section:not([data-transition]).future {
                        -webkit-transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0);
                                transform: translate3d(0, 300px, 0) rotateX(-70deg) translate3d(0, 300px, 0); }
+
+/*********************************************
+ * CONCAVE TRANSITION
+ *********************************************/
+ .reveal .slides section[data-transition=concave].stack,
+ .reveal.concave .slides section.stack {
+   -webkit-transform-style: preserve-3d;
+           transform-style: preserve-3d; }
+ 
+ .reveal .slides > section[data-transition=concave].past,
+ .reveal .slides > section[data-transition~=concave-out].past,
+ .reveal.concave .slides > section:not([data-transition]).past {
+   -webkit-transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0);
+           transform: translate3d(-100%, 0, 0) rotateY(90deg) translate3d(-100%, 0, 0); }
+ 
+ .reveal .slides > section[data-transition=concave].future,
+ .reveal .slides > section[data-transition~=concave-in].future,
+ .reveal.concave .slides > section:not([data-transition]).future {
+   -webkit-transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0);
+           transform: translate3d(100%, 0, 0) rotateY(-90deg) translate3d(100%, 0, 0); }
+ 
+ .reveal .slides > section > section[data-transition=concave].past,
+ .reveal .slides > section > section[data-transition~=concave-out].past,
+ .reveal.concave .slides > section > section:not([data-transition]).past {
+   -webkit-transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0);
+           transform: translate3d(0, -80%, 0) rotateX(-70deg) translate3d(0, -80%, 0); }
+ 
+ .reveal .slides > section > section[data-transition=concave].future,
+ .reveal .slides > section > section[data-transition~=concave-in].future,
+ .reveal.concave .slides > section > section:not([data-transition]).future {
+   -webkit-transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0);
+           transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0); }
+ 
