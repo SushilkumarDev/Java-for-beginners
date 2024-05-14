@@ -399,3 +399,9 @@
 .reveal.overview .slides > section,
 .reveal.overview .slides > section > section {
   pointer-events: auto; }
+
+  .reveal .slides > section.past,
+.reveal .slides > section.future,
+.reveal .slides > section > section.past,
+.reveal .slides > section > section.future {
+  opacity: 0; }
