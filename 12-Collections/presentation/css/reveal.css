@@ -650,4 +650,18 @@
               -webkit-transform: translateZ(-90px) rotateX(65deg);
                       transform: translateZ(-90px) rotateX(65deg); }
             
-            
+                      .reveal.cube .slides > section.stack {
+                        padding: 0;
+                        background: none; }
+                      
+                      .reveal.cube .slides > section.past {
+                        -webkit-transform-origin: 100% 0%;
+                                transform-origin: 100% 0%;
+                        -webkit-transform: translate3d(-100%, 0, 0) rotateY(-90deg);
+                                transform: translate3d(-100%, 0, 0) rotateY(-90deg); }
+                      
+                      .reveal.cube .slides > section.future {
+                        -webkit-transform-origin: 0% 0%;
+                                transform-origin: 0% 0%;
+                        -webkit-transform: translate3d(100%, 0, 0) rotateY(90deg);
+                                transform: translate3d(100%, 0, 0) rotateY(90deg); }
