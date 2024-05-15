@@ -571,3 +571,11 @@
 .reveal.zoom .slides section:not([data-transition]) {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease; }
+
+
+          .reveal .slides > section[data-transition=zoom].past,
+          .reveal .slides > section[data-transition~=zoom-out].past,
+          .reveal.zoom .slides > section:not([data-transition]).past {
+            visibility: hidden;
+            -webkit-transform: scale(16);
+                    transform: scale(16); }
