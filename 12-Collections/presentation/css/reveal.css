@@ -586,3 +586,11 @@
                       visibility: hidden;
                       -webkit-transform: scale(0.2);
                               transform: scale(0.2); }
+
+                              .reveal .slides > section > section[data-transition=zoom].past,
+                              .reveal .slides > section > section[data-transition~=zoom-out].past,
+                              .reveal.zoom .slides > section > section:not([data-transition]).past {
+                                -webkit-transform: translate(0, -150%);
+                                        transform: translate(0, -150%); }
+                              
+                              
