@@ -563,3 +563,11 @@
    -webkit-transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0);
            transform: translate3d(0, 80%, 0) rotateX(70deg) translate3d(0, 80%, 0); }
  
+
+  /*********************************************
+ * ZOOM TRANSITION
+ *********************************************/
+.reveal .slides section[data-transition=zoom],
+.reveal.zoom .slides section:not([data-transition]) {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
