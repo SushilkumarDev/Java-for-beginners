@@ -593,4 +593,9 @@
                                 -webkit-transform: translate(0, -150%);
                                         transform: translate(0, -150%); }
                               
-                              
+                                        .reveal .slides > section > section[data-transition=zoom].future,
+                                        .reveal .slides > section > section[data-transition~=zoom-in].future,
+                                        .reveal.zoom .slides > section > section:not([data-transition]).future {
+                                          -webkit-transform: translate(0, 150%);
+                                                  transform: translate(0, 150%); }
+                                        
