@@ -731,4 +731,17 @@
                               .reveal.page .slides > section.stack {
                                 padding: 0;
                                 background: none; }
-                              
+
+                                
+                                .reveal.page .slides > section.past {
+                                  -webkit-transform-origin: 0% 0%;
+                                          transform-origin: 0% 0%;
+                                  -webkit-transform: translate3d(-40%, 0, 0) rotateY(-80deg);
+                                          transform: translate3d(-40%, 0, 0) rotateY(-80deg); }
+                                
+                                .reveal.page .slides > section.future {
+                                  -webkit-transform-origin: 100% 0%;
+                                          transform-origin: 100% 0%;
+                                  -webkit-transform: translate3d(0, 0, 0);
+                                          transform: translate3d(0, 0, 0); }
+                                
