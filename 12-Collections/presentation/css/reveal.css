@@ -758,3 +758,14 @@
                                                     transform: translate3d(0, 0, 0); }
                                           
                                           
+
+                                                    /*********************************************
+ * NO TRANSITION
+ *********************************************/
+.reveal .slides section[data-transition=none],
+.reveal.none .slides section:not([data-transition]) {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+          transition: none; }
+
