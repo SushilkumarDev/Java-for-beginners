@@ -745,3 +745,16 @@
                                   -webkit-transform: translate3d(0, 0, 0);
                                           transform: translate3d(0, 0, 0); }
                                 
+                                          .reveal.page .slides > section > section.past {
+                                            -webkit-transform-origin: 0% 0%;
+                                                    transform-origin: 0% 0%;
+                                            -webkit-transform: translate3d(0, -40%, 0) rotateX(80deg);
+                                                    transform: translate3d(0, -40%, 0) rotateX(80deg); }
+                                          
+                                          .reveal.page .slides > section > section.future {
+                                            -webkit-transform-origin: 0% 100%;
+                                                    transform-origin: 0% 100%;
+                                            -webkit-transform: translate3d(0, 0, 0);
+                                                    transform: translate3d(0, 0, 0); }
+                                          
+                                          
