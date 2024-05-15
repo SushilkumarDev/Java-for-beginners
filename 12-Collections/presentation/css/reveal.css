@@ -579,3 +579,10 @@
             visibility: hidden;
             -webkit-transform: scale(16);
                     transform: scale(16); }
+
+                    .reveal .slides > section[data-transition=zoom].future,
+                    .reveal .slides > section[data-transition~=zoom-in].future,
+                    .reveal.zoom .slides > section:not([data-transition]).future {
+                      visibility: hidden;
+                      -webkit-transform: scale(0.2);
+                              transform: scale(0.2); }
