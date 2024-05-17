@@ -1550,3 +1550,5 @@
 .zoomed .reveal *:after {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important; }
+
+          -webkit-backface-visibility: visible !important;
