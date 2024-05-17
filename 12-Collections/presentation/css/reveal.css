@@ -1490,4 +1490,6 @@
 .zoomed .reveal .roll span:after {
   visibility: hidden; }
 
-  
+  .zoomed .reveal .progress,
+.zoomed .reveal .controls {
+  opacity: 0; }
