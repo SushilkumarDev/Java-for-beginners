@@ -1532,4 +1532,11 @@
 .zoomed .reveal .controls {
   opacity: 0; }
 
-  
+  /*********************************************
+ * ZOOM PLUGIN
+ *********************************************/
+.zoomed .reveal *,
+.zoomed .reveal *:before,
+.zoomed .reveal *:after {
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important; }
