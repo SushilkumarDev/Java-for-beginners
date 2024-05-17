@@ -1540,3 +1540,13 @@
 .zoomed .reveal *:after {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important; }
+
+
+          /*********************************************
+ * ZOOM PLUGIN
+ *********************************************/
+.zoomed .reveal *,
+.zoomed .reveal *:before,
+.zoomed .reveal *:after {
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important; }
