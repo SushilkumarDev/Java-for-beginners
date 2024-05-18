@@ -57,3 +57,17 @@
      color: #000;
  }
  
+ /*********************************************
+ * VIEW FRAGMENTS
+ *********************************************/
+
+.reveal .slides section .fragment {
+	opacity: 0;
+	visibility: hidden;
+	transition: all .2s ease;
+
+	&.visible {
+		opacity: 1;
+		visibility: inherit;
+	}
+}
