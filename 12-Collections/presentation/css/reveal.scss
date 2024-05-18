@@ -36,3 +36,24 @@
 .reveal footer, .reveal header, .reveal hgroup, .reveal menu, .reveal nav, .reveal section {
 	display: block;
 }
+
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+ }
+ 
+ body {
+     position: relative;
+     line-height: 1;
+ 
+     background-color: #fff;
+     color: #000;
+ }
+ 
